@@ -2,43 +2,34 @@
 
 Static reading of the official 1.3.16.2 container only. The container header says platform `10.00.09.77`, built 2026-07-30. No camera was connected. The firmware file is not in this repo.
 
-## What actually crops a picture
+## Aspect crop is not digital zoom
 
-The body does not take an arbitrary sensor window. It takes one value from `HblmTypes::E_CropMode`.
+`HblmTypes::E_CropMode` changes the shape of the picture. It always keeps the maximum width or the maximum height. It does not zoom.
 
-The call that stores the current choice is `CameraSettings::setCrop_mode_current(HblmTypes::E_CropMode, bool)`. The same name exists on `CameraObjectImpl`. `MetadataControl::setCropMode` writes it into the file metadata. `Cmd_SetCropMode` and `Worker::CropModeEvent` are the service-side names.
+The stored choice is `CameraSettings::setCrop_mode_current(HblmTypes::E_CropMode, bool)`. The same name exists on `CameraObjectImpl`. `MetadataControl::setCropMode` writes that mode into the file. `Cmd_SetCropMode` and `Worker::CropModeEvent` are the service-side names.
 
-`ImageMemory::toCroppedCopy(const QRect &)` can cut a rectangle out of an image already in memory. That is a copy of a buffer, not evidence that the sensor was read out smaller.
+`Common::kCropBorderFRatio*` is a pair of doubles: horizontal inset and vertical inset, as a fraction of the full frame. One of the two is zero, or nearly zero, for every mode below. The other side is what gets trimmed so the aspect changes.
 
-## The modes that exist
+| Mode | Horizontal inset | Vertical inset | Side kept full |
+| --- | ---: | ---: | --- |
+| 3:2 | 0 | 0.0555 | width |
+| 16:9 | 0 | 0.1250 | width |
+| 2:1 | 0 | 0.1667 | width |
+| 65:24 | 0 | 0.2538 | width |
+| 1:1 | 0.1318 | 0.0090 | height |
 
-`E_CropMode_None`, `Ratio1to1`, `Ratio7to6`, `Ratio5to4`, `Ratio11to8p5`, `Ratio297to210`, `Ratio3to2`, `Ratio3to2Crop`, `Ratio16to9`, `Ratio2to1`, `Ratio65to24`, plus `All` and `Max`.
+16:9 keeps every column and cuts an eighth off the top and the bottom. Square keeps the height and cuts the sides. 65:24 is the XPan shape, still at full width. A 2× zoom would cut a quarter off every edge and keep the centre half of both width and height. No row in this table does that.
 
-`Common::kCropBorderFRatio*` is a pair of doubles, horizontal inset and vertical inset, as a fraction of the frame. Checked against the public 11656×8742 sensor:
+Modes present: `E_CropMode_None`, `Ratio1to1`, `Ratio7to6`, `Ratio5to4`, `Ratio11to8p5`, `Ratio297to210`, `Ratio3to2`, `Ratio3to2Crop`, `Ratio16to9`, `Ratio2to1`, `Ratio65to24`, plus `All` and `Max`.
 
-| Mode | Horizontal inset | Vertical inset |
-| --- | ---: | ---: |
-| 3:2 | 0 | 0.0555 |
-| 16:9 | 0 | 0.1250 |
-| 2:1 | 0 | 0.1667 |
-| 65:24 | 0 | 0.2538 |
-| 1:1 | 0.1318 | 0.0090 |
-
-A 16:9 frame keeps the full width and trims an eighth off the top and the bottom. 65:24 is the XPan cut. There is no 2× entry.
-
-`QSizeF Common::cropFactors(HblmTypes::E_CropMode)` is the scale that goes with a mode. `Common::CropData` is the record stored per mode.
+`QSizeF Common::cropFactors(HblmTypes::E_CropMode)` is the scale for one of those shapes. `Common::CropData` is the record stored per mode.
 
 ## What the zoom control on the camera is
 
-`HblmTypes::E_ZoomLevel` is only `Full`, `Half`, and `Max`. The screen pieces `ZoomFlick`, `ZoomOverlay`, and `ZoomIndicator` belong to that magnifier. They do not change the recorded crop.
+`HblmTypes::E_ZoomLevel` is only `Full`, `Half`, and `Max`. `ZoomFlick`, `ZoomOverlay`, and `ZoomIndicator` are that magnifier. They do not change what is recorded.
 
-## What this means for digital zoom
+## What is still missing
 
-A 2× crop, in the same units as the table above, would be an inset of 0.25 on both axes: the centre half of the width and the centre half of the height. No `E_CropMode` value has that inset. Choosing 16:9 or XPan cannot produce it.
+`ImageMemory::toCroppedCopy(const QRect &)` can cut an arbitrary rectangle out of a buffer that is already in memory. That is not a sensor readout window, and it was not tested here.
 
-So the socket in `controller.py` is this call, not a new sensor command:
-
-- apply: `setCrop_mode_current` with a mode whose border matches the zoom window
-- release: `setCrop_mode_current` with `E_CropMode_None`
-
-That mode does not exist yet. Adding one, and checking that the saved file and the live view both follow it, is still undone. This note is not a device test.
+Digital zoom needs a path that shrinks both sides and can keep the same aspect. `setCrop_mode_current` is the wrong call: every mode it accepts keeps a full side. This note does not name that other path. Not a device test.
