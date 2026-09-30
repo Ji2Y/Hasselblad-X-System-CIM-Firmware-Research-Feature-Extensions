@@ -16,6 +16,14 @@ def main() -> None:
     top = describe(s, windows[-1])
     assert top["achieved_zoom"] + 1e-9 >= 2.0
     assert abs(top["achieved_zoom"] - 2.0) < 0.01
+    h = (s.width_px - windows[-1].width) / 2 / s.width_px
+    v = (s.height_px - windows[-1].height) / 2 / s.height_px
+    assert h > 0.2 and v > 0.2, (h, v)
+
+    wide = achievable_windows(s, 16 / 9, s.cfa_quad, ZOOM_MAX)
+    h = (s.width_px - wide[0].width) / 2 / s.width_px
+    v = (s.height_px - wide[0].height) / 2 / s.height_px
+    assert h < 0.01 and v > 0.1, (h, v)
 
     sink = RecordingSink()
     session = ZoomSession(sink=sink)
