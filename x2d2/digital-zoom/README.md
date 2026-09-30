@@ -1,10 +1,10 @@
 # X2D II digital zoom (offline candidate)
 
-## Purpose and limit
+## What this is
 
-CFA-aligned crop windows and the shooting-screen rules from the zoom bench: stops at 1.0 / full-frame / 1.5 / 2.0, bar only while shooting, bar-off returns to the full frame.
+The body already saves a rectangle of the sensor when you pick 16:9, square, or XPan. Digital zoom is that same rectangle, drawn smaller and kept centred. It is not a second sensor mode.
 
-This does **not** apply a window on an X2D II. There is no capture or preview call in the public 1.3.16.2 tree that accepts an arbitrary sensor rectangle. `SensorWindowSink` is the only integration point.
+This folder calculates the rectangle. It does not switch the camera.
 
 ## Applies to
 
@@ -16,9 +16,11 @@ This does **not** apply a window on an X2D II. There is no capture or preview ca
 
 | File | Role |
 | --- | --- |
-| `crop_geometry.py` | Window list. Source of truth. |
-| `controller.py` | Mode, bar, zoom, and the sink the camera code must fill in. |
-| `test_crop.py` | Offline assertions. |
+| `crop_geometry.py` | Which rectangle each zoom step uses. |
+| `controller.py` | Bar on only while shooting. Bar off, or Review, means the full sensor. |
+| `find_crop_strings.py` | Looks through a local extract for the existing crop call. |
+| `test_crop.py` | Offline checks for the rectangle. |
+| `test_find_crop_strings.py` | Offline check for the scanner. Uses a temp file, not firmware. |
 
 ## Dependencies
 
@@ -26,7 +28,7 @@ Python 3.11+. No camera, no CIM, no vendor libraries.
 
 ## Side effects
 
-`python3 test_crop.py` is offline. Nothing in this folder opens a device, writes firmware, or changes camera state.
+Both checks are offline. `find_crop_strings.py` only reads a path you pass. Nothing here opens a device, writes firmware, or changes camera state.
 
 ## Checks
 
@@ -34,14 +36,21 @@ From this directory:
 
 ```sh
 python3 test_crop.py
+python3 -m unittest test_find_crop_strings.py
 ```
 
-Asserts: every window is quad-aligned; a stop never reports less zoom than its label; 2.0× is reachable; Review and bar-off release the crop; a square aspect stays square.
+On your own machine, against an extract that stays outside this repo:
+
+```sh
+python3 find_crop_strings.py /path/to/local/extract
+```
+
+A useful hit names something like a crop rectangle or aspect ratio. That name is what `SensorWindowSink.apply` should call, with the window from `crop_geometry.py`. `release` calls the same thing with the full sensor.
 
 ## Status
 
-Candidate. The missing piece on the camera is one function: given `{x, y, width, height}` all divisible by 2, set the live readout and the recorded frame to that window, and a matching release that restores the full sensor. Until that function exists, do not ship a menu entry — the bench already treats a hidden crop as a trap.
+Candidate. The rectangle maths is checked. The name of the existing crop call on 1.3.16.2 is not in this repo, so the camera still shoots full frame.
 
 ## What not to add here
 
-No installer, no factory-channel bootstrap, no copied vendor QML or firmware. Those stay out of the public tree the same way the rest of `x2d2/` does.
+No installer, no factory-channel bootstrap, no copied vendor QML or firmware.
