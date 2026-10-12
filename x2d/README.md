@@ -19,9 +19,20 @@ The X2D tree covers firmware 4.2.0 unless a document states otherwise.
 
 The public tree contains offline analysis, source UI and desktop tests. Vendor inputs, generated units, camera deployment tools and operating instructions are not included.
 
-## 最新研究汇总（更新至 2026-10-07）
+## 最新研究汇总（更新至 2026-10-12）
 
 最新验收状态以[成果总表](../RESEARCH_RESULTS.md)及分主题报告为准，早期“尚未验证”文字保留其历史范围。
+
+- [AFT、眼部共存与三档速度](research/4.2.0/AF-EYE-AND-SPEED-UPDATE.md)
+- [像素位移实拍、倒计时及 JSR 电脑合成](research/4.2.0/PIXEL-SHIFT-CAPTURE-RESULTS.md)；[独立离线 C 处理库](pixel-shift/README.md)
+- [Startup Studio 应用与菜单生命周期](research/4.2.0/STARTUP-STUDIO-UPDATE.md)
+- [一代模型解密、签名与独立 CPU 合成输入测试](research/4.2.0/MODEL-DECRYPTION-AND-CPU-RESULTS.md)；[TFLite 结构工具](tools/model-structure/README.md)
+- [425 区域边界](research/4.2.0/PDAF-425-BOUNDARIES.md)、[采样几何](research/4.2.0/PDAF-SAMPLING-GEOMETRY.md)、[控制策略对照](research/4.2.0/FOCUS-STRATEGY-PORT-BOUNDARIES.md)
+- [AS7341 光谱白平衡链路](research/4.2.0/SPECTRAL-WHITE-BALANCE.md)；[对焦／光谱离线工具](tools/firmware-analysis/focus-and-spectral/README.md)
+- [FXGab69 黑白候选的本地审查](research/4.2.0/MONOCHROME-CANDIDATE-REVIEW.md)
+- [镜头与模式状态兼容审查](research/4.2.0/LENS-AND-STATUS-COMPATIBILITY.md)
+- [电池重装与肩屏 H 的诊断边界](research/4.2.0/USB-POWER-STARTUP-DIAGNOSIS.md)
+- [安全披露与公开维护状态](research/4.2.0/SECURITY-DISCLOSURE-STATUS.md)
 
 - [原厂对焦参数与实验](research/4.2.0/AF-NATIVE-PARAMETERS-AND-TRIALS.md)
 - [AFT 人脸区域与主框](research/4.2.0/AFT-FACE-TRACKING-RESULTS.md)

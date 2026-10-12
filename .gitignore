@@ -118,3 +118,23 @@ __pycache__/
 *.wad
 !/x2d/doom/README.md
 !/x2d/research/4.2.0/DOOM-FEASIBILITY.md
+
+# Reviewed 2026-10-12 research and offline modules.
+!/x2d/pixel-shift/README.md
+!/x2d/pixel-shift/THIRD-PARTY.md
+!/x2d/research/4.2.0/AF-EYE-AND-SPEED-UPDATE.md
+!/x2d/research/4.2.0/FOCUS-STRATEGY-PORT-BOUNDARIES.md
+!/x2d/research/4.2.0/LENS-AND-STATUS-COMPATIBILITY.md
+!/x2d/research/4.2.0/MODEL-DECRYPTION-AND-CPU-RESULTS.md
+!/x2d/research/4.2.0/MONOCHROME-CANDIDATE-REVIEW.md
+!/x2d/research/4.2.0/PDAF-425-BOUNDARIES.md
+!/x2d/research/4.2.0/PDAF-SAMPLING-GEOMETRY.md
+!/x2d/research/4.2.0/PIXEL-SHIFT-CAPTURE-RESULTS.md
+!/x2d/research/4.2.0/SECURITY-DISCLOSURE-STATUS.md
+!/x2d/research/4.2.0/SPECTRAL-WHITE-BALANCE.md
+!/x2d/research/4.2.0/STARTUP-STUDIO-UPDATE.md
+!/x2d/research/4.2.0/USB-POWER-STARTUP-DIAGNOSIS.md
+!/x2d/tools/firmware-analysis/focus-and-spectral/README.md
+!/x2d/tools/model-structure/README.md
+!/x2d2/README.md
+!/x2d2/research/1.3.16.2/MODEL-AND-PDAF-STATUS.md

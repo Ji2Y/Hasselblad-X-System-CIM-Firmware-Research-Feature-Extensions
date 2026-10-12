@@ -2,6 +2,14 @@
 
 This file is a release checklist, not a claim that every referenced dependency is redistributed.
 
+## 2026-10-12 新增公开范围
+
+- [pixel-shift 处理模块](x2d/pixel-shift/README.md)：复用固定 MIT 六行内核，原作者署名、精确提交和完整许可见 [模块来源](x2d/pixel-shift/THIRD-PARTY.md)。自有处理库未复制 Phocus 私有代码。libjpeg-turbo、JSR 及其权重未 vendoring。
+- tflite 2.18.0 与 flatbuffers 25.12.19：可选本地结构检查／合成夹具依赖，不复制其源码、二进制、模型或权重。安装包中的原许可证适用。
+- [Startup Studio](https://github.com/radium-wang/hasselblad-startup-studio)：仅引用其独立项目。初版 v0.1.4 的 MIT 与后续 MIT + Commons Clause 必须按版本区分，本研究库 MIT 不替换其许可。
+- [FXGab69 黑白候选](x2d/research/4.2.0/MONOCHROME-CANDIDATE-REVIEW.md)：明确作者与固定来源，本库仅提供本项目的审查结论，未复制完整候选实现。
+- IMaH 上游工具仅作研究来源链接，未迁入密钥表、厂商模型、解密程序或设备接口。
+
 The citation-only external research records are maintained in
 [`x2d/references/EXTERNAL-RESEARCH.md`](x2d/references/EXTERNAL-RESEARCH.md).
 They document provenance and acknowledgement; they are not vendored into this

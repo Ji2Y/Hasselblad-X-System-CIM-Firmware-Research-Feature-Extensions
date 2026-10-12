@@ -16,7 +16,7 @@ jobs:
         with:
           python-version: "3.11"
       - name: Install offline test dependencies
-        run: python -m pip install pyelftools==0.32 capstone==5.0.6
+        run: python -m pip install pyelftools==0.32 capstone==5.0.6 tflite==2.18.0 flatbuffers==25.12.19
       - name: Publication safety check
         run: python scripts/validate_public_repo.py
       - name: AF-S candidate tests
@@ -29,3 +29,9 @@ jobs:
 
       - name: UI trace analysis tests
         run: python -m unittest discover -s x2d/CodeTests/ui-response -p 'test_*.py'
+
+      - name: Pixel-shift host synthetic RAW tests
+        run: python -B -m unittest discover -s x2d/pixel-shift/CodeTests -p 'test_*.py'
+
+      - name: Synthetic model schema and output isolation tests
+        run: python -B -m unittest discover -s x2d/tools/model-structure/CodeTests -p 'test_*.py'

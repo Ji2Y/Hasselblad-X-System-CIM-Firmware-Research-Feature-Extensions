@@ -36,6 +36,9 @@ The directories are read-only inputs and are never copied into this repository. 
 | Doom | [module](x2d/doom/README.md) | Engine/audio builds and desktop input checks |
 | Shimeji | [module](x2d/shimeji-overlay/README.md) | Native desktop engine, transparent QML and synthetic traces |
 | Shutter | [preview](x2d/CodeTests/shutter-animation-preview/README.md) | Browser/QML preview and timing analysis |
+| PDAF / spectral AWB | [read-only tools](x2d/tools/firmware-analysis/focus-and-spectral/README.md) | Pinned operator-provided ELF/configuration inputs, static evidence only |
+| Pixel shift | [offline library](x2d/pixel-shift/README.md) | Host C build, miniature output and synthetic sparse RAW fixtures; no capture |
+| Model structure | [schema checks](x2d/tools/model-structure/README.md) | Operator-provided TFLite schema/index inspection; no decryption/inference |
 
 ## 中文说明
 
@@ -44,3 +47,9 @@ The directories are read-only inputs and are never copied into this repository. 
 在仓库根目录运行上面的离线套件。默认不提供固件输入时，依赖外部输入的用例会跳过；需要时显式指定四个只读固件目录。Qt／原生桌面检查按对应模块说明执行，不自动下载依赖。
 
 离线候选、能够显示的菜单或接口契约通过，不代表相机性能、稳定性或跨机型兼容性已通过验收。
+
+## 2026-10-12 新增源码复现
+
+像素位移套件需要主机 `cc`，只生成临时合成稀疏文件，完整原片与四亿 DNG 不公开。模型结构的合成夹具检查需要 tflite 2.18.0 和 flatbuffers 25.12.19；缺少依赖会明确跳过，不算完成结构检查。对焦／光谱脚本须由操作者提供固定版本输入，命令见其 README。
+
+本次发布不会运行相机部署、推理或真实图像采集。原始完整工具包、原厂输入、模型、照片及部分历史设备证据未提供，不能仅凭本库重建全部报告。独立 Startup Studio 以其版本化源码与许可为准，不包含在本库离线套件内。
