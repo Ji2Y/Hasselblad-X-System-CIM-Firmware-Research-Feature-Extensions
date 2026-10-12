@@ -34,7 +34,8 @@
 ## 复现材料与操作边界
 
 - 官方输入：[X2D 100C 4.2.0 CIM](https://cdn.hasselblad.com/firmware/X2D-100C-Firmware/4.2.0/X2D_100C_v4_2_0.cim)。固件文件和提取出的原厂二进制仅在本机临时目录，不随仓库提供。
-- CIM 解包依据：[固定修订的公开提取器](https://github.com/YuHaoyua/hasselblad-cim-firmware-extractor/blob/768664267cb44621c3c12595ee9cc538020b1b94/hasselblad_extract.py)，源码 SHA-256 为 `96461ea1baec8df4cf42925eedc2f79f673078d828c5348b9a4a47b8bd2886fd`；原包、OTA 和 GUI 分别按上文的 SHA-256 核对。
+- 固件提取研究致谢：[derrickyau9 的 X1D II 研究](https://github.com/derrickyau9/Hasselblad_X1D_II_FirmwareDump)，固件提取由其在该研究中实现。
+- 历史 CIM 解包工具记录：[固定修订的公开提取器](https://github.com/YuHaoyua/hasselblad-cim-firmware-extractor/blob/768664267cb44621c3c12595ee9cc538020b1b94/hasselblad_extract.py)，源码 SHA-256 为 `96461ea1baec8df4cf42925eedc2f79f673078d828c5348b9a4a47b8bd2886fd`；原包、OTA 和 GUI 分别按上文的 SHA-256 核对。
 - `system`／`vendor` 镜像由仓库的 [`sdat2img.py`](../../tools/firmware-analysis/sdat2img.py)在电脑上还原；Qt 编译单元可用 [`qml_unit_search.py`](../../tools/firmware-analysis/qml_unit_search.py)只读检查。Qt 资源树由 ELF 内的 `qt_resource_struct`、`qt_resource_name`、`qt_resource_data` 静态解析。
 - `normal.img`／`bootarea.img` 使用公开的 [`dji_imah_fwsig.py`](https://github.com/o-gs/dji-firmware-tools/blob/master/dji_imah_fwsig.py)只读解析；外部工具和解包文件没有纳入仓库。
 - 原厂二进制保持原样；已另存主屏测试副本，未生成可刷包、连接设备或验证实机显示。

@@ -28,11 +28,13 @@
 
 ### 2. CIM 离线解包
 
-公开参考：[hasselblad-cim-firmware-extractor](https://github.com/YuHaoyua/hasselblad-cim-firmware-extractor)。本研究原先参考的固定修订为 `768664267cb44621c3c12595ee9cc538020b1b94`，其脚本地址为：
+固件提取研究来源与致谢：[derrickyau9 的 X1D II 研究](https://github.com/derrickyau9/Hasselblad_X1D_II_FirmwareDump)。
+
+历史复现工具快照：[hasselblad-cim-firmware-extractor](https://github.com/YuHaoyua/hasselblad-cim-firmware-extractor)。本研究原先参考的固定修订为 `768664267cb44621c3c12595ee9cc538020b1b94`，其脚本地址为：
 
 <https://raw.githubusercontent.com/YuHaoyua/hasselblad-cim-firmware-extractor/768664267cb44621c3c12595ee9cc538020b1b94/hasselblad_extract.py>
 
-这是外部工具，不随包分发。其公开用法是安装 `pycryptodome` 后，在电脑上运行：
+以下固定脚本是当时实际使用的外部工具记录，不代表固件提取研究的原创归属，也不随包分发。其公开用法是安装 `pycryptodome` 后，在电脑上运行：
 
 ```text
 python hasselblad_extract.py X2D_100C_v4_2_0.cim

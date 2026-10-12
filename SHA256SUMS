@@ -10,11 +10,11 @@ b562ae62f5a70e4aba866bbe214fbc0bfd9f1f53288cb6cbf9a5dcb13ec59d39  ./AGENTS.md
 25ca0e09198a82ccbc6b7fdcbceb71c8feb7109570315d098b0ee4f032e4cd36  ./MIGRATION_DEPENDENCIES.md
 52212867dc1e8b6392b411b28f6f65df09559e2927cad16c712bd5894b6d445e  ./NOTICE.md
 bbd2e31cb60eb2583c892d5c9758e57a87fd264720a3a56e44da85d1f318bc6a  ./PUBLISH_CHECKLIST.md
-89d6470ca4ec95f5bfe49f353f04b3ea2190b0d7dc0df2b5760877cf6bd73b07  ./README.md
+d8c7bbe9f254999d1b4e9aaef530ca6b6a062dfe2f380ff25561eab672b70987  ./README.md
 0093e5e41c98a0783cfd36b67c58b514a9a26fb8b216f1d13880b97df47ae7c3  ./REPRODUCE.md
 5333b455028de650690e96122243a54fa83dd25ff3a30edb9e467a68a7db8770  ./RESEARCH_RESULTS.md
 0a47417db599953b77edb0fa5a1432407a76bb0a063ccaab50f94ccd63595a26  ./SECURITY.md
-c7aab4b20ce736d219fe485f54a810f1ac628a8e25aa3fbd8f7a3b54e6e44534  ./THIRD_PARTY_NOTICES.md
+ca049088a4568815f276c481e400d84e6552ae834feae11d688743ab09a0e2b1  ./THIRD_PARTY_NOTICES.md
 f4735567286143aa2e753bdd94605c519d170b352464a8809cb55051f78a5e0e  ./scripts/reproduce_offline.py
 849ce5c7629581f512530249b62b41c3c7d266a800b94d27313ceb4dec4e4473  ./scripts/validate_public_repo.py
 3b4120486df551196b977c41d3110f8b082b5abdb0ec108b0da7be8629b917a0  ./x2d/CodeTests/README.md
@@ -37,7 +37,7 @@ fabef24e792bea7a7f8e3f7f444d5d404a4d5ffaad9a3f6ce7ec4e8f4d21f878  ./x2d/CodeTest
 6d143b22a0ded257b0539eeb95772276f9ebf4a3be2e8d5b072f07e55aa46552  ./x2d/CodeTests/temporary_af_speed_probe/PDAF_DIRECTION_CONTROL.md
 4cb18c4bbd3e2fe3696c007bbebb211aa504b42bb8b49efa80fd55cf8a90f5c6  ./x2d/CodeTests/temporary_af_speed_probe/PDAF_EARLY_SLOWDOWN.md
 f1a3cee6f179cb55733abb2f028b6543dd2ecb4f558cb24d326bd6ee3912280a  ./x2d/CodeTests/temporary_af_speed_probe/README.md
-a603d006296d080b153c0887e57b33a351aa24d6d67a9479da1e19419ee93501  ./x2d/CodeTests/temporary_af_speed_probe/X2D_AF_STANDALONE_HANDOFF.md
+91331271b52d76783b89218d498b3f2d12fe295ea738b6f0cd120e2f356eda8b  ./x2d/CodeTests/temporary_af_speed_probe/X2D_AF_STANDALONE_HANDOFF.md
 6d1c278125a8ac97499ff59c0a3b0a5919b7eb8593f09cb38db1aa9e086bafb1  ./x2d/CodeTests/temporary_af_speed_probe/fastscan.S
 96d7564f8a4b203e65cf491dd614dcb2652ad1c8e272990562071212d1f1ef4d  ./x2d/CodeTests/temporary_af_speed_probe/original-menu-candidate/Bootstrap.qml
 74c5741be8bd3f9f0b36db0fb7eedac833c1980294b19681874a4f8ce3daa923  ./x2d/CodeTests/temporary_af_speed_probe/original-menu-candidate/LIVE-DEVICE-TEST.md
@@ -65,7 +65,7 @@ b1648d00f86f0c87f1d5f5f6a3c8d54809fa3535572c474fbf1c436f767127ed  ./x2d/CodeTest
 13d5e2082a8b529d65e28735b7a3618d8f72b0bb118ad0f6c6abdc5f65f7d05c  ./x2d/CodeTests/temporary_af_speed_probe/pdaf-scan-type1-candidate/build_candidate.py
 c8c9da487557fbd666622266ad2f3f6f15fd6eb5e156fca9883a3e600e872049  ./x2d/CodeTests/temporary_af_speed_probe/pdaf-scan-type1-candidate/evaluate_benchmark.py
 2ae15e12ab5ea9f3feaa4460f12e811ab69cbfb8081d83ea2b74c1c0e4a3dec6  ./x2d/CodeTests/temporary_af_speed_probe/pdaf-scan-type1-candidate/test_candidate.py
-934e884af6003c13ddaf612ef0ddf27bd16eab1398ee432b89f6ae0d11d64d1b  ./x2d/CodeTests/temporary_af_speed_probe/standalone_handoff/README.md
+3c5ee397b186a80b772e3112a433c3d7c77bba99ddf98c25413037b7af0c5f47  ./x2d/CodeTests/temporary_af_speed_probe/standalone_handoff/README.md
 79eda79008965395f3473499715b6d0e4791acbbadb6cd2555b030261a86412d  ./x2d/CodeTests/temporary_af_speed_probe/standalone_handoff/extract_ota.py
 6d1c278125a8ac97499ff59c0a3b0a5919b7eb8593f09cb38db1aa9e086bafb1  ./x2d/CodeTests/temporary_af_speed_probe/standalone_handoff/fastscan.S
 b674e73dabce62bd5ec93295dcecd634663c0560f55e50d657d149381f0884f1  ./x2d/CodeTests/temporary_af_speed_probe/standalone_handoff/offline_elf.py
@@ -140,7 +140,7 @@ a3d4f223e8ed37c11070e711a4239a7afda01973bf26e77e45f961f4b6bb3f64  ./x2d/pixel-sh
 eb9f330fa54242b77c7d6444cba47eaba58232c68e2812fed06825faaf122098  ./x2d/pixel-shift/native/render.h
 440d50a8985a66ce54b1d6ebb243f2a8494488b391ec49bceaa2846c6bdf6b82  ./x2d/pixel-shift/native/vendor/Hasselblad-Feature-Extensions-LICENSE
 88268bf29f50b0dac35de1e0c08098d3a52444a52310525ffba12aa5b4fcd506  ./x2d/pixel-shift/native/vendor/six_row_kernel.h
-d3e00aa59ecc5caece2c48ba89c38d0eba9d9738a3f7f3eee948be5badb3007c  ./x2d/references/EXTERNAL-RESEARCH.md
+224bb7ed0e631ce1aa0d2e1a3a6d9f3cd309c023e14cb04ad050c4d25e6bf8f7  ./x2d/references/EXTERNAL-RESEARCH.md
 8b92478114ce45e4c4e51f5381c3b08abc9929938d4425b1eab8ee3663b2ca8e  ./x2d/research/4.2.0/AF-EYE-AND-SPEED-UPDATE.md
 b3f709b3057f3feaa3269698da07546af14cb9ba313cd615a250577e2032550c  ./x2d/research/4.2.0/AF-NATIVE-PARAMETERS-AND-TRIALS.md
 ee1007269d9ae7cd2218824c453fa82216232081b5a17e08b464a2a81f5a414d  ./x2d/research/4.2.0/AFT-FACE-TRACKING-RESULTS.md
@@ -157,7 +157,7 @@ b1ed93632b257bbcca4da8bdef2de9a90e5360301aa101ff49b2ef09e8d09d86  ./x2d/research
 7bd6c0f1283931df6630b517a3242cc7556ec4713d29830848ce6ecde6f2ed43  ./x2d/research/4.2.0/PIXEL-SHIFT-CAPTURE-RESULTS.md
 0cf1bb3e4a07e879ed90eac3705f73b69115f4c28246f226abe311f0f1c92047  ./x2d/research/4.2.0/SECURITY-DISCLOSURE-STATUS.md
 9d322a1d6dbd6d3189296bf497c69acf2dd77c8cd99f44fcc5c134086f308cce  ./x2d/research/4.2.0/SPECTRAL-WHITE-BALANCE.md
-34b142c5a72f6f949bdc4d2a2907893e7e34cb60ff2b2e638a464d8d31dfb03d  ./x2d/research/4.2.0/STARTUP-LOGO-LOCATION.md
+9989a9cb5438b5a6ef450da03fb6a99aded0e45f5f59f3dea1b9a5695677bfad  ./x2d/research/4.2.0/STARTUP-LOGO-LOCATION.md
 820f12087b9a40a3c85f36cfc3e751e4fa9aac69a360317f0c964b8d0a2b26f7  ./x2d/research/4.2.0/STARTUP-LOGO-REPLACEMENT.md
 e64e27486be7bd2de42d83658666ce4b2ed0e8c876d75766b192be0fe9575c87  ./x2d/research/4.2.0/STARTUP-STUDIO-UPDATE.md
 fc52c9455220f951eb35ed25801b5814ee2739890d350dee010924f321375767  ./x2d/research/4.2.0/TEMPORARY_WIFI_BUTTON_TRIAL.md

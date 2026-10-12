@@ -36,10 +36,11 @@ The external projects below helped shape the research questions and analysis
 methods. They are cited as provenance and acknowledgement, not as vendored
 dependencies or proof of the results in this repository.
 
+**Special thanks to [@derrickyau9](https://github.com/derrickyau9): for sacrificing an X1D II in his research, helping make today's firmware-unpacking methods and the flourishing research community possible. We are grateful for the cost he bore and the path his work opened for others.** See his [X1D II research](https://github.com/derrickyau9/Hasselblad_X1D_II_FirmwareDump).
+
 - [`x2d-cim-notes`](https://github.com/Konamill-bot/x2d-cim-notes) was the direct inspiration for investigating whether the X2D 100C's in-camera firmware retained an AF-C capability or a disabled AF-C path. It helped separate the questions of code-path presence, UI gating, and actual camera behavior.
-- [`hasselblad-cim-firmware-extractor`](https://github.com/YuHaoyua/hasselblad-cim-firmware-extractor) helped establish CIM container and extraction terminology for the offline firmware-format work.
+- [**@derrickyau9**](https://github.com/derrickyau9) implemented firmware extraction in his [Hasselblad X1D II research](https://github.com/derrickyau9/Hasselblad_X1D_II_FirmwareDump). We acknowledge that work as the source of the firmware-extraction research reference.
 - [`x2d-pdaf-sim`](https://github.com/Konamill-bot/x2d-pdaf-sim) provided related PDAF decision-policy simulation context for the AF-S speed model; its simulation is not treated as hardware evidence.
-- [`hasselblad-x1d-reverse-engineering`](https://github.com/YuHaoyua/hasselblad-x1d-reverse-engineering) provided historical reverse-engineering and documentation context while remaining outside the X2D/X2D II implementation scope.
 
 The public menu candidate includes the source-level [`X2dNativeMenuLoader.qml`](x2d/CodeTests/temporary_af_speed_probe/original-menu-candidate/X2dNativeMenuLoader.qml), the [`Bootstrap.qml`](x2d/CodeTests/temporary_af_speed_probe/original-menu-candidate/Bootstrap.qml) attach logic, and the [`twelfth-entry SVG icon`](x2d/CodeTests/temporary_af_speed_probe/original-menu-candidate/assets/ic_main_menu_play.svg). The generated vendor QML unit and device installation package remain intentionally excluded.
 
@@ -109,10 +110,11 @@ The check rejects known binary or firmware formats, personal absolute paths, lik
 下面的外部项目帮助确定研究问题和分析方法。它们在此作为来源记录和致谢，
 不是被 vendoring 进来的依赖，也不是本仓库结论的直接证据。
 
+**特别感谢 [@derrickyau9](https://github.com/derrickyau9)：献祭一台 X1D II，换来了今天的解包方法与后续研究的繁荣。感谢他为这条研究道路付出的代价与作出的贡献。** [查看他的 X1D II 研究](https://github.com/derrickyau9/Hasselblad_X1D_II_FirmwareDump)。
+
 - [`x2d-cim-notes`](https://github.com/Konamill-bot/x2d-cim-notes) 是调查 X2D 100C 机内固件是否保留 AF-C 能力或被关闭 AF-C 路径的直接启发来源。它帮助我们把“代码路径存在”“界面 gate 开放”和“实机行为成立”区分开。
-- [`hasselblad-cim-firmware-extractor`](https://github.com/YuHaoyua/hasselblad-cim-firmware-extractor) 帮助建立离线固件格式研究中的 CIM 容器和解包术语。
+- 感谢 [**@derrickyau9**](https://github.com/derrickyau9)：他在 [Hasselblad X1D II 研究](https://github.com/derrickyau9/Hasselblad_X1D_II_FirmwareDump)中实现了固件提取，为本项目的固件提取研究提供了来源参考。
 - [`x2d-pdaf-sim`](https://github.com/Konamill-bot/x2d-pdaf-sim) 提供了 PDAF 决策策略仿真的相关背景，用于理解 AF-S 速度模型；其仿真不能替代实机证据。
-- [`hasselblad-x1d-reverse-engineering`](https://github.com/YuHaoyua/hasselblad-x1d-reverse-engineering) 提供了历史逆向和文档方法背景，但 X1D 不属于当前 X2D/X2D II 实现范围。
 
 公开的菜单候选现在包含[源码级 `X2dNativeMenuLoader.qml`](x2d/CodeTests/temporary_af_speed_probe/original-menu-candidate/X2dNativeMenuLoader.qml)、[`Bootstrap.qml`](x2d/CodeTests/temporary_af_speed_probe/original-menu-candidate/Bootstrap.qml) 接入逻辑，以及[第十二格 SVG 图标](x2d/CodeTests/temporary_af_speed_probe/original-menu-candidate/assets/ic_main_menu_play.svg)。生成后的原厂 QML 编译单元和设备安装包仍有意不随仓库发布。
 

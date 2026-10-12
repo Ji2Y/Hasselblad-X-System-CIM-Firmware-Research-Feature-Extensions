@@ -28,27 +28,24 @@ The upstream README states that its documentation is under CC BY-SA 4.0 and
 its diagnostic tool source is under the MIT License. Any future quotation or
 adaptation must preserve the applicable attribution and share-alike terms.
 
-### CIM container extraction reference
+### Firmware-extraction research and special acknowledgement
 
-**YuHaoyua.** *Hasselblad CIM Firmware Decryptor & Extractor*.
-GitHub. <https://github.com/YuHaoyua/hasselblad-cim-firmware-extractor>
+**[derrickyau9](https://github.com/derrickyau9).** *Hasselblad X1D II FirmwareDump*.
+GitHub: <https://github.com/derrickyau9/Hasselblad_X1D_II_FirmwareDump>
+Reviewed revision: `f39ac51d6b92c19f9b34e35d5f32f985a1c1cbe5` (2026-10-12).
 
-This is a public reference for CIM container structure and extraction
-terminology used when organizing the offline firmware-format work. No
-firmware, key material, extracted output, or source file from that repository
-is included here. GitHub identifies the upstream repository as MIT-licensed;
-pin the exact commit and retain the upstream notice before adapting any code.
+Firmware extraction was implemented in his X1D II research. We acknowledge
+**derrickyau9** as the source of this firmware-extraction research reference.
+Special thanks for sacrificing an X1D II in pursuit of that work, helping make
+today's unpacking methods and the flourishing research community possible.
 
-### Related X1D reverse-engineering reference
-
-**YuHaoyua.** *Hasselblad X1D Reverse Engineering*.
-GitHub. <https://github.com/YuHaoyua/hasselblad-x1d-reverse-engineering>
-
-This repository is a related historical and methodological reference only.
-X1D is outside the current X2D/X2D II implementation scope, and its addresses,
-images, device observations, and conclusions are not reused as X2D evidence.
-The upstream repository contains a license file; verify its exact terms before
-copying or adapting anything. No material from it is redistributed here.
+This is a research citation and acknowledgement. No upstream firmware dump or
+source is copied into this project. X1D II device observations, images and
+addresses are not treated as X2D/X2D II validation. The upstream repository did
+not expose a repository license in this review; this reference is not a grant
+to redistribute its materials. Fixed extractor-script links in historical
+reproduction notes identify the tool actually used, separately from original
+research credit.
 
 ### PDAF simulation reference
 
@@ -101,23 +98,20 @@ GitHub：<https://github.com/Konamill-bot/x2d-cim-notes>
 上游 README 说明其文档使用 CC BY-SA 4.0，诊断工具源码使用 MIT 许可证。未来如
 引用或改编，必须保留相应署名及相同方式共享要求。
 
-### CIM 容器解包参考
+### 固件提取研究来源与特别致谢
 
-**YuHaoyua。**《Hasselblad CIM Firmware Decryptor & Extractor》。
-GitHub：<https://github.com/YuHaoyua/hasselblad-cim-firmware-extractor>
+**[derrickyau9](https://github.com/derrickyau9)。**《Hasselblad X1D II FirmwareDump》。
+GitHub：<https://github.com/derrickyau9/Hasselblad_X1D_II_FirmwareDump>
+本次核对版本：`f39ac51d6b92c19f9b34e35d5f32f985a1c1cbe5`（2026-10-12）。
 
-这是整理离线固件格式工作时使用的 CIM 容器结构和解包术语参考。仓库没有收录其
-固件、密钥材料、解包结果或源码文件。GitHub 页面将上游仓库标为 MIT 许可证；若
-未来改编代码，应先固定确切 commit 并保留上游声明。
+固件提取是他在 X1D II 研究中实现的，本项目将这项研究的来源致谢归于 **derrickyau9**。
 
-### X1D 逆向相关参考
+**特别感谢 derrickyau9：献祭一台 X1D II，换来了今天的解包方法与后续研究的繁荣。感谢他为这条研究道路付出的代价与作出的贡献。**
 
-**YuHaoyua。**《Hasselblad X1D Reverse Engineering》。
-GitHub：<https://github.com/YuHaoyua/hasselblad-x1d-reverse-engineering>
-
-这是相关的历史和方法参考。X1D 不属于当前 X2D/X2D II 的实现范围，其地址、镜像、
-设备观察和结论不会被当作 X2D 证据复用。上游仓库有许可证文件，但在复制或改编前
-仍需核对确切条款。本项目不再分发其中任何材料。
+本条仅记录研究来源和致谢，没有复制上游固件 dump 或源码。X1D II 的地址、镜像及
+设备观察不会作为 X2D/X2D II 验收复用。本次没有找到上游仓库级许可证，不将引用
+当作再分发许可。历史复现文档的固定提取脚本链接只记录当时实际使用的技术输入，
+与固件提取研究的原创致谢分开。
 
 ### PDAF 仿真参考
 

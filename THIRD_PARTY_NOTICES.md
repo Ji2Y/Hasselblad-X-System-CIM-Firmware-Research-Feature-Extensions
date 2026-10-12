@@ -18,8 +18,7 @@ repository.
 ## Public references used by the research
 
 - `WeiCheng97/Hasselblad-X2d-series-5g-unlock` — public X2D protocol reference; upstream repository reports an MIT license. Before release, record the exact commit used and identify any files that contain copied or adapted code.
-- `YuHaoyua/hasselblad-cim-firmware-extractor` — public CIM extraction reference; upstream repository reports an MIT license. Record the exact commit and retained notices before release.
-- `YuHaoyua/hasselblad-x1d-reverse-engineering` — related X1D reverse-engineering reference only; it is outside the current X2D/X2D II implementation scope. Verify its exact license before reuse.
+- [derrickyau9/Hasselblad_X1D_II_FirmwareDump](https://github.com/derrickyau9/Hasselblad_X1D_II_FirmwareDump/tree/f39ac51d6b92c19f9b34e35d5f32f985a1c1cbe5) — firmware-extraction research implemented in the author's X1D II work; acknowledged as the original research reference. Citation only: no upstream firmware dump or source is copied here. No repository license was identified in the 2026-10-12 check; this citation does not grant redistribution rights. Historical extractor-script snapshots in reproduction notes identify the actual past input and are separate from original research credit.
 - `Konamill-bot/x2d-pdaf-sim` — related X2D 100C 4.2.0 PDAF simulation reference; upstream README reports an MIT license. No source or generated output is copied here.
 - `Konamill-bot/x2d-cim-notes` — primary inspiration for the X2D AF-C investigation; documentation reports CC BY-SA 4.0 and diagnostic tools report MIT. No source or documentation is copied here.
 - Qt Declarative 6.4.1 — compiled-QML format and API reference. Qt components may use different commercial, LGPL, GPL or third-party licenses; this repository does not redistribute Qt binaries.
