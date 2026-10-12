@@ -1,12 +1,10 @@
 # Hasselblad X-System CIM Firmware Research & Feature Extensions
 
-## 赞助开发 / Support development
+## 欢迎交流 / Discussion and contributions
 
-**[PayPal 赞助 →](https://paypal.me/RadiumWang) · [支付宝收款码 →](https://github.com/radium-wang/x2d-907-one-click-extension-toolkit#support-development)**
+欢迎交流、分享研究发现和使用反馈。欢迎通过 [Issues](https://github.com/radium-wang/Hasselblad-X-System-CIM-Firmware-Research-Feature-Extensions/issues) 讨论问题与建议，也欢迎提交 [Pull Requests](https://github.com/radium-wang/Hasselblad-X-System-CIM-Firmware-Research-Feature-Extensions/pulls) 改进代码、文档和测试。
 
-[![Support via PayPal](https://img.shields.io/badge/Support-PayPal-0070ba?style=for-the-badge)](https://paypal.me/RadiumWang)
-
-赞助完全自愿，用于支持持续研究、工具开发和维护；获取工具与使用功能不以付款为条件。 Donations are voluntary and support ongoing research, development and maintenance.
+Discussion, research findings and feedback are welcome. Please use [Issues](https://github.com/radium-wang/Hasselblad-X-System-CIM-Firmware-Research-Feature-Extensions/issues) for questions and suggestions, and submit [Pull Requests](https://github.com/radium-wang/Hasselblad-X-System-CIM-Firmware-Research-Feature-Extensions/pulls) to improve code, documentation and tests.
 
 ---
 
