@@ -19,12 +19,13 @@ The X2D tree covers firmware 4.2.0 unless a document states otherwise.
 
 The public tree contains offline analysis, source UI and desktop tests. Vendor inputs, generated units, camera deployment tools and operating instructions are not included.
 
-## 最新研究汇总（更新至 2026-10-12）
+## 最新研究汇总（更新至 2026-10-13）
 
 最新验收状态以[成果总表](../RESEARCH_RESULTS.md)及分主题报告为准，早期“尚未验证”文字保留其历史范围。
 
 - [AFT、眼部共存与三档速度](research/4.2.0/AF-EYE-AND-SPEED-UPDATE.md)
 - [像素位移实拍、倒计时及 JSR 电脑合成](research/4.2.0/PIXEL-SHIFT-CAPTURE-RESULTS.md)；[独立离线 C 处理库](pixel-shift/README.md)
+- [JSR 原生 Metal、单张原片三方对比与蓝鸟细节扫描](research/4.2.0/JSR-METAL-COMPARISON.md)：纯重建记录约 9.41 倍提速，可见精细度相当，严格逐像素一致性失败
 - [Startup Studio 应用与菜单生命周期](research/4.2.0/STARTUP-STUDIO-UPDATE.md)
 - [一代模型解密、签名与独立 CPU 合成输入测试](research/4.2.0/MODEL-DECRYPTION-AND-CPU-RESULTS.md)；[TFLite 结构工具](tools/model-structure/README.md)
 - [425 区域边界](research/4.2.0/PDAF-425-BOUNDARIES.md)、[采样几何](research/4.2.0/PDAF-SAMPLING-GEOMETRY.md)、[控制策略对照](research/4.2.0/FOCUS-STRATEGY-PORT-BOUNDARIES.md)

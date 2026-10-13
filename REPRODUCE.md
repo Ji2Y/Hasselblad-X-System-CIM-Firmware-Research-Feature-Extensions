@@ -53,3 +53,7 @@ The directories are read-only inputs and are never copied into this repository. 
 像素位移套件需要主机 `cc`，只生成临时合成稀疏文件，完整原片与四亿 DNG 不公开。模型结构的合成夹具检查需要 tflite 2.18.0 和 flatbuffers 25.12.19；缺少依赖会明确跳过，不算完成结构检查。对焦／光谱脚本须由操作者提供固定版本输入，命令见其 README。
 
 本次发布不会运行相机部署、推理或真实图像采集。原始完整工具包、原厂输入、模型、照片及部分历史设备证据未提供，不能仅凭本库重建全部报告。独立 Startup Studio 以其版本化源码与许可为准，不包含在本库离线套件内。
+
+## 2026-10-13 JSR 实拍对照记录
+
+[简要对比与科研图](x2d/research/4.2.0/JSR-METAL-COMPARISON.md)只随库提供摘要和两张 PNG；详细数据留在本地。私有 RAW、已删除的完整 DNG、JSR 运行时及模型未提供，不能只下载本仓库重跑该实验。

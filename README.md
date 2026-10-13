@@ -11,7 +11,7 @@ Discussion, research findings and feedback are welcome. Please use [Issues](http
 
 An independent, non-official research project on Hasselblad X-System camera interoperability, user interfaces, autofocus behavior, feature extensions, and firmware formats.
 
-**研究更新至 2026-10-12：** [AFT／眼部共存与三档速度](x2d/research/4.2.0/AF-EYE-AND-SPEED-UPDATE.md) · [4／6／16 张实拍与电脑四亿 DNG](x2d/research/4.2.0/PIXEL-SHIFT-CAPTURE-RESULTS.md) · [Startup Studio](x2d/research/4.2.0/STARTUP-STUDIO-UPDATE.md) · [一代模型解密与独立 CPU 测试](x2d/research/4.2.0/MODEL-DECRYPTION-AND-CPU-RESULTS.md) · [完整成果表](RESEARCH_RESULTS.md)。新增 [PDAF／光谱只读工具](x2d/tools/firmware-analysis/focus-and-spectral/README.md)、[像素位移离线处理库](x2d/pixel-shift/README.md) 和 [TFLite 结构检查](x2d/tools/model-structure/README.md)。历史实机、离线检查及待验证内容分别标注，不提供设备部署后端。
+**研究更新至 2026-10-13：** [AFT／眼部共存与三档速度](x2d/research/4.2.0/AF-EYE-AND-SPEED-UPDATE.md) · [4／6／16 张实拍与电脑四亿 DNG](x2d/research/4.2.0/PIXEL-SHIFT-CAPTURE-RESULTS.md) · [JSR Metal 加速、原片三方对比与细节扫描](x2d/research/4.2.0/JSR-METAL-COMPARISON.md) · [Startup Studio](x2d/research/4.2.0/STARTUP-STUDIO-UPDATE.md) · [一代模型解密与独立 CPU 测试](x2d/research/4.2.0/MODEL-DECRYPTION-AND-CPU-RESULTS.md) · [完整成果表](RESEARCH_RESULTS.md)。新增 [PDAF／光谱只读工具](x2d/tools/firmware-analysis/focus-and-spectral/README.md)、[像素位移离线处理库](x2d/pixel-shift/README.md) 和 [TFLite 结构检查](x2d/tools/model-structure/README.md)。历史实机、离线检查及待验证内容分别标注，不提供设备部署后端。
 
 This repository contains only source code, offline tools, tests, and sanitized research findings that contributors are authorized to publish. Vendor firmware, original shared libraries, models, DSP or kernel files, extracted or modified QML compilation units, device logs, and local build products are not distributed here.
 

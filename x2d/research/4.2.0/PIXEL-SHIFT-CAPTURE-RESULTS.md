@@ -32,6 +32,10 @@
 
 四个输入均保留，原处理算法没有修改。尺寸和完整性不证明四倍光学细节、颜色优于 Phocus 或六／十六张合成已完成。JSR 模型、权重、发行程序、用户原片、输出 DNG 和预览不随本仓库提供；引用来源为 [Jiangtherapee / JSR](https://github.com/y-g-jiang/Jiangtherapee-Super-Resolution-World-Best) 与 [v9.8 发行](https://github.com/y-g-jiang/Jiangtherapee-Super-Resolution-World-Best/releases/tag/v9.8)。
 
+## 2026-10-13 电脑端后续对照
+
+同组四帧新增原生 Apple Metal 离线重建，完整进程约 18.77 分钟，日志纯重建约 17.37 分钟。对照旧 Wine 输出与单张 AHD 基线，保留科研图、全图差异聚合测量及蓝鸟腹部的原片细节扫描。两次四帧可见精细度相当，但严格逐像素一致性失败；缓存复用使完整计时不构成受控冷启动基准。完整成片已按用户要求删除，仅原片与实验记录留在本地。详情见 [JSR Metal 对比报告](JSR-METAL-COMPARISON.md)。
+
 ## 本仓库的离线源码
 
 [pixel-shift 模块](../../pixel-shift/README.md) 收录此前自有四／六帧原尺寸合成及渲染库、固定 MIT 六行内核和无设备测试。它与 JSR 四亿重建是不同处理器；本库 C 合成库没有取得新的全尺寸实拍成片验收，也不包含机内安装器、原厂处理库或编译载荷。
