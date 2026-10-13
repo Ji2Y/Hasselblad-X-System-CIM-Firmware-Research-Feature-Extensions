@@ -1,22 +1,23 @@
-# X2D 四帧 JSR：原片、Wine 与 Metal 简要对比
+# X2D JSR：蓝鸟腹部与文字的解析表现
 
-更新：2026-10-13。第一代 Hasselblad X2D 100C 的同组四张 RAW，在 M1 Pro 16 GB 上完成电脑端离线对照；不是机内加速或本库 C 合成器验收。前序实拍见 [采集报告](PIXEL-SHIFT-CAPTURE-RESULTS.md)。
+更新：2026-10-13。第一代 X2D 100C 同组四帧的电脑端离线对照。重点为用户实际对焦的蓝鸟腹部，以及细节候选的印刷字和手写笔画；前序实拍见 [采集报告](PIXEL-SHIFT-CAPTURE-RESULTS.md)。
 
-- 四帧相较单张 AHD 基线，可见彩色颗粒更少，文字和纤维更连续；没有真值，不能据此宣称四倍光学细节。
-- Wine／WGPU 与原生 Metal 的可见精细度基本相当。全图 RMSE 为 0.619 DN，98.45% 的颜色样本差异≤1 DN；严格逐像素一致性未通过。
-- 日志纯重建由 163.55 分钟降至 17.37 分钟，耗时比约 9.41。Metal 完整进程约 18.77 分钟并复用配准缓存，不是受控冷启动基准。
-- 用户对焦点在蓝鸟腹部。原片细节扫描的首位候选为稿纸上方手写笔画 `(2496, 2624)`，右上印刷字也适合观察边缘；蓝鸟腹部进入有效窗口的前约 8%。该指标受反差、纹理和噪声影响，不能判断焦平面或对焦偏差。
+- **Wine 与 Metal：** 三处局部的可见解析细节基本相同，线性强度剖面接近重合；共同显示处理后的 8-bit RGB 最大差异均为 1，没有发现哪一次分开了更多纤维或笔画。
+- **四帧与单张：** 合成后的彩色颗粒和伪色更少，编织轮廓、字画更连贯，细节更容易辨认。绿色通道剖面的主要峰谷接近，未显示明显新增的一层可分辨结构；这组自然场景不支持几倍光学解析力的结论。
+- **复算核验：** 完整成片此前已删除，因此按两次原流程、原全图网格和已保存色差参数重算局部及周边上下文。两后端各四个校验区域相对存档裁切的最大误差≤1 DN、RMSE≤0.004 DN。局部来自原 K4 模型与既定写出链，未另加锐化。
 
-## 三方局部对比
+## 同位置三方局部对照
 
-![单张原片、Wine 四帧与 Metal 四帧](assets/jsr-metal-20261013/Hasselblad-JSR-three-way-scientific-comparison.png)
+![蓝鸟腹部、印刷字和手写笔画的三方解析表现](assets/jsr-metal-20261013/Hasselblad-JSR-resolution-focus-comparison.png)
 
-单张 AHD 以最近邻重复 2× 展示；同一行使用相同视野、色彩转换和曝光增益，没有另加锐化。单张缺少 JSR 色差／高光重建，属于整体路线对照。B 为圆形挂饰附近纤维，不是蓝鸟；第四列只比较两次合成。
+每格覆盖 256×256 原片像素／512×512 合成像素。单张为 AHD，原生像素最近邻重复 2×；同一行使用相同视野、色彩转换和曝光，没有另加锐化。单张与四帧是整体处理路线对照。
 
-## 原片细节候选与蓝鸟腹部
+## 同位置强度剖面
 
-![原片细节候选位置及蓝鸟腹部](assets/jsr-metal-20261013/Hasselblad-single-frame-sharpness-search.png)
+![编织线及笔画的同位置线性强度剖面](assets/jsr-metal-20261013/Hasselblad-JSR-resolution-line-profiles.png)
 
-采用平滑后 DoG 截尾 RMS，256×256 原生窗口、128 像素步长，并排除暗、低反差及饱和区域。扫描 5,874 个窗口，1,788 个有效。纸张候选 +0 EV、蓝鸟 +2 EV 展示；分数使用共同的线性数据。新增位置只扫描原片，没有重新生成已删除的完整合成。
+灰点为单张原生采样，蓝线与绿线为两次四帧结果；使用线性绿色通道，在相同 y 区间作梯形平均，未进行横向滤波或按曲线拟合亮度。剖面用于核对细节形状，不是标定 MTF。
 
-处理路线参考 [JSR PR #2](https://github.com/y-g-jiang/Jiangtherapee-Super-Resolution-World-Best/pull/2) 固定提交 `7294095eb2b40e62f3349734ccde7ce28cb32cec` 和 [PR #3](https://github.com/y-g-jiang/Jiangtherapee-Super-Resolution-World-Best/pull/3)。本地使用 Bridge 2.3.12 作兼容集成，未再分发第三方程序或模型。详细测量、矢量图及脚本留在本地；本库只收录摘要和两张研究图。完整 DNG、预览与大缓存已按用户要求删除，四份原始 RAW 校验未变化。
+性能为次要记录：旧 Wine 纯重建 163.55 分钟，Metal 17.37 分钟；Metal 复用缓存，这不是受控冷启动基准。早期全图严格一致性门槛失败仍保留，局部吻合不代表全图逐像素相同。
+
+来源为 [JSR PR #2](https://github.com/y-g-jiang/Jiangtherapee-Super-Resolution-World-Best/pull/2)（`7294095eb2b40e62f3349734ccde7ce28cb32cec`）及 [PR #3](https://github.com/y-g-jiang/Jiangtherapee-Super-Resolution-World-Best/pull/3)，本地 Bridge 2.3.12 兼容集成、原 K4 权重；未再分发第三方程序或模型。大库仅提供概括和两张 PNG，详细数据、SVG、脚本留在本地。四份原始 RAW 保持完整，仅保留局部实验记录并清理临时运行材料。

@@ -55,7 +55,7 @@
 
 ## 分主题报告
 
-- [JSR Metal、单张原片三方对比与蓝鸟细节扫描](x2d/research/4.2.0/JSR-METAL-COMPARISON.md)
+- [JSR 蓝鸟腹部与文字的解析力三方对比](x2d/research/4.2.0/JSR-METAL-COMPARISON.md)
 
 - [Doom 实现与证据](x2d/research/4.2.0/DOOM-FEASIBILITY.md)及[源码/复现](x2d/doom/README.md)
 - [Shimeji 透明宠物模块](x2d/shimeji-overlay/README.md)

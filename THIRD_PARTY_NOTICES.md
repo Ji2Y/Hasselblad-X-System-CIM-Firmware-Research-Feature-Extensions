@@ -4,7 +4,7 @@ This file is a release checklist, not a claim that every referenced dependency i
 
 ## 2026-10-13 JSR 对照记录
 
-[JSR 简要报告与两张科研图](x2d/research/4.2.0/JSR-METAL-COMPARISON.md)引用上游 PR #2／#3；未复制其实现、字节码或模型。本地单张基线及绘图使用 rawpy 0.27.1／LibRaw 0.22.1、NumPy 2.2.6、Pillow 12.3.0、Matplotlib 3.10.9，均未 vendoring，各依赖许可独立适用。
+[JSR 简要报告与两张科研图](x2d/research/4.2.0/JSR-METAL-COMPARISON.md)引用上游 PR #2／#3；未复制其实现、字节码或模型。本地单张基线及绘图使用 rawpy 0.27.1／LibRaw 0.22.1（早期基线）及 0.22.2（同位置复算）、NumPy 2.2.6、Pillow 12.3.0、Matplotlib 3.10.9，均未 vendoring，各依赖许可独立适用。
 
 ## 2026-10-12 新增公开范围
 
