@@ -24,6 +24,13 @@ static void put_ptr(void *base, size_t offset, void *value) {
     memcpy((uint8_t *)base + offset, &value, sizeof value);
 }
 
+static int disjoint(const void *a, size_t asize, const void *b, size_t bsize) {
+    uintptr_t x = (uintptr_t)a, y = (uintptr_t)b;
+    if (!a || !b || !asize || !bsize || asize > UINTPTR_MAX - x ||
+        bsize > UINTPTR_MAX - y) return 0;
+    return x + asize <= y || y + bsize <= x;
+}
+
 static int plane(const void *descriptor, uint8_t *mapped, size_t mapped_size,
                  size_t field, size_t width, size_t height,
                  uint8_t **address, size_t *available, size_t *stride) {
@@ -45,6 +52,12 @@ static int plane(const void *descriptor, uint8_t *mapped, size_t mapped_size,
 }
 
 static void discard(cfv_mono_vmem_context *context) {
+    if (!context->private_ownership_verified) {
+        /* An unverified copy may still name the stock allocation. */
+        context->poisoned = 1;
+        context->in_flight = 0;
+        return;
+    }
     if (ptr(context->descriptor, FRAME_VMEM) &&
         context->ops->free_frame(context->user, context->descriptor) != 0) {
         /* The ownership state is unknown. Never reuse the descriptor. */
@@ -53,6 +66,17 @@ static void discard(cfv_mono_vmem_context *context) {
         return;
     }
     put_ptr(context->descriptor, FRAME_VMEM, NULL);
+    context->in_flight = 0;
+    context->private_ownership_verified = 0;
+}
+
+static void reject_unverified(cfv_mono_vmem_context *context,
+                              void *source_handle) {
+    /* No release callback is safe before distinct ownership is established.
+     * Retain an unknown allocation for recovery; never free the source. */
+    if (ptr(context->descriptor, FRAME_VMEM) == source_handle)
+        put_ptr(context->descriptor, FRAME_VMEM, NULL);
+    context->poisoned = 1;
     context->in_flight = 0;
 }
 
@@ -82,21 +106,22 @@ static int acquire(void *opaque, const void *stock,
                            context->source_read_sync_mode) != 0)
         return -1;
 
+    void *source_handle = ptr(stock, FRAME_VMEM);
+    context->private_ownership_verified = 0;
     memcpy(context->descriptor, stock, context->descriptor_size);
     put_ptr(context->descriptor, FRAME_VMEM, NULL);
     if (context->ops->deep_copy(context->user, context->descriptor, stock,
                                 context->allocation_flags) != 0) {
-        discard(context);
+        reject_unverified(context, source_handle);
         return -1;
     }
-    void *source_handle = ptr(stock, FRAME_VMEM);
     void *private_handle = ptr(context->descriptor, FRAME_VMEM);
     if (!private_handle || private_handle == source_handle ||
         u32(context->descriptor, FRAME_FORMAT) != 103 ||
         u32(context->descriptor, FRAME_PLANE_COUNT) != 2 ||
         u32(context->descriptor, FRAME_WIDTH) != width ||
         u32(context->descriptor, FRAME_HEIGHT) != height) {
-        discard(context);
+        reject_unverified(context, source_handle);
         return -1;
     }
 
@@ -106,10 +131,11 @@ static int acquire(void *opaque, const void *stock,
         context->ops->get_size(context->user, private_handle, &destination_size) ||
         context->ops->map(context->user, source_handle, (void **)&source) ||
         context->ops->map(context->user, private_handle, (void **)&destination) ||
-        !source || !destination || source == destination) {
-        discard(context);
+        !disjoint(source, source_size, destination, destination_size)) {
+        reject_unverified(context, source_handle);
         return -1;
     }
+    context->private_ownership_verified = 1;
 
     cfv_mono_frame *frame = &owned->planes;
     memset(frame, 0, sizeof *frame);

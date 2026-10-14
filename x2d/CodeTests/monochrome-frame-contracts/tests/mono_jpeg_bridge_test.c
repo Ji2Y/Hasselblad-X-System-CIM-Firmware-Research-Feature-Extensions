@@ -12,7 +12,7 @@ typedef struct {
     cfv_mono_vmem_context vmem;
     cfv_mono_vmem_ops ops;
     cfv_mono_jpeg_bridge bridge;
-    int calls, frees, syncs, fail_copy, vendor_return, reenter;
+    int calls, frees, syncs, fail_copy, alias_copy, vendor_return, reenter;
     int saw_private;
     const void *received_params;
 } fixture;
@@ -35,6 +35,10 @@ static int copy_frame(void *user, void *destination, const void *source,
                       int flags) {
     fixture *f = user;
     assert(flags == 7 && destination == f->private_frame && source == f->stock);
+    if (f->alias_copy) {
+        put_ptr(destination, 0x20, f->stock_pixels);
+        return f->alias_copy == 2 ? -1 : 0;
+    }
     if (f->fail_copy) return -1;
     memcpy(f->private_pixels, f->stock_pixels, PIXEL_SIZE);
     put_ptr(destination, 0x20, f->private_pixels);
@@ -66,6 +70,7 @@ static int sync_mem(void *user, void *handle, int mode) {
 static int free_frame(void *user, void *frame) {
     fixture *f = user;
     assert(frame == f->private_frame);
+    assert(get_ptr(frame, 0x20) != f->stock_pixels);
     ++f->frees;
     put_ptr(frame, 0x20, NULL);
     return 0;
@@ -183,11 +188,27 @@ static void test_quarantine(void) {
     assert(cfv_mono_jpeg_bridge_ready(&f.bridge));
 }
 
+static void test_copy_alias_does_not_free_stock(void) {
+    for (int mode = 1; mode <= 2; ++mode) {
+        fixture f;
+        setup(&f);
+        f.alias_copy = mode;
+        cfv_mono_ienc_params p = { f.stock, f.output, 90, 0 };
+        assert(cfv_mono_jpeg_bridge_encfrm(&f.bridge, &f, &p, 1) ==
+               CFV_MONO_BRIDGE_REJECTED);
+        assert(f.calls == 0 && f.frees == 0);
+        assert(get_ptr(f.stock, 0x20) == f.stock_pixels);
+        assert(get_ptr(f.private_frame, 0x20) == NULL);
+        assert(f.vmem.poisoned && !f.vmem.in_flight);
+    }
+}
+
 int main(void) {
     test_off_passthrough();
     test_private_frame_and_sync_lifetime();
     test_fail_closed();
     test_quarantine();
+    test_copy_alias_does_not_free_stock();
     puts("mono JPEG bridge: OK");
     return 0;
 }

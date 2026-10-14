@@ -25,6 +25,7 @@ typedef struct {
     void *user;
     int in_flight;
     int poisoned;
+    int private_ownership_verified;
 } cfv_mono_vmem_context;
 
 /* This memory adapter is single-flight: keep its context and descriptor

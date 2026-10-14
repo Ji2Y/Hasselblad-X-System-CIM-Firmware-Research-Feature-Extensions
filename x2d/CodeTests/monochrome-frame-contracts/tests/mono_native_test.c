@@ -270,7 +270,7 @@ static void test_vmem_adapter(void) {
         fake_deep_copy, fake_map, fake_size, fake_sync, fake_free
     };
     cfv_mono_vmem_context context = {
-        private_frame, sizeof private_frame, 0x13, 1, 2, &ops, &state, 0, 0
+        private_frame, sizeof private_frame, 0x13, 1, 2, &ops, &state, 0, 0, 0
     };
     cfv_mono_jpeg_ticket ticket;
     assert(cfv_mono_jpeg_begin(stock, 1, cfv_mono_vmem_memory(),
@@ -294,31 +294,25 @@ static void test_vmem_adapter(void) {
                                &context, &ticket) == CFV_MONO_SYNC_FAILED);
     assert(state.frees == 2 && !context.in_flight);
     state.fail_sync = 0;
-    state.fail_copy = 1;
-    assert(cfv_mono_jpeg_begin(stock, 1, cfv_mono_vmem_memory(),
-                               &context, &ticket) ==
-           CFV_MONO_PRIVATE_BUFFER_FAILED);
-    assert(state.frees == 3 && !context.in_flight);
-    state.fail_copy = 0;
     state.fail_source_sync = 1;
     const unsigned copies_before_source_failure = state.copies;
     assert(cfv_mono_jpeg_begin(stock, 1, cfv_mono_vmem_memory(),
                                &context, &ticket) ==
            CFV_MONO_PRIVATE_BUFFER_FAILED);
-    assert(state.copies == copies_before_source_failure && state.frees == 3);
+    assert(state.copies == copies_before_source_failure && state.frees == 2);
     state.fail_source_sync = 0;
     write32(stock, 0x54, 8);
     assert(cfv_mono_jpeg_begin(stock, 1, cfv_mono_vmem_memory(),
                                &context, &ticket) ==
            CFV_MONO_PRIVATE_BUFFER_FAILED);
-    assert(state.frees == 4 && !context.in_flight);
+    assert(state.frees == 3 && !context.in_flight);
     assert(memcmp(state.source, original, sizeof original) == 0);
 
     context.allocation_flags = 0;
     assert(cfv_mono_jpeg_begin(stock, 1, cfv_mono_vmem_memory(),
                                &context, &ticket) ==
            CFV_MONO_PRIVATE_BUFFER_FAILED);
-    assert(state.copies == 4);
+    assert(state.copies == 3);
     context.allocation_flags = 0x13;
 
     write32(stock, 0x54, 4);
@@ -326,11 +320,26 @@ static void test_vmem_adapter(void) {
     assert(cfv_mono_jpeg_begin(stock, 1, cfv_mono_vmem_memory(),
                                &context, &ticket) == CFV_MONO_OK);
     cfv_mono_jpeg_end(&ticket);
-    assert(context.poisoned && state.frees == 5);
+    assert(context.poisoned && state.frees == 4);
     assert(cfv_mono_jpeg_begin(stock, 1, cfv_mono_vmem_memory(),
                                &context, &ticket) ==
            CFV_MONO_PRIVATE_BUFFER_FAILED);
-    assert(state.copies == 5);
+    assert(state.copies == 4);
+
+    /* A failed copy can leave an unverified handle. It must be quarantined
+     * without calling the release callback, even when the mock allocated. */
+    uint8_t failed_frame[0x90];
+    cfv_mono_vmem_context failed_context = context;
+    failed_context.descriptor = failed_frame;
+    failed_context.poisoned = 0;
+    failed_context.private_ownership_verified = 0;
+    state.fail_copy = 1;
+    state.fail_free = 0;
+    assert(cfv_mono_jpeg_begin(stock, 1, cfv_mono_vmem_memory(),
+                               &failed_context, &ticket) ==
+           CFV_MONO_PRIVATE_BUFFER_FAILED);
+    assert(failed_context.poisoned && !failed_context.in_flight);
+    assert(state.frees == 4 && state.copies == 5);
 }
 
 int main(void) {
