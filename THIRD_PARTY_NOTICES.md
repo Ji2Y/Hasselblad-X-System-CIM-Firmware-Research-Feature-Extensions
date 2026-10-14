@@ -2,6 +2,10 @@
 
 This file is a release checklist, not a claim that every referenced dependency is redistributed.
 
+## 2026-10-14 FXGab69 黑白离线源码收录
+
+[黑白帧与所有权实验](x2d/CodeTests/monochrome-frame-contracts/README.md)收录 FXGab69 在 toolkit PR #9 中的 28 个源码／测试文件，固定来源为 `fedb1abbd2ea73b2510c464867029ee607e9a4aa` 和 `4d7254a5f85b9ab8a39c7395bc96da059f354c27`。两笔迁入提交保留来源 Author，整理者作为 Committer；逐文件哈希与测试路径调整见[来源清单](x2d/CodeTests/monochrome-frame-contracts/SOURCE_MANIFEST.json)。[完整来源许可](x2d/CodeTests/monochrome-frame-contracts/LICENSE)随目录保留，大库 MIT 不替换它；原作者实现不归为本项目独立创作。
+
 ## 2026-10-13 JSR 对照记录
 
 [JSR 简要报告与两张科研图](x2d/research/4.2.0/JSR-METAL-COMPARISON.md)引用上游 PR #2／#3；未复制其实现、字节码或模型。本地单张基线及绘图使用 rawpy 0.27.1／LibRaw 0.22.1（早期基线）及 0.22.2（同位置复算）、NumPy 2.2.6、Pillow 12.3.0、Matplotlib 3.10.9，均未 vendoring，各依赖许可独立适用。

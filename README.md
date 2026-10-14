@@ -30,6 +30,8 @@ See [RESEARCH_RESULTS.md](RESEARCH_RESULTS.md) for the complete status of the re
 
 ## Research references and their contribution
 
+2026-10-14 新增：[FXGab69 的黑白帧与所有权离线源码](x2d/CodeTests/monochrome-frame-contracts/README.md)。来源作者的两笔提交归属保留，源码子集采用原项目许可；6 项离线测试通过，实际相机功能待验证。
+
 The external projects below helped shape the research questions and analysis
 methods. They are cited as provenance and acknowledgement, not as vendored
 dependencies or proof of the results in this repository.
@@ -104,6 +106,8 @@ The check rejects known binary or firmware formats, personal absolute paths, lik
 完整状态见[研究成果总表](RESEARCH_RESULTS.md)。
 
 ## 研究参考资料及其帮助
+
+2026-10-14 新增：[FXGab69 的黑白帧与所有权离线源码](x2d/CodeTests/monochrome-frame-contracts/README.md)。保留来源作者、原始提交对应记录及完整许可；6 项电脑端测试通过，实际相机功能待验证。
 
 下面的外部项目帮助确定研究问题和分析方法。它们在此作为来源记录和致谢，
 不是被 vendoring 进来的依赖，也不是本仓库结论的直接证据。

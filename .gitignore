@@ -141,3 +141,6 @@ __pycache__/
 
 # Reviewed 2026-10-13 JSR desktop comparison and research figures.
 !/x2d/research/4.2.0/JSR-METAL-COMPARISON.md
+
+# Reviewed FXGab69 monochrome offline contribution.
+!/x2d/CodeTests/monochrome-frame-contracts/README.md

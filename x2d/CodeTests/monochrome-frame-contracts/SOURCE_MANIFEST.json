@@ -1,0 +1,229 @@
+{
+  "format": 1,
+  "author": "FXGab69",
+  "source_repository": "radium-wang/x2d-907-one-click-extension-toolkit",
+  "source_pull_request": 9,
+  "source_commits": [
+    "fedb1abbd2ea73b2510c464867029ee607e9a4aa",
+    "4d7254a5f85b9ab8a39c7395bc96da059f354c27"
+  ],
+  "device_verified": false,
+  "files": [
+    {
+      "source_path": "src/mono/cfv_mono.c",
+      "path": "native/cfv_mono.c",
+      "source_sha256": "3f8c7fd200c8691d320cdbec725388297d04cf672c1c6e7f78b83356b048b5d0",
+      "sha256": "3f8c7fd200c8691d320cdbec725388297d04cf672c1c6e7f78b83356b048b5d0",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono.h",
+      "path": "native/cfv_mono.h",
+      "source_sha256": "3d2ddc6eb71a6c95f0d64be30718e70dad3fa290a1b9ab27198071a4ff28aee2",
+      "sha256": "3d2ddc6eb71a6c95f0d64be30718e70dad3fa290a1b9ab27198071a4ff28aee2",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_jpeg.c",
+      "path": "native/cfv_mono_jpeg.c",
+      "source_sha256": "241b9725de955ef9c16017f5d42541f9557f2718c72d077c0094e7d517be1921",
+      "sha256": "241b9725de955ef9c16017f5d42541f9557f2718c72d077c0094e7d517be1921",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_jpeg.h",
+      "path": "native/cfv_mono_jpeg.h",
+      "source_sha256": "b469b344c30984f2292bd21541cdddc8f8a55fcb97fc78cfe61814499cee10c7",
+      "sha256": "b469b344c30984f2292bd21541cdddc8f8a55fcb97fc78cfe61814499cee10c7",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_vmem.c",
+      "path": "native/cfv_mono_vmem.c",
+      "source_sha256": "e523695066c34bb74a635b8661de4ea416966bb92c629dace10ebf1e7855f3b6",
+      "sha256": "e523695066c34bb74a635b8661de4ea416966bb92c629dace10ebf1e7855f3b6",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_vmem.h",
+      "path": "native/cfv_mono_vmem.h",
+      "source_sha256": "f47cd638c086ee8c5d6c86b974eed21b9b9daf6bdd82d2aca74495c0b704de24",
+      "sha256": "f47cd638c086ee8c5d6c86b974eed21b9b9daf6bdd82d2aca74495c0b704de24",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_jpeg_bridge.c",
+      "path": "native/cfv_mono_jpeg_bridge.c",
+      "source_sha256": "a27aef8bc2707e0dee84a179b21e95f4b593cfe2718263afaa7c73adfc7b64c8",
+      "sha256": "a27aef8bc2707e0dee84a179b21e95f4b593cfe2718263afaa7c73adfc7b64c8",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_jpeg_bridge.h",
+      "path": "native/cfv_mono_jpeg_bridge.h",
+      "source_sha256": "6bc391823728f2c67c54b55450c976e7e8fb9b61a022699f3fdbb9c7b959f56e",
+      "sha256": "6bc391823728f2c67c54b55450c976e7e8fb9b61a022699f3fdbb9c7b959f56e",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_preview.c",
+      "path": "native/cfv_mono_preview.c",
+      "source_sha256": "202962e577c12547e794e573ee680bc82541b3315270845dd8225100d05cdbc9",
+      "sha256": "202962e577c12547e794e573ee680bc82541b3315270845dd8225100d05cdbc9",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_preview.h",
+      "path": "native/cfv_mono_preview.h",
+      "source_sha256": "0646a070c93d6ac915cee52a4522068b9d3697d52448681d2e5cd5afec0c136d",
+      "sha256": "0646a070c93d6ac915cee52a4522068b9d3697d52448681d2e5cd5afec0c136d",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_display.c",
+      "path": "native/cfv_mono_display.c",
+      "source_sha256": "3d9ff6b9e3e4b13bb9f9520346d49b7ea5c87a824fd2b0dec79a982620279c95",
+      "sha256": "3d9ff6b9e3e4b13bb9f9520346d49b7ea5c87a824fd2b0dec79a982620279c95",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_display.h",
+      "path": "native/cfv_mono_display.h",
+      "source_sha256": "f8d0d09b355e34f6a608a058bb3ad78f19fe4a5b8680d95783ee00d7b9b82630",
+      "sha256": "f8d0d09b355e34f6a608a058bb3ad78f19fe4a5b8680d95783ee00d7b9b82630",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_heif_bridge.c",
+      "path": "native/cfv_mono_heif_bridge.c",
+      "source_sha256": "1cd6b985852ad56f77edfae67b984158be0bcd96a25d77833ead05c4299b1748",
+      "sha256": "1cd6b985852ad56f77edfae67b984158be0bcd96a25d77833ead05c4299b1748",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_heif_bridge.h",
+      "path": "native/cfv_mono_heif_bridge.h",
+      "source_sha256": "c8d26394e8ea308620029eab9c6f52334227ebd009b4d00eb3828c2ddb4632c7",
+      "sha256": "c8d26394e8ea308620029eab9c6f52334227ebd009b4d00eb3828c2ddb4632c7",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_heif_format.c",
+      "path": "native/cfv_mono_heif_format.c",
+      "source_sha256": "5eadc8f979a2da0c55952ee555390f827bd30fd8e1418de755136aa6f54996c2",
+      "sha256": "5eadc8f979a2da0c55952ee555390f827bd30fd8e1418de755136aa6f54996c2",
+      "adaptations": []
+    },
+    {
+      "source_path": "src/mono/cfv_mono_heif_format.h",
+      "path": "native/cfv_mono_heif_format.h",
+      "source_sha256": "e61f01efb27b18ae0c1de7927ec906acecd986acc11cc4a99080ab8154e319c3",
+      "sha256": "e61f01efb27b18ae0c1de7927ec906acecd986acc11cc4a99080ab8154e319c3",
+      "adaptations": []
+    },
+    {
+      "source_path": "tests/mono_native_test.c",
+      "path": "tests/mono_native_test.c",
+      "source_sha256": "37af3ee1dfe20d53e9ff703035bfc91b46d88394f94c2d3d617fc31061edcbe5",
+      "sha256": "37af3ee1dfe20d53e9ff703035bfc91b46d88394f94c2d3d617fc31061edcbe5",
+      "adaptations": []
+    },
+    {
+      "source_path": "tests/mono_jpeg_bridge_test.c",
+      "path": "tests/mono_jpeg_bridge_test.c",
+      "source_sha256": "44da7175a74277557aff43906565ddf169751bbbfc10cbf1c9b9c2211d45f4fd",
+      "sha256": "44da7175a74277557aff43906565ddf169751bbbfc10cbf1c9b9c2211d45f4fd",
+      "adaptations": []
+    },
+    {
+      "source_path": "tests/mono_preview_test.c",
+      "path": "tests/mono_preview_test.c",
+      "source_sha256": "2311cecd759c30f24fb7bedee5551919a9206c5950f731ac6f332a77c91bef4e",
+      "sha256": "2311cecd759c30f24fb7bedee5551919a9206c5950f731ac6f332a77c91bef4e",
+      "adaptations": []
+    },
+    {
+      "source_path": "tests/mono_display_test.c",
+      "path": "tests/mono_display_test.c",
+      "source_sha256": "76851858bd179225cb491dd8c137a92c58df0854216633fe8d754e8e2a83c618",
+      "sha256": "76851858bd179225cb491dd8c137a92c58df0854216633fe8d754e8e2a83c618",
+      "adaptations": []
+    },
+    {
+      "source_path": "tests/mono_heif_bridge_test.c",
+      "path": "tests/mono_heif_bridge_test.c",
+      "source_sha256": "ae8211cdc1de96b924786b7b1955c25ca2f8d84cf3087a1d6718cfabc059aab2",
+      "sha256": "ae8211cdc1de96b924786b7b1955c25ca2f8d84cf3087a1d6718cfabc059aab2",
+      "adaptations": []
+    },
+    {
+      "source_path": "tests/mono_heif_format_test.c",
+      "path": "tests/mono_heif_format_test.c",
+      "source_sha256": "224c5962a93eaf41127743967ebafe19eee88297c30226e519b45b17b4c3e4a2",
+      "sha256": "224c5962a93eaf41127743967ebafe19eee88297c30226e519b45b17b4c3e4a2",
+      "adaptations": []
+    },
+    {
+      "source_path": "tests/test_mono_native.py",
+      "path": "tests/test_mono_native.py",
+      "source_sha256": "1f6c97123d5cc5373cbbf48c50ab819e656dd90d0a4c1d686c2fddcb1d947336",
+      "sha256": "4315c7fe8c603592795c3aa3d8e12f996cc2d69064cd2ce72b3b6d2b4fe35e61",
+      "adaptations": [
+        "retain only the offline frame converter test",
+        "adjust the native source path to the archive layout"
+      ]
+    },
+    {
+      "source_path": "tests/test_mono_jpeg_bridge.py",
+      "path": "tests/test_mono_jpeg_bridge.py",
+      "source_sha256": "2c3676920279e19af2254bcdeaa7304ebe4f2b286241d67f7ff5f7b2c99f587c",
+      "sha256": "da0582defb633e9c169fc2f2c94f8cff1abdb39f1cfdd55f3ce183680e51269e",
+      "adaptations": [
+        "adjust the native source path to the archive layout"
+      ]
+    },
+    {
+      "source_path": "tests/test_mono_preview.py",
+      "path": "tests/test_mono_preview.py",
+      "source_sha256": "4dd85fbbea923176ef63244a8ad7e8960dc6e0b19883cb84f5c1aa6cb4f50562",
+      "sha256": "4e9623c54532705717fe6b89d5699b158eb40850288e405e429700ad8c6b0be2",
+      "adaptations": [
+        "adjust the native source path to the archive layout"
+      ]
+    },
+    {
+      "source_path": "tests/test_mono_display.py",
+      "path": "tests/test_mono_display.py",
+      "source_sha256": "abe4091fbd507a6330ffff014274735fa0c10ecea92570a87222c89d0b244f6f",
+      "sha256": "2e995d74ecc797061707173106c29221759f8dde04c0687f889e80eb3b0bca08",
+      "adaptations": [
+        "adjust the native source path to the archive layout"
+      ]
+    },
+    {
+      "source_path": "tests/test_mono_heif_bridge.py",
+      "path": "tests/test_mono_heif_bridge.py",
+      "source_sha256": "898027faa0e1dead6c21b685a3c3a3450f8dc9a2a001ac4d7e22180b2fb1194a",
+      "sha256": "21a361761c5bed6d9fa3fa342b83c3170177710ca96dc91d11b4aafb37d1e94a",
+      "adaptations": [
+        "adjust the native source path to the archive layout"
+      ]
+    },
+    {
+      "source_path": "tests/test_mono_heif_format.py",
+      "path": "tests/test_mono_heif_format.py",
+      "source_sha256": "f2b82150f8f2f75352b52e4dd818d4f4c3964fc08648b0ae83b0008f5b996e88",
+      "sha256": "5fe36eaf4f0e47e6bf454c72271f1f8feea2c907becee1e9f5238124c5f9d220",
+      "adaptations": [
+        "adjust the native source path to the archive layout"
+      ]
+    },
+    {
+      "source_path": "LICENSE",
+      "path": "LICENSE",
+      "source_sha256": "59cb8d0dc5935cf3664792ec2a3b07add7b7d03dec3d1888620b52f520af932e",
+      "sha256": "59cb8d0dc5935cf3664792ec2a3b07add7b7d03dec3d1888620b52f520af932e",
+      "adaptations": []
+    }
+  ]
+}

@@ -31,6 +31,7 @@ The public tree contains offline analysis, source UI and desktop tests. Vendor i
 - [425 区域边界](research/4.2.0/PDAF-425-BOUNDARIES.md)、[采样几何](research/4.2.0/PDAF-SAMPLING-GEOMETRY.md)、[控制策略对照](research/4.2.0/FOCUS-STRATEGY-PORT-BOUNDARIES.md)
 - [AS7341 光谱白平衡链路](research/4.2.0/SPECTRAL-WHITE-BALANCE.md)；[对焦／光谱离线工具](tools/firmware-analysis/focus-and-spectral/README.md)
 - [FXGab69 黑白候选的本地审查](research/4.2.0/MONOCHROME-CANDIDATE-REVIEW.md)
+- [FXGab69 黑白帧离线源码收录](CodeTests/monochrome-frame-contracts/README.md)：2026-10-14 收录 PR #9 的处理核心与所有权测试，保留作者及来源许可；6 项离线测试通过，实机待验收。
 - [镜头与模式状态兼容审查](research/4.2.0/LENS-AND-STATUS-COMPATIBILITY.md)
 - [电池重装与肩屏 H 的诊断边界](research/4.2.0/USB-POWER-STARTUP-DIAGNOSIS.md)
 - [安全披露与公开维护状态](research/4.2.0/SECURITY-DISCLOSURE-STATUS.md)

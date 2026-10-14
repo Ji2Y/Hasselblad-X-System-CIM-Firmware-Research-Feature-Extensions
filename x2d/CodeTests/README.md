@@ -8,3 +8,4 @@ This public subset contains only selected source and offline tests:
 - `x2d-afc-research/`: offline AF-C gate patcher and public status summary.
 - [ui-response](ui-response/README.md)：本地轨迹解析器的合成时钟、CPU 与统计边界测试。
 - `shutter-animation-preview/`: browser/QML animation, read-only timing analysis and offline tests.
+- [黑白帧与所有权契约](monochrome-frame-contracts/README.md)：FXGab69 的 PR #9 离线源码子集，保留作者归属与来源许可；实机待验证。
