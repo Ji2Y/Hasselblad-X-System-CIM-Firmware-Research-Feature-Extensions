@@ -1,6 +1,6 @@
 # Reproduce the Offline Research / 离线研究复现
 
-Read [DISCLAIMER.md](DISCLAIMER.md) first. The public tree supplies offline analysis, interface source and desktop checks. Camera configuration writers and deployment/recovery commands are excluded. The PDAF module has an opt-in, narrowly allowlisted AF-S observation workflow in [PDAF425-RECORDING.md](x2d/CodeTests/pdaf-only-shadow/PDAF425-RECORDING.md); other device observations remain evidence summaries.
+Read [DISCLAIMER.md](DISCLAIMER.md) first. The public tree supplies offline analysis, interface source and desktop checks. Camera configuration writers, device deployment/recovery commands and diagnostic-channel instructions are excluded. Historical device observations remain evidence summaries rather than executable procedures.
 
 ## Run repository-contained checks
 
@@ -37,13 +37,14 @@ The directories are read-only inputs and are never copied into this repository. 
 | Shimeji | [module](x2d/shimeji-overlay/README.md) | Native desktop engine, transparent QML and synthetic traces |
 | Shutter | [preview](x2d/CodeTests/shutter-animation-preview/README.md) | Browser/QML preview and timing analysis |
 | PDAF / spectral AWB | [read-only tools](x2d/tools/firmware-analysis/focus-and-spectral/README.md) | Pinned operator-provided ELF/configuration inputs, static evidence only |
-| PDAF 425 candidate | [source and contracts](x2d/CodeTests/pdaf-only-shadow/PDAF425.md) | Synthetic C/Python checks, pinned-input offline build/audit and separate read-only AF-S observation; no callback registration or autofocus control |
+| PDAF 425 candidate | [source and contracts](x2d/CodeTests/pdaf-only-shadow/PDAF425.md) | Synthetic C/Python checks and pinned-input offline build/audit; no callback registration or autofocus control |
+| PDAF record processing | [record template and tools](x2d/CodeTests/pdaf-only-shadow/PDAF425-RECORDING.md) | Local anonymization and offline trajectory analysis of operator-provided records; no device access |
 | Pixel shift | [offline library](x2d/pixel-shift/README.md) | Host C build, miniature output and synthetic sparse RAW fixtures; no capture |
 | Model structure | [schema checks](x2d/tools/model-structure/README.md) | Operator-provided TFLite schema/index inspection; no decryption/inference |
 
 ## 中文说明
 
-本公开树主要提供离线分析、界面源码和桌面检查，不包含相机配置写入或设备部署／恢复命令。只有 PDAF 模块单独提供受限的只读观察方法，具体前提、临时日志清理和脱敏步骤见该模块说明；这不构成部署入口。
+本公开树只提供离线分析、界面源码和桌面检查，不包含相机配置写入、设备部署／恢复命令或调试通道操作步骤。历史实机报告保留其机型、固件及验证限制，不能视作可执行的部署说明。PDAF 记录文档只说明实验记录字段、脱敏和离线处理，不含设备采集步骤。
 
 在仓库根目录运行上面的离线套件。默认不提供固件输入时，依赖外部输入的用例会跳过；需要时显式指定四个只读固件目录。Qt／原生桌面检查按对应模块说明执行，不自动下载依赖。
 
@@ -63,4 +64,4 @@ The directories are read-only inputs and are never copied into this repository. 
 
 默认离线套件新增 12 项影子判定器、13 项 425 区域核心检查及 1 项适配器合成场景；需要主机 C11 编译器，适配器测试还使用 AddressSanitizer / UndefinedBehaviorSanitizer。缺少编译器会明确跳过对应检查，不能计作通过。版本锁定 ARM64 构建与二代依赖审计按[模块说明](x2d/CodeTests/pdaf-only-shadow/PDAF425.md)另行提供输入；输出必须留在输入树外的新本地位置。
 
-PDAF 硬件观察是显式的可选步骤，不属于默认离线套件。本次只读脚本要求操作者自备固定版本输入和目标相机；它们不触发 AF，只有限时日志会写入并清理实验自有的临时文件。原始日志与固件不公开，脱敏输出和完整边界见[记录方法](x2d/CodeTests/pdaf-only-shadow/PDAF425-RECORDING.md)。
+PDAF 记录和分析工具只处理操作者已在本地取得的文本记录，不属于默认离线套件，不连接设备。原始日志与固件不公开；记录字段、脱敏输出和离线回放方法见[记录文档](x2d/CodeTests/pdaf-only-shadow/PDAF425-RECORDING.md)。
