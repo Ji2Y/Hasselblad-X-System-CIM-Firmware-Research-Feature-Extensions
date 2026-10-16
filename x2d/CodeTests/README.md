@@ -9,3 +9,5 @@ This public subset contains only selected source and offline tests:
 - [ui-response](ui-response/README.md)：本地轨迹解析器的合成时钟、CPU 与统计边界测试。
 - `shutter-animation-preview/`: browser/QML animation, read-only timing analysis and offline tests.
 - [黑白帧与所有权契约](monochrome-frame-contracts/README.md)：FXGab69 的 PR #9 离线源码子集，保留作者归属与来源许可；实机待验证。
+
+- [PDAF 影子判定与 425 区域候选](pdaf-only-shadow/README.md)：离线计算、同帧快照和适配器契约测试；未接入原厂回调或镜头控制。

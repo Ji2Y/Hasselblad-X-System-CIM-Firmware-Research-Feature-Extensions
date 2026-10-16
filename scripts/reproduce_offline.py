@@ -82,6 +82,11 @@ def main() -> int:
         env,
     )
     run(
+        [PYTHON, "-B", "-m", "unittest", "test_pdaf_shadow", "test_pdaf425", "test_pdaf425_adapter"],
+        ROOT / "x2d/CodeTests/pdaf-only-shadow",
+        env,
+    )
+    run(
         [PYTHON, "-m", "unittest", "discover", "-s",
          "x2d/object-recognition/CodeTests/offline-contract", "-p", "test_*.py"],
         ROOT,

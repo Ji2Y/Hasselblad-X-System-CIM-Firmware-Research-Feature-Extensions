@@ -24,6 +24,9 @@ jobs:
         run: python -m unittest test_candidate.py
       - name: Object-recognition contract tests
         run: python -m unittest discover -s x2d/object-recognition/CodeTests/offline-contract -p 'test_*.py'
+      - name: PDAF 425 and shadow contract tests
+        working-directory: x2d/CodeTests/pdaf-only-shadow
+        run: python -B -m unittest test_pdaf_shadow test_pdaf425 test_pdaf425_adapter
       - name: Shutter timing analysis tests
         run: python -m unittest discover -s x2d/CodeTests/shutter-animation-preview -p 'test_analyze_blackout.py'
 

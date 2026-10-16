@@ -13,3 +13,9 @@ Source presence does not imply device compatibility. Static analysis, offline va
 对焦／白平衡依赖 pyelftools 0.32 与 Capstone 5.0.6；模型结构依赖 tflite 2.18.0 与 flatbuffers 25.12.19。像素位移合成需要 POSIX C11 编译器，渲染另需 libjpeg API，开发版为 libjpeg-turbo 3.1.0。依赖未 vendoring。
 
 新工具不包含相机部署后端。历史完整工具包检查、实拍及 JSR 处理的原始输入／日志没有全部公开，不能宣称只下载研究库就能重建这些结果。独立 Startup Studio 与工具包引用保留原许可，不按根 MIT 重新授权。
+
+## 2026-10-16 PDAF 与本对话成果补充
+
+`x2d/CodeTests/pdaf-only-shadow/` 补入 425 区域核心、相位行复制、被动同步观测适配器、ARM64 函数适配源码、构建与二代依赖审计，以及旧影子判定器。主机测试只用合成输入和临时目录；C11 编译器和地址／未定义行为检查运行库需由操作者提供。固件检查仍依赖 pyelftools 0.32、Capstone 5.0.6 和固定版本的一／二代自备输入；交叉构建另需 AArch64 clang / lld。
+
+公开子集不依赖原先本地设备读取脚本，不收录其工厂／远程操作和传输后端。历史 972 × 42 模式观测只以脱敏摘要收录；原始日志、完整帧、原厂库、派生签名、编译产物与产品安装包不公开。自动亮度和 Windows 修正以独立工具包版本摘要归档，未将其产品实现或许可并入本库。

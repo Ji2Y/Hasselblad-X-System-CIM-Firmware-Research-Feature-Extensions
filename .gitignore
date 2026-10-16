@@ -144,3 +144,7 @@ __pycache__/
 
 # Reviewed FXGab69 monochrome offline contribution.
 !/x2d/CodeTests/monochrome-frame-contracts/README.md
+
+# Reviewed 2026-10-16 conversation archive: offline PDAF candidate and summaries.
+!/x2d/CodeTests/pdaf-only-shadow/PDAF425.md
+!/x2d/research/4.2.0/TOOLKIT-BRIGHTNESS-AND-WINDOWS.md

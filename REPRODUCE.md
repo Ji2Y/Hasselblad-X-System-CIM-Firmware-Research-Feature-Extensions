@@ -37,6 +37,7 @@ The directories are read-only inputs and are never copied into this repository. 
 | Shimeji | [module](x2d/shimeji-overlay/README.md) | Native desktop engine, transparent QML and synthetic traces |
 | Shutter | [preview](x2d/CodeTests/shutter-animation-preview/README.md) | Browser/QML preview and timing analysis |
 | PDAF / spectral AWB | [read-only tools](x2d/tools/firmware-analysis/focus-and-spectral/README.md) | Pinned operator-provided ELF/configuration inputs, static evidence only |
+| PDAF 425 candidate | [source and contracts](x2d/CodeTests/pdaf-only-shadow/PDAF425.md) | Synthetic C/Python tests and pinned-input offline build/audit; no callback registration or autofocus control |
 | Pixel shift | [offline library](x2d/pixel-shift/README.md) | Host C build, miniature output and synthetic sparse RAW fixtures; no capture |
 | Model structure | [schema checks](x2d/tools/model-structure/README.md) | Operator-provided TFLite schema/index inspection; no decryption/inference |
 
@@ -57,3 +58,9 @@ The directories are read-only inputs and are never copied into this repository. 
 ## 2026-10-13 JSR 实拍对照记录
 
 [简要对比与科研图](x2d/research/4.2.0/JSR-METAL-COMPARISON.md)只随库提供摘要和两张 PNG；详细数据留在本地。私有 RAW、已删除的完整 DNG、JSR 运行时及模型未提供，不能只下载本仓库重跑该实验。
+
+## 2026-10-16 PDAF 实验源码归档
+
+默认离线套件新增 12 项影子判定器、13 项 425 区域核心检查及 1 项适配器合成场景；需要主机 C11 编译器，适配器测试还使用 AddressSanitizer / UndefinedBehaviorSanitizer。缺少编译器会明确跳过对应检查，不能计作通过。版本锁定 ARM64 构建与二代依赖审计按[模块说明](x2d/CodeTests/pdaf-only-shadow/PDAF425.md)另行提供输入；输出必须留在输入树外的新本地位置。
+
+本次归档不访问设备，不重做历史实机采样，不提供被排除的读取、传输或安装实现。
