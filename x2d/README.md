@@ -17,13 +17,14 @@ The X2D tree covers firmware 4.2.0 unless a document states otherwise.
 - [Research notes](research/): selected sanitized findings and validation limits.
 - [External research references](references/EXTERNAL-RESEARCH.md): citation-only provenance, including the X2D CIM notes that inspired the AF-C investigation.
 
-The public tree contains offline analysis, source UI and desktop tests. Vendor inputs, generated units, camera deployment tools and operating instructions are not included.
+The public tree contains offline analysis, source UI and desktop checks, plus the separately documented read-only PDAF observation scripts. Vendor inputs, generated units and camera deployment tools are not included.
 
 ## 最新研究汇总（归档更新至 2026-10-16）
 
 最新验收状态以[成果总表](../RESEARCH_RESULTS.md)及分主题报告为准，早期“尚未验证”文字保留其历史范围。
 
 - [425 区域候选源码与同帧快照契约](CodeTests/pdaf-only-shadow/PDAF425.md)：补齐 2026-10-08 历史原厂观察和离线实现；不是可安装升级，未完成二代完整策略移植。
+- [PDAF 实验记录方法](CodeTests/pdaf-only-shadow/PDAF425-RECORDING.md)：限时日志采集、相位状态快照、脱敏与离线回放；不属于默认离线套件。
 - [自动亮度、Windows 界面与退出修正摘要](research/4.2.0/TOOLKIT-BRIGHTNESS-AND-WINDOWS.md)：独立工具包历史功能记录与验证边界，不收录产品操作后端。
 - [AFT、眼部共存与三档速度](research/4.2.0/AF-EYE-AND-SPEED-UPDATE.md)
 - [像素位移实拍、倒计时及 JSR 电脑合成](research/4.2.0/PIXEL-SHIFT-CAPTURE-RESULTS.md)；[独立离线 C 处理库](pixel-shift/README.md)
