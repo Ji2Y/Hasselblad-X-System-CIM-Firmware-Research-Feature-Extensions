@@ -1,0 +1,869 @@
+
+DepthMapWrapperProcessFrame @ 0x2e578, 92 bytes
+0002e578  sub      sp, sp, #0x50
+0002e57c  str      x19, [sp, #0x30]
+0002e580  stp      x29, x30, [sp, #0x40]
+0002e584  add      x29, sp, #0x40
+0002e588  mrs      x19, tpidr_el0
+0002e58c  ldr      x8, [x19, #0x28]
+0002e590  stur     x8, [x29, #-0x18]
+0002e594  ldr      x8, [x1, #0x20]
+0002e598  ldp      q1, q0, [x1]
+0002e59c  mov      x1, sp
+0002e5a0  str      x8, [sp, #0x20]
+0002e5a4  stp      q1, q0, [sp]
+0002e5a8  bl       #0xfef0 _ZN15DepthMapWrapper12processFrameE17WrapperDepthInputP21WrapperDepthCamConfigjP18WrapperDepthOutput
+0002e5ac  ldr      x8, [x19, #0x28]
+0002e5b0  ldur     x9, [x29, #-0x18]
+0002e5b4  cmp      x8, x9
+0002e5b8  b.ne     #0x2e5d0
+0002e5bc  ldp      x29, x30, [sp, #0x40]
+0002e5c0  ldr      x19, [sp, #0x30]
+0002e5c4  and      w0, w0, #1
+0002e5c8  add      sp, sp, #0x50
+0002e5cc  ret
+0002e5d0  bl       #0xebe0 __stack_chk_fail
+
+_ZN15DepthMapWrapper12processFrameE17WrapperDepthInputP21WrapperDepthCamConfigjP18WrapperDepthOutput @ 0x2d5c8, 2800 bytes
+0002d5c8  sub      sp, sp, #0x1f0
+0002d5cc  stp      x28, x27, [sp, #0x190]
+0002d5d0  stp      x26, x25, [sp, #0x1a0]
+0002d5d4  stp      x24, x23, [sp, #0x1b0]
+0002d5d8  stp      x22, x21, [sp, #0x1c0]
+0002d5dc  stp      x20, x19, [sp, #0x1d0]
+0002d5e0  stp      x29, x30, [sp, #0x1e0]
+0002d5e4  add      x29, sp, #0x1e0
+0002d5e8  mrs      x23, tpidr_el0
+0002d5ec  mov      x24, x2
+0002d5f0  ldr      x8, [x23, #0x28]
+0002d5f4  mov      x22, x0
+0002d5f8  str      x1, [sp, #0x60]
+0002d5fc  add      x1, x24, #0x40
+0002d600  mov      w2, #0x48
+0002d604  sub      x0, x29, #0xa0
+0002d608  mov      x20, x4
+0002d60c  stur     x8, [x29, #-0x58]
+0002d610  mov      w25, w3
+0002d614  bl       #0xeb40 memcpy
+0002d618  ldrb     w8, [x22, #8]
+0002d61c  cbz      w8, #0x2d6f0
+0002d620  ldr      w8, [x22]
+0002d624  cmp      w8, #0x1f
+0002d628  b.lt     #0x2d6f0
+0002d62c  adrp     x8, #0x71000
+0002d630  ldr      w9, [x22, #4]
+0002d634  ldr      w8, [x8, #0x458]
+0002d638  cmp      w9, w8
+0002d63c  b.ge     #0x2d6f0
+0002d640  mov      w8, #0x85a0
+0002d644  movk     w8, #2, lsl #16
+0002d648  add      x1, x22, x8
+0002d64c  add      x0, sp, #0x98
+0002d650  add      x19, sp, #0x98
+0002d654  bl       #0xf070 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+0002d658  adrp     x1, #0x32000
+0002d65c  add      x1, x1, #0xc8e
+0002d660  add      x0, sp, #0x98
+0002d664  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002d668  ldr      w0, [x22]
+0002d66c  add      x8, sp, #0x80
+0002d670  add      x21, sp, #0x80
+0002d674  bl       #0xf1b0 _ZNSt3__19to_stringEi
+0002d678  ldrb     w8, [sp, #0x80]
+0002d67c  orr      x11, x21, #1
+0002d680  ldp      x10, x9, [sp, #0x88]
+0002d684  add      x0, sp, #0x98
+0002d688  tst      w8, #1
+0002d68c  lsr      x12, x8, #1
+0002d690  csel     x1, x11, x9, eq
+0002d694  csel     x2, x12, x10, eq
+0002d698  bl       #0xef40 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0002d69c  ldrb     w8, [sp, #0x80]
+0002d6a0  tbz      w8, #0, #0x2d6ac
+0002d6a4  ldr      x0, [sp, #0x90]
+0002d6a8  bl       #0xec10 _ZdlPv
+0002d6ac  adrp     x1, #0x32000
+0002d6b0  add      x1, x1, #0xca0
+0002d6b4  add      x0, sp, #0x98
+0002d6b8  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002d6bc  ldrb     w8, [sp, #0x98]
+0002d6c0  sub      x9, x29, #0xa0
+0002d6c4  ldr      x10, [sp, #0xa8]
+0002d6c8  add      x0, x9, #8
+0002d6cc  orr      x9, x19, #1
+0002d6d0  mov      w1, #4
+0002d6d4  tst      w8, #1
+0002d6d8  csel     x2, x9, x10, eq
+0002d6dc  bl       #0xfcb0 _Z11DumpRawDataPKhiPKc
+0002d6e0  ldrb     w8, [sp, #0x98]
+0002d6e4  tbz      w8, #0, #0x2d6f0
+0002d6e8  ldr      x0, [sp, #0xa8]
+0002d6ec  bl       #0xec10 _ZdlPv
+0002d6f0  mov      w27, wzr
+0002d6f4  cbz      x20, #0x2e080
+0002d6f8  cbz      w25, #0x2e080
+0002d6fc  ldr      x8, [x22, #0x10]
+0002d700  cbz      x8, #0x2e080
+0002d704  stp      x24, x23, [sp, #0x40]
+0002d708  ldr      x0, [x22, #0x18]
+0002d70c  ldurb    w4, [x29, #-0x5d]
+0002d710  ldurb    w3, [x29, #-0x5e]
+0002d714  ldurb    w2, [x29, #-0x5f]
+0002d718  ldurb    w1, [x29, #-0x60]
+0002d71c  bl       #0xfdc0 _ZN20SwiftDepthCalculator31UpdateSpotPositionIndexInBitMapEhhhh
+0002d720  mov      w10, #0x8528
+0002d724  ldr      x8, [sp, #0x60]
+0002d728  movk     w10, #2, lsl #16
+0002d72c  add      x10, x22, x10
+0002d730  adrp     x9, #0x32000
+0002d734  ldr      x8, [x8, #0x18]
+0002d738  add      x9, x9, #0xf3c
+0002d73c  str      x10, [sp, #0x58]
+0002d740  mov      w10, #0x8520
+0002d744  movk     w10, #2, lsl #16
+0002d748  add      x24, x22, x10
+0002d74c  mov      w10, #0xd20
+0002d750  ldrsb    x8, [x8, #1]
+0002d754  movk     w10, #2, lsl #16
+0002d758  add      x10, x22, x10
+0002d75c  str      x24, [sp, #0x50]
+0002d760  adrp     x28, #0x32000
+0002d764  ldr      w8, [x9, x8, lsl #2]
+0002d768  mov      x23, xzr
+0002d76c  str      x10, [sp, #0x28]
+0002d770  mov      w10, #0x85a0
+0002d774  movk     w10, #2, lsl #16
+0002d778  add      x10, x22, x10
+0002d77c  mov      x19, xzr
+0002d780  str      w8, [sp, #0x1c]
+0002d784  mov      w25, w25
+0002d788  str      x10, [sp, #0x20]
+0002d78c  add      x10, sp, #0x80
+0002d790  orr      x10, x10, #1
+0002d794  mov      w27, #1
+0002d798  mov      w11, #0x2d40
+0002d79c  str      x10, [sp, #0x38]
+0002d7a0  add      x10, sp, #0x98
+0002d7a4  orr      x10, x10, #1
+0002d7a8  add      x28, x28, #0xf2c
+0002d7ac  str      x10, [sp, #0x30]
+0002d7b0  add      x10, sp, #0x68
+0002d7b4  orr      x10, x10, #1
+0002d7b8  str      x10, [sp, #0x10]
+0002d7bc  mov      w10, #0x2d30
+0002d7c0  add      x21, x20, x10
+0002d7c4  b        #0x2de34
+0002d7c8  ldr      x8, [sp, #0x58]
+0002d7cc  ldrsb    x24, [x8]
+0002d7d0  cmp      x24, #3
+0002d7d4  b.hs     #0x2d94c
+0002d7d8  adrp     x9, #0x32000
+0002d7dc  ldrb     w8, [x22, #8]
+0002d7e0  add      x9, x9, #0xf60
+0002d7e4  ldr      w27, [x9, x24, lsl #2]
+0002d7e8  cbz      w8, #0x2dbc8
+0002d7ec  ldr      x8, [x22, #0x18]
+0002d7f0  cmp      w24, #2
+0002d7f4  ldr      w9, [x22]
+0002d7f8  add      x10, x8, #0x5c
+0002d7fc  add      x8, x8, #0x58
+0002d800  csel     x8, x10, x8, eq
+0002d804  cmp      w9, #0x1f
+0002d808  b.lt     #0x2dbc8
+0002d80c  adrp     x10, #0x71000
+0002d810  ldr      w9, [x22, #4]
+0002d814  ldr      w10, [x10, #0x458]
+0002d818  cmp      w9, w10
+0002d81c  b.ge     #0x2dbc8
+0002d820  ldr      w8, [x8]
+0002d824  add      x0, sp, #0x98
+0002d828  ldr      x1, [sp, #0x20]
+0002d82c  str      w8, [sp, #8]
+0002d830  bl       #0xf070 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+0002d834  adrp     x1, #0x32000
+0002d838  add      x0, sp, #0x98
+0002d83c  add      x1, x1, #0xcc5
+0002d840  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002d844  ldr      w0, [x22]
+0002d848  add      x8, sp, #0x80
+0002d84c  bl       #0xf1b0 _ZNSt3__19to_stringEi
+0002d850  ldrb     w8, [sp, #0x80]
+0002d854  add      x0, sp, #0x98
+0002d858  ldp      x10, x9, [sp, #0x88]
+0002d85c  lsr      x11, x8, #1
+0002d860  tst      w8, #1
+0002d864  ldr      x8, [sp, #0x38]
+0002d868  csel     x2, x11, x10, eq
+0002d86c  csel     x1, x8, x9, eq
+0002d870  bl       #0xef40 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0002d874  ldrb     w8, [sp, #0x80]
+0002d878  tbz      w8, #0, #0x2d884
+0002d87c  ldr      x0, [sp, #0x90]
+0002d880  bl       #0xec10 _ZdlPv
+0002d884  adrp     x1, #0x32000
+0002d888  str      w27, [sp, #0xc]
+0002d88c  add      x0, sp, #0x98
+0002d890  add      x1, x1, #0xcce
+0002d894  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002d898  ldr      w0, [sp, #0x1c]
+0002d89c  add      x8, sp, #0x80
+0002d8a0  bl       #0xf1b0 _ZNSt3__19to_stringEi
+0002d8a4  ldrb     w8, [sp, #0x80]
+0002d8a8  add      x0, sp, #0x98
+0002d8ac  ldp      x10, x9, [sp, #0x88]
+0002d8b0  lsr      x11, x8, #1
+0002d8b4  tst      w8, #1
+0002d8b8  ldr      x8, [sp, #0x38]
+0002d8bc  csel     x2, x11, x10, eq
+0002d8c0  csel     x1, x8, x9, eq
+0002d8c4  bl       #0xef40 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0002d8c8  ldrb     w8, [sp, #0x80]
+0002d8cc  tbz      w8, #0, #0x2d8d8
+0002d8d0  ldr      x0, [sp, #0x90]
+0002d8d4  bl       #0xec10 _ZdlPv
+0002d8d8  adrp     x1, #0x32000
+0002d8dc  add      x0, sp, #0x98
+0002d8e0  add      x1, x1, #0xca0
+0002d8e4  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002d8e8  ldrb     w8, [sp, #0x98]
+0002d8ec  adrp     x1, #0x31000
+0002d8f0  ldr      x9, [sp, #0xa8]
+0002d8f4  adrp     x2, #0x32000
+0002d8f8  ldr      x27, [sp, #0x30]
+0002d8fc  mov      w0, #5
+0002d900  add      x1, x1, #0x4ce
+0002d904  tst      w8, #1
+0002d908  add      x2, x2, #0xcd0
+0002d90c  csel     x3, x27, x9, eq
+0002d910  bl       #0xee80 __android_log_print
+0002d914  cbz      w24, #0x2db8c
+0002d918  cmp      w24, #2
+0002d91c  b.ne     #0x2ddf8
+0002d920  ldrb     w8, [sp, #0x98]
+0002d924  mov      w3, #0x20
+0002d928  ldr      x10, [sp, #0x60]
+0002d92c  mov      w2, #0x1008
+0002d930  ldr      x9, [sp, #0xa8]
+0002d934  ldr      w1, [sp, #8]
+0002d938  tst      w8, #1
+0002d93c  ldr      x8, [sp, #0x30]
+0002d940  ldr      x0, [x10, #0x18]
+0002d944  csel     x4, x8, x9, eq
+0002d948  b        #0x2dbb0
+0002d94c  adrp     x1, #0x31000
+0002d950  adrp     x2, #0x32000
+0002d954  mov      w0, #4
+0002d958  add      x1, x1, #0x4ce
+0002d95c  add      x2, x2, #0xca5
+0002d960  bl       #0xee80 __android_log_print
+0002d964  ldr      x24, [sp, #0x50]
+0002d968  b        #0x2dde8
+0002d96c  adrp     x1, #0x31000
+0002d970  adrp     x2, #0x32000
+0002d974  mov      w0, #6
+0002d978  add      x1, x1, #0x4ce
+0002d97c  add      x2, x2, #0xcf4
+0002d980  bl       #0xee80 __android_log_print
+0002d984  b        #0x2dde8
+0002d988  ldrb     w8, [sp, #0x98]
+0002d98c  mov      w3, #0x20
+0002d990  ldr      x10, [sp, #0x60]
+0002d994  mov      w2, #0x408
+0002d998  ldr      x9, [sp, #0xa8]
+0002d99c  ldr      w1, [sp, #8]
+0002d9a0  tst      w8, #1
+0002d9a4  ldr      x0, [x10, #0x18]
+0002d9a8  csel     x4, x27, x9, eq
+0002d9ac  bl       #0xfdd0 _Z15DumpRawMipiDataPKhiiiPKc
+0002d9b0  ldr      w27, [sp, #0xc]
+0002d9b4  ldrb     w8, [sp, #0x98]
+0002d9b8  tbz      w8, #0, #0x2d9c4
+0002d9bc  ldr      x0, [sp, #0xa8]
+0002d9c0  bl       #0xec10 _ZdlPv
+0002d9c4  sub      x0, x29, #0xe8
+0002d9c8  sub      x1, x29, #0xa0
+0002d9cc  mov      w2, #0x48
+0002d9d0  bl       #0xeb40 memcpy
+0002d9d4  ldr      x2, [sp, #0x60]
+0002d9d8  sub      x4, x29, #0xe8
+0002d9dc  mov      x0, x22
+0002d9e0  mov      w1, w27
+0002d9e4  mov      x3, x26
+0002d9e8  bl       #0xfde0 _ZN15DepthMapWrapper23DecodeAndComposeDepthXYE9FrameModeR17WrapperDepthInputR18WrapperDepthOutput36AdapsParamAndOutForProcessEveryFrame
+0002d9ec  mov      w27, w0
+0002d9f0  cmp      w27, #3
+0002d9f4  b.eq     #0x2d9fc
+0002d9f8  cbnz     w27, #0x2dde0
+0002d9fc  ldrb     w8, [x22, #8]
+0002da00  mov      w11, #0x2d40
+0002da04  ldr      x24, [sp, #0x50]
+0002da08  cbz      w8, #0x2ddf0
+0002da0c  ldr      w8, [x22]
+0002da10  cmp      w8, #0x1f
+0002da14  b.lt     #0x2ddd0
+0002da18  adrp     x10, #0x71000
+0002da1c  ldr      w9, [x22, #4]
+0002da20  ldr      w10, [x10, #0x458]
+0002da24  cmp      w9, w10
+0002da28  b.ge     #0x2ddd0
+0002da2c  ldr      x1, [sp, #0x20]
+0002da30  add      x0, sp, #0x98
+0002da34  bl       #0xf070 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+0002da38  adrp     x1, #0x32000
+0002da3c  add      x0, sp, #0x98
+0002da40  add      x1, x1, #0xcea
+0002da44  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002da48  adrp     x1, #0x32000
+0002da4c  add      x0, sp, #0x98
+0002da50  add      x1, x1, #0xc0c
+0002da54  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002da58  ldr      w0, [x22]
+0002da5c  add      x8, sp, #0x80
+0002da60  bl       #0xf1b0 _ZNSt3__19to_stringEi
+0002da64  ldrb     w8, [sp, #0x80]
+0002da68  add      x0, sp, #0x98
+0002da6c  ldp      x10, x9, [sp, #0x88]
+0002da70  lsr      x11, x8, #1
+0002da74  tst      w8, #1
+0002da78  ldr      x8, [sp, #0x38]
+0002da7c  csel     x2, x11, x10, eq
+0002da80  csel     x1, x8, x9, eq
+0002da84  bl       #0xef40 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0002da88  ldrb     w8, [sp, #0x80]
+0002da8c  tbz      w8, #0, #0x2da98
+0002da90  ldr      x0, [sp, #0x90]
+0002da94  bl       #0xec10 _ZdlPv
+0002da98  mov      w8, #0x2328
+0002da9c  cbnz     w27, #0x2daf4
+0002daa0  adrp     x1, #0x32000
+0002daa4  add      x0, sp, #0x98
+0002daa8  add      x1, x1, #0xcce
+0002daac  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002dab0  ldr      w0, [sp, #0x1c]
+0002dab4  add      x8, sp, #0x80
+0002dab8  bl       #0xf1b0 _ZNSt3__19to_stringEi
+0002dabc  ldrb     w8, [sp, #0x80]
+0002dac0  add      x0, sp, #0x98
+0002dac4  ldp      x10, x9, [sp, #0x88]
+0002dac8  lsr      x11, x8, #1
+0002dacc  tst      w8, #1
+0002dad0  ldr      x8, [sp, #0x38]
+0002dad4  csel     x2, x11, x10, eq
+0002dad8  csel     x1, x8, x9, eq
+0002dadc  bl       #0xef40 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0002dae0  ldrb     w8, [sp, #0x80]
+0002dae4  tbz      w8, #0, #0x2daf0
+0002dae8  ldr      x0, [sp, #0x90]
+0002daec  bl       #0xec10 _ZdlPv
+0002daf0  mov      w8, #0x708
+0002daf4  adrp     x1, #0x31000
+0002daf8  add      x0, sp, #0x98
+0002dafc  add      x1, x1, #0x744
+0002db00  mov      w27, w8
+0002db04  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002db08  ldrb     w8, [sp, #0x98]
+0002db0c  mov      w1, w27
+0002db10  ldr      x9, [sp, #0xa8]
+0002db14  ldr      x0, [x26, #0x2d20]
+0002db18  tst      w8, #1
+0002db1c  ldr      x8, [sp, #0x30]
+0002db20  csel     x2, x8, x9, eq
+0002db24  bl       #0xfdf0 _Z14DumpDepthXYTxtPKviPKc
+0002db28  ldr      w8, [x22, #4]
+0002db2c  ldrb     w9, [sp, #0x98]
+0002db30  add      w8, w8, #1
+0002db34  str      w8, [x22, #4]
+0002db38  tbz      w9, #0, #0x2db44
+0002db3c  ldr      x0, [sp, #0xa8]
+0002db40  bl       #0xec10 _ZdlPv
+0002db44  ldr      w8, [x22]
+0002db48  mov      w11, #0x2d40
+0002db4c  b        #0x2ddd0
+0002db50  ldr      w27, [sp, #0xc]
+0002db54  cmp      w24, #1
+0002db58  b.ne     #0x2d9b4
+0002db5c  ldrb     w8, [sp, #0x98]
+0002db60  mov      w1, #0xa00
+0002db64  ldr      x10, [sp, #0x60]
+0002db68  ldr      x9, [sp, #0xa8]
+0002db6c  tst      w8, #1
+0002db70  ldr      x8, [sp, #0x30]
+0002db74  ldr      x0, [x10, #0x18]
+0002db78  csel     x2, x8, x9, eq
+0002db7c  bl       #0xfcb0 _Z11DumpRawDataPKhiPKc
+0002db80  ldrb     w8, [sp, #0x98]
+0002db84  tbnz     w8, #0, #0x2d9bc
+0002db88  b        #0x2d9c4
+0002db8c  ldrb     w8, [sp, #0x98]
+0002db90  mov      w3, #0x20
+0002db94  ldr      x10, [sp, #0x60]
+0002db98  mov      w2, #0x408
+0002db9c  ldr      x9, [sp, #0xa8]
+0002dba0  ldr      w1, [sp, #8]
+0002dba4  tst      w8, #1
+0002dba8  ldr      x0, [x10, #0x18]
+0002dbac  csel     x4, x27, x9, eq
+0002dbb0  bl       #0xfdd0 _Z15DumpRawMipiDataPKhiiiPKc
+0002dbb4  ldr      w27, [sp, #0xc]
+0002dbb8  ldrb     w8, [sp, #0x98]
+0002dbbc  tbz      w8, #0, #0x2dbc8
+0002dbc0  ldr      x0, [sp, #0xa8]
+0002dbc4  bl       #0xec10 _ZdlPv
+0002dbc8  add      x0, sp, #0xb0
+0002dbcc  sub      x1, x29, #0xa0
+0002dbd0  mov      w2, #0x48
+0002dbd4  bl       #0xeb40 memcpy
+0002dbd8  ldr      x2, [sp, #0x60]
+0002dbdc  add      x4, sp, #0xb0
+0002dbe0  mov      x0, x22
+0002dbe4  mov      w1, w27
+0002dbe8  mov      x3, x26
+0002dbec  bl       #0xfe00 _ZN15DepthMapWrapper16DecodeAndComposeE9FrameModeR17WrapperDepthInputR18WrapperDepthOutput36AdapsParamAndOutForProcessEveryFrame
+0002dbf0  mov      w27, w0
+0002dbf4  cmp      w27, #3
+0002dbf8  b.eq     #0x2dc00
+0002dbfc  cbnz     w27, #0x2dde0
+0002dc00  ldrb     w8, [x22, #8]
+0002dc04  mov      w11, #0x2d40
+0002dc08  ldr      x24, [sp, #0x50]
+0002dc0c  cbz      w8, #0x2ddf0
+0002dc10  ldr      w8, [x22]
+0002dc14  cmp      w8, #0x1f
+0002dc18  b.lt     #0x2ddd0
+0002dc1c  adrp     x10, #0x71000
+0002dc20  ldr      w9, [x22, #4]
+0002dc24  ldr      w10, [x10, #0x458]
+0002dc28  cmp      w9, w10
+0002dc2c  b.ge     #0x2ddd0
+0002dc30  ldr      x1, [sp, #0x20]
+0002dc34  add      x0, sp, #0x98
+0002dc38  bl       #0xf070 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+0002dc3c  adrp     x1, #0x32000
+0002dc40  add      x0, sp, #0x98
+0002dc44  add      x1, x1, #0xd46
+0002dc48  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002dc4c  ldr      w0, [x22]
+0002dc50  add      x8, sp, #0x80
+0002dc54  bl       #0xf1b0 _ZNSt3__19to_stringEi
+0002dc58  ldrb     w8, [sp, #0x80]
+0002dc5c  add      x0, sp, #0x98
+0002dc60  ldp      x10, x9, [sp, #0x88]
+0002dc64  lsr      x11, x8, #1
+0002dc68  tst      w8, #1
+0002dc6c  ldr      x8, [sp, #0x38]
+0002dc70  csel     x2, x11, x10, eq
+0002dc74  csel     x1, x8, x9, eq
+0002dc78  bl       #0xef40 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0002dc7c  ldrb     w8, [sp, #0x80]
+0002dc80  tbz      w8, #0, #0x2dc8c
+0002dc84  ldr      x0, [sp, #0x90]
+0002dc88  bl       #0xec10 _ZdlPv
+0002dc8c  cbnz     w27, #0x2dce0
+0002dc90  adrp     x1, #0x32000
+0002dc94  add      x0, sp, #0x98
+0002dc98  add      x1, x1, #0xcce
+0002dc9c  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002dca0  ldr      w0, [sp, #0x1c]
+0002dca4  add      x8, sp, #0x80
+0002dca8  bl       #0xf1b0 _ZNSt3__19to_stringEi
+0002dcac  ldrb     w8, [sp, #0x80]
+0002dcb0  add      x0, sp, #0x98
+0002dcb4  ldp      x10, x9, [sp, #0x88]
+0002dcb8  lsr      x11, x8, #1
+0002dcbc  tst      w8, #1
+0002dcc0  ldr      x8, [sp, #0x38]
+0002dcc4  csel     x2, x11, x10, eq
+0002dcc8  csel     x1, x8, x9, eq
+0002dccc  bl       #0xef40 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0002dcd0  ldrb     w8, [sp, #0x80]
+0002dcd4  tbz      w8, #0, #0x2dce0
+0002dcd8  ldr      x0, [sp, #0x90]
+0002dcdc  bl       #0xec10 _ZdlPv
+0002dce0  adrp     x1, #0x31000
+0002dce4  add      x0, sp, #0x98
+0002dce8  add      x1, x1, #0x744
+0002dcec  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002dcf0  ldrb     w8, [sp, #0x98]
+0002dcf4  mov      w1, #0x680
+0002dcf8  ldr      x9, [sp, #0xa8]
+0002dcfc  movk     w1, #1, lsl #16
+0002dd00  ldr      x0, [x26, #0x2d20]
+0002dd04  mov      w3, wzr
+0002dd08  tst      w8, #1
+0002dd0c  ldr      x8, [sp, #0x30]
+0002dd10  csel     x2, x8, x9, eq
+0002dd14  bl       #0xfe10 _Z12DumpDepthTxtPKviPKcb
+0002dd18  ldr      x1, [sp, #0x20]
+0002dd1c  add      x0, sp, #0x80
+0002dd20  bl       #0xf070 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+0002dd24  adrp     x1, #0x32000
+0002dd28  add      x0, sp, #0x80
+0002dd2c  add      x1, x1, #0xd57
+0002dd30  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002dd34  ldr      w0, [x22]
+0002dd38  add      x8, sp, #0x68
+0002dd3c  bl       #0xf1b0 _ZNSt3__19to_stringEi
+0002dd40  ldrb     w8, [sp, #0x68]
+0002dd44  add      x0, sp, #0x80
+0002dd48  ldp      x10, x9, [sp, #0x70]
+0002dd4c  lsr      x11, x8, #1
+0002dd50  tst      w8, #1
+0002dd54  ldr      x8, [sp, #0x10]
+0002dd58  csel     x2, x11, x10, eq
+0002dd5c  csel     x1, x8, x9, eq
+0002dd60  bl       #0xef40 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0002dd64  ldrb     w8, [sp, #0x68]
+0002dd68  tbz      w8, #0, #0x2dd74
+0002dd6c  ldr      x0, [sp, #0x78]
+0002dd70  bl       #0xec10 _ZdlPv
+0002dd74  adrp     x1, #0x31000
+0002dd78  add      x0, sp, #0x80
+0002dd7c  add      x1, x1, #0x744
+0002dd80  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002dd84  ldrb     w8, [sp, #0x80]
+0002dd88  add      x0, x26, #0x20
+0002dd8c  ldr      x9, [sp, #0x90]
+0002dd90  add      x1, x26, #0xf20
+0002dd94  mov      w2, #0x3c0
+0002dd98  tst      w8, #1
+0002dd9c  ldr      x8, [sp, #0x38]
+0002dda0  csel     x3, x8, x9, eq
+0002dda4  bl       #0xfe20 _Z16DumpSpotPositionPKjS0_iPKc
+0002dda8  ldr      w8, [x22, #4]
+0002ddac  ldrb     w9, [sp, #0x80]
+0002ddb0  add      w8, w8, #1
+0002ddb4  str      w8, [x22, #4]
+0002ddb8  tbz      w9, #0, #0x2ddc4
+0002ddbc  ldr      x0, [sp, #0x90]
+0002ddc0  bl       #0xec10 _ZdlPv
+0002ddc4  ldrb     w8, [sp, #0x98]
+0002ddc8  tbnz     w8, #0, #0x2db3c
+0002ddcc  b        #0x2db44
+0002ddd0  add      w8, w8, #1
+0002ddd4  mov      w27, #1
+0002ddd8  str      w8, [x22]
+0002dddc  b        #0x2e060
+0002dde0  ldr      x24, [sp, #0x50]
+0002dde4  mov      w27, wzr
+0002dde8  mov      w11, #0x2d40
+0002ddec  b        #0x2e060
+0002ddf0  mov      w27, #1
+0002ddf4  b        #0x2e060
+0002ddf8  ldr      w27, [sp, #0xc]
+0002ddfc  cmp      w24, #1
+0002de00  b.ne     #0x2dbb8
+0002de04  ldrb     w8, [sp, #0x98]
+0002de08  mov      w1, #0xa00
+0002de0c  ldr      x10, [sp, #0x60]
+0002de10  ldr      x9, [sp, #0xa8]
+0002de14  tst      w8, #1
+0002de18  ldr      x8, [sp, #0x30]
+0002de1c  ldr      x0, [x10, #0x18]
+0002de20  csel     x2, x8, x9, eq
+0002de24  bl       #0xfcb0 _Z11DumpRawDataPKhiPKc
+0002de28  ldrb     w8, [sp, #0x98]
+0002de2c  tbnz     w8, #0, #0x2dbc0
+0002de30  b        #0x2dbc8
+0002de34  add      x26, x20, x23
+0002de38  ldr      w8, [x26]
+0002de3c  sub      w8, w8, #1
+0002de40  cmp      w8, #3
+0002de44  b.hi     #0x2e05c
+0002de48  ldrsw    x8, [x28, x8, lsl #2]
+0002de4c  add      x8, x8, x28
+0002de50  br       x8
+0002de54  ldr      x8, [x26, #0x2d20]
+0002de58  cbz      x8, #0x2e05c
+0002de5c  ldr      w8, [x21, x23]
+0002de60  cbnz     w8, #0x2e060
+0002de64  b        #0x2e05c
+0002de68  ldr      x8, [x26, #0x2d20]
+0002de6c  cbz      x8, #0x2e05c
+0002de70  ldr      x8, [x21, x23]
+0002de74  cbnz     x8, #0x2e060
+0002de78  b        #0x2e05c
+0002de7c  ldr      x8, [x26, #0x2d20]
+0002de80  cbz      x8, #0x2e05c
+0002de84  ldr      w8, [x21, x23]
+0002de88  cbz      w8, #0x2e05c
+0002de8c  ldr      x8, [sp, #0x58]
+0002de90  ldrsb    x24, [x8]
+0002de94  cmp      x24, #3
+0002de98  b.hs     #0x2d94c
+0002de9c  adrp     x9, #0x32000
+0002dea0  ldrb     w8, [x22, #8]
+0002dea4  add      x9, x9, #0xf60
+0002dea8  ldr      w27, [x9, x24, lsl #2]
+0002deac  cbz      w8, #0x2d9c4
+0002deb0  ldr      x8, [x22, #0x18]
+0002deb4  cmp      w24, #2
+0002deb8  ldr      w9, [x22]
+0002debc  add      x10, x8, #0x5c
+0002dec0  add      x8, x8, #0x58
+0002dec4  csel     x8, x10, x8, eq
+0002dec8  cmp      w9, #0x1f
+0002decc  b.lt     #0x2d9c4
+0002ded0  adrp     x10, #0x71000
+0002ded4  ldr      w9, [x22, #4]
+0002ded8  ldr      w10, [x10, #0x458]
+0002dedc  cmp      w9, w10
+0002dee0  b.ge     #0x2d9c4
+0002dee4  ldr      w8, [x8]
+0002dee8  add      x0, sp, #0x98
+0002deec  ldr      x1, [sp, #0x20]
+0002def0  str      w8, [sp, #8]
+0002def4  bl       #0xf070 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+0002def8  adrp     x1, #0x32000
+0002defc  add      x0, sp, #0x98
+0002df00  add      x1, x1, #0xcc5
+0002df04  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002df08  ldr      w0, [x22]
+0002df0c  add      x8, sp, #0x80
+0002df10  bl       #0xf1b0 _ZNSt3__19to_stringEi
+0002df14  ldrb     w8, [sp, #0x80]
+0002df18  add      x0, sp, #0x98
+0002df1c  ldp      x10, x9, [sp, #0x88]
+0002df20  lsr      x11, x8, #1
+0002df24  tst      w8, #1
+0002df28  ldr      x8, [sp, #0x38]
+0002df2c  csel     x2, x11, x10, eq
+0002df30  csel     x1, x8, x9, eq
+0002df34  bl       #0xef40 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0002df38  ldrb     w8, [sp, #0x80]
+0002df3c  tbz      w8, #0, #0x2df48
+0002df40  ldr      x0, [sp, #0x90]
+0002df44  bl       #0xec10 _ZdlPv
+0002df48  adrp     x1, #0x32000
+0002df4c  str      w27, [sp, #0xc]
+0002df50  add      x0, sp, #0x98
+0002df54  add      x1, x1, #0xcce
+0002df58  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002df5c  ldr      w0, [sp, #0x1c]
+0002df60  add      x8, sp, #0x80
+0002df64  bl       #0xf1b0 _ZNSt3__19to_stringEi
+0002df68  ldrb     w8, [sp, #0x80]
+0002df6c  add      x0, sp, #0x98
+0002df70  ldp      x10, x9, [sp, #0x88]
+0002df74  lsr      x11, x8, #1
+0002df78  tst      w8, #1
+0002df7c  ldr      x8, [sp, #0x38]
+0002df80  csel     x2, x11, x10, eq
+0002df84  csel     x1, x8, x9, eq
+0002df88  bl       #0xef40 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKcm
+0002df8c  ldrb     w8, [sp, #0x80]
+0002df90  tbz      w8, #0, #0x2df9c
+0002df94  ldr      x0, [sp, #0x90]
+0002df98  bl       #0xec10 _ZdlPv
+0002df9c  adrp     x1, #0x32000
+0002dfa0  add      x0, sp, #0x98
+0002dfa4  add      x1, x1, #0xca0
+0002dfa8  bl       #0xf080 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6appendEPKc
+0002dfac  ldrb     w8, [sp, #0x98]
+0002dfb0  adrp     x1, #0x31000
+0002dfb4  ldr      x9, [sp, #0xa8]
+0002dfb8  adrp     x2, #0x32000
+0002dfbc  ldr      x27, [sp, #0x30]
+0002dfc0  mov      w0, #5
+0002dfc4  add      x1, x1, #0x4ce
+0002dfc8  tst      w8, #1
+0002dfcc  add      x2, x2, #0xcd0
+0002dfd0  csel     x3, x27, x9, eq
+0002dfd4  bl       #0xee80 __android_log_print
+0002dfd8  cbz      w24, #0x2d988
+0002dfdc  cmp      w24, #2
+0002dfe0  b.ne     #0x2db50
+0002dfe4  ldrb     w8, [sp, #0x98]
+0002dfe8  mov      w3, #0x20
+0002dfec  ldr      x10, [sp, #0x60]
+0002dff0  mov      w2, #0x1008
+0002dff4  ldr      x9, [sp, #0xa8]
+0002dff8  ldr      w1, [sp, #8]
+0002dffc  tst      w8, #1
+0002e000  ldr      x8, [sp, #0x30]
+0002e004  ldr      x0, [x10, #0x18]
+0002e008  csel     x4, x8, x9, eq
+0002e00c  b        #0x2d9ac
+0002e010  ldr      x0, [x26, #0x2d20]
+0002e014  cbz      x0, #0x2e05c
+0002e018  ldr      w8, [x21, x23]
+0002e01c  cbz      w8, #0x2e05c
+0002e020  cmp      x19, #1
+0002e024  b.ne     #0x2d7c8
+0002e028  ldrh     w3, [x24]
+0002e02c  cmp      x3, #0x77f
+0002e030  b.hi     #0x2d96c
+0002e034  ldr      x26, [sp, #0x28]
+0002e038  lsl      x2, x3, #4
+0002e03c  mov      x1, x26
+0002e040  bl       #0xeb40 memcpy
+0002e044  ldrh     w8, [x24]
+0002e048  mov      x0, x26
+0002e04c  mov      w1, wzr
+0002e050  lsl      x2, x8, #4
+0002e054  bl       #0xed00 memset
+0002e058  b        #0x2dde8
+0002e05c  mov      w27, wzr
+0002e060  add      x19, x19, #1
+0002e064  add      x23, x23, x11
+0002e068  cmp      x25, x19
+0002e06c  b.ne     #0x2de34
+0002e070  mov      w8, #0xe3eb
+0002e074  ldp      x9, x23, [sp, #0x40]
+0002e078  movk     w8, #0xe4, lsl #16
+0002e07c  str      x8, [x9, #8]
+0002e080  ldr      x8, [x23, #0x28]
+0002e084  ldur     x9, [x29, #-0x58]
+0002e088  cmp      x8, x9
+0002e08c  b.ne     #0x2e0b4
+0002e090  and      w0, w27, #1
+0002e094  ldp      x29, x30, [sp, #0x1e0]
+0002e098  ldp      x20, x19, [sp, #0x1d0]
+0002e09c  ldp      x22, x21, [sp, #0x1c0]
+0002e0a0  ldp      x24, x23, [sp, #0x1b0]
+0002e0a4  ldp      x26, x25, [sp, #0x1a0]
+0002e0a8  ldp      x28, x27, [sp, #0x190]
+0002e0ac  add      sp, sp, #0x1f0
+0002e0b0  ret
+0002e0b4  bl       #0xebe0 __stack_chk_fail
+
+_ZN15DepthMapWrapper16DecodeAndComposeE9FrameModeR17WrapperDepthInputR18WrapperDepthOutput36AdapsParamAndOutForProcessEveryFrame @ 0x2e200, 560 bytes
+0002e200  str      x25, [sp, #-0x50]!
+0002e204  stp      x24, x23, [sp, #0x10]
+0002e208  stp      x22, x21, [sp, #0x20]
+0002e20c  stp      x20, x19, [sp, #0x30]
+0002e210  stp      x29, x30, [sp, #0x40]
+0002e214  add      x29, sp, #0x40
+0002e218  mov      x22, x4
+0002e21c  mov      w23, w1
+0002e220  mov      x19, x3
+0002e224  mov      x21, x2
+0002e228  mov      x20, x0
+0002e22c  sub      w8, w23, #1
+0002e230  cmp      w8, #1
+0002e234  b.hi     #0x2e294
+0002e238  mov      w8, #0x8529
+0002e23c  ldr      x0, [x20, #0x18]
+0002e240  movk     w8, #2, lsl #16
+0002e244  ldr      s0, [x22, #8]
+0002e248  ldrb     w24, [x20, x8]
+0002e24c  bl       #0xfe30 _ZN20SwiftDepthCalculator21SetCurrentTemperatureEf
+0002e250  tbnz     w0, #0, #0x2e26c
+0002e254  adrp     x1, #0x31000
+0002e258  adrp     x2, #0x32000
+0002e25c  add      x1, x1, #0x4ce
+0002e260  add      x2, x2, #0xd67
+0002e264  mov      w0, #6
+0002e268  bl       #0xee80 __android_log_print
+0002e26c  ldr      w8, [x22, #4]
+0002e270  cmp      w8, #3
+0002e274  b.eq     #0x2e2d4
+0002e278  cmp      w8, #2
+0002e27c  b.eq     #0x2e2e0
+0002e280  cmp      w8, #1
+0002e284  b.ne     #0x2e2ec
+0002e288  ldr      x0, [x20, #0x18]
+0002e28c  mov      w1, wzr
+0002e290  b        #0x2e2e8
+0002e294  cmp      w23, #5
+0002e298  b.ne     #0x2e2b4
+0002e29c  ldr      x0, [x20, #0x18]
+0002e2a0  ldr      x1, [x19, #0x2d20]
+0002e2a4  ldr      x2, [x21, #0x18]
+0002e2a8  bl       #0xfe60 _ZN20SwiftDepthCalculator19CalculateGrayBitmapEPtPKh
+0002e2ac  mov      w21, wzr
+0002e2b0  b        #0x2e414
+0002e2b4  adrp     x1, #0x31000
+0002e2b8  adrp     x2, #0x32000
+0002e2bc  add      x1, x1, #0x4ce
+0002e2c0  add      x2, x2, #0xd83
+0002e2c4  mov      w0, #6
+0002e2c8  bl       #0xee80 __android_log_print
+0002e2cc  mov      w21, #4
+0002e2d0  b        #0x2e414
+0002e2d4  ldr      x0, [x20, #0x18]
+0002e2d8  mov      w1, #2
+0002e2dc  b        #0x2e2e8
+0002e2e0  ldr      x0, [x20, #0x18]
+0002e2e4  mov      w1, #1
+0002e2e8  bl       #0xfe40 _ZN20SwiftDepthCalculator18SetMeasurementTypeE15AlgoMeasurement
+0002e2ec  ldr      x0, [x20, #0x18]
+0002e2f0  ldp      w1, w2, [x22, #0x20]
+0002e2f4  bl       #0xfe70 _ZN20SwiftDepthCalculator13setFocusPointEii
+0002e2f8  ldr      x0, [x20, #0x18]
+0002e2fc  mov      w1, w23
+0002e300  ldr      x2, [x21, #0x18]
+0002e304  bl       #0xfe50 _ZN20SwiftDepthCalculator26CalculateSparseDepthBitmapE9FrameModePKh
+0002e308  ldr      x8, [x22, #0x10]
+0002e30c  mov      w21, w0
+0002e310  cbz      x8, #0x2e338
+0002e314  ldr      x9, [x20, #0x18]
+0002e318  ldr      w9, [x9]
+0002e31c  cmp      w9, #1
+0002e320  b.eq     #0x2e330
+0002e324  cbnz     w9, #0x2e338
+0002e328  mov      w9, #1
+0002e32c  b        #0x2e334
+0002e330  mov      w9, #2
+0002e334  str      w9, [x8]
+0002e338  ldr      x8, [x22, #0x18]
+0002e33c  cbz      x8, #0x2e35c
+0002e340  ldr      x0, [x20, #0x18]
+0002e344  bl       #0xfe80 _ZN20SwiftDepthCalculator25GetAdvicedMeasurementModeEv
+0002e348  ldr      x8, [x22, #0x18]
+0002e34c  cmp      w0, #0
+0002e350  mov      w9, #1
+0002e354  cinc     w9, w9, ne
+0002e358  str      w9, [x8]
+0002e35c  cmp      w21, #3
+0002e360  b.eq     #0x2e368
+0002e364  cbnz     w21, #0x2e414
+0002e368  cbz      w24, #0x2e374
+0002e36c  mov      w22, #4
+0002e370  b        #0x2e380
+0002e374  ldr      x0, [x20, #0x18]
+0002e378  bl       #0xfe90 _ZN20SwiftDepthCalculator12getZoneIndexEv
+0002e37c  mov      w22, w0
+0002e380  mov      w8, #0x1e20
+0002e384  ldr      x0, [x20, #0x18]
+0002e388  add      x1, x19, x8
+0002e38c  add      x23, x19, #0x20
+0002e390  bl       #0xfea0 _ZN20SwiftDepthCalculator19FillSparsePointHistEPj
+0002e394  ldr      x0, [x20, #0x18]
+0002e398  add      x24, x19, #0xf20
+0002e39c  mov      x1, x23
+0002e3a0  mov      x2, x24
+0002e3a4  mov      w3, w22
+0002e3a8  bl       #0xfeb0 _ZN20SwiftDepthCalculator29FillSparsePointPositionsArrayEPjS0_j
+0002e3ac  mov      w25, #0x8524
+0002e3b0  ldr      x0, [x19, #0x2d20]
+0002e3b4  movk     w25, #2, lsl #16
+0002e3b8  add      x22, x20, #0x20
+0002e3bc  mov      x1, x22
+0002e3c0  ldrsw    x8, [x20, x25]
+0002e3c4  lsl      x2, x8, #1
+0002e3c8  bl       #0xeb40 memcpy
+0002e3cc  mov      w8, #0xd20
+0002e3d0  ldr      x0, [x20, #0x18]
+0002e3d4  mov      w9, #0x8520
+0002e3d8  movk     w8, #2, lsl #16
+0002e3dc  movk     w9, #2, lsl #16
+0002e3e0  add      x3, x20, x8
+0002e3e4  add      x4, x20, x9
+0002e3e8  mov      x1, x23
+0002e3ec  mov      x2, x24
+0002e3f0  bl       #0xfec0 _ZN20SwiftDepthCalculator14GetPointCloudsEPjS0_PfPt
+0002e3f4  ldrsw    x8, [x20, x25]
+0002e3f8  mov      x0, x22
+0002e3fc  mov      w1, wzr
+0002e400  lsl      x2, x8, #1
+0002e404  bl       #0xed00 memset
+0002e408  ldr      x8, [x20, #0x18]
+0002e40c  add      x8, x8, #0x68
+0002e410  str      x8, [x19, #0x2d38]
+0002e414  mov      w0, w21
+0002e418  ldp      x29, x30, [sp, #0x40]
+0002e41c  ldp      x20, x19, [sp, #0x30]
+0002e420  ldp      x22, x21, [sp, #0x20]
+0002e424  ldp      x24, x23, [sp, #0x10]
+0002e428  ldr      x25, [sp], #0x50
+0002e42c  ret

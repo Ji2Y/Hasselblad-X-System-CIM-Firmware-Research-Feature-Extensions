@@ -1,0 +1,131 @@
+{
+  "model": "X2D II 100C",
+  "firmware": "1.3.16.2",
+  "verification": "static offline only",
+  "device_access": false,
+  "input_sha256": {
+    "backend": "7d393c1b0cfecca355b7ca07d357003c25e16fecf8e111a1e03b311c07ab72ab",
+    "gui": "b1b643cb36176cd5a49129dd9bb2be480aa045a96ed1c35c30a779ab5af0801b",
+    "system": "a7554605d7d9bcde6e87a050522a4f154eaa056bbe4abc4545a8df9cd1022039",
+    "prodconfig": "c2b6e86122cc6286dd998b46638b3063bea30d8c85ede83182cd4cd072a217a0",
+    "logo": "03fe95b65e39db203061b8f9d367a6f184d8c71bd9f5c7dd67b27ce0b1105576",
+    "mcu": "3e23ad78b1b5cef9321f8f02aac272e740164b7f49bd1d4c7f5b37e1978db1af"
+  },
+  "logo": {
+    "header": "width:1024 height:768 offset-x:0 offset-y:0 format:2",
+    "width": 1024,
+    "height": 768,
+    "payload_bytes": 1179648,
+    "luma_range": [
+      16,
+      235
+    ],
+    "chroma_value": 128,
+    "preview_file": "logo-luma-preview.png",
+    "preview_sha256": "31e03e7ab55093c31c132ee54d698384ba01e23122e9414d7584a966050bd8e9"
+  },
+  "version_enums": {
+    "ProductID": {
+      "X2D": 4,
+      "CFV100": 5,
+      "X2DM2": 6,
+      "X1DM2": 12,
+      "CFV50": 14,
+      "FIRST": 4,
+      "LAST": 14,
+      "UNKNOWN": 255
+    },
+    "HardwareID": {
+      "Hardware_X1DM2": 4096,
+      "Hardware_CFV_Moon": 16384,
+      "Hardware_CFV_HighRes": 2147500032,
+      "Hardware_X2D": 16,
+      "Hardware_X2D_Prototype": 2147483664,
+      "Hardware_X2D_P0": 1073741840,
+      "Hardware_X2D_P1": 536870928,
+      "Hardware_X2D_P2": 67108880,
+      "Hardware_CFV100": 32,
+      "Hardware_CFV100_P0": 2147483680,
+      "Hardware_X2DM2": 64,
+      "Hardware_X2DM2_Prototype": 2147483712,
+      "Hardware_X2DM2_P0": 1073741888,
+      "Hardware_X2DM2_P1": 536870976,
+      "Hardware_X2DM2_P15": 268435520,
+      "Hardware_X2DM2_P16": 134217792,
+      "Hardware_Unknown": 4294967295
+    }
+  },
+  "x2d2_hardware_ids": {
+    "Hardware_X2DM2": 64,
+    "Hardware_X2DM2_Prototype": 2147483712,
+    "Hardware_X2DM2_P0": 1073741888,
+    "Hardware_X2DM2_P1": 536870976,
+    "Hardware_X2DM2_P15": 268435520,
+    "Hardware_X2DM2_P16": 134217792
+  },
+  "gui_resource_count": 1112,
+  "gui_image_resource_count": 470,
+  "gui_brand_startup_named_resources": [
+    "/icons/ic_logo_hasselblad.svg"
+  ],
+  "mcu_qrc_path_count": 55,
+  "mcu_brand_startup_named_resources": [],
+  "identity_tokens": {
+    "backend": {
+      "Identity/SuVariant": false,
+      "su_variant": false,
+      "Identity/ShellColor": false,
+      "Identity/SuModel": false
+    },
+    "system": {
+      "Identity/SuVariant": false,
+      "su_variant": false,
+      "Identity/ShellColor": true,
+      "Identity/SuModel": true
+    },
+    "prodconfig": {
+      "Identity/SuVariant": false,
+      "su_variant": false,
+      "Identity/ShellColor": true,
+      "Identity/SuModel": true
+    },
+    "gui": {
+      "Identity/SuVariant": false,
+      "su_variant": false,
+      "Identity/ShellColor": false,
+      "Identity/SuModel": false
+    }
+  },
+  "filesystem_inventory": {
+    "system": {
+      "files": 1694,
+      "named_images": [],
+      "named_startup_assets": [
+        "recovery-from-boot.p",
+        "bin/boottime_test_debrand.sh",
+        "bin/boot_control",
+        "bin/startup_perfetto.sh",
+        "bin/boottime_test.sh",
+        "bin/reboot",
+        "bin/dds_toptest_matching_reboot",
+        "bin/fastboot",
+        "etc/startup_trace.cfg"
+      ]
+    },
+    "vendor": {
+      "files": 93,
+      "named_images": [],
+      "named_startup_assets": [
+        "logo.bin",
+        "etc/boottime.cfg"
+      ]
+    }
+  },
+  "limitations": [
+    "Hardware revisions are not evidence of retail special editions.",
+    "ShellColor is a byte field; supported color values and branding mapping were not established.",
+    "The presence of logo.bin does not by itself establish its complete boot loading path.",
+    "No encrypted bootarea/normal payload or every unnamed MCU image was decoded.",
+    "Absence of named variant resources does not prove no future or separate firmware has them."
+  ]
+}

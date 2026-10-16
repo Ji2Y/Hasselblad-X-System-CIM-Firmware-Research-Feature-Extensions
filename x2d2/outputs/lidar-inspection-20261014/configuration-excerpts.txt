@@ -1,0 +1,351 @@
+18:         af_feature_cfg_type : "af_feature_cfg_u_d_t",
+19:         af_feature_cfg : {
+20:                 af               : ENABLE,
+21:                 afc              : AF_AFC_ENABLE,
+22:                 mf               : ENABLE,
+23:                 dmf              : DISABLE,
+24:                 zoom             : DISABLE,
+25:                 dzoom            : DISABLE,
+26:                 zoom_tracking_af : DISABLE,
+27:                 ir_cut           : DISABLE,
+28:                 aft              : DISABLE,
+29:         },
+30:
+31:         af_alg_cfg_type : "af_alg_cfg_u_d_t",
+32:         af_alg_cfg : {
+33:                 cdaf : ENABLE,  //must enable
+34:                 pdaf : ENABLE, // todo enable
+35:                 bdaf : DISABLE,
+36:                 ldaf : DISABLE,
+37:                 vdaf : DISABLE,
+38:                 tof  : ENABLE, // todo enable
+39:         },
+40:
+41:         af_alg_overpeak_cfg : [
+42:             ENABLE,   // CDAF
+43:             DISABLE,  // PDAF
+44:             DISABLE,  // BDAF
+45:             DISABLE,  // LDAF
+46:             DISABLE,  // VDAF
+47:             DISABLE   // TOF
+48:         ],
+49:
+102:         policy : {
+103:             find_dir : {
+104:                 get_peak_min_conf                 : 100,
+105:                 get_peak_range_min_conf           : 90,
+106:                 confirm_dir_conf                  : 100,   // confirm dir conf
+107:                 choose_bdaf_min_conf              : 0,
+108:                 max_frame_wait_bdaf_confirm_ok    : 0,
+109:                 max_jump_times                    : 1,  // normal 1 is enough, when focus range is very big or use bdaf, maybe we need more
+110:                 max_frame_for_jump                : 1,  // define max frame before af start scan
+111:                 overwrite_jumping_target          : 0,   // if set 1, jumping target maybe change evevy frame
+112:                 wait_main_alg_max_frame_cnt       : 255,   // if set 1, jumping target maybe change evevy frame
+113:                 max_focus_range_to_start_scan     : 100,  // when focus range is less than this limit, we can start scan directly
+114:                 max_peak_diff_fdelta_between_algo : 20,
+115:                 set_safe_range_times              : 1,
+116:             },
+117:
+118:             find_peak : {
+119:                 support_guess_peak         : 0,    // maybe bdaf need, mabe pdaf also need, need tune and test
+120:                 use_abort_check            : 1,    // Abort AF after having scanned complete range in both directions
+121:                 confirm_guess_peak_conf    : 120,  // should very good enough, if set 0xFF mean disable
+122:                 confirm_peak_conf          : 100,  // confirm peak min conf
+123:
+124:                 fcsm    : {
+125:                     enable                     : DISABLE,   // switch of fcsm function enable(1) or disable(0)
+126:                     frame_skip                 : 0,   // the minimal internal frame between two fcsm operation
+127:                     direction_consistent_check : 1,   // check the fcsm direction consistent if enable it(set 1), fcsm function only take affect for the same direction
+128:                     abs_speed_pps              : 1000,// ABS scan speed
+129:                     conf_thres                 : 80,  // minimal threshold for fcsm allowing
+130:                     max_cnt                    : 60,  // the maximum fcsm count for one single focus scan
+131:                     done_threshold             : 30,   // the threshold for going to fcsm_STATE_DONE
+132:                     abort_threshold            : 3
+133:                 },
+134:             },
+135:
+136:             check_peak : {
+137:                 enable                   : ENABLE,
+138:                 check_peak_2_fail_enable : 1,
+139:                 max_check_cnt            : 1,
+140:                 min_main_alg_peak_conf   : 0,
+141:                 is_near_invalid          : 1,
+142:                 min_backlash_threshold   : 10,
+143:                 max_frame_cnt            : 40,
+144:                 confirm_pd_mesh_peak_thr : 40
+145:             },
+146:
+147:             goto_peak : {
+148:                 support_refine_peak           : 1,
+149:                 need_focus_stop_status        : 0,
+150:                 refine_peak_diff_fdelta_limit : 4,
+151:                 refine_peak_conf              : 120,
+152:
+153:                 enable_alg_mask_type : "af_alg_cfg_u_d_t",
+154:                 enable_alg_mask : {
+155:                     cdaf : DISABLE,
+156:                     pdaf : DISABLE,
+157:                     bdaf : DISABLE,
+158:                     vdaf : DISABLE,
+159:                     ldaf : DISABLE,
+160:                     tof  : DISABLE,
+161:                 },
+162:             },
+163:         },
+164:
+1342:     tof : {
+1343:         tof_type : TOF_ALGO_TYPE_DTOF_ADS6401,
+1344:         tof_param_type : TOF_PARAM_OF_DRONE,
+1345:
+1346:         enable_tof_tracking    : 0,           // 0 disable, 1 enable
+1347:         tof_tracking_min_roi   : 0,
+1348:
+1349:         // blend config
+1350:         mode                    : TOF_MODE_MESH,
+1351:         blend_domain            : TOF_BLEND_IN_DEPTH,
+1352:         roi_refine              : TOF_ROI_REFINE_FG_FIRST,
+1353:         afc_roi_refine          : TOF_ROI_REFINE_FG_FIRST,
+1354:         tracking_roi_refine     : TOF_ROI_REFINE_FG_FIRST,
+1355:         wide_focus_roi_refine   : TOF_ROI_REFINE_FG_FIRST,
+1356:         multi_mesh_blend_enable : AF_TRUE,
+1357:         mesh_blend_mode         : TOF_MESH_BLEND_MODE_WEIGHT_AVG,
+1358:         blend_mode              : TOF_BLEND_MODE_FLEX_FIRST,
+1359:         temporal_filter_type    : TOF_TEMPORAL_FILTER_AVG,
+1360:
+1361:         // detailed params
+1362:         iir_weight              : 0.1,
+1363:         safe_fdelta_num         : 1,
+1364:         stat_notud_tof_enable   : AF_TRUE,
+1365:         afc_rec_nofc_cmdopt_enable  : AF_FALSE,
+1366:         afs_rec_nofc_cmdopt_enable  : AF_FALSE,
+1367:         win_lens                : 10,
+1368:         delta_range             : 1.4,
+1369:         fg_ratio                : 0.3,
+1370:         front_max_conf          : 65535,
+1371:         front_conf_ratio        : 1,
+1372:         mesh_conf_thres         : [28, 25, 20, 0],
+1373:         weight_conf_thres       : 20,
+1374:
+1375:         zoom_in_roi : {
+1376:             enable              : 0,
+1377:             x_step              : 1,
+1378:             y_step              : 1,
+1379:             x_div               : 3,   // x_max / x_div : zoom_in_max_x
+1380:             y_div               : 3,   // y_max / y_div : zoom_in_max_y
+1381:         },
+1382:
+1383:         mesh_max_row            : 35,
+1384:         mesh_max_col            : 35,
+1385:         safe_distance_fdelta    : 0,
+1386:
+1387:         invalid_distance        : 15000, //65535
+1388:         update_timeout_cnt      : 2,
+1389:         near_distance           : 200,
+1390:         near_distance_in_tracking_mode : 500,
+1391:         under_near_distance_max_conf: 400,
+1392:         stillmode_focus_max_rlt : TOF_RLT_OK,
+1393:         stillmode_afs_focus_max_rlt: TOF_RLT_OK,
+1394:         far_push_inf_enable_liveview     : 0,
+1395:         far_force_afc_enable_liveview    : 0,
+1396:
+1397:         output_confidence : {
+1398:             rlt_super_ok_peak_range_confidence : 120,
+1399:             rlt_super_ok_peak_confidence       : 99, // to make its focus prority higher than the other algorithm
+1400:             rlt_super_ok_dir_confidence        : 130,
+1401:             rlt_ok_peak_range_confidence       : 100,
+1402:             rlt_ok_peak_confidence             : 80,
+1403:             rlt_ok_dir_confidence              : 120,
+1404:             rlt_dir_ok_dir_confidence          : 100,
+1405:             rlt_dir_ok_peak_range_confidence   : 60,
+1406:             rlt_ng_dir_confidence              : 50,
+1407:         },
+1408:     },
+1409:
+1410:     afc : {
+1441:             cdaf_scene_quick_change_max_limit  : 1.2,
+1442:             cdaf_scene_quick_change_min_limit  : 0.8,
+1443:             cdaf_scene_stable_wait_time_s      : 0.3,
+1444:             crs_and_fine_peak_max_dif_idle     : 1.35,
+1445:             crs_and_fine_peak_min_dif_idle     : 0.65,
+1446:             fv_linear_zoom_in_peak_dif_time_ms : 3000,
+1447:             fv_linear_zoom_in_peak_dif_coeff   : 1.05,
+1448:             peak_fv_stable_frame_after_idle    : 9,   //frame
+1449:             peak_fv_stable_time_after_idle     : 330,  // unit ms
+1450:             low_light_score_correction         : 0,
+1451:             no_light_score_correction          : 0,
+1452:             imu_move_afc_score                 : CAM_AFC_SCORE_NO_SUGGEST,
+1453:             cdaf_afc_scores_config :
+1454:             {
+1455:                 limits :
+1456:                 [
+1457:                     0.3,
+1458:                     0.5,
+1459:                     0.7,
+1460:                 ],
+1461:                 scores :
+1462:                 [
+1463:                     CAM_AFC_SCORE_NO_SUGGEST,
+1464:                     CAM_AFC_SCORE_NO_SUGGEST,
+1465:                     CAM_AFC_SCORE_NO_SUGGEST,
+1466:                 ],
+1467:             },
+1468:         },
+1469:
+1470:         pd : {
+1471:             enable : 1,
+1472:             unit   : AF_STEP_UNIT_FDELTA,
+1550:             enable : 0,
+1551:         },
+1552:
+1553:         ir : {
+1554:             enable : 0,
+1555:         },
+1556:
+1557:         cnn_hist : {
+1558:             enable : 0,
+1559:         },
+1560:
+1561:         laser : {
+1562:             enable : DISABLE,
+1563:         },
+1564:
+1565:         temp : {
+1566:             enable : 0,
+1567:         },
+1568:
+1569:         tof : {
+1570:             enable                   : 1,
+1571:             roi_not_conf_timeout     : 200,
+1572:             tof_scene_changed_frames : [1, 1, 1],
+1573:             tof_scene_stable_frames  : [3, 3, 3],
+1574:             max_buffer_len           : 10,  // for afc stable judge
+1575:             max_wait_time            : 15,
+1576:         },
+1577:
+1578:         bdaf : {
+1579:             enable : 0,
+1580:         },
+1581:
+1582:         scene : {
+1583:             enable       : 1,
+1584:             imu_raw_mask : 3,
+1585:         },
+1586:         still_defocus_no_lost       : 1,
+1587:
+1588:         afc_ctrl : {
+1589:             afc_ctrl_alg_cfg : [
+1590:                 1,  // PDAF
+1591:                 0,  // VDAF
+1592:                 0,  // LDAF
+1593:                 1   // TOF
+1594:             ],
+1595:             pos_unit_in_fdelta_flag     : 1,  // wait modify 1
+1596:             length                      : 16,
+1597:             tracking_length             : 1,
+1598:             valid_cnt_th                : 1,
+1599:             tracking_valid_cnt_th       : 0,
+1600:             peak_conf_th                : [400, 0, 0, 80], // 0 is PDAF, 1 is VDAF, 2 is LDAF, 3 is TOF
+1601:             peak_super_conf_th          : [650, 0, 0, 95], // 0 is PDAF, 1 is VDAF, 2 is LDAF, 3 is TOF
+1602:             invalid_cnt_th              : 12,
+1603:             tracking_invalid_cnt_th     : 12,
+1604:             keep_cnt_th                 : 2,
+1605:             tracking_keep_cnt_th        : 10,
+1606:             std_th                      : 20.0,  // unit Fδ
+1607:             tracking_std_th             : 40.0, // unit Fδ
+1608:             ctrl_pos_min_limit          : 0.0,   // 0.5 Fδ
+1609:             ctrl_pos_keep_limit         : 0.0,   // 1.0 Fδ
+1610:             ctrl_pos_low_light_video_keep_limit : 110, // 2.0 Fδ
+1611:             ctrl_pos_max_limit          : 9999.0,  // 6.0 Fδ
+1612:             ctrl_pos_low_light_limit    : 100,    // 4.0 Fδ
+1613:             fast_factor                 : 1.0,
+1614:             slow_factor                 : 1.0,
+1615:             tracking_factor             : 1.0,
+1616:             ctrl_pos_diff_threshold     : 220,    // 4.0 Fδ
+1617:             stable_pos_diff_threshold   : 20,      // pos
+1618:             tracking_stable_pos_diff_threshold : 275,      // pos
+1619:             stable_keep_time_ms         : 10,    // 200ms
+1620:             tracking_stable_keep_time_ms : 200,
+1621:             control_on_score            : CAM_AFC_SCORE_MUST_DISABLE,
+1622:             control_off_score           : CAM_AFC_SCORE_NO_SUGGEST,
+1623:             pdaf_boost_cdaf             : DISABLE,
+1624:             history_status_size         : 5,
+1625:             method                      : AFC_CTRL_METHOD_DEFOCUS,
+1626:             infocus_thres               : 2.0,
+1627:             fusion_ctrl : {
+1628:                 fusion_enable           : 1,
+1629:                 master_algo_type        : 0, // 0 is PDAF, 3 is ToF
+1630:                 slave_algo_type         : 3,
+1631:                 backup_algo_type        : 3, // Both master & slave invalid
+1632:                 enter_lv_thresh         : 6,
+1633:                 fusion_pos_diff_threshold : 6.0, // 6.0 Fδ
+1634:                 fusion_tracking_length       : 4,
+1635:                 fusion_tracking_valid_cnt_th : 2,
+1636:                 fusion_tracking_keep_cnt_th  : 2,
+1637:                 fusion_tracking_std_th       : 4.0, // unit Fδ
+1638:             },
+1639:         },
+1640:     },
+1641:
+1662:     mf : {
+1663:         mf_calib          : MF_CALIB_FIT_TYPE_NONE,
+1664:         mf_auto_calib     : 0,
+1665:         mf_can_set_position_in_afc : 0,
+1666:         mf_can_set_position_in_afs : 1,
+1667:         mf_timeout_frame  : 30,
+1668:         mf_assistant_type : "mf_assist_type_u_cfg_t",
+1669:         mf_assistant : {
+1670:             tof  : DISABLE,
+1671:             bdaf : DISABLE,
+1672:             pdaf : ENABLE,
+1673:         },
+1674:         mf_assist_param : {
+1675:             enable                          : 1,
+1676:             mfa_v2_gui_max_defocus          : 500,
+1677:             mfa_v2_cntdown_for_stable_focus : 7,
+1678:             mfa_v2_large_converge_step      : 1000,
+1844:         delta            : 7.52,  //um
+1845:         changeable_lens  : 1,
+1846:         fixed_foucs_lens : 0,
+1847:         lens_stop_error  : 8,
+1848:         lens_num         : 0,  // auto get lens num by lens list array size
+1849:         wait_lens_accept_cmd_frame : 1,
+1850:         use_ae_fnum                            : 0,
+1851:         wait_focus_frames                      : 3,
+1852:         wide_lens_focal_length_threshold       : 35,
+1853:         wide_lens_speed_ratio                  : 1.0,
+1854:         super_fine_speed_factor                : 1.0,
+1855:         actual_fl_unit                         : AF_ACTUAL_FL_UNIT_MM,
+1856:         distance_to_storke_enable              : 1,
+1857:         hbl_lens                               : 1,
+1858:
+1903:                 tof_params : {
+1904:                     max_dis_to_pos_error : 10,
+1905:                     roi_mask : {
+1906:                         circle_center_x : 209,
+1907:                         circle_center_y : 159,
+1908:                         circle_r        : 75,
+1909:                     },
+1910:
+1911:                     distance_to_storke : [ {
+1912:                         inf : 0,
+1913:                         mod : 560,
+1914:                         mod_distance : 320,
+1915:
+1916:                         kf2 : -0.01719,
+1917:                         kf  : -0.4278,
+1918:                         bf  : 21.815,
+1919:                         km2 : 0.0,
+1920:                         km  : 0.1,
+1921:                         bm  : 0.0,
+1922:                         kn2 : 0.0253,
+1923:                         kn  : 0.5969,
+1924:                         bn  : 84.538,
+1925:
+1926:                         a : 0.2162,
+1927:                         b : 0.01786,
+1928:                         c : 0.004872,
+1929:                         d : 0
+1930:                     } ],
+1931:                 },
+1932:
+1933:                 pdaf_params : {

@@ -1,0 +1,110 @@
+{
+  "model": "X2D II 100C",
+  "firmware": "1.3.16.2",
+  "source": "system/bin/camera-gui",
+  "source_sha256": "b1b643cb36176cd5a49129dd9bb2be480aa045a96ed1c35c30a779ab5af0801b",
+  "verification": "offline extraction; exact decompressed Qt resources",
+  "files": [
+    {
+      "resource": "/icons/ic_liveview_AF-S_disable.svg",
+      "file": "svg/ic_liveview_AF-S_disable.svg",
+      "sha256": "4995a12a76c0025bfb54ca460295ed90c93e9012b0c3676a711d4ea2d09ec7ce",
+      "bytes": 15782,
+      "png": "png/ic_liveview_AF-S_disable.png",
+      "png_width": 312,
+      "png_height": 152,
+      "png_sha256": "e800b21c9e425f47f314d20c259c0c3f2d9286fec144c90a4b31b060974ca93d"
+    },
+    {
+      "resource": "/icons/ic_liveview_AF-C_disable.svg",
+      "file": "svg/ic_liveview_AF-C_disable.svg",
+      "sha256": "b598f2d45c0d31ac960458a86e9f1a05d9f2a4ca8eb16f1694a83332ee63200b",
+      "bytes": 13168,
+      "png": "png/ic_liveview_AF-C_disable.png",
+      "png_width": 312,
+      "png_height": 152,
+      "png_sha256": "7dae1ffc67413d191be8bb59502b49b593b60b7bf63009447f1bd74338e273eb"
+    },
+    {
+      "resource": "/icons/ic_liveview_AF-S.svg",
+      "file": "svg/ic_liveview_AF-S.svg",
+      "sha256": "fab912b8285e3bbd3863c149efc20535efd464d9d34ab2be3a197207e2ed107b",
+      "bytes": 15744,
+      "png": "png/ic_liveview_AF-S.png",
+      "png_width": 312,
+      "png_height": 152,
+      "png_sha256": "1c11f8d9907359c528271491e474d9b475099b72b0581530df175d9360f6b1f9"
+    },
+    {
+      "resource": "/icons/ic_liveview_AF-C.svg",
+      "file": "svg/ic_liveview_AF-C.svg",
+      "sha256": "c44ea8d65064d775bd5414dc6bb5b7fbb675d2af2e081f289334d75af26aea8a",
+      "bytes": 6300,
+      "png": "png/ic_liveview_AF-C.png",
+      "png_width": 312,
+      "png_height": 152,
+      "png_sha256": "47ea6eba16f75cdbc666e3e5e015890f838fea0c823428df7f611344e9449866"
+    },
+    {
+      "resource": "/icons/ic_controlscreen_focus_mode_AF-C.svg",
+      "file": "svg/ic_controlscreen_focus_mode_AF-C.svg",
+      "sha256": "b3475b1364f3e23decba18ab72d891dbbe221a4be3d9337d7d56a8ca52afd50a",
+      "bytes": 1868,
+      "png": "png/ic_controlscreen_focus_mode_AF-C.png",
+      "png_width": 512,
+      "png_height": 280,
+      "png_sha256": "a5b07ff9d6457aec1e26ada56dcf3d80615f4afcd7bbb3f942ffc8724d33e24e"
+    },
+    {
+      "resource": "/icons/ic_controlscreen_focus_mode_AF-S.svg",
+      "file": "svg/ic_controlscreen_focus_mode_AF-S.svg",
+      "sha256": "c4b405c4f489be4c84afd51f276f808c9ad79c234670f40916cef51cd03b8b5e",
+      "bytes": 2633,
+      "png": "png/ic_controlscreen_focus_mode_AF-S.png",
+      "png_width": 512,
+      "png_height": 280,
+      "png_sha256": "3d2112f9053fbcd195fee3525b6b3e8703fd6ff9189c55d57ee9f846d2d25ebd"
+    },
+    {
+      "resource": "/icons/ic_liveview_focus_mode_afc.svg",
+      "file": "svg/ic_liveview_focus_mode_afc.svg",
+      "sha256": "b85418f2d4c0988f2d99784b0a315234b6566f83278c1d524d2d9e5fff2fe8dd",
+      "bytes": 2570,
+      "png": "png/ic_liveview_focus_mode_afc.png",
+      "png_width": 200,
+      "png_height": 200,
+      "png_sha256": "c558b8c918911861714f5967c32ec4c424b1c4378ec5e355ee4ee531388c369e"
+    },
+    {
+      "resource": "/icons/ic_liveview_focus_mode_afs.svg",
+      "file": "svg/ic_liveview_focus_mode_afs.svg",
+      "sha256": "7a732f810b16411fd92a94fd901b34d742646ba799a0712fd6df9d9b09d1769b",
+      "bytes": 2256,
+      "png": "png/ic_liveview_focus_mode_afs.png",
+      "png_width": 200,
+      "png_height": 200,
+      "png_sha256": "ea79df0f704a639c4ac091593d0d288c3f3af15c3990a5d925cda8f2b79ab7bb"
+    },
+    {
+      "resource": "/icons/ic_controlscreen_focus_mode_AF-C_disabled.svg",
+      "file": "svg/ic_controlscreen_focus_mode_AF-C_disabled.svg",
+      "sha256": "eb3861d09be50ad0bd10a1052d812109484a167aa7c14b827b4366c355d82b66",
+      "bytes": 7089,
+      "png": "png/ic_controlscreen_focus_mode_AF-C_disabled.png",
+      "png_width": 512,
+      "png_height": 280,
+      "png_sha256": "1532d041040871efa450d59c8817ba69a574b58e7b7753db1c4b2dc2c91fdbbf"
+    },
+    {
+      "resource": "/icons/ic_controlscreen_focus_mode_AF-S_disabled.svg",
+      "file": "svg/ic_controlscreen_focus_mode_AF-S_disabled.svg",
+      "sha256": "e789feff0aeb951bec8561586f8523901b5d1660cd6666708973267dcd5e43ae",
+      "bytes": 9414,
+      "png": "png/ic_controlscreen_focus_mode_AF-S_disabled.png",
+      "png_width": 512,
+      "png_height": 280,
+      "png_sha256": "af616aedb53e76de39907a663c028b3d7657fa06b263e0e2737e99ada26b24e4"
+    }
+  ],
+  "png_note": "Original SVG rendered at 4x size with transparent background; no recoloring."
+}

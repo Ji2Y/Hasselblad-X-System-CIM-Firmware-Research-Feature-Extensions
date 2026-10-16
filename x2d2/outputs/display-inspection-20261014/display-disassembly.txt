@@ -1,0 +1,3576 @@
+
+_Z15initDispAlgoVopP8EagleVop @ 0xa9080, 2048 bytes
+000a9080  stp      d9, d8, [sp, #-0x70]!
+000a9084  stp      x28, x27, [sp, #0x10]
+000a9088  stp      x26, x25, [sp, #0x20]
+000a908c  stp      x24, x23, [sp, #0x30]
+000a9090  stp      x22, x21, [sp, #0x40]
+000a9094  stp      x20, x19, [sp, #0x50]
+000a9098  stp      x29, x30, [sp, #0x60]
+000a909c  add      x29, sp, #0x60
+000a90a0  sub      sp, sp, #0x7b0
+000a90a4  mrs      x24, tpidr_el0
+000a90a8  mov      x20, x0
+000a90ac  ldr      x8, [x24, #0x28]
+000a90b0  stur     x8, [x29, #-0x68]
+000a90b4  stp      xzr, xzr, [sp, #0x58]
+000a90b8  str      xzr, [sp, #0x68]
+000a90bc  bl       #0x8a568 pthread_self
+000a90c0  add      x1, sp, #0x54
+000a90c4  add      x2, sp, #0x50
+000a90c8  mov      x19, x0
+000a90cc  bl       #0x8bad8 pthread_getschedparam
+000a90d0  cbz      w0, #0xa90e4
+000a90d4  mov      w21, wzr
+000a90d8  ldrb     w8, [sp, #0x58]
+000a90dc  tbnz     w8, #0, #0xa9108
+000a90e0  b        #0xa9110
+000a90e4  adrp     x2, #0x1cc000
+000a90e8  add      x2, x2, #0x510
+000a90ec  mov      x0, x19
+000a90f0  mov      w1, wzr
+000a90f4  bl       #0x8a578 pthread_setschedparam
+000a90f8  mov      w21, wzr
+000a90fc  cbz      w0, #0xa9148
+000a9100  ldrb     w8, [sp, #0x58]
+000a9104  tbz      w8, #0, #0xa9110
+000a9108  ldr      x0, [sp, #0x68]
+000a910c  bl       #0x8a708 _ZdlPv
+000a9110  ldr      x8, [x24, #0x28]
+000a9114  ldur     x9, [x29, #-0x68]
+000a9118  cmp      x8, x9
+000a911c  b.ne     #0xa987c
+000a9120  mov      w0, w21
+000a9124  add      sp, sp, #0x7b0
+000a9128  ldp      x29, x30, [sp, #0x60]
+000a912c  ldp      x20, x19, [sp, #0x50]
+000a9130  ldp      x22, x21, [sp, #0x40]
+000a9134  ldp      x24, x23, [sp, #0x30]
+000a9138  ldp      x26, x25, [sp, #0x20]
+000a913c  ldp      x28, x27, [sp, #0x10]
+000a9140  ldp      d9, d8, [sp], #0x70
+000a9144  ret
+000a9148  mov      x0, x20
+000a914c  bl       #0x8aae8 _ZNK8EagleVop2idEv
+000a9150  cbz      w0, #0xa94e4
+000a9154  mov      x0, x20
+000a9158  bl       #0x8aae8 _ZNK8EagleVop2idEv
+000a915c  cmp      w0, #1
+000a9160  b.ne     #0xa9850
+000a9164  bl       #0x8be28 dispalgo_init
+000a9168  adrp     x8, #0x24a000
+000a916c  adrp     x9, #0x24a000
+000a9170  mov      x0, x20
+000a9174  ldr      x8, [x8, #0x628]
+000a9178  ldr      x9, [x9, #0x630]
+000a917c  stp      x8, x20, [sp, #0x30]
+000a9180  stp      x9, x20, [sp, #0x40]
+000a9184  bl       #0x8aae8 _ZNK8EagleVop2idEv
+000a9188  add      x1, sp, #0x30
+000a918c  bl       #0x8be38 dispalgo_subscribe_events_vop
+000a9190  mov      w22, w0
+000a9194  add      x0, sp, #0x6b8
+000a9198  mov      w2, #0xf0
+000a919c  mov      w1, wzr
+000a91a0  add      x23, sp, #0x6b8
+000a91a4  bl       #0x8a8b8 memset
+000a91a8  adrp     x8, #0x1cb000
+000a91ac  adrp     x9, #0x24a000
+000a91b0  adrp     x1, #0x1b8000
+000a91b4  ldr      d0, [x8, #0xf10]
+000a91b8  add      x1, x1, #0x176
+000a91bc  ldr      x9, [x9, #0x638]
+000a91c0  add      x0, sp, #0x58
+000a91c4  str      x20, [sp, #0x790]
+000a91c8  add      x21, sp, #0x58
+000a91cc  str      d0, [sp, #0x780]
+000a91d0  str      x9, [sp, #0x788]
+000a91d4  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a91d8  ldrb     w8, [sp, #0x58]
+000a91dc  orr      x25, x21, #1
+000a91e0  ldr      x9, [sp, #0x68]
+000a91e4  mov      w21, #0x63
+000a91e8  add      x0, sp, #0x6b8
+000a91ec  mov      x2, x21
+000a91f0  tst      w8, #1
+000a91f4  csel     x1, x25, x9, eq
+000a91f8  bl       #0x8be58 strncpy
+000a91fc  adrp     x1, #0x1b8000
+000a9200  add      x1, x1, #0x190
+000a9204  add      x0, sp, #0x58
+000a9208  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a920c  ldrb     w8, [sp, #0x58]
+000a9210  add      x0, x23, #0x64
+000a9214  ldr      x9, [sp, #0x68]
+000a9218  mov      x2, x21
+000a921c  tst      w8, #1
+000a9220  csel     x1, x25, x9, eq
+000a9224  bl       #0x8be58 strncpy
+000a9228  mov      x0, x20
+000a922c  bl       #0x8aae8 _ZNK8EagleVop2idEv
+000a9230  add      x2, sp, #0x6b8
+000a9234  mov      w1, wzr
+000a9238  bl       #0x8be68 dispalgo_add_algorithm
+000a923c  mov      w23, w0
+000a9240  mov      w2, #0x648
+000a9244  add      x0, sp, #0x70
+000a9248  mov      w1, wzr
+000a924c  add      x25, sp, #0x70
+000a9250  bl       #0x8a8b8 memset
+000a9254  adrp     x26, #0x24a000
+000a9258  movi     v9.2s, #1
+000a925c  movi     v8.2s, #2
+000a9260  stp      xzr, xzr, [sp, #0x190]
+000a9264  str      xzr, [sp, #0x238]
+000a9268  adrp     x1, #0x1b8000
+000a926c  str      xzr, [sp, #0x230]
+000a9270  mov      w28, #3
+000a9274  str      xzr, [sp, #0x2d8]
+000a9278  mov      w27, #1
+000a927c  str      xzr, [sp, #0x2d0]
+000a9280  orr      w8, w23, w22
+000a9284  str      xzr, [sp, #0x378]
+000a9288  add      x1, x1, #0x1ad
+000a928c  str      xzr, [sp, #0x370]
+000a9290  add      x0, sp, #0x18
+000a9294  str      xzr, [sp, #0x418]
+000a9298  add      x22, sp, #0x18
+000a929c  str      xzr, [sp, #0x410]
+000a92a0  str      xzr, [sp, #0x4b8]
+000a92a4  str      xzr, [sp, #0x4b0]
+000a92a8  str      xzr, [sp, #0x550]
+000a92ac  str      xzr, [sp, #0x558]
+000a92b0  str      xzr, [sp, #0x5f0]
+000a92b4  str      xzr, [sp, #0x5f8]
+000a92b8  str      xzr, [sp, #0x690]
+000a92bc  str      xzr, [sp, #0x698]
+000a92c0  stp      xzr, xzr, [sp, #0x18]
+000a92c4  str      xzr, [sp, #0x28]
+000a92c8  ldr      x26, [x26, #0x640]
+000a92cc  str      d9, [sp, #0x70]
+000a92d0  str      w28, [sp, #0x78]
+000a92d4  str      d8, [sp, #0x80]
+000a92d8  str      w8, [sp, #0x14]
+000a92dc  stp      x26, x20, [sp, #0xf0]
+000a92e0  str      w27, [sp, #0xec]
+000a92e4  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a92e8  ldrb     w8, [sp, #0x18]
+000a92ec  orr      x23, x22, #1
+000a92f0  ldr      x9, [sp, #0x28]
+000a92f4  add      x0, x25, #0x18
+000a92f8  mov      x2, x21
+000a92fc  tst      w8, #1
+000a9300  csel     x1, x23, x9, eq
+000a9304  bl       #0x8be58 strncpy
+000a9308  adrp     x1, #0x1b8000
+000a930c  str      d9, [sp, #0x110]
+000a9310  mov      w22, #4
+000a9314  str      d8, [sp, #0x120]
+000a9318  add      x1, x1, #0x1cd
+000a931c  stp      x26, x20, [sp, #0x190]
+000a9320  add      x0, sp, #0x18
+000a9324  str      w27, [sp, #0x18c]
+000a9328  str      w22, [sp, #0x118]
+000a932c  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a9330  ldrb     w8, [sp, #0x18]
+000a9334  add      x0, x25, #0xb8
+000a9338  ldr      x9, [sp, #0x28]
+000a933c  mov      x2, x21
+000a9340  tst      w8, #1
+000a9344  csel     x1, x23, x9, eq
+000a9348  bl       #0x8be58 strncpy
+000a934c  adrp     x1, #0x1b8000
+000a9350  str      d8, [sp, #0x1b0]
+000a9354  add      x1, x1, #0x1f6
+000a9358  str      w28, [sp, #0x1b8]
+000a935c  add      x0, sp, #0x18
+000a9360  str      d8, [sp, #0x1c0]
+000a9364  str      x26, [sp, #0x230]
+000a9368  str      x20, [sp, #0x238]
+000a936c  str      w27, [sp, #0x22c]
+000a9370  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a9374  ldrb     w8, [sp, #0x18]
+000a9378  add      x0, x25, #0x158
+000a937c  ldr      x9, [sp, #0x28]
+000a9380  mov      x2, x21
+000a9384  tst      w8, #1
+000a9388  csel     x1, x23, x9, eq
+000a938c  bl       #0x8be58 strncpy
+000a9390  adrp     x8, #0x1cb000
+000a9394  str      d8, [sp, #0x260]
+000a9398  adrp     x1, #0x1b8000
+000a939c  str      x26, [sp, #0x2d0]
+000a93a0  mov      w28, #2
+000a93a4  str      x20, [sp, #0x2d8]
+000a93a8  ldr      d0, [x8, #0xf18]
+000a93ac  add      x1, x1, #0x216
+000a93b0  add      x0, sp, #0x18
+000a93b4  str      w27, [sp, #0x2cc]
+000a93b8  str      w28, [sp, #0x258]
+000a93bc  str      d0, [sp, #0x250]
+000a93c0  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a93c4  ldrb     w8, [sp, #0x18]
+000a93c8  add      x0, x25, #0x1f8
+000a93cc  ldr      x9, [sp, #0x28]
+000a93d0  mov      x2, x21
+000a93d4  tst      w8, #1
+000a93d8  csel     x1, x23, x9, eq
+000a93dc  bl       #0x8be58 strncpy
+000a93e0  adrp     x1, #0x1b8000
+000a93e4  str      d8, [sp, #0x2f0]
+000a93e8  add      x1, x1, #0x237
+000a93ec  str      wzr, [sp, #0x2f8]
+000a93f0  add      x0, sp, #0x18
+000a93f4  str      d8, [sp, #0x300]
+000a93f8  str      x26, [sp, #0x370]
+000a93fc  str      x20, [sp, #0x378]
+000a9400  str      w27, [sp, #0x36c]
+000a9404  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a9408  ldrb     w8, [sp, #0x18]
+000a940c  add      x0, x25, #0x298
+000a9410  ldr      x9, [sp, #0x28]
+000a9414  mov      x2, x21
+000a9418  tst      w8, #1
+000a941c  csel     x1, x23, x9, eq
+000a9420  bl       #0x8be58 strncpy
+000a9424  adrp     x1, #0x1b8000
+000a9428  str      d8, [sp, #0x390]
+000a942c  add      x1, x1, #0x258
+000a9430  str      w28, [sp, #0x398]
+000a9434  add      x0, sp, #0x18
+000a9438  str      d8, [sp, #0x3a0]
+000a943c  str      x26, [sp, #0x410]
+000a9440  str      x20, [sp, #0x418]
+000a9444  str      w27, [sp, #0x40c]
+000a9448  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a944c  ldrb     w8, [sp, #0x18]
+000a9450  add      x0, x25, #0x338
+000a9454  ldr      x9, [sp, #0x28]
+000a9458  mov      x2, x21
+000a945c  tst      w8, #1
+000a9460  csel     x1, x23, x9, eq
+000a9464  bl       #0x8be58 strncpy
+000a9468  adrp     x1, #0x1b8000
+000a946c  str      d8, [sp, #0x430]
+000a9470  add      x1, x1, #0x27f
+000a9474  str      w22, [sp, #0x438]
+000a9478  add      x0, sp, #0x18
+000a947c  str      d8, [sp, #0x440]
+000a9480  str      x26, [sp, #0x4b0]
+000a9484  str      x20, [sp, #0x4b8]
+000a9488  str      w27, [sp, #0x4ac]
+000a948c  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a9490  ldrb     w8, [sp, #0x18]
+000a9494  add      x0, x25, #0x3d8
+000a9498  ldr      x9, [sp, #0x28]
+000a949c  mov      x2, x21
+000a94a0  tst      w8, #1
+000a94a4  csel     x1, x23, x9, eq
+000a94a8  bl       #0x8be58 strncpy
+000a94ac  mov      w8, #7
+000a94b0  mov      x0, x20
+000a94b4  str      w8, [sp, #0x6b0]
+000a94b8  bl       #0x8aae8 _ZNK8EagleVop2idEv
+000a94bc  mov      w1, #1
+000a94c0  add      x2, sp, #0x70
+000a94c4  bl       #0x8be68 dispalgo_add_algorithm
+000a94c8  ldr      w9, [sp, #0x14]
+000a94cc  ldrb     w8, [sp, #0x18]
+000a94d0  orr      w20, w9, w0
+000a94d4  tbz      w8, #0, #0xa9854
+000a94d8  ldr      x0, [sp, #0x28]
+000a94dc  bl       #0x8a708 _ZdlPv
+000a94e0  b        #0xa9854
+000a94e4  bl       #0x8be28 dispalgo_init
+000a94e8  adrp     x8, #0x24a000
+000a94ec  adrp     x9, #0x24a000
+000a94f0  mov      x0, x20
+000a94f4  ldr      x8, [x8, #0x628]
+000a94f8  ldr      x9, [x9, #0x630]
+000a94fc  stp      x8, x20, [sp, #0x30]
+000a9500  stp      x9, x20, [sp, #0x40]
+000a9504  bl       #0x8aae8 _ZNK8EagleVop2idEv
+000a9508  add      x1, sp, #0x30
+000a950c  bl       #0x8be38 dispalgo_subscribe_events_vop
+000a9510  str      w0, [sp, #0x14]
+000a9514  mov      w2, #0xc8
+000a9518  add      x0, sp, #0x6b8
+000a951c  mov      w1, wzr
+000a9520  add      x23, sp, #0x6b8
+000a9524  bl       #0x8a8b8 memset
+000a9528  adrp     x8, #0x24a000
+000a952c  movi     v9.2s, #1
+000a9530  adrp     x9, #0x24a000
+000a9534  adrp     x1, #0x1b8000
+000a9538  ldr      x8, [x8, #0x638]
+000a953c  add      x1, x1, #0x51
+000a9540  ldr      x9, [x9, #0x648]
+000a9544  add      x0, sp, #0x58
+000a9548  str      x20, [sp, #0x790]
+000a954c  add      x21, sp, #0x58
+000a9550  str      x20, [sp, #0x7a0]
+000a9554  str      x8, [sp, #0x788]
+000a9558  str      x9, [sp, #0x798]
+000a955c  str      d9, [sp, #0x780]
+000a9560  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a9564  ldrb     w8, [sp, #0x58]
+000a9568  orr      x25, x21, #1
+000a956c  ldr      x9, [sp, #0x68]
+000a9570  mov      w21, #0x63
+000a9574  add      x0, sp, #0x6b8
+000a9578  mov      x2, x21
+000a957c  tst      w8, #1
+000a9580  csel     x1, x25, x9, eq
+000a9584  bl       #0x8be58 strncpy
+000a9588  adrp     x1, #0x1b8000
+000a958c  add      x1, x1, #0x6a
+000a9590  add      x0, sp, #0x58
+000a9594  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a9598  ldrb     w8, [sp, #0x58]
+000a959c  add      x0, x23, #0x64
+000a95a0  ldr      x9, [sp, #0x68]
+000a95a4  mov      x2, x21
+000a95a8  tst      w8, #1
+000a95ac  csel     x1, x25, x9, eq
+000a95b0  bl       #0x8be58 strncpy
+000a95b4  mov      x0, x20
+000a95b8  bl       #0x8aae8 _ZNK8EagleVop2idEv
+000a95bc  add      x2, sp, #0x6b8
+000a95c0  mov      w1, wzr
+000a95c4  bl       #0x8be68 dispalgo_add_algorithm
+000a95c8  mov      w23, w0
+000a95cc  mov      w2, #0x648
+000a95d0  add      x0, sp, #0x70
+000a95d4  mov      w1, wzr
+000a95d8  add      x26, sp, #0x70
+000a95dc  bl       #0x8a8b8 memset
+000a95e0  adrp     x27, #0x24a000
+000a95e4  stp      xzr, xzr, [sp, #0x190]
+000a95e8  str      xzr, [sp, #0x238]
+000a95ec  movi     v8.2s, #2
+000a95f0  str      xzr, [sp, #0x230]
+000a95f4  adrp     x1, #0x1b8000
+000a95f8  str      xzr, [sp, #0x2d8]
+000a95fc  mov      w22, #3
+000a9600  str      xzr, [sp, #0x2d0]
+000a9604  mov      w28, #1
+000a9608  str      xzr, [sp, #0x378]
+000a960c  add      x1, x1, #0x86
+000a9610  str      xzr, [sp, #0x370]
+000a9614  add      x0, sp, #0x58
+000a9618  str      xzr, [sp, #0x418]
+000a961c  str      xzr, [sp, #0x410]
+000a9620  str      xzr, [sp, #0x4b8]
+000a9624  str      xzr, [sp, #0x4b0]
+000a9628  str      xzr, [sp, #0x550]
+000a962c  str      xzr, [sp, #0x558]
+000a9630  str      xzr, [sp, #0x5f0]
+000a9634  str      xzr, [sp, #0x5f8]
+000a9638  str      xzr, [sp, #0x690]
+000a963c  str      xzr, [sp, #0x698]
+000a9640  ldr      x27, [x27, #0x640]
+000a9644  ldr      w8, [sp, #0x14]
+000a9648  str      d9, [sp, #0x70]
+000a964c  str      w22, [sp, #0x78]
+000a9650  str      d8, [sp, #0x80]
+000a9654  orr      w8, w23, w8
+000a9658  stp      x27, x20, [sp, #0xf0]
+000a965c  str      w28, [sp, #0xec]
+000a9660  str      w8, [sp, #0x14]
+000a9664  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a9668  ldrb     w8, [sp, #0x58]
+000a966c  add      x0, x26, #0x18
+000a9670  ldr      x9, [sp, #0x68]
+000a9674  mov      x2, x21
+000a9678  tst      w8, #1
+000a967c  csel     x1, x25, x9, eq
+000a9680  bl       #0x8be58 strncpy
+000a9684  adrp     x1, #0x1b8000
+000a9688  str      d9, [sp, #0x110]
+000a968c  mov      w23, #4
+000a9690  str      d8, [sp, #0x120]
+000a9694  add      x1, x1, #0xa5
+000a9698  stp      x27, x20, [sp, #0x190]
+000a969c  add      x0, sp, #0x58
+000a96a0  str      w28, [sp, #0x18c]
+000a96a4  str      w23, [sp, #0x118]
+000a96a8  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a96ac  ldrb     w8, [sp, #0x58]
+000a96b0  add      x0, x26, #0xb8
+000a96b4  ldr      x9, [sp, #0x68]
+000a96b8  mov      x2, x21
+000a96bc  tst      w8, #1
+000a96c0  csel     x1, x25, x9, eq
+000a96c4  bl       #0x8be58 strncpy
+000a96c8  adrp     x1, #0x1b8000
+000a96cc  str      d8, [sp, #0x1b0]
+000a96d0  add      x1, x1, #0xcd
+000a96d4  str      w22, [sp, #0x1b8]
+000a96d8  add      x0, sp, #0x58
+000a96dc  str      d8, [sp, #0x1c0]
+000a96e0  str      x27, [sp, #0x230]
+000a96e4  str      x20, [sp, #0x238]
+000a96e8  str      w28, [sp, #0x22c]
+000a96ec  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a96f0  ldrb     w8, [sp, #0x58]
+000a96f4  add      x0, x26, #0x158
+000a96f8  ldr      x9, [sp, #0x68]
+000a96fc  mov      x2, x21
+000a9700  tst      w8, #1
+000a9704  csel     x1, x25, x9, eq
+000a9708  bl       #0x8be58 strncpy
+000a970c  adrp     x8, #0x1cb000
+000a9710  str      d8, [sp, #0x260]
+000a9714  adrp     x1, #0x1b8000
+000a9718  str      x27, [sp, #0x2d0]
+000a971c  mov      w22, #2
+000a9720  str      x20, [sp, #0x2d8]
+000a9724  ldr      d0, [x8, #0xf18]
+000a9728  add      x1, x1, #0xec
+000a972c  add      x0, sp, #0x58
+000a9730  str      w28, [sp, #0x2cc]
+000a9734  str      w22, [sp, #0x258]
+000a9738  str      d0, [sp, #0x250]
+000a973c  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a9740  ldrb     w8, [sp, #0x58]
+000a9744  add      x0, x26, #0x1f8
+000a9748  ldr      x9, [sp, #0x68]
+000a974c  mov      x2, x21
+000a9750  tst      w8, #1
+000a9754  csel     x1, x25, x9, eq
+000a9758  bl       #0x8be58 strncpy
+000a975c  adrp     x1, #0x1b8000
+000a9760  str      d8, [sp, #0x2f0]
+000a9764  add      x1, x1, #0x10c
+000a9768  str      wzr, [sp, #0x2f8]
+000a976c  add      x0, sp, #0x58
+000a9770  str      d8, [sp, #0x300]
+000a9774  str      x27, [sp, #0x370]
+000a9778  str      x20, [sp, #0x378]
+000a977c  str      w28, [sp, #0x36c]
+000a9780  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a9784  ldrb     w8, [sp, #0x58]
+000a9788  add      x0, x26, #0x298
+000a978c  ldr      x9, [sp, #0x68]
+000a9790  mov      x2, x21
+000a9794  tst      w8, #1
+000a9798  csel     x1, x25, x9, eq
+000a979c  bl       #0x8be58 strncpy
+000a97a0  adrp     x1, #0x1b8000
+000a97a4  str      d8, [sp, #0x390]
+000a97a8  add      x1, x1, #0x12c
+000a97ac  str      w22, [sp, #0x398]
+000a97b0  add      x0, sp, #0x58
+000a97b4  str      d8, [sp, #0x3a0]
+000a97b8  str      x27, [sp, #0x410]
+000a97bc  str      x20, [sp, #0x418]
+000a97c0  str      w28, [sp, #0x40c]
+000a97c4  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a97c8  ldrb     w8, [sp, #0x58]
+000a97cc  add      x0, x26, #0x338
+000a97d0  ldr      x9, [sp, #0x68]
+000a97d4  mov      x2, x21
+000a97d8  tst      w8, #1
+000a97dc  csel     x1, x25, x9, eq
+000a97e0  bl       #0x8be58 strncpy
+000a97e4  adrp     x1, #0x1b8000
+000a97e8  str      d8, [sp, #0x430]
+000a97ec  add      x1, x1, #0x152
+000a97f0  str      w23, [sp, #0x438]
+000a97f4  add      x0, sp, #0x58
+000a97f8  str      d8, [sp, #0x440]
+000a97fc  str      x27, [sp, #0x4b0]
+000a9800  str      x20, [sp, #0x4b8]
+000a9804  str      w28, [sp, #0x4ac]
+000a9808  bl       #0x8be48 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE6assignEPKc
+000a980c  ldrb     w8, [sp, #0x58]
+000a9810  add      x0, x26, #0x3d8
+000a9814  ldr      x9, [sp, #0x68]
+000a9818  mov      x2, x21
+000a981c  tst      w8, #1
+000a9820  csel     x1, x25, x9, eq
+000a9824  bl       #0x8be58 strncpy
+000a9828  mov      w8, #7
+000a982c  mov      x0, x20
+000a9830  str      w8, [sp, #0x6b0]
+000a9834  bl       #0x8aae8 _ZNK8EagleVop2idEv
+000a9838  mov      w1, #1
+000a983c  add      x2, sp, #0x70
+000a9840  bl       #0x8be68 dispalgo_add_algorithm
+000a9844  ldr      w8, [sp, #0x14]
+000a9848  orr      w20, w8, w0
+000a984c  b        #0xa9854
+000a9850  mov      w20, wzr
+000a9854  ldr      w1, [sp, #0x54]
+000a9858  add      x2, sp, #0x50
+000a985c  mov      x0, x19
+000a9860  bl       #0x8a578 pthread_setschedparam
+000a9864  cbnz     w0, #0xa90d4
+000a9868  cmp      w20, #0
+000a986c  cset     w21, eq
+000a9870  ldrb     w8, [sp, #0x58]
+000a9874  tbnz     w8, #0, #0xa9108
+000a9878  b        #0xa9110
+000a987c  bl       #0x8a778 __stack_chk_fail
+
+_ZN21DispAlgoAutoBacklight14lazyLoadParamsEv @ 0xb6b38, 520 bytes
+000b6b38  str      x21, [sp, #-0x30]!
+000b6b3c  stp      x20, x19, [sp, #0x10]
+000b6b40  stp      x29, x30, [sp, #0x20]
+000b6b44  add      x29, sp, #0x20
+000b6b48  mov      w8, #0x8efc
+000b6b4c  mov      x19, x0
+000b6b50  movk     w8, #2, lsl #16
+000b6b54  ldrb     w8, [x19, x8]
+000b6b58  cbz      w8, #0xb6b64
+000b6b5c  ldrb     w8, [x19, #0x20]
+000b6b60  cbz      w8, #0xb6b6c
+000b6b64  mov      w20, wzr
+000b6b68  b        #0xb6cf0
+000b6b6c  mov      x21, x19
+000b6b70  ldrb     w8, [x21, #8]!
+000b6b74  tbnz     w8, #0, #0xb6b80
+000b6b78  add      x1, x21, #1
+000b6b7c  b        #0xb6b84
+000b6b80  ldr      x1, [x19, #0x18]
+000b6b84  adrp     x0, #0x1b9000
+000b6b88  add      x0, x0, #0xf4
+000b6b8c  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b6b90  mov      x0, x19
+000b6b94  bl       #0x8c728 _ZN21DispAlgoAutoBacklight10initParamsEv
+000b6b98  mov      w8, #0x8e40
+000b6b9c  movk     w8, #2, lsl #16
+000b6ba0  mov      w20, w0
+000b6ba4  ldrb     w8, [x19, x8]
+000b6ba8  cbz      w8, #0xb6bec
+000b6bac  mov      w8, #0x4698
+000b6bb0  movk     w8, #1, lsl #16
+000b6bb4  ldr      w8, [x19, x8]
+000b6bb8  cmp      w8, #2
+000b6bbc  b.ne     #0xb6c30
+000b6bc0  mov      w8, #0x4bd8
+000b6bc4  movk     w8, #1, lsl #16
+000b6bc8  adrp     x9, #0x1cb000
+000b6bcc  ldr      d0, [x19, x8]
+000b6bd0  mov      w8, #0x8e98
+000b6bd4  ldr      d1, [x9, #0xf80]
+000b6bd8  movk     w8, #2, lsl #16
+000b6bdc  fdiv     d0, d1, d0
+000b6be0  fcvtzu   w2, d0
+000b6be4  str      w2, [x19, x8]
+000b6be8  b        #0xb6c64
+000b6bec  adrp     x8, #0x1cb000
+000b6bf0  ldr      d0, [x19, #0x4d8]
+000b6bf4  ldr      d2, [x19, #0x4c8]
+000b6bf8  mov      w10, #0x8e98
+000b6bfc  mov      w11, #0x8e9c
+000b6c00  ldr      d1, [x8, #0xf80]
+000b6c04  movk     w10, #2, lsl #16
+000b6c08  movk     w11, #2, lsl #16
+000b6c0c  add      x8, x19, #0x40
+000b6c10  add      x9, x19, #0x4d0
+000b6c14  fdiv     d1, d1, d0
+000b6c18  fmul     d0, d2, d0
+000b6c1c  fcvtzu   w2, d1
+000b6c20  fcvtzu   w3, d0
+000b6c24  str      w2, [x19, x10]
+000b6c28  str      w3, [x19, x11]
+000b6c2c  b        #0xb6ca8
+000b6c30  adrp     x8, #0x1cb000
+000b6c34  ldr      d0, [x19, #0x4d8]
+000b6c38  mov      w9, #0x8e98
+000b6c3c  movk     w9, #2, lsl #16
+000b6c40  ldr      d1, [x8, #0xf80]
+000b6c44  mov      w8, #0x4698
+000b6c48  movk     w8, #1, lsl #16
+000b6c4c  fdiv     d0, d1, d0
+000b6c50  ldr      w8, [x19, x8]
+000b6c54  cmp      w8, #2
+000b6c58  fcvtzu   w2, d0
+000b6c5c  str      w2, [x19, x9]
+000b6c60  b.ne     #0xb6d04
+000b6c64  mov      w8, #0x4bc8
+000b6c68  mov      w9, #0x4bd8
+000b6c6c  movk     w8, #1, lsl #16
+000b6c70  movk     w9, #1, lsl #16
+000b6c74  ldr      d0, [x19, x8]
+000b6c78  mov      w8, #0x8e9c
+000b6c7c  ldr      d1, [x19, x9]
+000b6c80  movk     w8, #2, lsl #16
+000b6c84  fmul     d0, d0, d1
+000b6c88  fcvtzu   w3, d0
+000b6c8c  str      w3, [x19, x8]
+000b6c90  mov      w8, #0x4740
+000b6c94  mov      w9, #0x4bd0
+000b6c98  movk     w8, #1, lsl #16
+000b6c9c  movk     w9, #1, lsl #16
+000b6ca0  add      x8, x19, x8
+000b6ca4  add      x9, x19, x9
+000b6ca8  ldr      d0, [x9]
+000b6cac  mov      w9, #0x8ea0
+000b6cb0  ldr      d1, [x8, #0x498]
+000b6cb4  movk     w9, #2, lsl #16
+000b6cb8  ldrb     w8, [x19, #8]
+000b6cbc  fmul     d0, d0, d1
+000b6cc0  fcvtzu   w4, d0
+000b6cc4  str      w4, [x19, x9]
+000b6cc8  tbnz     w8, #0, #0xb6cd4
+000b6ccc  add      x1, x21, #1
+000b6cd0  b        #0xb6cd8
+000b6cd4  ldr      x1, [x19, #0x18]
+000b6cd8  adrp     x0, #0x1b9000
+000b6cdc  add      x0, x0, #0x10e
+000b6ce0  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b6ce4  cmp      w20, #0
+000b6ce8  cset     w8, eq
+000b6cec  strb     w8, [x19, #0x20]
+000b6cf0  mov      w0, w20
+000b6cf4  ldp      x29, x30, [sp, #0x20]
+000b6cf8  ldp      x20, x19, [sp, #0x10]
+000b6cfc  ldr      x21, [sp], #0x30
+000b6d00  ret
+000b6d04  ldr      d0, [x19, #0x4c8]
+000b6d08  mov      w8, #0x4698
+000b6d0c  ldr      d1, [x19, #0x4d8]
+000b6d10  movk     w8, #1, lsl #16
+000b6d14  mov      w9, #0x8e9c
+000b6d18  movk     w9, #2, lsl #16
+000b6d1c  ldr      w8, [x19, x8]
+000b6d20  fmul     d0, d0, d1
+000b6d24  cmp      w8, #2
+000b6d28  fcvtzu   w3, d0
+000b6d2c  str      w3, [x19, x9]
+000b6d30  b.eq     #0xb6c90
+000b6d34  add      x8, x19, #0x40
+000b6d38  add      x9, x19, #0x4d0
+000b6d3c  b        #0xb6ca8
+
+_ZN21DispAlgoAutoBacklight9calculateEP15_dss10_iq_reg_t @ 0xb5428, 644 bytes
+000b5428  sub      sp, sp, #0x80
+000b542c  str      x21, [sp, #0x50]
+000b5430  stp      x20, x19, [sp, #0x60]
+000b5434  stp      x29, x30, [sp, #0x70]
+000b5438  add      x29, sp, #0x70
+000b543c  mrs      x21, tpidr_el0
+000b5440  mov      x20, x1
+000b5444  ldr      x8, [x21, #0x28]
+000b5448  mov      x19, x0
+000b544c  add      x1, sp, #0x38
+000b5450  mov      w0, wzr
+000b5454  stur     x8, [x29, #-0x28]
+000b5458  bl       #0x8c658 clock_gettime
+000b545c  mov      x9, #0xf7cf
+000b5460  ldp      x10, x8, [sp, #0x38]
+000b5464  movk     x9, #0xe353, lsl #16
+000b5468  movk     x9, #0x9ba5, lsl #32
+000b546c  movk     x9, #0x20c4, lsl #48
+000b5470  add      x1, sp, #8
+000b5474  smulh    x8, x8, x9
+000b5478  mov      w9, #0x4680
+000b547c  movk     w9, #1, lsl #16
+000b5480  asr      x11, x8, #7
+000b5484  add      x8, x11, x8, lsr #63
+000b5488  mov      w11, #0x4688
+000b548c  str      x10, [x20, x9]
+000b5490  movk     w11, #1, lsl #16
+000b5494  mov      x0, x20
+000b5498  str      x8, [x20, x11]
+000b549c  bl       #0x8c668 _Z28dss10_bright_control_algo_swP15_dss10_iq_reg_tP30_dss10_bright_control_result_s
+000b54a0  mov      w8, #0x8e48
+000b54a4  ldr      d1, [sp, #8]
+000b54a8  movk     w8, #2, lsl #16
+000b54ac  add      x8, x19, x8
+000b54b0  ldr      d0, [x8]
+000b54b4  fcmp     d0, d1
+000b54b8  b.ne     #0xb555c
+000b54bc  mov      w9, #0x8e58
+000b54c0  ldr      d1, [sp, #0x18]
+000b54c4  movk     w9, #2, lsl #16
+000b54c8  ldr      d0, [x19, x9]
+000b54cc  fcmp     d0, d1
+000b54d0  b.ne     #0xb555c
+000b54d4  mov      w9, #0x8e50
+000b54d8  ldr      d1, [sp, #0x10]
+000b54dc  movk     w9, #2, lsl #16
+000b54e0  ldr      d0, [x19, x9]
+000b54e4  fcmp     d0, d1
+000b54e8  b.ne     #0xb555c
+000b54ec  mov      w9, #0x8e60
+000b54f0  ldr      d1, [sp, #0x20]
+000b54f4  movk     w9, #2, lsl #16
+000b54f8  ldr      d0, [x19, x9]
+000b54fc  fcmp     d0, d1
+000b5500  b.ne     #0xb555c
+000b5504  mov      w9, #0x8e68
+000b5508  ldr      w10, [sp, #0x28]
+000b550c  movk     w9, #2, lsl #16
+000b5510  ldr      w9, [x19, x9]
+000b5514  cmp      w9, w10
+000b5518  b.ne     #0xb555c
+000b551c  mov      w9, #0x8e6c
+000b5520  ldr      w10, [sp, #0x2c]
+000b5524  movk     w9, #2, lsl #16
+000b5528  ldr      w9, [x19, x9]
+000b552c  cmp      w9, w10
+000b5530  b.ne     #0xb555c
+000b5534  mov      w9, #0x8e70
+000b5538  ldr      d1, [sp, #0x30]
+000b553c  movk     w9, #2, lsl #16
+000b5540  ldr      d0, [x19, x9]
+000b5544  fcmp     d0, d1
+000b5548  b.ne     #0xb555c
+000b554c  mov      w9, #0x8f32
+000b5550  movk     w9, #2, lsl #16
+000b5554  ldrb     w9, [x19, x9]
+000b5558  cbz      w9, #0xb56a0
+000b555c  ldur     q0, [sp, #0x28]
+000b5560  ldur     q1, [sp, #8]
+000b5564  ldur     q2, [sp, #0x18]
+000b5568  str      q1, [x8]
+000b556c  stp      q2, q0, [x8, #0x10]
+000b5570  add      x8, x19, #0x40
+000b5574  ldr      x9, [x20, #0x4b0]
+000b5578  cmp      x8, x20
+000b557c  b.eq     #0xb55e4
+000b5580  mov      w10, #0x4690
+000b5584  str      x9, [x19, #0x4f0]
+000b5588  movk     w10, #1, lsl #16
+000b558c  mov      w9, #0x46d0
+000b5590  movk     w9, #1, lsl #16
+000b5594  ldr      q0, [x20, x10]
+000b5598  mov      w10, #0x46a0
+000b559c  movk     w10, #1, lsl #16
+000b55a0  mov      w11, #0x46d8
+000b55a4  movk     w11, #1, lsl #16
+000b55a8  str      q0, [x19, x9]
+000b55ac  ldr      w9, [x20, x10]
+000b55b0  mov      w10, #0x46e0
+000b55b4  movk     w10, #1, lsl #16
+000b55b8  str      w9, [x19, x10]
+000b55bc  mov      w9, #0x4718
+000b55c0  ldr      q0, [x20, x11]
+000b55c4  movk     w9, #1, lsl #16
+000b55c8  mov      w10, #0x46e8
+000b55cc  movk     w10, #1, lsl #16
+000b55d0  str      q0, [x19, x9]
+000b55d4  mov      w9, #0x4728
+000b55d8  ldr      q0, [x20, x10]
+000b55dc  movk     w9, #1, lsl #16
+000b55e0  b        #0xb5658
+000b55e4  mov      w8, #0x4bf0
+000b55e8  movk     w8, #1, lsl #16
+000b55ec  mov      w10, #0x4690
+000b55f0  movk     w10, #1, lsl #16
+000b55f4  str      x9, [x19, x8]
+000b55f8  mov      w8, #0x8dd0
+000b55fc  movk     w8, #2, lsl #16
+000b5600  ldr      q0, [x20, x10]
+000b5604  mov      w9, #0x46a0
+000b5608  movk     w9, #1, lsl #16
+000b560c  mov      w10, #0x46d8
+000b5610  movk     w10, #1, lsl #16
+000b5614  str      q0, [x19, x8]
+000b5618  ldr      w8, [x20, x9]
+000b561c  mov      w9, #0x8de0
+000b5620  movk     w9, #2, lsl #16
+000b5624  str      w8, [x19, x9]
+000b5628  mov      w8, #0x8e18
+000b562c  ldr      q0, [x20, x10]
+000b5630  movk     w8, #2, lsl #16
+000b5634  mov      w9, #0x46e8
+000b5638  movk     w9, #1, lsl #16
+000b563c  str      q0, [x19, x8]
+000b5640  mov      w8, #0x4740
+000b5644  ldr      q0, [x20, x9]
+000b5648  movk     w8, #1, lsl #16
+000b564c  mov      w9, #0x8e28
+000b5650  movk     w9, #2, lsl #16
+000b5654  add      x8, x19, x8
+000b5658  str      q0, [x19, x9]
+000b565c  mov      w9, #0x46f8
+000b5660  movk     w9, #1, lsl #16
+000b5664  mov      w11, #0x8f32
+000b5668  movk     w11, #2, lsl #16
+000b566c  ldr      x10, [x20, x9]
+000b5670  mov      w0, #1
+000b5674  str      x10, [x8, x9]
+000b5678  strb     wzr, [x19, x11]
+000b567c  ldr      x8, [x21, #0x28]
+000b5680  ldur     x9, [x29, #-0x28]
+000b5684  cmp      x8, x9
+000b5688  b.ne     #0xb56a8
+000b568c  ldp      x29, x30, [sp, #0x70]
+000b5690  ldp      x20, x19, [sp, #0x60]
+000b5694  ldr      x21, [sp, #0x50]
+000b5698  add      sp, sp, #0x80
+000b569c  ret
+000b56a0  mov      w0, wzr
+000b56a4  b        #0xb567c
+000b56a8  bl       #0x8a778 __stack_chk_fail
+
+_Z28dss10_bright_control_algo_swP15_dss10_iq_reg_tP30_dss10_bright_control_result_s @ 0xb7560, 3256 bytes
+000b7560  sub      sp, sp, #0xa0
+000b7564  stp      d15, d14, [sp, #0x10]
+000b7568  stp      d13, d12, [sp, #0x20]
+000b756c  stp      d11, d10, [sp, #0x30]
+000b7570  stp      d9, d8, [sp, #0x40]
+000b7574  stp      x26, x25, [sp, #0x50]
+000b7578  stp      x24, x23, [sp, #0x60]
+000b757c  stp      x22, x21, [sp, #0x70]
+000b7580  stp      x20, x19, [sp, #0x80]
+000b7584  stp      x29, x30, [sp, #0x90]
+000b7588  add      x29, sp, #0x90
+000b758c  mov      x20, x0
+000b7590  mov      w8, #0x46b0
+000b7594  movk     w8, #1, lsl #16
+000b7598  mov      w9, #0x4658
+000b759c  add      x21, x20, x8
+000b75a0  ldr      w8, [x20, #4]
+000b75a4  movk     w9, #1, lsl #16
+000b75a8  mov      x19, x1
+000b75ac  add      x22, x20, x9
+000b75b0  cbz      w8, #0xb768c
+000b75b4  ldr      w1, [x22]
+000b75b8  adrp     x0, #0x1b9000
+000b75bc  add      x0, x0, #0x599
+000b75c0  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b75c4  mov      w8, #0x465c
+000b75c8  movk     w8, #1, lsl #16
+000b75cc  add      x23, x20, x8
+000b75d0  adrp     x0, #0x1b9000
+000b75d4  add      x0, x0, #0x5ad
+000b75d8  ldr      w1, [x23]
+000b75dc  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b75e0  mov      w8, #0x4660
+000b75e4  movk     w8, #1, lsl #16
+000b75e8  adrp     x0, #0x1b9000
+000b75ec  add      x0, x0, #0x5c3
+000b75f0  ldr      w1, [x20, x8]
+000b75f4  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b75f8  mov      w8, #0x4680
+000b75fc  movk     w8, #1, lsl #16
+000b7600  adrp     x0, #0x1b9000
+000b7604  add      x0, x0, #0x5db
+000b7608  ldr      x1, [x20, x8]
+000b760c  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7610  mov      w8, #0x4688
+000b7614  movk     w8, #1, lsl #16
+000b7618  adrp     x0, #0x1b9000
+000b761c  add      x0, x0, #0x5f4
+000b7620  ldr      x1, [x20, x8]
+000b7624  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7628  mov      w8, #0x4668
+000b762c  movk     w8, #1, lsl #16
+000b7630  adrp     x0, #0x1b9000
+000b7634  add      x0, x0, #0x60e
+000b7638  ldr      d0, [x20, x8]
+000b763c  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7640  mov      w8, #0x4670
+000b7644  movk     w8, #1, lsl #16
+000b7648  adrp     x0, #0x1b9000
+000b764c  add      x0, x0, #0x628
+000b7650  ldr      d0, [x20, x8]
+000b7654  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7658  mov      w8, #0x4678
+000b765c  movk     w8, #1, lsl #16
+000b7660  adrp     x0, #0x1b9000
+000b7664  add      x0, x0, #0x63f
+000b7668  ldr      w1, [x20, x8]
+000b766c  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7670  mov      w8, #0x467c
+000b7674  movk     w8, #1, lsl #16
+000b7678  adrp     x0, #0x1b9000
+000b767c  add      x0, x0, #0x656
+000b7680  ldr      w1, [x20, x8]
+000b7684  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7688  b        #0xb7698
+000b768c  mov      w8, #0x465c
+000b7690  movk     w8, #1, lsl #16
+000b7694  add      x23, x20, x8
+000b7698  ldr      w9, [x22]
+000b769c  ldr      w8, [x23]
+000b76a0  cmp      w9, #1
+000b76a4  b.ne     #0xb76c0
+000b76a8  cmp      w8, #2
+000b76ac  b.ne     #0xb76c0
+000b76b0  ldr      d0, [x20, #0x38]
+000b76b4  ldr      d1, [x20, #0x70]
+000b76b8  ldr      x8, [x20, #0x18]
+000b76bc  b        #0xb771c
+000b76c0  cmp      w9, #2
+000b76c4  b.ne     #0xb76e0
+000b76c8  cmp      w8, #2
+000b76cc  b.ne     #0xb76e0
+000b76d0  ldr      d0, [x20, #0x40]
+000b76d4  ldr      d1, [x20, #0x70]
+000b76d8  ldr      x8, [x20, #0x20]
+000b76dc  b        #0xb771c
+000b76e0  cmp      w9, #1
+000b76e4  b.ne     #0xb7700
+000b76e8  cmp      w8, #1
+000b76ec  b.ne     #0xb7700
+000b76f0  ldr      d0, [x20, #0x48]
+000b76f4  ldr      d1, [x20, #0x70]
+000b76f8  ldr      x8, [x20, #0x28]
+000b76fc  b        #0xb771c
+000b7700  cmp      w9, #2
+000b7704  b.ne     #0xb80b0
+000b7708  cmp      w8, #1
+000b770c  b.ne     #0xb80b0
+000b7710  ldr      d0, [x20, #0x50]
+000b7714  ldr      d1, [x20, #0x70]
+000b7718  ldr      x8, [x20, #0x30]
+000b771c  fdiv     d1, d0, d1
+000b7720  mov      w9, #0x46b8
+000b7724  str      x8, [x21]
+000b7728  mov      w10, #0x46c0
+000b772c  movk     w9, #1, lsl #16
+000b7730  movk     w10, #1, lsl #16
+000b7734  str      d0, [x20, x9]
+000b7738  str      d1, [x20, x10]
+000b773c  mov      w8, #0x4660
+000b7740  movk     w8, #1, lsl #16
+000b7744  ldr      w8, [x20, x8]
+000b7748  cbnz     w8, #0xb7760
+000b774c  ldp      x8, x9, [x20, #0x58]
+000b7750  mov      w10, #0x46c0
+000b7754  movk     w10, #1, lsl #16
+000b7758  str      x8, [x21]
+000b775c  str      x9, [x20, x10]
+000b7760  mov      w8, #0x4668
+000b7764  ldr      d1, [x20, #0x4c0]
+000b7768  movk     w8, #1, lsl #16
+000b776c  ldr      d0, [x20, x8]
+000b7770  mov      w8, #0x46c8
+000b7774  movk     w8, #1, lsl #16
+000b7778  add      x22, x20, x8
+000b777c  fcmp     d1, d0
+000b7780  b.le     #0xb7790
+000b7784  fmov     d0, xzr
+000b7788  mov      w8, wzr
+000b778c  b        #0xb7814
+000b7790  ldr      d1, [x20, #0xcb8]
+000b7794  fcmp     d1, d0
+000b7798  b.ls     #0xb780c
+000b779c  mov      w9, wzr
+000b77a0  mov      w10, #0xff
+000b77a4  add      w8, w9, w10
+000b77a8  cmp      w8, #0
+000b77ac  cinc     w11, w8, lt
+000b77b0  asr      w8, w11, #1
+000b77b4  add      x12, x20, w8, sxtw #3
+000b77b8  sbfx     x11, x11, #1, #0x1f
+000b77bc  add      x11, x11, #1
+000b77c0  ldr      d1, [x12, #0x4c0]
+000b77c4  fcmp     d1, d0
+000b77c8  b.hi     #0xb77dc
+000b77cc  add      x12, x20, x11, lsl #3
+000b77d0  ldr      d2, [x12, #0x4c0]
+000b77d4  fcmp     d2, d0
+000b77d8  b.gt     #0xb77fc
+000b77dc  fcmp     d1, d0
+000b77e0  sub      w12, w8, #1
+000b77e4  csel     w9, w9, w11, gt
+000b77e8  csel     w10, w12, w10, gt
+000b77ec  cmp      w9, w10
+000b77f0  b.le     #0xb77a4
+000b77f4  add      x9, x20, w11, sxtw #3
+000b77f8  ldr      d2, [x9, #0x4c0]
+000b77fc  fsub     d0, d0, d1
+000b7800  fsub     d1, d2, d1
+000b7804  fdiv     d0, d0, d1
+000b7808  b        #0xb7814
+000b780c  fmov     d0, #1.00000000
+000b7810  mov      w8, #0xfe
+000b7814  add      x8, x20, w8, sxtw #3
+000b7818  ldr      d1, [x8, #0xcc0]
+000b781c  ldr      d2, [x8, #0xcc8]
+000b7820  ldr      w8, [x20, #4]
+000b7824  fsub     d2, d2, d1
+000b7828  fmul     d0, d0, d2
+000b782c  fadd     d0, d1, d0
+000b7830  str      d0, [x22]
+000b7834  cbz      w8, #0xb7844
+000b7838  adrp     x0, #0x1b9000
+000b783c  add      x0, x0, #0x749
+000b7840  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7844  mov      w8, #0x467c
+000b7848  movk     w8, #1, lsl #16
+000b784c  add      x23, x20, x8
+000b7850  ldr      w8, [x23]
+000b7854  cbz      w8, #0xb78e0
+000b7858  mov      w9, #0x4670
+000b785c  movk     w9, #1, lsl #16
+000b7860  mov      w10, #0x44c0
+000b7864  movk     w10, #1, lsl #16
+000b7868  ldr      d0, [x20, x9]
+000b786c  mov      w9, #0x46a0
+000b7870  movk     w9, #1, lsl #16
+000b7874  add      x9, x20, x9
+000b7878  mov      w12, #0x44c4
+000b787c  fcvtzs   w11, d0
+000b7880  mov      w14, #0x44c8
+000b7884  ldr      w15, [x9]
+000b7888  add      x10, x20, x10
+000b788c  movk     w12, #1, lsl #16
+000b7890  mov      w13, #-1
+000b7894  movk     w14, #1, lsl #16
+000b7898  add      x16, x20, w15, sxtw #3
+000b789c  sxtw     x15, w15
+000b78a0  ldr      w17, [x16, x12]
+000b78a4  mov      w16, w13
+000b78a8  cmp      w17, w11
+000b78ac  b.gt     #0xb78c0
+000b78b0  add      x16, x20, x15, lsl #3
+000b78b4  ldr      w16, [x16, x14]
+000b78b8  cmp      w16, w11
+000b78bc  cset     w16, lt
+000b78c0  adds     w15, w16, w15
+000b78c4  str      w15, [x9]
+000b78c8  b.mi     #0xb78f4
+000b78cc  ldr      w17, [x10]
+000b78d0  cmp      w15, w17
+000b78d4  b.ge     #0xb78fc
+000b78d8  cbnz     w16, #0xb7898
+000b78dc  b        #0xb7904
+000b78e0  mov      w9, #0x46a8
+000b78e4  movk     w9, #1, lsl #16
+000b78e8  add      x24, x20, x9
+000b78ec  ldr      d0, [x24]
+000b78f0  b        #0xb7940
+000b78f4  mov      w15, wzr
+000b78f8  b        #0xb7900
+000b78fc  sub      w15, w17, #1
+000b7900  str      w15, [x9]
+000b7904  mov      w10, #0x44c4
+000b7908  fmov     d1, #0.50000000
+000b790c  mov      w11, #0x44c8
+000b7910  add      x9, x20, w15, sxtw #3
+000b7914  movk     w10, #1, lsl #16
+000b7918  movk     w11, #1, lsl #16
+000b791c  ldr      w10, [x9, x10]
+000b7920  ldr      w9, [x9, x11]
+000b7924  add      w9, w9, w10
+000b7928  scvtf    d0, w9
+000b792c  mov      w9, #0x46a8
+000b7930  movk     w9, #1, lsl #16
+000b7934  add      x24, x20, x9
+000b7938  fmul     d0, d0, d1
+000b793c  str      d0, [x24]
+000b7940  ldr      d1, [x20, #0x14c0]
+000b7944  mov      w9, #0x46d0
+000b7948  movk     w9, #1, lsl #16
+000b794c  add      x25, x20, x9
+000b7950  fcmp     d1, d0
+000b7954  b.le     #0xb7964
+000b7958  fmov     d0, xzr
+000b795c  mov      w9, wzr
+000b7960  b        #0xb79e8
+000b7964  ldr      d1, [x20, #0x1cb8]
+000b7968  fcmp     d1, d0
+000b796c  b.ls     #0xb79e0
+000b7970  mov      w10, wzr
+000b7974  mov      w11, #0xff
+000b7978  add      w9, w10, w11
+000b797c  cmp      w9, #0
+000b7980  cinc     w12, w9, lt
+000b7984  asr      w9, w12, #1
+000b7988  add      x13, x20, w9, sxtw #3
+000b798c  sbfx     x12, x12, #1, #0x1f
+000b7990  add      x12, x12, #1
+000b7994  ldr      d1, [x13, #0x14c0]
+000b7998  fcmp     d1, d0
+000b799c  b.hi     #0xb79b0
+000b79a0  add      x13, x20, x12, lsl #3
+000b79a4  ldr      d2, [x13, #0x14c0]
+000b79a8  fcmp     d2, d0
+000b79ac  b.gt     #0xb79d0
+000b79b0  fcmp     d1, d0
+000b79b4  sub      w13, w9, #1
+000b79b8  csel     w10, w10, w12, gt
+000b79bc  csel     w11, w13, w11, gt
+000b79c0  cmp      w10, w11
+000b79c4  b.le     #0xb7978
+000b79c8  add      x10, x20, w12, sxtw #3
+000b79cc  ldr      d2, [x10, #0x14c0]
+000b79d0  fsub     d0, d0, d1
+000b79d4  fsub     d1, d2, d1
+000b79d8  fdiv     d0, d0, d1
+000b79dc  b        #0xb79e8
+000b79e0  fmov     d0, #1.00000000
+000b79e4  mov      w9, #0xfe
+000b79e8  add      x9, x20, w9, sxtw #3
+000b79ec  ldr      d1, [x9, #0x1cc0]
+000b79f0  ldr      d2, [x9, #0x1cc8]
+000b79f4  ldr      w9, [x20, #4]
+000b79f8  fsub     d2, d2, d1
+000b79fc  fmul     d0, d0, d2
+000b7a00  fadd     d0, d1, d0
+000b7a04  str      d0, [x25]
+000b7a08  cbz      w9, #0xb7a2c
+000b7a0c  adrp     x0, #0x1b9000
+000b7a10  add      x0, x0, #0x762
+000b7a14  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7a18  ldr      d0, [x24]
+000b7a1c  adrp     x0, #0x1b9000
+000b7a20  add      x0, x0, #0x778
+000b7a24  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7a28  ldr      w8, [x23]
+000b7a2c  cbz      w8, #0xb7adc
+000b7a30  mov      w9, #0x4694
+000b7a34  movk     w9, #1, lsl #16
+000b7a38  add      x26, x20, x9
+000b7a3c  mov      w9, #0x4690
+000b7a40  movk     w9, #1, lsl #16
+000b7a44  ldr      w10, [x26]
+000b7a48  add      x9, x20, x9
+000b7a4c  cbz      w10, #0xb7fd8
+000b7a50  mov      w10, #0x4698
+000b7a54  ldr      d0, [x25]
+000b7a58  movk     w10, #1, lsl #16
+000b7a5c  add      x10, x20, x10
+000b7a60  ldr      d1, [x10]
+000b7a64  fsub     d1, d0, d1
+000b7a68  fneg     d2, d1
+000b7a6c  fcmp     d1, #0.0
+000b7a70  fcsel    d1, d1, d2, ge
+000b7a74  fcvtzs   w11, d1
+000b7a78  cbz      w11, #0xb7a88
+000b7a7c  mov      w11, #1
+000b7a80  str      w11, [x9]
+000b7a84  str      d0, [x10]
+000b7a88  ldr      w9, [x20, #4]
+000b7a8c  cbz      w9, #0xb7af0
+000b7a90  ldr      w1, [x26]
+000b7a94  adrp     x0, #0x1b9000
+000b7a98  add      x0, x0, #0x6a8
+000b7a9c  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7aa0  mov      w8, #0x4690
+000b7aa4  movk     w8, #1, lsl #16
+000b7aa8  add      x24, x20, x8
+000b7aac  adrp     x0, #0x1b9000
+000b7ab0  add      x0, x0, #0x6bd
+000b7ab4  ldr      w1, [x24]
+000b7ab8  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7abc  mov      w8, #0x4698
+000b7ac0  movk     w8, #1, lsl #16
+000b7ac4  adrp     x0, #0x1b9000
+000b7ac8  add      x0, x0, #0x6d7
+000b7acc  ldr      d0, [x20, x8]
+000b7ad0  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7ad4  ldr      w8, [x23]
+000b7ad8  b        #0xb7afc
+000b7adc  mov      w9, #0x4694
+000b7ae0  movk     w9, #1, lsl #16
+000b7ae4  add      x26, x20, x9
+000b7ae8  ldr      w9, [x20, #4]
+000b7aec  cbnz     w9, #0xb7a90
+000b7af0  mov      w9, #0x4690
+000b7af4  movk     w9, #1, lsl #16
+000b7af8  add      x24, x20, x9
+000b7afc  ldr      w9, [x24]
+000b7b00  str      w8, [x26]
+000b7b04  cbz      w9, #0xb7b80
+000b7b08  ldr      d0, [x25]
+000b7b0c  mov      w10, #0x4680
+000b7b10  ldr      d1, [x20, #0x4b0]
+000b7b14  mov      w11, #0x4688
+000b7b18  movk     w10, #1, lsl #16
+000b7b1c  movk     w11, #1, lsl #16
+000b7b20  mov      w12, #0x46e8
+000b7b24  fsub     d0, d0, d1
+000b7b28  ldr      x10, [x20, x10]
+000b7b2c  ldr      x11, [x20, x11]
+000b7b30  mov      w13, #0x46f0
+000b7b34  mov      w14, #0x46d8
+000b7b38  mov      w15, #0x46e0
+000b7b3c  mov      w16, #0x46f8
+000b7b40  movk     w12, #1, lsl #16
+000b7b44  fneg     d1, d0
+000b7b48  movk     w13, #1, lsl #16
+000b7b4c  fcmp     d0, #0.0
+000b7b50  movk     w14, #1, lsl #16
+000b7b54  movk     w15, #1, lsl #16
+000b7b58  str      x10, [x20, x12]
+000b7b5c  movk     w16, #1, lsl #16
+000b7b60  str      x11, [x20, x13]
+000b7b64  mov      x13, x11
+000b7b68  str      x10, [x20, x14]
+000b7b6c  mov      x12, x10
+000b7b70  str      x11, [x20, x15]
+000b7b74  fcsel    d0, d0, d1, ge
+000b7b78  str      d0, [x20, x16]
+000b7b7c  b        #0xb7bd0
+000b7b80  mov      w14, #0x46e8
+000b7b84  mov      w15, #0x46f0
+000b7b88  mov      w12, #0x4680
+000b7b8c  mov      w13, #0x4688
+000b7b90  movk     w14, #1, lsl #16
+000b7b94  movk     w15, #1, lsl #16
+000b7b98  movk     w12, #1, lsl #16
+000b7b9c  movk     w13, #1, lsl #16
+000b7ba0  ldr      x10, [x20, x14]
+000b7ba4  mov      w16, #0x46d8
+000b7ba8  ldr      x11, [x20, x15]
+000b7bac  mov      w17, #0x46e0
+000b7bb0  ldr      x12, [x20, x12]
+000b7bb4  ldr      x13, [x20, x13]
+000b7bb8  movk     w16, #1, lsl #16
+000b7bbc  movk     w17, #1, lsl #16
+000b7bc0  str      x10, [x20, x16]
+000b7bc4  str      x11, [x20, x17]
+000b7bc8  str      x12, [x20, x14]
+000b7bcc  str      x13, [x20, x15]
+000b7bd0  mov      w14, #0x4678
+000b7bd4  movk     w14, #1, lsl #16
+000b7bd8  ldr      w14, [x20, x14]
+000b7bdc  cbz      w14, #0xb7bf0
+000b7be0  cbnz     w8, #0xb7c04
+000b7be4  ldr      x23, [x22]
+000b7be8  str      x23, [x20, #0x4b0]
+000b7bec  b        #0xb7c10
+000b7bf0  cbz      w8, #0xb7c04
+000b7bf4  cbz      w9, #0xb7ffc
+000b7bf8  ldr      d9, [x20, #0x4b0]
+000b7bfc  fmov     x23, d9
+000b7c00  b        #0xb7c10
+000b7c04  adrp     x0, #0x1b9000
+000b7c08  add      x0, x0, #0x6ef
+000b7c0c  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7c10  ldr      w8, [x20, #4]
+000b7c14  str      wzr, [x24]
+000b7c18  cbz      w8, #0xb7c44
+000b7c1c  ldr      d0, [x20, #0x4b0]
+000b7c20  adrp     x0, #0x1b9000
+000b7c24  add      x0, x0, #0x715
+000b7c28  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7c2c  fmov     d9, x23
+000b7c30  adrp     x0, #0x1b9000
+000b7c34  add      x0, x0, #0x732
+000b7c38  mov      v0.16b, v9.16b
+000b7c3c  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7c40  b        #0xb7c48
+000b7c44  fmov     d9, x23
+000b7c48  mov      w8, #0x46c0
+000b7c4c  ldr      d1, [x21]
+000b7c50  movk     w8, #1, lsl #16
+000b7c54  ldr      d2, [x20, #0x24c0]
+000b7c58  add      x22, x20, x8
+000b7c5c  ldr      d0, [x22]
+000b7c60  fmul     d0, d0, d9
+000b7c64  fcmp     d0, d1
+000b7c68  fcsel    d8, d0, d1, ls
+000b7c6c  fcmp     d2, d9
+000b7c70  b.le     #0xb7c80
+000b7c74  fmov     d0, xzr
+000b7c78  mov      w8, wzr
+000b7c7c  b        #0xb7d04
+000b7c80  ldr      d0, [x20, #0x2cb8]
+000b7c84  fcmp     d0, d9
+000b7c88  b.ls     #0xb7cfc
+000b7c8c  mov      w9, wzr
+000b7c90  mov      w10, #0xff
+000b7c94  add      w8, w9, w10
+000b7c98  cmp      w8, #0
+000b7c9c  cinc     w11, w8, lt
+000b7ca0  asr      w8, w11, #1
+000b7ca4  add      x12, x20, w8, sxtw #3
+000b7ca8  sbfx     x11, x11, #1, #0x1f
+000b7cac  add      x11, x11, #1
+000b7cb0  ldr      d0, [x12, #0x24c0]
+000b7cb4  fcmp     d0, d9
+000b7cb8  b.hi     #0xb7ccc
+000b7cbc  add      x12, x20, x11, lsl #3
+000b7cc0  ldr      d1, [x12, #0x24c0]
+000b7cc4  fcmp     d1, d9
+000b7cc8  b.gt     #0xb7cec
+000b7ccc  fcmp     d0, d9
+000b7cd0  sub      w12, w8, #1
+000b7cd4  csel     w9, w9, w11, gt
+000b7cd8  csel     w10, w12, w10, gt
+000b7cdc  cmp      w9, w10
+000b7ce0  b.le     #0xb7c94
+000b7ce4  add      x9, x20, w11, sxtw #3
+000b7ce8  ldr      d1, [x9, #0x24c0]
+000b7cec  fsub     d2, d9, d0
+000b7cf0  fsub     d0, d1, d0
+000b7cf4  fdiv     d0, d2, d0
+000b7cf8  b        #0xb7d04
+000b7cfc  fmov     d0, #1.00000000
+000b7d00  mov      w8, #0xfe
+000b7d04  add      x8, x20, w8, sxtw #3
+000b7d08  ldr      d11, [x20, #0x10]
+000b7d0c  ldr      d1, [x8, #0x2cc0]
+000b7d10  ldr      d2, [x8, #0x2cc8]
+000b7d14  fcmp     d11, #0.0
+000b7d18  fsub     d2, d2, d1
+000b7d1c  fmul     d0, d0, d2
+000b7d20  fadd     d10, d1, d0
+000b7d24  b.pl     #0xb7d34
+000b7d28  fdiv     d0, d8, d10
+000b7d2c  bl       #0x8c848 log2
+000b7d30  mov      v11.16b, v0.16b
+000b7d34  ldr      w8, [x20, #4]
+000b7d38  cbz      w8, #0xb7da4
+000b7d3c  ldr      d0, [x21]
+000b7d40  adrp     x0, #0x1b9000
+000b7d44  add      x0, x0, #0x88d
+000b7d48  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7d4c  mov      w8, #0x46b8
+000b7d50  movk     w8, #1, lsl #16
+000b7d54  adrp     x0, #0x1b9000
+000b7d58  add      x0, x0, #0x8a5
+000b7d5c  ldr      d0, [x20, x8]
+000b7d60  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7d64  ldr      d0, [x22]
+000b7d68  adrp     x0, #0x1b9000
+000b7d6c  add      x0, x0, #0x8bd
+000b7d70  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7d74  mov      v0.16b, v8.16b
+000b7d78  adrp     x0, #0x1b9000
+000b7d7c  add      x0, x0, #0x8d3
+000b7d80  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7d84  mov      v0.16b, v10.16b
+000b7d88  adrp     x0, #0x1b9000
+000b7d8c  add      x0, x0, #0x8ec
+000b7d90  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7d94  mov      v0.16b, v11.16b
+000b7d98  adrp     x0, #0x1b9000
+000b7d9c  add      x0, x0, #0x903
+000b7da0  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7da4  ldr      d0, [x20, #0x68]
+000b7da8  fcmp     d8, d0
+000b7dac  ldr      d0, [x20, #0x34c0]
+000b7db0  cset     w21, gt
+000b7db4  fcmp     d0, d8
+000b7db8  b.le     #0xb7dc8
+000b7dbc  fmov     d0, xzr
+000b7dc0  mov      w8, wzr
+000b7dc4  b        #0xb7e50
+000b7dc8  mov      w8, #0xb4b8
+000b7dcc  ldr      d0, [x20, x8]
+000b7dd0  fcmp     d0, d8
+000b7dd4  b.ls     #0xb7e48
+000b7dd8  mov      w9, wzr
+000b7ddc  mov      w10, #0xfff
+000b7de0  add      w8, w9, w10
+000b7de4  cmp      w8, #0
+000b7de8  cinc     w11, w8, lt
+000b7dec  asr      w8, w11, #1
+000b7df0  add      x12, x20, w8, sxtw #3
+000b7df4  sbfx     x11, x11, #1, #0x1f
+000b7df8  add      x11, x11, #1
+000b7dfc  ldr      d0, [x12, #0x34c0]
+000b7e00  fcmp     d0, d8
+000b7e04  b.hi     #0xb7e18
+000b7e08  add      x12, x20, x11, lsl #3
+000b7e0c  ldr      d1, [x12, #0x34c0]
+000b7e10  fcmp     d1, d8
+000b7e14  b.gt     #0xb7e38
+000b7e18  fcmp     d0, d8
+000b7e1c  sub      w12, w8, #1
+000b7e20  csel     w9, w9, w11, gt
+000b7e24  csel     w10, w12, w10, gt
+000b7e28  cmp      w9, w10
+000b7e2c  b.le     #0xb7de0
+000b7e30  add      x9, x20, w11, sxtw #3
+000b7e34  ldr      d1, [x9, #0x34c0]
+000b7e38  fsub     d2, d8, d0
+000b7e3c  fsub     d0, d1, d0
+000b7e40  fdiv     d0, d2, d0
+000b7e44  b        #0xb7e50
+000b7e48  fmov     d0, #1.00000000
+000b7e4c  mov      w8, #0xffe
+000b7e50  add      x8, x20, w8, sxtw #3
+000b7e54  mov      w9, #0xb4c0
+000b7e58  mov      w10, #0xb4c8
+000b7e5c  ldr      d1, [x8, x9]
+000b7e60  ldr      d2, [x8, x10]
+000b7e64  ldr      w8, [x20, #4]
+000b7e68  fsub     d2, d2, d1
+000b7e6c  fmul     d0, d0, d2
+000b7e70  fadd     d0, d1, d0
+000b7e74  fcvtzs   w22, d0
+000b7e78  cbz      w8, #0xb7e9c
+000b7e7c  adrp     x0, #0x1b9000
+000b7e80  add      x0, x0, #0x91f
+000b7e84  mov      w1, w21
+000b7e88  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7e8c  adrp     x0, #0x1b9000
+000b7e90  add      x0, x0, #0x933
+000b7e94  mov      w1, w22
+000b7e98  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7e9c  mov      w8, #0x34c0
+000b7ea0  movk     w8, #1, lsl #16
+000b7ea4  ldr      d0, [x20, x8]
+000b7ea8  fcmp     d0, d9
+000b7eac  b.le     #0xb7ebc
+000b7eb0  fmov     d0, xzr
+000b7eb4  mov      w8, wzr
+000b7eb8  b        #0xb7f58
+000b7ebc  mov      w8, #0x3cb8
+000b7ec0  movk     w8, #1, lsl #16
+000b7ec4  ldr      d0, [x20, x8]
+000b7ec8  fcmp     d0, d9
+000b7ecc  b.ls     #0xb7f50
+000b7ed0  mov      w11, #0x34c0
+000b7ed4  mov      w9, wzr
+000b7ed8  mov      w10, #0xff
+000b7edc  movk     w11, #1, lsl #16
+000b7ee0  add      w8, w9, w10
+000b7ee4  cmp      w8, #0
+000b7ee8  cinc     w12, w8, lt
+000b7eec  asr      w8, w12, #1
+000b7ef0  add      x13, x20, w8, sxtw #3
+000b7ef4  sbfx     x12, x12, #1, #0x1f
+000b7ef8  add      x12, x12, #1
+000b7efc  ldr      d0, [x13, x11]
+000b7f00  fcmp     d0, d9
+000b7f04  b.hi     #0xb7f18
+000b7f08  add      x13, x20, x12, lsl #3
+000b7f0c  ldr      d1, [x13, x11]
+000b7f10  fcmp     d1, d9
+000b7f14  b.gt     #0xb7f40
+000b7f18  fcmp     d0, d9
+000b7f1c  sub      w13, w8, #1
+000b7f20  csel     w9, w9, w12, gt
+000b7f24  csel     w10, w13, w10, gt
+000b7f28  cmp      w9, w10
+000b7f2c  b.le     #0xb7ee0
+000b7f30  mov      w10, #0x34c0
+000b7f34  add      x9, x20, w12, sxtw #3
+000b7f38  movk     w10, #1, lsl #16
+000b7f3c  ldr      d1, [x9, x10]
+000b7f40  fsub     d2, d9, d0
+000b7f44  fsub     d0, d1, d0
+000b7f48  fdiv     d0, d2, d0
+000b7f4c  b        #0xb7f58
+000b7f50  fmov     d0, #1.00000000
+000b7f54  mov      w8, #0xfe
+000b7f58  mov      w9, #0x3cc0
+000b7f5c  mov      w10, #0x3cc8
+000b7f60  add      x8, x20, w8, sxtw #3
+000b7f64  movk     w9, #1, lsl #16
+000b7f68  movk     w10, #1, lsl #16
+000b7f6c  ldr      d1, [x8, x9]
+000b7f70  ldr      d2, [x8, x10]
+000b7f74  ldr      w8, [x20, #4]
+000b7f78  fsub     d2, d2, d1
+000b7f7c  fmul     d0, d0, d2
+000b7f80  fadd     d9, d1, d0
+000b7f84  cbz      w8, #0xb7f98
+000b7f88  mov      v0.16b, v9.16b
+000b7f8c  adrp     x0, #0x1b9000
+000b7f90  add      x0, x0, #0x946
+000b7f94  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b7f98  str      x23, [x19]
+000b7f9c  stp      d8, d10, [x19, #8]
+000b7fa0  str      d11, [x19, #0x18]
+000b7fa4  stp      w21, w22, [x19, #0x20]
+000b7fa8  str      d9, [x19, #0x28]
+000b7fac  ldp      x29, x30, [sp, #0x90]
+000b7fb0  ldp      x20, x19, [sp, #0x80]
+000b7fb4  ldp      x22, x21, [sp, #0x70]
+000b7fb8  ldp      x24, x23, [sp, #0x60]
+000b7fbc  ldp      x26, x25, [sp, #0x50]
+000b7fc0  ldp      d9, d8, [sp, #0x40]
+000b7fc4  ldp      d11, d10, [sp, #0x30]
+000b7fc8  ldp      d13, d12, [sp, #0x20]
+000b7fcc  ldp      d15, d14, [sp, #0x10]
+000b7fd0  add      sp, sp, #0xa0
+000b7fd4  ret
+000b7fd8  ldr      x11, [x25]
+000b7fdc  mov      w12, #0x4698
+000b7fe0  mov      w10, #1
+000b7fe4  movk     w12, #1, lsl #16
+000b7fe8  str      w10, [x9]
+000b7fec  str      x11, [x20, x12]
+000b7ff0  ldr      w9, [x20, #4]
+000b7ff4  cbnz     w9, #0xb7a90
+000b7ff8  b        #0xb7af0
+000b7ffc  adrp     x8, #0x1cb000
+000b8000  scvtf    d0, x13
+000b8004  scvtf    d2, x11
+000b8008  ldr      d7, [x25]
+000b800c  scvtf    d3, x12
+000b8010  ldr      d1, [x8, #0xf80]
+000b8014  scvtf    d4, x10
+000b8018  fmov     d10, xzr
+000b801c  fdiv     d0, d0, d1
+000b8020  fdiv     d2, d2, d1
+000b8024  ldr      d1, [x20, #0x4b0]
+000b8028  fsub     d8, d7, d1
+000b802c  fadd     d0, d0, d3
+000b8030  fneg     d3, d8
+000b8034  fcmp     d8, #0.0
+000b8038  fadd     d2, d2, d4
+000b803c  fsub     d0, d0, d2
+000b8040  fcsel    d2, d8, d3, ge
+000b8044  fmax     d13, d0, d10
+000b8048  fcvtzs   w8, d2
+000b804c  cbz      w8, #0xb81b0
+000b8050  ldr      d0, [x20, #0x58]
+000b8054  adrp     x8, #0x1cb000
+000b8058  fcmp     d8, #0.0
+000b805c  add      x9, x20, #0x488
+000b8060  str      d13, [sp, #8]
+000b8064  ldr      d4, [x8, #0xf88]
+000b8068  mov      w8, #0x46f8
+000b806c  fadd     d3, d0, d0
+000b8070  movk     w8, #1, lsl #16
+000b8074  fadd     d11, d8, d0
+000b8078  fmul     d0, d3, d4
+000b807c  fdiv     d3, d11, d0
+000b8080  ldr      d0, [x20, x8]
+000b8084  add      x8, x20, #0x490
+000b8088  csel     x8, x9, x8, gt
+000b808c  ldr      d5, [x8]
+000b8090  fmul     d17, d13, d0
+000b8094  fcvtzs   w8, d3
+000b8098  fdiv     d12, d17, d5
+000b809c  tbnz     w8, #0x1f, #0xb80c0
+000b80a0  cmp      w8, #0x40
+000b80a4  b.lt     #0xb80c8
+000b80a8  ldr      d13, [x20, #0x278]
+000b80ac  b        #0xb80e4
+000b80b0  adrp     x0, #0x1b9000
+000b80b4  add      x0, x0, #0x693
+000b80b8  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000b80bc  b        #0xb773c
+000b80c0  ldr      d13, [x20, #0x78]
+000b80c4  b        #0xb80e4
+000b80c8  add      x9, x20, w8, sxtw #3
+000b80cc  scvtf    d4, w8
+000b80d0  ldp      d5, d6, [x9, #0x78]
+000b80d4  fsub     d3, d3, d4
+000b80d8  fsub     d4, d6, d5
+000b80dc  fmul     d3, d3, d4
+000b80e0  fadd     d13, d5, d3
+000b80e4  fcmp     d8, #0.0
+000b80e8  add      x8, x20, #0x4a8
+000b80ec  add      x9, x20, #0x4a0
+000b80f0  fmul     d3, d8, d13
+000b80f4  csel     x8, x9, x8, gt
+000b80f8  ldr      d9, [x8]
+000b80fc  ldr      w8, [x20, #4]
+000b8100  fcmp     d9, d12
+000b8104  fcsel    d15, d9, d12, ge
+000b8108  fcmp     d3, d12
+000b810c  fcsel    d3, d3, d12, ge
+000b8110  fcmp     d3, d15
+000b8114  fcsel    d14, d3, d15, ls
+000b8118  fmov     d3, xzr
+000b811c  fdiv     d2, d14, d2
+000b8120  fcmp     d2, #0.0
+000b8124  fcsel    d2, d2, d3, ge
+000b8128  fmov     d3, #1.00000000
+000b812c  fminnm   d10, d2, d3
+000b8130  cbz      w8, #0xb81ac
+000b8134  adrp     x0, #0x1b9000
+000b8138  str      d7, [sp]
+000b813c  add      x0, x0, #0x79a
+000b8140  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b8144  mov      v0.16b, v11.16b
+000b8148  adrp     x0, #0x1b9000
+000b814c  add      x0, x0, #0x7b4
+000b8150  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b8154  mov      v0.16b, v12.16b
+000b8158  adrp     x0, #0x1b9000
+000b815c  add      x0, x0, #0x7cf
+000b8160  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b8164  mov      v0.16b, v13.16b
+000b8168  adrp     x0, #0x1b9000
+000b816c  add      x0, x0, #0x7e2
+000b8170  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b8174  mov      v0.16b, v9.16b
+000b8178  adrp     x0, #0x1b9000
+000b817c  add      x0, x0, #0x7fd
+000b8180  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b8184  mov      v0.16b, v15.16b
+000b8188  adrp     x0, #0x1b9000
+000b818c  add      x0, x0, #0x80f
+000b8190  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b8194  mov      v0.16b, v14.16b
+000b8198  adrp     x0, #0x1b9000
+000b819c  add      x0, x0, #0x821
+000b81a0  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b81a4  ldr      d7, [sp]
+000b81a8  ldr      d1, [x20, #0x4b0]
+000b81ac  ldr      d13, [sp, #8]
+000b81b0  fmov     d0, #1.00000000
+000b81b4  fmul     d2, d7, d10
+000b81b8  ldr      w8, [x20, #4]
+000b81bc  fsub     d0, d0, d10
+000b81c0  fmul     d3, d1, d0
+000b81c4  fadd     d9, d2, d3
+000b81c8  str      d9, [x20, #0x4b0]
+000b81cc  cbz      w8, #0xb8210
+000b81d0  mov      v0.16b, v8.16b
+000b81d4  adrp     x0, #0x1b9000
+000b81d8  add      x0, x0, #0x83a
+000b81dc  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b81e0  mov      v0.16b, v13.16b
+000b81e4  adrp     x0, #0x1b9000
+000b81e8  add      x0, x0, #0x84e
+000b81ec  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b81f0  mov      v0.16b, v10.16b
+000b81f4  adrp     x0, #0x1b9000
+000b81f8  add      x0, x0, #0x861
+000b81fc  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b8200  mov      v0.16b, v9.16b
+000b8204  adrp     x0, #0x1b9000
+000b8208  add      x0, x0, #0x877
+000b820c  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b8210  fmov     x23, d9
+000b8214  b        #0xb7c10
+
+_ZN21DispAlgoAutoBacklight6updateEv @ 0xb56b0, 304 bytes
+000b56b0  str      x23, [sp, #-0x40]!
+000b56b4  stp      x22, x21, [sp, #0x10]
+000b56b8  stp      x20, x19, [sp, #0x20]
+000b56bc  stp      x29, x30, [sp, #0x30]
+000b56c0  add      x29, sp, #0x30
+000b56c4  mov      x19, x0
+000b56c8  bl       #0x8c388 _ZN11DispAlgoHal11getInstanceEv
+000b56cc  mov      w8, #0x8e68
+000b56d0  ldrb     w1, [x19, #0x28]
+000b56d4  movk     w8, #2, lsl #16
+000b56d8  add      x20, x19, x8
+000b56dc  mov      w9, #0x8e6c
+000b56e0  movk     w9, #2, lsl #16
+000b56e4  ldr      w8, [x20]
+000b56e8  add      x21, x19, x9
+000b56ec  ldr      w3, [x21]
+000b56f0  cmp      w8, #0
+000b56f4  cset     w2, ne
+000b56f8  bl       #0x8c678 _ZN11DispAlgoHal22setPanelHighBrightnessEabt
+000b56fc  mov      w8, w0
+000b5700  cbz      w8, #0xb5728
+000b5704  ldrsb    w1, [x19, #0x28]
+000b5708  adrp     x0, #0x1b9000
+000b570c  ldp      x29, x30, [sp, #0x30]
+000b5710  ldp      x20, x19, [sp, #0x20]
+000b5714  ldp      x22, x21, [sp, #0x10]
+000b5718  add      x0, x0, #0x17d
+000b571c  mov      w2, w8
+000b5720  ldr      x23, [sp], #0x40
+000b5724  b        #0x8c348 _Z12dispAlgoLogEPKcz
+000b5728  mov      w8, #0x8e70
+000b572c  movk     w8, #2, lsl #16
+000b5730  add      x22, x19, x8
+000b5734  adrp     x23, #0x250000
+000b5738  ldr      d0, [x22]
+000b573c  ldr      w9, [x23, #0xd0]
+000b5740  fcvtzs   w8, d0
+000b5744  cmp      w9, w8
+000b5748  b.ne     #0xb5760
+000b574c  adrp     x9, #0x250000
+000b5750  ldr      w10, [x20]
+000b5754  ldr      w9, [x9, #0xd4]
+000b5758  cmp      w10, w9
+000b575c  b.eq     #0xb57a0
+000b5760  mov      w9, #0x8f10
+000b5764  movk     w9, #2, lsl #16
+000b5768  ldr      x9, [x19, x9]
+000b576c  cbz      x9, #0xb5790
+000b5770  mov      w8, #0x8f18
+000b5774  fcvtzu   w2, d0
+000b5778  movk     w8, #2, lsl #16
+000b577c  ldr      w1, [x20]
+000b5780  ldr      x0, [x19, x8]
+000b5784  blr      x9
+000b5788  ldr      d0, [x22]
+000b578c  fcvtzs   w8, d0
+000b5790  ldr      w9, [x20]
+000b5794  adrp     x10, #0x250000
+000b5798  str      w8, [x23, #0xd0]
+000b579c  str      w9, [x10, #0xd4]
+000b57a0  ldr      x8, [x19]
+000b57a4  mov      x0, x19
+000b57a8  ldr      x8, [x8, #0x40]
+000b57ac  blr      x8
+000b57b0  ldr      d0, [x22]
+000b57b4  adrp     x0, #0x1b9000
+000b57b8  ldrsb    w1, [x19, #0x28]
+000b57bc  add      x0, x0, #0x155
+000b57c0  ldr      w2, [x20]
+000b57c4  ldr      w3, [x21]
+000b57c8  ldp      x29, x30, [sp, #0x30]
+000b57cc  ldp      x20, x19, [sp, #0x20]
+000b57d0  ldp      x22, x21, [sp, #0x10]
+000b57d4  fcvtzu   w4, d0
+000b57d8  ldr      x23, [sp], #0x40
+000b57dc  b        #0x8c338 _Z12dispAlgoLogIPKcz
+
+_ZN11DispAlgoHal22setPanelHighBrightnessEabt @ 0xb2380, 292 bytes
+000b2380  sub      sp, sp, #0xf0
+000b2384  stp      x22, x21, [sp, #0xc0]
+000b2388  stp      x20, x19, [sp, #0xd0]
+000b238c  stp      x29, x30, [sp, #0xe0]
+000b2390  add      x29, sp, #0xe0
+000b2394  mrs      x21, tpidr_el0
+000b2398  mov      w20, w1
+000b239c  ldr      x8, [x21, #0x28]
+000b23a0  and      w9, w20, #0xff
+000b23a4  cmp      w9, #4
+000b23a8  stur     x8, [x29, #-0x28]
+000b23ac  b.hs     #0xb2410
+000b23b0  add      x8, x0, w20, sxtb #3
+000b23b4  ldr      x19, [x8, #0x48]
+000b23b8  cbz      x19, #0xb2420
+000b23bc  sxtb     x8, w20
+000b23c0  str      xzr, [sp]
+000b23c4  mov      w9, #1
+000b23c8  str      wzr, [sp, #8]
+000b23cc  add      x22, x0, x8, lsl #2
+000b23d0  strh     w3, [sp, #6]
+000b23d4  strb     w9, [sp, #4]
+000b23d8  ldr      w8, [x22, #0x68]!
+000b23dc  cmp      w8, #0x1b
+000b23e0  b.lt     #0xb2450
+000b23e4  add      x1, sp, #0x10
+000b23e8  mov      x0, x19
+000b23ec  bl       #0x8b178 duss_hal_display_panel_get_info
+000b23f0  mov      w8, w0
+000b23f4  cbz      w8, #0xb2434
+000b23f8  adrp     x0, #0x1b8000
+000b23fc  add      x0, x0, #0xe11
+000b2400  mov      w1, w8
+000b2404  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000b2408  mov      w8, #0x1b
+000b240c  b        #0xb2450
+000b2410  adrp     x0, #0x1b8000
+000b2414  add      x0, x0, #0xa89
+000b2418  sxtb     w1, w20
+000b241c  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000b2420  adrp     x0, #0x1b8000
+000b2424  add      x0, x0, #0xd53
+000b2428  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000b242c  mov      w19, #-1
+000b2430  b        #0xb2478
+000b2434  ldr      w2, [sp, #0x24]
+000b2438  adrp     x0, #0x1b8000
+000b243c  add      x0, x0, #0xe41
+000b2440  sxtb     w1, w20
+000b2444  str      w2, [x22]
+000b2448  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000b244c  ldr      w8, [x22]
+000b2450  mov      x1, sp
+000b2454  str      w8, [sp]
+000b2458  mov      x0, x19
+000b245c  bl       #0x8c508 duss_hal_display_panel_set_high_brightness
+000b2460  mov      w19, w0
+000b2464  cbz      w19, #0xb2478
+000b2468  adrp     x0, #0x1b8000
+000b246c  add      x0, x0, #0xd87
+000b2470  mov      w1, w19
+000b2474  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000b2478  ldr      x8, [x21, #0x28]
+000b247c  ldur     x9, [x29, #-0x28]
+000b2480  cmp      x8, x9
+000b2484  b.ne     #0xb24a0
+000b2488  mov      w0, w19
+000b248c  ldp      x29, x30, [sp, #0xe0]
+000b2490  ldp      x20, x19, [sp, #0xd0]
+000b2494  ldp      x22, x21, [sp, #0xc0]
+000b2498  add      sp, sp, #0xf0
+000b249c  ret
+000b24a0  bl       #0x8a778 __stack_chk_fail
+
+_ZN23DispAlgoColorMgmtInterp10initParamsEv @ 0xbbee8, 1408 bytes
+000bbee8  sub      sp, sp, #0xf0
+000bbeec  stp      x28, x27, [sp, #0x90]
+000bbef0  stp      x26, x25, [sp, #0xa0]
+000bbef4  stp      x24, x23, [sp, #0xb0]
+000bbef8  stp      x22, x21, [sp, #0xc0]
+000bbefc  stp      x20, x19, [sp, #0xd0]
+000bbf00  stp      x29, x30, [sp, #0xe0]
+000bbf04  add      x29, sp, #0xe0
+000bbf08  mrs      x27, tpidr_el0
+000bbf0c  mov      x20, x0
+000bbf10  ldr      x8, [x27, #0x28]
+000bbf14  mov      x21, x20
+000bbf18  stur     x8, [x29, #-0x58]
+000bbf1c  ldrb     w8, [x21, #0x70]!
+000bbf20  tbnz     w8, #0, #0xbbf48
+000bbf24  lsr      x9, x8, #1
+000bbf28  cbz      x9, #0xbbf50
+000bbf2c  mov      x28, x20
+000bbf30  ldrb     w9, [x28, #8]!
+000bbf34  tbnz     w9, #0, #0xbbf64
+000bbf38  add      x1, x28, #1
+000bbf3c  tbz      w8, #0, #0xbbf6c
+000bbf40  ldr      x2, [x20, #0x80]
+000bbf44  b        #0xbbf70
+000bbf48  ldr      x9, [x20, #0x78]
+000bbf4c  cbnz     x9, #0xbbf2c
+000bbf50  adrp     x0, #0x1b9000
+000bbf54  add      x0, x0, #0x97b
+000bbf58  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000bbf5c  mov      w22, #-1
+000bbf60  b        #0xbc3ac
+000bbf64  ldr      x1, [x20, #0x18]
+000bbf68  tbnz     w8, #0, #0xbbf40
+000bbf6c  add      x2, x21, #1
+000bbf70  adrp     x0, #0x1b9000
+000bbf74  add      x0, x0, #0x994
+000bbf78  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000bbf7c  mov      w0, #0x20
+000bbf80  bl       #0x8a6c8 _Znwm
+000bbf84  mov      x19, x0
+000bbf88  add      x0, sp, #0x70
+000bbf8c  mov      x1, x21
+000bbf90  bl       #0x8a8a8 _ZNSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEEC1ERKS5_
+000bbf94  add      x1, sp, #0x70
+000bbf98  mov      x0, x19
+000bbf9c  bl       #0x8c8c8 _ZN14DispJsonObjectC1ENSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+000bbfa0  ldrb     w8, [sp, #0x70]
+000bbfa4  tbz      w8, #0, #0xbbfb0
+000bbfa8  ldr      x0, [sp, #0x80]
+000bbfac  bl       #0x8a708 _ZdlPv
+000bbfb0  mov      x0, x19
+000bbfb4  bl       #0x8c788 _ZN14DispJsonObject13parseJsonFileEv
+000bbfb8  cbz      w0, #0xbbfc4
+000bbfbc  mov      w22, #-1
+000bbfc0  b        #0xbc39c
+000bbfc4  adrp     x1, #0x1b9000
+000bbfc8  str      wzr, [sp, #0x6c]
+000bbfcc  add      x2, x20, #0x89
+000bbfd0  stp      xzr, xzr, [sp, #0x50]
+000bbfd4  add      x1, x1, #0xaa5
+000bbfd8  str      xzr, [sp, #0x60]
+000bbfdc  mov      x0, x19
+000bbfe0  bl       #0x8c8e8 _ZN14DispJsonObject12getBoolValueEPKcPb
+000bbfe4  mov      w8, #0x2e0
+000bbfe8  str      w0, [sp, #0x2c]
+000bbfec  movk     w8, #1, lsl #16
+000bbff0  add      x21, x20, x8
+000bbff4  adrp     x1, #0x1b9000
+000bbff8  add      x1, x1, #0xc48
+000bbffc  mov      x0, x19
+000bc000  mov      x2, x21
+000bc004  bl       #0x8c7a8 _ZN14DispJsonObject14getDoubleValueEPKcPd
+000bc008  adrp     x1, #0x1b9000
+000bc00c  str      w0, [sp, #0x28]
+000bc010  add      x1, x1, #0xc54
+000bc014  add      x2, sp, #0x6c
+000bc018  mov      x0, x19
+000bc01c  bl       #0x8c798 _ZN14DispJsonObject11getIntValueEPKcPi
+000bc020  mov      w8, #0x2e8
+000bc024  ldr      w3, [sp, #0x6c]
+000bc028  movk     w8, #1, lsl #16
+000bc02c  str      w0, [sp, #0x24]
+000bc030  adrp     x1, #0x1b9000
+000bc034  add      x2, x20, x8
+000bc038  add      x1, x1, #0xc60
+000bc03c  mov      x0, x19
+000bc040  mov      w4, wzr
+000bc044  bl       #0x8ca48 _ZN14DispJsonObject13getDoubleListEPKcRNSt3__16vectorIdNS2_9allocatorIdEEEEib
+000bc048  adrp     x1, #0x1b9000
+000bc04c  str      w0, [sp, #0x20]
+000bc050  add      x1, x1, #0xacf
+000bc054  add      x2, sp, #0x50
+000bc058  mov      x0, x19
+000bc05c  bl       #0x8c8f8 _ZN14DispJsonObject9getStringEPKcRNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+000bc060  ldrb     w10, [sp, #0x50]
+000bc064  ldr      x8, [sp, #0x58]
+000bc068  str      w0, [sp, #0x1c]
+000bc06c  tst      w10, #1
+000bc070  lsr      x9, x10, #1
+000bc074  csel     x11, x9, x8, eq
+000bc078  cmp      x11, #6
+000bc07c  b.ne     #0xbc0b4
+000bc080  adrp     x3, #0x1ba000
+000bc084  add      x3, x3, #0x1c4
+000bc088  mov      x2, #-1
+000bc08c  add      x0, sp, #0x50
+000bc090  mov      w4, #6
+000bc094  mov      x1, xzr
+000bc098  bl       #0x8c908 _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEmmPKcm
+000bc09c  cbz      w0, #0xbc0fc
+000bc0a0  ldrb     w9, [sp, #0x50]
+000bc0a4  ldr      x8, [sp, #0x58]
+000bc0a8  and      w10, w9, #1
+000bc0ac  lsr      x9, x9, #1
+000bc0b0  b        #0xbc0b8
+000bc0b4  and      w10, w10, #1
+000bc0b8  cmp      w10, #0
+000bc0bc  csel     x8, x9, x8, eq
+000bc0c0  cmp      x8, #6
+000bc0c4  b.ne     #0xbc0f4
+000bc0c8  adrp     x3, #0x1ba000
+000bc0cc  add      x3, x3, #0x1cb
+000bc0d0  mov      x2, #-1
+000bc0d4  add      x0, sp, #0x50
+000bc0d8  mov      w4, #6
+000bc0dc  mov      x1, xzr
+000bc0e0  bl       #0x8c908 _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEmmPKcm
+000bc0e4  cmp      w0, #0
+000bc0e8  mov      w8, #1
+000bc0ec  cinc     w24, w8, ne
+000bc0f0  b        #0xbc100
+000bc0f4  mov      w24, #2
+000bc0f8  b        #0xbc100
+000bc0fc  mov      w24, wzr
+000bc100  adrp     x1, #0x1b9000
+000bc104  add      x1, x1, #0xada
+000bc108  add      x2, sp, #0x50
+000bc10c  mov      x0, x19
+000bc110  bl       #0x8c8f8 _ZN14DispJsonObject9getStringEPKcRNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+000bc114  ldrb     w8, [sp, #0x50]
+000bc118  ldr      x9, [sp, #0x58]
+000bc11c  str      w0, [sp, #0x18]
+000bc120  str      x21, [sp, #8]
+000bc124  tst      w8, #1
+000bc128  lsr      x10, x8, #1
+000bc12c  csel     x8, x10, x9, eq
+000bc130  cmp      x8, #3
+000bc134  b.ne     #0xbc160
+000bc138  adrp     x3, #0x1ba000
+000bc13c  add      x3, x3, #0x1c0
+000bc140  mov      x2, #-1
+000bc144  add      x0, sp, #0x50
+000bc148  mov      w4, #3
+000bc14c  mov      x1, xzr
+000bc150  bl       #0x8c908 _ZNKSt3__112basic_stringIcNS_11char_traitsIcEENS_9allocatorIcEEE7compareEmmPKcm
+000bc154  cmp      w0, #0
+000bc158  cset     w25, ne
+000bc15c  b        #0xbc164
+000bc160  mov      w25, #1
+000bc164  adrp     x1, #0x1b9000
+000bc168  add      x1, x1, #0xae8
+000bc16c  add      x2, sp, #0x4c
+000bc170  mov      x0, x19
+000bc174  bl       #0x8c798 _ZN14DispJsonObject11getIntValueEPKcPi
+000bc178  adrp     x1, #0x1b9000
+000bc17c  str      w0, [sp, #0x14]
+000bc180  add      x1, x1, #0xaf6
+000bc184  add      x2, sp, #0x48
+000bc188  mov      x0, x19
+000bc18c  bl       #0x8c798 _ZN14DispJsonObject11getIntValueEPKcPi
+000bc190  adrp     x1, #0x1b9000
+000bc194  mov      w22, w0
+000bc198  add      x1, x1, #0xb00
+000bc19c  add      x2, sp, #0x44
+000bc1a0  mov      x0, x19
+000bc1a4  bl       #0x8c798 _ZN14DispJsonObject11getIntValueEPKcPi
+000bc1a8  mov      w23, w0
+000bc1ac  mov      w0, #0x48
+000bc1b0  bl       #0x8a6c8 _Znwm
+000bc1b4  adrp     x8, #0x24a000
+000bc1b8  mov      x26, x0
+000bc1bc  add      x21, x26, #0x18
+000bc1c0  ldr      x8, [x8, #0x720]
+000bc1c4  mov      x0, x21
+000bc1c8  ldpsw    x4, x3, [sp, #0x48]
+000bc1cc  ldrsw    x5, [sp, #0x44]
+000bc1d0  mov      w1, w24
+000bc1d4  add      x8, x8, #0x10
+000bc1d8  stp      xzr, xzr, [x26, #8]
+000bc1dc  mov      w2, w25
+000bc1e0  str      x8, [x26]
+000bc1e4  bl       #0x8c918 _ZN15DispAlgoLutTypeC1E21dispalgo_lut_format_e20dispalgo_data_type_emmm
+000bc1e8  add      x0, sp, #0x30
+000bc1ec  stp      x21, x26, [sp, #0x30]
+000bc1f0  mov      x1, x21
+000bc1f4  mov      x2, x21
+000bc1f8  bl       #0xc0320
+000bc1fc  ldp      x8, x9, [sp, #0x30]
+000bc200  ldr      x24, [x20, #0x58]
+000bc204  stp      xzr, xzr, [sp, #0x30]
+000bc208  stp      x8, x9, [x20, #0x50]
+000bc20c  cbz      x24, #0xbc240
+000bc210  add      x8, x24, #8
+000bc214  ldaxr    x9, [x8]
+000bc218  sub      x10, x9, #1
+000bc21c  stlxr    w11, x10, [x8]
+000bc220  cbnz     w11, #0xbc214
+000bc224  cbnz     x9, #0xbc240
+000bc228  ldr      x8, [x24]
+000bc22c  mov      x0, x24
+000bc230  ldr      x8, [x8, #0x10]
+000bc234  blr      x8
+000bc238  mov      x0, x24
+000bc23c  bl       #0x8a938 _ZNSt3__119__shared_weak_count14__release_weakEv
+000bc240  ldr      x24, [sp, #0x38]
+000bc244  cbz      x24, #0xbc278
+000bc248  add      x8, x24, #8
+000bc24c  ldaxr    x9, [x8]
+000bc250  sub      x10, x9, #1
+000bc254  stlxr    w11, x10, [x8]
+000bc258  cbnz     w11, #0xbc24c
+000bc25c  cbnz     x9, #0xbc278
+000bc260  ldr      x8, [x24]
+000bc264  mov      x0, x24
+000bc268  ldr      x8, [x8, #0x10]
+000bc26c  blr      x8
+000bc270  mov      x0, x24
+000bc274  bl       #0x8a938 _ZNSt3__119__shared_weak_count14__release_weakEv
+000bc278  mov      w8, #0x2c0
+000bc27c  movk     w8, #1, lsl #16
+000bc280  adrp     x1, #0x1b9000
+000bc284  add      x2, x20, x8
+000bc288  add      x1, x1, #0xc6b
+000bc28c  mov      x0, x19
+000bc290  bl       #0x8c8f8 _ZN14DispJsonObject9getStringEPKcRNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+000bc294  mov      w24, w0
+000bc298  mov      x0, x20
+000bc29c  bl       #0x8ca58 _ZN23DispAlgoColorMgmtInterp12parseLutFileEv
+000bc2a0  adrp     x1, #0x1b9000
+000bc2a4  mov      w25, w0
+000bc2a8  add      x1, x1, #0xc74
+000bc2ac  add      x2, sp, #0x50
+000bc2b0  mov      x0, x19
+000bc2b4  bl       #0x8c8f8 _ZN14DispJsonObject9getStringEPKcRNSt3__112basic_stringIcNS2_11char_traitsIcEENS2_9allocatorIcEEEE
+000bc2b8  mov      w26, w0
+000bc2bc  add      x0, sp, #0x50
+000bc2c0  bl       #0x8ca68 _ZN17DispAlgoColorMgmt25convertStringToDispStatusERNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+000bc2c4  mov      w8, #0x2d8
+000bc2c8  movk     w8, #1, lsl #16
+000bc2cc  add      x21, x20, x8
+000bc2d0  cmp      w0, #7
+000bc2d4  str      w0, [x21]
+000bc2d8  b.ne     #0xbc2ec
+000bc2dc  ldrb     w8, [x28]
+000bc2e0  tbnz     w8, #0, #0xbc360
+000bc2e4  add      x1, x28, #1
+000bc2e8  b        #0xbc364
+000bc2ec  ldp      w9, w8, [sp, #0x28]
+000bc2f0  orr      w8, w9, w8
+000bc2f4  ldr      w9, [sp, #0x24]
+000bc2f8  orr      w8, w8, w9
+000bc2fc  ldr      w9, [sp, #0x20]
+000bc300  orr      w8, w8, w9
+000bc304  ldr      w9, [sp, #0x1c]
+000bc308  orr      w8, w8, w9
+000bc30c  ldr      w9, [sp, #0x18]
+000bc310  orr      w8, w8, w9
+000bc314  ldr      w9, [sp, #0x14]
+000bc318  orr      w8, w8, w9
+000bc31c  ldrb     w9, [x28]
+000bc320  orr      w8, w8, w22
+000bc324  orr      w8, w8, w23
+000bc328  orr      w8, w8, w24
+000bc32c  orr      w8, w8, w25
+000bc330  orr      w22, w8, w26
+000bc334  tbnz     w9, #0, #0xbc3e0
+000bc338  add      x1, x28, #1
+000bc33c  cbz      w22, #0xbc3e8
+000bc340  adrp     x0, #0x1b9000
+000bc344  add      x0, x0, #0x557
+000bc348  mov      w2, w22
+000bc34c  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000bc350  strb     wzr, [x20, #0x20]
+000bc354  ldrb     w8, [sp, #0x50]
+000bc358  tbnz     w8, #0, #0xbc394
+000bc35c  b        #0xbc39c
+000bc360  ldr      x1, [x20, #0x18]
+000bc364  ldrb     w8, [sp, #0x50]
+000bc368  add      x10, sp, #0x50
+000bc36c  ldr      x9, [sp, #0x60]
+000bc370  orr      x10, x10, #1
+000bc374  adrp     x0, #0x1b9000
+000bc378  add      x0, x0, #0xc7f
+000bc37c  tst      w8, #1
+000bc380  csel     x2, x10, x9, eq
+000bc384  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000bc388  mov      w22, #-1
+000bc38c  ldrb     w8, [sp, #0x50]
+000bc390  tbz      w8, #0, #0xbc39c
+000bc394  ldr      x0, [sp, #0x60]
+000bc398  bl       #0x8a708 _ZdlPv
+000bc39c  mov      x0, x19
+000bc3a0  bl       #0x8c758 _ZN14DispJsonObjectD1Ev
+000bc3a4  mov      x0, x19
+000bc3a8  bl       #0x8a708 _ZdlPv
+000bc3ac  ldr      x8, [x27, #0x28]
+000bc3b0  ldur     x9, [x29, #-0x58]
+000bc3b4  cmp      x8, x9
+000bc3b8  b.ne     #0xbc464
+000bc3bc  mov      w0, w22
+000bc3c0  ldp      x29, x30, [sp, #0xe0]
+000bc3c4  ldp      x20, x19, [sp, #0xd0]
+000bc3c8  ldp      x22, x21, [sp, #0xc0]
+000bc3cc  ldp      x24, x23, [sp, #0xb0]
+000bc3d0  ldp      x26, x25, [sp, #0xa0]
+000bc3d4  ldp      x28, x27, [sp, #0x90]
+000bc3d8  add      sp, sp, #0xf0
+000bc3dc  ret
+000bc3e0  ldr      x1, [x20, #0x18]
+000bc3e4  cbnz     w22, #0xbc340
+000bc3e8  adrp     x0, #0x1b9000
+000bc3ec  add      x0, x0, #0x54a
+000bc3f0  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000bc3f4  ldrb     w8, [x20, #0x89]
+000bc3f8  mov      w9, #1
+000bc3fc  strb     w9, [x20, #0x20]
+000bc400  cbz      w8, #0xbc454
+000bc404  bl       #0x8c6a8 _ZN22DispAlgoStatusAccessor11getInstanceEv
+000bc408  ldr      w2, [x21]
+000bc40c  mov      x1, x20
+000bc410  bl       #0x8c948 _ZN22DispAlgoStatusAccessor9subscribeEP13DispAlgorithm18dispAlgoStatusItem
+000bc414  bl       #0x8c6a8 _ZN22DispAlgoStatusAccessor11getInstanceEv
+000bc418  ldr      w2, [x21]
+000bc41c  mov      x1, x20
+000bc420  ldr      x21, [sp, #8]
+000bc424  mov      w4, wzr
+000bc428  mov      x3, x21
+000bc42c  bl       #0x8c958 _ZN22DispAlgoStatusAccessor14getGlobalValueEP13DispAlgorithm18dispAlgoStatusItemPvb
+000bc430  ldrb     w8, [x20, #8]
+000bc434  tbnz     w8, #0, #0xbc440
+000bc438  add      x1, x28, #1
+000bc43c  b        #0xbc444
+000bc440  ldr      x1, [x20, #0x18]
+000bc444  ldr      d0, [x21]
+000bc448  adrp     x0, #0x1b9000
+000bc44c  add      x0, x0, #0xc9f
+000bc450  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000bc454  mov      w22, wzr
+000bc458  ldrb     w8, [sp, #0x50]
+000bc45c  tbnz     w8, #0, #0xbc394
+000bc460  b        #0xbc39c
+000bc464  bl       #0x8a778 __stack_chk_fail
+
+_ZN23DispAlgoColorMgmtInterp12parseLutFileEv @ 0xbc468, 1660 bytes
+000bc468  stp      x28, x27, [sp, #-0x60]!
+000bc46c  stp      x26, x25, [sp, #0x10]
+000bc470  stp      x24, x23, [sp, #0x20]
+000bc474  stp      x22, x21, [sp, #0x30]
+000bc478  stp      x20, x19, [sp, #0x40]
+000bc47c  stp      x29, x30, [sp, #0x50]
+000bc480  add      x29, sp, #0x50
+000bc484  sub      sp, sp, #0x1d0
+000bc488  mrs      x20, tpidr_el0
+000bc48c  mov      w9, #0x2c0
+000bc490  ldr      x8, [x20, #0x28]
+000bc494  mov      x22, x0
+000bc498  movk     w9, #1, lsl #16
+000bc49c  add      x21, x22, x9
+000bc4a0  stur     x8, [x29, #-0x58]
+000bc4a4  ldrb     w8, [x21]
+000bc4a8  tbnz     w8, #0, #0xbc5d0
+000bc4ac  lsr      x8, x8, #1
+000bc4b0  cbz      x8, #0xbc5e0
+000bc4b4  adrp     x8, #0x24a000
+000bc4b8  dup      v0.2d, xzr
+000bc4bc  add      x19, sp, #0x70
+000bc4c0  add      x25, x19, #0xb8
+000bc4c4  ldr      x8, [x8, #0x740]
+000bc4c8  add      x27, x19, #0x10
+000bc4cc  mov      x0, x25
+000bc4d0  mov      x1, x27
+000bc4d4  add      x9, x8, #0x18
+000bc4d8  add      x8, x8, #0x40
+000bc4dc  mov      v0.d[0], x9
+000bc4e0  str      x8, [sp, #0x128]
+000bc4e4  str      q0, [sp, #0x70]
+000bc4e8  bl       #0x8b918 _ZNSt3__18ios_base4initEPv
+000bc4ec  adrp     x26, #0x24a000
+000bc4f0  mov      w8, #-1
+000bc4f4  mov      x0, x27
+000bc4f8  ldr      x26, [x26, #0x748]
+000bc4fc  str      xzr, [sp, #0x1b0]
+000bc500  str      w8, [sp, #0x1b8]
+000bc504  add      x9, x26, #0x18
+000bc508  add      x10, x26, #0x40
+000bc50c  str      x9, [sp, #0x70]
+000bc510  str      x10, [sp, #0x128]
+000bc514  bl       #0x8b928 _ZNSt3__113basic_filebufIcNS_11char_traitsIcEEEC2Ev
+000bc518  mov      w8, #0x2d0
+000bc51c  ldr      x9, [sp, #0xf8]
+000bc520  movk     w8, #1, lsl #16
+000bc524  add      x8, x22, x8
+000bc528  str      x8, [sp, #0x40]
+000bc52c  add      x8, x21, #1
+000bc530  str      x8, [sp, #0x58]
+000bc534  cbz      x9, #0xbc5f4
+000bc538  ldr      x8, [sp, #0x70]
+000bc53c  ldur     x8, [x8, #-0x18]
+000bc540  add      x0, x19, x8
+000bc544  ldr      w8, [x0, #0x20]
+000bc548  orr      w1, w8, #4
+000bc54c  bl       #0x8b948 _ZNSt3__18ios_base5clearEj
+000bc550  ldr      x8, [sp, #0xf8]
+000bc554  cbz      x8, #0xbc648
+000bc558  add      x0, sp, #0x70
+000bc55c  str      x21, [sp, #0x48]
+000bc560  bl       #0x8ca78 _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEE5tellgEv
+000bc564  mov      x24, x1
+000bc568  add      x0, sp, #0x70
+000bc56c  mov      x1, xzr
+000bc570  mov      w2, wzr
+000bc574  bl       #0x8ca88 _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEE5seekgExNS_8ios_base7seekdirE
+000bc578  ldr      x0, [x22, #0x50]
+000bc57c  bl       #0x8ca98 _ZN20DispAlgoLutProcessor17calculateLutBytesERK15DispAlgoLutType
+000bc580  mov      w8, #0x2e8
+000bc584  mov      w9, #0x2f0
+000bc588  movk     w8, #1, lsl #16
+000bc58c  movk     w9, #1, lsl #16
+000bc590  mov      x23, x0
+000bc594  add      x19, x22, x8
+000bc598  add      x21, x22, x9
+000bc59c  cbz      x23, #0xbc664
+000bc5a0  ldr      x8, [x21]
+000bc5a4  ldr      x9, [x19]
+000bc5a8  sub      x8, x8, x9
+000bc5ac  asr      x8, x8, #3
+000bc5b0  mul      x4, x8, x23
+000bc5b4  cmp      x24, x4
+000bc5b8  b.eq     #0xbc664
+000bc5bc  mov      x8, x22
+000bc5c0  ldrb     w9, [x8, #8]!
+000bc5c4  tbnz     w9, #0, #0xbc9f0
+000bc5c8  add      x1, x8, #1
+000bc5cc  b        #0xbc9f4
+000bc5d0  mov      w8, #0x2c8
+000bc5d4  movk     w8, #1, lsl #16
+000bc5d8  ldr      x8, [x22, x8]
+000bc5dc  cbnz     x8, #0xbc4b4
+000bc5e0  mov      x8, x22
+000bc5e4  ldrb     w9, [x8, #8]!
+000bc5e8  tbnz     w9, #0, #0xbc970
+000bc5ec  add      x1, x8, #1
+000bc5f0  b        #0xbc974
+000bc5f4  ldrb     w8, [x21]
+000bc5f8  adrp     x1, #0x1ba000
+000bc5fc  ldr      x9, [sp, #0x40]
+000bc600  add      x1, x1, #0x342
+000bc604  tst      w8, #1
+000bc608  ldr      x8, [sp, #0x58]
+000bc60c  ldr      x9, [x9]
+000bc610  csel     x0, x8, x9, eq
+000bc614  bl       #0x8b938 fopen
+000bc618  str      x0, [sp, #0xf8]
+000bc61c  cbz      x0, #0xbc538
+000bc620  mov      w8, #0xe
+000bc624  mov      w2, #2
+000bc628  mov      x1, xzr
+000bc62c  str      w8, [sp, #0x118]
+000bc630  bl       #0x8caa8 fseek
+000bc634  cbz      w0, #0xbc550
+000bc638  ldr      x0, [sp, #0xf8]
+000bc63c  bl       #0x8b9b8 fclose
+000bc640  str      xzr, [sp, #0xf8]
+000bc644  b        #0xbc538
+000bc648  mov      x8, x22
+000bc64c  ldrb     w9, [x8, #8]!
+000bc650  tbnz     w9, #0, #0xbc988
+000bc654  add      x1, x8, #1
+000bc658  ldrb     w8, [x21]
+000bc65c  tbnz     w8, #0, #0xbc994
+000bc660  b        #0xbc9a0
+000bc664  stp      x25, x20, [sp, #0x18]
+000bc668  mov      w0, #0x60
+000bc66c  ldr      x24, [x22, #0x50]
+000bc670  bl       #0x8a6c8 _Znwm
+000bc674  adrp     x20, #0x24a000
+000bc678  fmov     d0, #-1.00000000
+000bc67c  mov      x25, x0
+000bc680  add      x26, x25, #0x18
+000bc684  ldr      x20, [x20, #0x728]
+000bc688  mov      x0, x26
+000bc68c  mov      x1, x24
+000bc690  stp      xzr, xzr, [x25, #8]
+000bc694  add      x8, x20, #0x10
+000bc698  str      x8, [x25]
+000bc69c  bl       #0x8cab8 _ZN11DispAlgoLutC1ERK15DispAlgoLutTyped
+000bc6a0  add      x0, sp, #0x60
+000bc6a4  stp      x26, x25, [sp, #0x60]
+000bc6a8  mov      x1, x26
+000bc6ac  mov      x2, x26
+000bc6b0  bl       #0xc0350
+000bc6b4  mov      w8, #0x320
+000bc6b8  movk     w8, #1, lsl #16
+000bc6bc  ldp      x9, x10, [sp, #0x60]
+000bc6c0  mov      w11, #0x318
+000bc6c4  ldr      x24, [x22, x8]
+000bc6c8  movk     w11, #1, lsl #16
+000bc6cc  stp      xzr, xzr, [sp, #0x60]
+000bc6d0  str      x9, [x22, x11]
+000bc6d4  str      x10, [x22, x8]
+000bc6d8  cbz      x24, #0xbc70c
+000bc6dc  add      x8, x24, #8
+000bc6e0  ldaxr    x9, [x8]
+000bc6e4  sub      x10, x9, #1
+000bc6e8  stlxr    w11, x10, [x8]
+000bc6ec  cbnz     w11, #0xbc6e0
+000bc6f0  cbnz     x9, #0xbc70c
+000bc6f4  ldr      x8, [x24]
+000bc6f8  mov      x0, x24
+000bc6fc  ldr      x8, [x8, #0x10]
+000bc700  blr      x8
+000bc704  mov      x0, x24
+000bc708  bl       #0x8a938 _ZNSt3__119__shared_weak_count14__release_weakEv
+000bc70c  ldr      x24, [sp, #0x68]
+000bc710  str      x27, [sp, #0x10]
+000bc714  cbz      x24, #0xbc748
+000bc718  add      x8, x24, #8
+000bc71c  ldaxr    x9, [x8]
+000bc720  sub      x10, x9, #1
+000bc724  stlxr    w11, x10, [x8]
+000bc728  cbnz     w11, #0xbc71c
+000bc72c  cbnz     x9, #0xbc748
+000bc730  ldr      x8, [x24]
+000bc734  mov      x0, x24
+000bc738  ldr      x8, [x8, #0x10]
+000bc73c  blr      x8
+000bc740  mov      x0, x24
+000bc744  bl       #0x8a938 _ZNSt3__119__shared_weak_count14__release_weakEv
+000bc748  ldr      x8, [x21]
+000bc74c  ldr      x28, [x19]
+000bc750  str      x21, [sp, #0x50]
+000bc754  mov      x21, x19
+000bc758  cmp      x8, x28
+000bc75c  b.eq     #0xbc8f4
+000bc760  mov      w8, #0x308
+000bc764  mov      w9, #0x300
+000bc768  movk     w8, #1, lsl #16
+000bc76c  movk     w9, #1, lsl #16
+000bc770  add      x24, x22, x8
+000bc774  add      x8, x22, x9
+000bc778  mov      x25, xzr
+000bc77c  add      x20, x20, #0x10
+000bc780  str      x8, [sp, #0x28]
+000bc784  mov      w8, #0x310
+000bc788  movk     w8, #1, lsl #16
+000bc78c  add      x19, x22, x8
+000bc790  add      x8, x22, #8
+000bc794  str      x8, [sp, #0x38]
+000bc798  add      x8, x22, #9
+000bc79c  str      x8, [sp, #0x30]
+000bc7a0  ldr      x26, [x22, #0x50]
+000bc7a4  mov      w0, #0x60
+000bc7a8  bl       #0x8a6c8 _Znwm
+000bc7ac  mov      x27, x0
+000bc7b0  mov      x1, x26
+000bc7b4  stp      xzr, xzr, [x27, #8]
+000bc7b8  str      x20, [x27]
+000bc7bc  ldr      d0, [x28, x25, lsl #3]
+000bc7c0  add      x28, x27, #0x18
+000bc7c4  mov      x0, x28
+000bc7c8  bl       #0x8cab8 _ZN11DispAlgoLutC1ERK15DispAlgoLutTyped
+000bc7cc  add      x0, sp, #0x60
+000bc7d0  stp      x28, x27, [sp, #0x60]
+000bc7d4  mov      x1, x28
+000bc7d8  mov      x2, x28
+000bc7dc  bl       #0xc0350
+000bc7e0  ldr      x0, [sp, #0x60]
+000bc7e4  bl       #0x8cac8 _ZN11DispAlgoLut6getLutEv
+000bc7e8  mov      x1, x0
+000bc7ec  add      x0, sp, #0x70
+000bc7f0  mov      x2, x23
+000bc7f4  bl       #0x8cad8 _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEE4readEPcl
+000bc7f8  ldr      x8, [x24]
+000bc7fc  ldr      x9, [x19]
+000bc800  cmp      x8, x9
+000bc804  b.eq     #0xbc848
+000bc808  ldr      x9, [sp, #0x60]
+000bc80c  mov      x27, x21
+000bc810  ldr      x28, [sp, #0x50]
+000bc814  str      x9, [x8]
+000bc818  ldr      x9, [sp, #0x68]
+000bc81c  str      x9, [x8, #8]
+000bc820  cbz      x9, #0xbc838
+000bc824  add      x8, x9, #8
+000bc828  ldxr     x9, [x8]
+000bc82c  add      x9, x9, #1
+000bc830  stxr     w10, x9, [x8]
+000bc834  cbnz     w10, #0xbc828
+000bc838  ldr      x8, [x24]
+000bc83c  add      x8, x8, #0x10
+000bc840  str      x8, [x24]
+000bc844  b        #0xbc85c
+000bc848  ldr      x0, [sp, #0x28]
+000bc84c  add      x1, sp, #0x60
+000bc850  bl       #0x8cae8 _ZNSt3__16vectorINS_10shared_ptrI11DispAlgoLutEENS_9allocatorIS3_EEE21__push_back_slow_pathIRKS3_EEvOT_
+000bc854  ldr      x28, [sp, #0x50]
+000bc858  mov      x27, x21
+000bc85c  ldr      x2, [sp, #0x78]
+000bc860  cmp      x2, x23
+000bc864  b.eq     #0xbc8a0
+000bc868  ldp      x1, x8, [sp, #0x30]
+000bc86c  ldrb     w8, [x8]
+000bc870  tbz      w8, #0, #0xbc878
+000bc874  ldr      x1, [x22, #0x18]
+000bc878  ldr      x8, [sp, #0x48]
+000bc87c  ldr      x3, [sp, #0x58]
+000bc880  ldrb     w8, [x8]
+000bc884  tbz      w8, #0, #0xbc890
+000bc888  ldr      x8, [sp, #0x40]
+000bc88c  ldr      x3, [x8]
+000bc890  adrp     x0, #0x1b9000
+000bc894  add      x0, x0, #0xd46
+000bc898  mov      x4, x23
+000bc89c  bl       #0x8c768 _Z12dispAlgoLogWPKcz
+000bc8a0  ldr      x26, [sp, #0x68]
+000bc8a4  cbz      x26, #0xbc8d8
+000bc8a8  add      x8, x26, #8
+000bc8ac  ldaxr    x9, [x8]
+000bc8b0  sub      x10, x9, #1
+000bc8b4  stlxr    w11, x10, [x8]
+000bc8b8  cbnz     w11, #0xbc8ac
+000bc8bc  cbnz     x9, #0xbc8d8
+000bc8c0  ldr      x8, [x26]
+000bc8c4  mov      x0, x26
+000bc8c8  ldr      x8, [x8, #0x10]
+000bc8cc  blr      x8
+000bc8d0  mov      x0, x26
+000bc8d4  bl       #0x8a938 _ZNSt3__119__shared_weak_count14__release_weakEv
+000bc8d8  ldr      x8, [x28]
+000bc8dc  add      x25, x25, #1
+000bc8e0  ldr      x28, [x27]
+000bc8e4  sub      x8, x8, x28
+000bc8e8  asr      x8, x8, #3
+000bc8ec  cmp      x8, x25
+000bc8f0  b.hi     #0xbc7a0
+000bc8f4  ldr      x23, [sp, #0xf8]
+000bc8f8  ldr      x27, [sp, #0x10]
+000bc8fc  cbz      x23, #0xbc928
+000bc900  ldr      x8, [sp, #0x80]
+000bc904  mov      x0, x27
+000bc908  ldr      x8, [x8, #0x30]
+000bc90c  blr      x8
+000bc910  mov      w24, w0
+000bc914  mov      x0, x23
+000bc918  bl       #0x8b9b8 fclose
+000bc91c  cbnz     w0, #0xbc928
+000bc920  str      xzr, [sp, #0xf8]
+000bc924  cbz      w24, #0xbc944
+000bc928  ldr      x8, [sp, #0x70]
+000bc92c  add      x9, sp, #0x70
+000bc930  ldur     x8, [x8, #-0x18]
+000bc934  add      x0, x9, x8
+000bc938  ldr      w8, [x0, #0x20]
+000bc93c  orr      w1, w8, #4
+000bc940  bl       #0x8b948 _ZNSt3__18ios_base5clearEj
+000bc944  mov      x8, x22
+000bc948  adrp     x26, #0x24a000
+000bc94c  ldrb     w9, [x8, #8]!
+000bc950  ldp      x25, x20, [sp, #0x18]
+000bc954  ldr      x26, [x26, #0x748]
+000bc958  ldr      x10, [sp, #0x48]
+000bc95c  tbnz     w9, #0, #0xbc9bc
+000bc960  add      x1, x8, #1
+000bc964  ldrb     w8, [x10]
+000bc968  tbnz     w8, #0, #0xbc9c8
+000bc96c  b        #0xbc9d4
+000bc970  ldr      x1, [x22, #0x18]
+000bc974  adrp     x0, #0x1b9000
+000bc978  add      x0, x0, #0xcd5
+000bc97c  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000bc980  mov      w21, #-1
+000bc984  b        #0xbcaa4
+000bc988  ldr      x1, [x22, #0x18]
+000bc98c  ldrb     w8, [x21]
+000bc990  tbz      w8, #0, #0xbc9a0
+000bc994  ldr      x8, [sp, #0x40]
+000bc998  ldr      x8, [x8]
+000bc99c  str      x8, [sp, #0x58]
+000bc9a0  adrp     x0, #0x1b9000
+000bc9a4  ldr      x2, [sp, #0x58]
+000bc9a8  add      x0, x0, #0xcf4
+000bc9ac  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000bc9b0  mov      w21, #-1
+000bc9b4  add      x22, sp, #0x70
+000bc9b8  b        #0xbca70
+000bc9bc  ldr      x1, [x22, #0x18]
+000bc9c0  ldrb     w8, [x10]
+000bc9c4  tbz      w8, #0, #0xbc9d4
+000bc9c8  ldr      x8, [sp, #0x40]
+000bc9cc  ldr      x8, [x8]
+000bc9d0  str      x8, [sp, #0x58]
+000bc9d4  adrp     x0, #0x1b9000
+000bc9d8  ldr      x2, [sp, #0x58]
+000bc9dc  add      x0, x0, #0xd7d
+000bc9e0  add      x22, sp, #0x70
+000bc9e4  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000bc9e8  mov      w21, wzr
+000bc9ec  b        #0xbca70
+000bc9f0  ldr      x1, [x22, #0x18]
+000bc9f4  ldr      x8, [sp, #0x48]
+000bc9f8  ldrb     w8, [x8]
+000bc9fc  tbz      w8, #0, #0xbca0c
+000bca00  ldr      x8, [sp, #0x40]
+000bca04  ldr      x8, [x8]
+000bca08  str      x8, [sp, #0x58]
+000bca0c  adrp     x0, #0x1b9000
+000bca10  ldr      x2, [sp, #0x58]
+000bca14  add      x0, x0, #0xd12
+000bca18  mov      x3, x24
+000bca1c  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000bca20  ldr      x21, [sp, #0xf8]
+000bca24  cbz      x21, #0xbca50
+000bca28  ldr      x8, [sp, #0x80]
+000bca2c  mov      x0, x27
+000bca30  ldr      x8, [x8, #0x30]
+000bca34  blr      x8
+000bca38  mov      w22, w0
+000bca3c  mov      x0, x21
+000bca40  bl       #0x8b9b8 fclose
+000bca44  cbnz     w0, #0xbca50
+000bca48  str      xzr, [sp, #0xf8]
+000bca4c  cbz      w22, #0xbcad8
+000bca50  ldr      x8, [sp, #0x70]
+000bca54  add      x22, sp, #0x70
+000bca58  ldur     x8, [x8, #-0x18]
+000bca5c  add      x0, x22, x8
+000bca60  ldr      w8, [x0, #0x20]
+000bca64  orr      w1, w8, #4
+000bca68  bl       #0x8b948 _ZNSt3__18ios_base5clearEj
+000bca6c  mov      w21, #-1
+000bca70  add      x8, x26, #0x18
+000bca74  add      x9, x26, #0x40
+000bca78  mov      x0, x27
+000bca7c  str      x8, [sp, #0x70]
+000bca80  str      x9, [sp, #0x128]
+000bca84  bl       #0x8b9c8 _ZNSt3__113basic_filebufIcNS_11char_traitsIcEEED2Ev
+000bca88  adrp     x8, #0x24a000
+000bca8c  mov      x0, x22
+000bca90  ldr      x8, [x8, #0x750]
+000bca94  add      x1, x8, #8
+000bca98  bl       #0x8caf8 _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEED2Ev
+000bca9c  mov      x0, x25
+000bcaa0  bl       #0x8b9e8 _ZNSt3__19basic_iosIcNS_11char_traitsIcEEED2Ev
+000bcaa4  ldr      x8, [x20, #0x28]
+000bcaa8  ldur     x9, [x29, #-0x58]
+000bcaac  cmp      x8, x9
+000bcab0  b.ne     #0xbcae0
+000bcab4  mov      w0, w21
+000bcab8  add      sp, sp, #0x1d0
+000bcabc  ldp      x29, x30, [sp, #0x50]
+000bcac0  ldp      x20, x19, [sp, #0x40]
+000bcac4  ldp      x22, x21, [sp, #0x30]
+000bcac8  ldp      x24, x23, [sp, #0x20]
+000bcacc  ldp      x26, x25, [sp, #0x10]
+000bcad0  ldp      x28, x27, [sp], #0x60
+000bcad4  ret
+000bcad8  add      x22, sp, #0x70
+000bcadc  b        #0xbca6c
+000bcae0  bl       #0x8a778 __stack_chk_fail
+
+_ZN23DispAlgoColorMgmtInterp16getLutsForInterpEd @ 0xbcd90, 620 bytes
+000bcd90  str      d8, [sp, #-0x50]!
+000bcd94  stp      x24, x23, [sp, #0x10]
+000bcd98  stp      x22, x21, [sp, #0x20]
+000bcd9c  stp      x20, x19, [sp, #0x30]
+000bcda0  stp      x29, x30, [sp, #0x40]
+000bcda4  add      x29, sp, #0x40
+000bcda8  mov      x19, x8
+000bcdac  mov      v8.16b, v0.16b
+000bcdb0  mov      w8, #0x300
+000bcdb4  mov      w9, #0x308
+000bcdb8  mov      x20, x0
+000bcdbc  movk     w8, #1, lsl #16
+000bcdc0  movk     w9, #1, lsl #16
+000bcdc4  add      x22, x20, x9
+000bcdc8  add      x21, x20, x8
+000bcdcc  ldr      x9, [x22]
+000bcdd0  ldr      x8, [x21]
+000bcdd4  sub      x9, x9, x8
+000bcdd8  asr      x9, x9, #4
+000bcddc  cmp      x9, #1
+000bcde0  b.eq     #0xbcdf4
+000bcde4  cbnz     x9, #0xbce20
+000bcde8  movi     v0.2d, #0000000000000000
+000bcdec  stp      q0, q0, [x19]
+000bcdf0  b        #0xbcf80
+000bcdf4  ldr      x9, [x8]
+000bcdf8  str      x9, [x19]
+000bcdfc  ldr      x8, [x8, #8]
+000bce00  str      x8, [x19, #8]
+000bce04  cbz      x8, #0xbcf7c
+000bce08  add      x8, x8, #8
+000bce0c  ldxr     x9, [x8]
+000bce10  add      x9, x9, #1
+000bce14  stxr     w10, x9, [x8]
+000bce18  cbnz     w10, #0xbce0c
+000bce1c  b        #0xbcf7c
+000bce20  ldr      x0, [x8]
+000bce24  bl       #0x8cb08 _ZNK11DispAlgoLut6factorEv
+000bce28  fcmp     d0, d8
+000bce2c  b.le     #0xbce44
+000bce30  mov      x8, x20
+000bce34  ldrb     w9, [x8, #8]!
+000bce38  tbnz     w9, #0, #0xbcecc
+000bce3c  add      x20, x8, #1
+000bce40  b        #0xbced0
+000bce44  ldr      x8, [x22]
+000bce48  ldur     x0, [x8, #-0x10]
+000bce4c  bl       #0x8cb08 _ZNK11DispAlgoLut6factorEv
+000bce50  fcmp     d0, d8
+000bce54  b.ls     #0xbcf1c
+000bce58  ldr      x9, [x22]
+000bce5c  ldr      x8, [x21]
+000bce60  cmp      x9, x8
+000bce64  b.eq     #0xbceb8
+000bce68  mov      x23, xzr
+000bce6c  mov      x24, xzr
+000bce70  ldr      x0, [x8, x23]
+000bce74  bl       #0x8cb08 _ZNK11DispAlgoLut6factorEv
+000bce78  fcmp     d0, d8
+000bce7c  b.hi     #0xbce98
+000bce80  ldr      x8, [x21]
+000bce84  add      x8, x8, x23
+000bce88  ldr      x0, [x8, #0x10]
+000bce8c  bl       #0x8cb08 _ZNK11DispAlgoLut6factorEv
+000bce90  fcmp     d0, d8
+000bce94  b.gt     #0xbcfb0
+000bce98  ldr      x9, [x22]
+000bce9c  add      x24, x24, #1
+000bcea0  ldr      x8, [x21]
+000bcea4  add      x23, x23, #0x10
+000bcea8  sub      x9, x9, x8
+000bceac  asr      x9, x9, #4
+000bceb0  cmp      x9, x24
+000bceb4  b.hi     #0xbce70
+000bceb8  mov      x8, x20
+000bcebc  ldrb     w9, [x8, #8]!
+000bcec0  tbnz     w9, #0, #0xbcf98
+000bcec4  add      x1, x8, #1
+000bcec8  b        #0xbcf9c
+000bcecc  ldr      x20, [x20, #0x18]
+000bced0  ldr      x8, [x21]
+000bced4  ldr      x0, [x8]
+000bced8  bl       #0x8cb08 _ZNK11DispAlgoLut6factorEv
+000bcedc  mov      v1.16b, v0.16b
+000bcee0  adrp     x0, #0x1b9000
+000bcee4  mov      v0.16b, v8.16b
+000bcee8  add      x0, x0, #0xda1
+000bceec  mov      x1, x20
+000bcef0  bl       #0x8c768 _Z12dispAlgoLogWPKcz
+000bcef4  ldr      x8, [x21]
+000bcef8  ldp      x9, x8, [x8]
+000bcefc  stp      x9, x8, [x19]
+000bcf00  cbz      x8, #0xbcf7c
+000bcf04  add      x8, x8, #8
+000bcf08  ldxr     x9, [x8]
+000bcf0c  add      x9, x9, #1
+000bcf10  stxr     w10, x9, [x8]
+000bcf14  cbnz     w10, #0xbcf08
+000bcf18  b        #0xbcf7c
+000bcf1c  mov      x8, x20
+000bcf20  ldrb     w9, [x8, #8]!
+000bcf24  tbnz     w9, #0, #0xbcf30
+000bcf28  add      x20, x8, #1
+000bcf2c  b        #0xbcf34
+000bcf30  ldr      x20, [x20, #0x18]
+000bcf34  ldr      x8, [x22]
+000bcf38  ldur     x0, [x8, #-0x10]
+000bcf3c  bl       #0x8cb08 _ZNK11DispAlgoLut6factorEv
+000bcf40  mov      v1.16b, v0.16b
+000bcf44  adrp     x0, #0x1b9000
+000bcf48  mov      v0.16b, v8.16b
+000bcf4c  add      x0, x0, #0xdd1
+000bcf50  mov      x1, x20
+000bcf54  bl       #0x8c768 _Z12dispAlgoLogWPKcz
+000bcf58  ldr      x8, [x22]
+000bcf5c  ldp      x9, x8, [x8, #-0x10]
+000bcf60  stp      x9, x8, [x19]
+000bcf64  cbz      x8, #0xbcf7c
+000bcf68  add      x8, x8, #8
+000bcf6c  ldxr     x9, [x8]
+000bcf70  add      x9, x9, #1
+000bcf74  stxr     w10, x9, [x8]
+000bcf78  cbnz     w10, #0xbcf6c
+000bcf7c  stp      xzr, xzr, [x19, #0x10]
+000bcf80  ldp      x29, x30, [sp, #0x40]
+000bcf84  ldp      x20, x19, [sp, #0x30]
+000bcf88  ldp      x22, x21, [sp, #0x20]
+000bcf8c  ldp      x24, x23, [sp, #0x10]
+000bcf90  ldr      d8, [sp], #0x50
+000bcf94  ret
+000bcf98  ldr      x1, [x20, #0x18]
+000bcf9c  mov      v0.16b, v8.16b
+000bcfa0  adrp     x0, #0x1b9000
+000bcfa4  add      x0, x0, #0xe02
+000bcfa8  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000bcfac  b        #0xbcde8
+000bcfb0  ldr      x8, [x21]
+000bcfb4  add      x8, x8, x23
+000bcfb8  ldp      x10, x9, [x8]
+000bcfbc  stp      x10, x9, [x19]
+000bcfc0  cbz      x9, #0xbcfd8
+000bcfc4  add      x9, x9, #8
+000bcfc8  ldxr     x10, [x9]
+000bcfcc  add      x10, x10, #1
+000bcfd0  stxr     w11, x10, [x9]
+000bcfd4  cbnz     w11, #0xbcfc8
+000bcfd8  ldp      x9, x8, [x8, #0x10]
+000bcfdc  stp      x9, x8, [x19, #0x10]
+000bcfe0  cbz      x8, #0xbcf80
+000bcfe4  add      x8, x8, #8
+000bcfe8  ldxr     x9, [x8]
+000bcfec  add      x9, x9, #1
+000bcff0  stxr     w10, x9, [x8]
+000bcff4  cbnz     w10, #0xbcfe8
+000bcff8  b        #0xbcf80
+
+_ZN23DispAlgoColorMgmtInterp11workingLoopEv @ 0xbd000, 1396 bytes
+000bd000  sub      sp, sp, #0x130
+000bd004  str      d8, [sp, #0xc0]
+000bd008  stp      x28, x27, [sp, #0xd0]
+000bd00c  stp      x26, x25, [sp, #0xe0]
+000bd010  stp      x24, x23, [sp, #0xf0]
+000bd014  stp      x22, x21, [sp, #0x100]
+000bd018  stp      x20, x19, [sp, #0x110]
+000bd01c  stp      x29, x30, [sp, #0x120]
+000bd020  add      x29, sp, #0x120
+000bd024  mrs      x21, tpidr_el0
+000bd028  mov      x19, x0
+000bd02c  ldr      x8, [x21, #0x28]
+000bd030  mov      x24, x19
+000bd034  stur     x8, [x29, #-0x68]
+000bd038  ldrb     w8, [x24, #8]!
+000bd03c  tbnz     w8, #0, #0xbd048
+000bd040  add      x1, x24, #1
+000bd044  b        #0xbd04c
+000bd048  ldr      x1, [x19, #0x18]
+000bd04c  adrp     x0, #0x1b9000
+000bd050  add      x0, x0, #0xb62
+000bd054  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000bd058  bl       #0x8a568 pthread_self
+000bd05c  ldrb     w8, [x24]
+000bd060  tbnz     w8, #0, #0xbd06c
+000bd064  add      x1, x24, #1
+000bd068  b        #0xbd070
+000bd06c  ldr      x1, [x19, #0x18]
+000bd070  bl       #0x8ab18 pthread_setname_np
+000bd074  ldrb     w9, [x24]
+000bd078  mov      w8, w0
+000bd07c  tbnz     w9, #0, #0xbd0a4
+000bd080  add      x1, x24, #1
+000bd084  cbz      w8, #0xbd0ac
+000bd088  adrp     x0, #0x1b9000
+000bd08c  adrp     x2, #0x1b9000
+000bd090  add      x0, x0, #0xfc5
+000bd094  add      x2, x2, #0xfdc
+000bd098  mov      w3, w8
+000bd09c  bl       #0x8c768 _Z12dispAlgoLogWPKcz
+000bd0a0  b        #0xbd0d0
+000bd0a4  ldr      x1, [x19, #0x18]
+000bd0a8  cbnz     w8, #0xbd088
+000bd0ac  tbnz     w9, #0, #0xbd0b8
+000bd0b0  add      x3, x24, #1
+000bd0b4  b        #0xbd0bc
+000bd0b8  ldr      x3, [x19, #0x18]
+000bd0bc  adrp     x0, #0x1b9000
+000bd0c0  adrp     x2, #0x1b9000
+000bd0c4  add      x0, x0, #0xfef
+000bd0c8  add      x2, x2, #0xfdc
+000bd0cc  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000bd0d0  add      x0, x19, #0xbc
+000bd0d4  mov      w8, #1
+000bd0d8  stur     x0, [x29, #-0x78]
+000bd0dc  sturb    w8, [x29, #-0x70]
+000bd0e0  bl       #0x8acb8 _ZNSt3__15mutex4lockEv
+000bd0e4  add      x20, x19, #0x8c
+000bd0e8  sub      x1, x29, #0x78
+000bd0ec  mov      x0, x20
+000bd0f0  bl       #0x8c618 _ZNSt3__118condition_variable4waitERNS_11unique_lockINS_5mutexEEE
+000bd0f4  ldrb     w8, [x19, #0xe5]
+000bd0f8  cbz      w8, #0xbd184
+000bd0fc  add      x23, x19, #0xf2
+000bd100  ldrb     w8, [x23]
+000bd104  cbz      w8, #0xbd120
+000bd108  ldr      x8, [x19, #0xf8]
+000bd10c  cbz      x8, #0xbd11c
+000bd110  ldr      x0, [x19, #0x100]
+000bd114  mov      w1, #-1
+000bd118  blr      x8
+000bd11c  strb     wzr, [x23]
+000bd120  ldrb     w8, [x24]
+000bd124  tbnz     w8, #0, #0xbd130
+000bd128  add      x1, x24, #1
+000bd12c  b        #0xbd134
+000bd130  ldr      x1, [x19, #0x18]
+000bd134  adrp     x0, #0x1b9000
+000bd138  add      x0, x0, #0xbaa
+000bd13c  bl       #0x8c338 _Z12dispAlgoLogIPKcz
+000bd140  ldurb    w8, [x29, #-0x70]
+000bd144  cbz      w8, #0xbd150
+000bd148  ldur     x0, [x29, #-0x78]
+000bd14c  bl       #0x8adc8 _ZNSt3__15mutex6unlockEv
+000bd150  ldr      x8, [x21, #0x28]
+000bd154  ldur     x9, [x29, #-0x68]
+000bd158  cmp      x8, x9
+000bd15c  b.ne     #0xbd570
+000bd160  ldp      x29, x30, [sp, #0x120]
+000bd164  ldp      x20, x19, [sp, #0x110]
+000bd168  ldp      x22, x21, [sp, #0x100]
+000bd16c  ldp      x24, x23, [sp, #0xf0]
+000bd170  ldp      x26, x25, [sp, #0xe0]
+000bd174  ldp      x28, x27, [sp, #0xd0]
+000bd178  ldr      d8, [sp, #0xc0]
+000bd17c  add      sp, sp, #0x130
+000bd180  ret
+000bd184  mov      w8, #0x2d8
+000bd188  str      x21, [sp, #8]
+000bd18c  movk     w8, #1, lsl #16
+000bd190  fmov     d8, #-1.00000000
+000bd194  add      x22, x19, x8
+000bd198  mov      w8, #0x318
+000bd19c  movk     w8, #1, lsl #16
+000bd1a0  add      x21, x19, x8
+000bd1a4  add      x8, x19, #0x118
+000bd1a8  mov      w9, #0x2e0
+000bd1ac  movk     w9, #1, lsl #16
+000bd1b0  add      x28, x19, x9
+000bd1b4  str      x8, [sp, #0x20]
+000bd1b8  add      x23, x19, #0xf2
+000bd1bc  add      x27, x19, #0x138
+000bd1c0  add      x8, x24, #1
+000bd1c4  stp      x22, x8, [sp, #0x10]
+000bd1c8  b        #0xbd1f8
+000bd1cc  ldrb     w8, [x24]
+000bd1d0  ldr      x1, [sp, #0x18]
+000bd1d4  tbz      w8, #0, #0xbd1dc
+000bd1d8  ldr      x1, [x19, #0x18]
+000bd1dc  adrp     x0, #0x1b9000
+000bd1e0  add      x0, x0, #0xb7a
+000bd1e4  bl       #0x8c768 _Z12dispAlgoLogWPKcz
+000bd1e8  mov      w25, #-1
+000bd1ec  ldr      x8, [x19, #0x110]
+000bd1f0  cbnz     x8, #0xbd378
+000bd1f4  b        #0xbd390
+000bd1f8  add      x8, x19, #0xe4
+000bd1fc  ldarb    w9, [x8]
+000bd200  tbz      w9, #0, #0xbd238
+000bd204  stlrb    wzr, [x8]
+000bd208  bl       #0x8c6a8 _ZN22DispAlgoStatusAccessor11getInstanceEv
+000bd20c  ldr      w2, [x22]
+000bd210  add      x3, sp, #0x30
+000bd214  mov      x1, x19
+000bd218  mov      w4, wzr
+000bd21c  bl       #0x8c958 _ZN22DispAlgoStatusAccessor14getGlobalValueEP13DispAlgorithm18dispAlgoStatusItemPvb
+000bd220  ldrb     w8, [x19, #0x89]
+000bd224  cmp      w8, #0
+000bd228  add      x8, sp, #0x30
+000bd22c  csel     x8, x28, x8, eq
+000bd230  ldr      x8, [x8]
+000bd234  str      x8, [x28]
+000bd238  ldr      w8, [x19, #0x48]
+000bd23c  cmp      w8, #2
+000bd240  b.ne     #0xbd254
+000bd244  ldrb     w8, [x23]
+000bd248  cbz      w8, #0xbd254
+000bd24c  ldrb     w8, [x19, #0xf1]
+000bd250  cbnz     w8, #0xbd318
+000bd254  ldr      d0, [x28]
+000bd258  add      x8, sp, #0x30
+000bd25c  mov      x0, x19
+000bd260  bl       #0x8cb18 _ZN23DispAlgoColorMgmtInterp16getLutsForInterpEd
+000bd264  ldr      x1, [sp, #0x30]
+000bd268  cbz      x1, #0xbd284
+000bd26c  ldr      x2, [sp, #0x40]
+000bd270  ldr      x0, [x21]
+000bd274  cbz      x2, #0xbd2b4
+000bd278  ldr      d0, [x28]
+000bd27c  bl       #0x8cb28 _ZN20DispAlgoLutProcessor17interpolateLinearER11DispAlgoLutS1_S1_d
+000bd280  b        #0xbd2b8
+000bd284  ldrb     w8, [x23]
+000bd288  cbz      w8, #0xbd400
+000bd28c  ldr      x8, [x19, #0xf8]
+000bd290  cbz      x8, #0xbd2a0
+000bd294  ldr      x0, [x19, #0x100]
+000bd298  mov      w1, #-1
+000bd29c  blr      x8
+000bd2a0  mov      w26, #2
+000bd2a4  strb     wzr, [x23]
+000bd2a8  ldr      x25, [sp, #0x48]
+000bd2ac  cbnz     x25, #0xbd2c4
+000bd2b0  b        #0xbd2dc
+000bd2b4  bl       #0x8c998 _ZN20DispAlgoLutProcessor7convertER11DispAlgoLutS1_
+000bd2b8  mov      w26, wzr
+000bd2bc  ldr      x25, [sp, #0x48]
+000bd2c0  cbz      x25, #0xbd2dc
+000bd2c4  add      x8, x25, #8
+000bd2c8  ldaxr    x9, [x8]
+000bd2cc  sub      x10, x9, #1
+000bd2d0  stlxr    w11, x10, [x8]
+000bd2d4  cbnz     w11, #0xbd2c8
+000bd2d8  cbz      x9, #0xbd3bc
+000bd2dc  ldr      x25, [sp, #0x38]
+000bd2e0  cbz      x25, #0xbd2fc
+000bd2e4  add      x8, x25, #8
+000bd2e8  ldaxr    x9, [x8]
+000bd2ec  sub      x10, x9, #1
+000bd2f0  stlxr    w11, x10, [x8]
+000bd2f4  cbnz     w11, #0xbd2e8
+000bd2f8  cbz      x9, #0xbd3e0
+000bd2fc  cbnz     w26, #0xbd54c
+000bd300  ldr      w8, [x19, #0x48]
+000bd304  cbz      w8, #0xbd4cc
+000bd308  cmp      w8, #1
+000bd30c  b.eq     #0xbd410
+000bd310  cmp      w8, #2
+000bd314  b.ne     #0xbd4fc
+000bd318  mov      w8, #1
+000bd31c  strb     w8, [x19, #0xf1]
+000bd320  ldrb     w9, [x23]
+000bd324  cbz      w9, #0xbd508
+000bd328  cbz      w8, #0xbd54c
+000bd32c  ldr      x8, [x19, #0x108]
+000bd330  cbz      x8, #0xbd1cc
+000bd334  ldr      x1, [sp, #0x20]
+000bd338  add      x0, sp, #0x78
+000bd33c  bl       #0x8c988 _ZN15DispAlgoLutTypeC1ERK23dispalgo_color_lut_type
+000bd340  mov      v0.16b, v8.16b
+000bd344  ldr      x1, [x19, #0x108]
+000bd348  add      x0, sp, #0x30
+000bd34c  add      x2, sp, #0x78
+000bd350  bl       #0x8c978 _ZN11DispAlgoLutC1EPvRK15DispAlgoLutTyped
+000bd354  ldr      x1, [x21]
+000bd358  add      x0, sp, #0x30
+000bd35c  bl       #0x8c998 _ZN20DispAlgoLutProcessor7convertER11DispAlgoLutS1_
+000bd360  mvn      w8, w0
+000bd364  add      x0, sp, #0x30
+000bd368  sbfx     w25, w8, #0, #1
+000bd36c  bl       #0x8c9a8 _ZN11DispAlgoLutD1Ev
+000bd370  ldr      x8, [x19, #0x110]
+000bd374  cbz      x8, #0xbd390
+000bd378  bl       #0x8c6a8 _ZN22DispAlgoStatusAccessor11getInstanceEv
+000bd37c  ldr      x3, [x19, #0x110]
+000bd380  mov      w2, #3
+000bd384  mov      x1, x19
+000bd388  mov      w4, wzr
+000bd38c  bl       #0x8c958 _ZN22DispAlgoStatusAccessor14getGlobalValueEP13DispAlgorithm18dispAlgoStatusItemPvb
+000bd390  ldr      x8, [x19, #0xf8]
+000bd394  cbz      x8, #0xbd3a4
+000bd398  ldr      x0, [x19, #0x100]
+000bd39c  mov      w1, w25
+000bd3a0  blr      x8
+000bd3a4  add      x8, x19, #0xf0
+000bd3a8  ldarb    w8, [x8]
+000bd3ac  strb     wzr, [x19, #0xf2]
+000bd3b0  and      w8, w8, #1
+000bd3b4  strb     w8, [x19, #0xf1]
+000bd3b8  b        #0xbd54c
+000bd3bc  ldr      x8, [x25]
+000bd3c0  mov      x0, x25
+000bd3c4  ldr      x8, [x8, #0x10]
+000bd3c8  blr      x8
+000bd3cc  mov      x0, x25
+000bd3d0  bl       #0x8a938 _ZNSt3__119__shared_weak_count14__release_weakEv
+000bd3d4  ldr      x25, [sp, #0x38]
+000bd3d8  cbnz     x25, #0xbd2e4
+000bd3dc  b        #0xbd2fc
+000bd3e0  ldr      x8, [x25]
+000bd3e4  mov      x0, x25
+000bd3e8  ldr      x8, [x8, #0x10]
+000bd3ec  blr      x8
+000bd3f0  mov      x0, x25
+000bd3f4  bl       #0x8a938 _ZNSt3__119__shared_weak_count14__release_weakEv
+000bd3f8  cbnz     w26, #0xbd54c
+000bd3fc  b        #0xbd300
+000bd400  mov      w26, #2
+000bd404  ldr      x25, [sp, #0x48]
+000bd408  cbnz     x25, #0xbd2c4
+000bd40c  b        #0xbd2dc
+000bd410  bl       #0x8c6a8 _ZN22DispAlgoStatusAccessor11getInstanceEv
+000bd414  mov      w2, #3
+000bd418  add      x3, sp, #0x30
+000bd41c  mov      x1, x19
+000bd420  mov      w4, wzr
+000bd424  bl       #0x8c958 _ZN22DispAlgoStatusAccessor14getGlobalValueEP13DispAlgorithm18dispAlgoStatusItemPvb
+000bd428  add      x1, sp, #0x78
+000bd42c  str      xzr, [sp, #0x78]
+000bd430  mov      x0, x27
+000bd434  bl       #0x8c9b8 _ZN17DispAlgoColorMgmt9ShmOutput7dequeueEPP16duss_hal_mem_buf
+000bd438  ldr      x25, [sp, #0x78]
+000bd43c  cbz      x25, #0xbd4fc
+000bd440  mov      x0, x27
+000bd444  mov      x1, x25
+000bd448  bl       #0x8c9c8 _ZN17DispAlgoColorMgmt9ShmOutput8getVaddrEP16duss_hal_mem_buf
+000bd44c  ldr      x8, [x21]
+000bd450  mov      x26, x0
+000bd454  mov      x0, x8
+000bd458  bl       #0x8cac8 _ZN11DispAlgoLut6getLutEv
+000bd45c  ldr      x8, [x19, #0x50]
+000bd460  mov      x22, x27
+000bd464  mov      x27, x0
+000bd468  mov      x0, x8
+000bd46c  bl       #0x8ca98 _ZN20DispAlgoLutProcessor17calculateLutBytesERK15DispAlgoLutType
+000bd470  mov      x2, x0
+000bd474  mov      x0, x26
+000bd478  mov      x1, x27
+000bd47c  mov      x27, x22
+000bd480  bl       #0x8ad98 memcpy
+000bd484  mov      x0, x27
+000bd488  mov      x1, x25
+000bd48c  bl       #0x8c9e8 _ZN17DispAlgoColorMgmt9ShmOutput5queueEP16duss_hal_mem_buf
+000bd490  mov      x0, x27
+000bd494  mov      x1, x25
+000bd498  bl       #0x8c9f8 _ZN17DispAlgoColorMgmt9ShmOutput12getShmHandleEP16duss_hal_mem_buf
+000bd49c  ldr      x8, [x19, #0x60]
+000bd4a0  str      x0, [sp, #0x28]
+000bd4a4  cbz      x8, #0xbd4c4
+000bd4a8  ldur     q1, [x19, #0x38]
+000bd4ac  add      x3, sp, #0x28
+000bd4b0  ldr      d0, [sp, #0x30]
+000bd4b4  ldr      x0, [x19, #0x68]
+000bd4b8  mov      x2, v1.d[1]
+000bd4bc  fmov     x1, d1
+000bd4c0  blr      x8
+000bd4c4  ldr      x22, [sp, #0x10]
+000bd4c8  b        #0xbd4fc
+000bd4cc  bl       #0x8c388 _ZN11DispAlgoHal11getInstanceEv
+000bd4d0  ldr      x8, [x21]
+000bd4d4  mov      x26, x0
+000bd4d8  ldrb     w25, [x19, #0x28]
+000bd4dc  mov      x0, x8
+000bd4e0  bl       #0x8cac8 _ZN11DispAlgoLut6getLutEv
+000bd4e4  mov      x2, x0
+000bd4e8  mov      w3, #0x6000
+000bd4ec  mov      w4, #4
+000bd4f0  mov      x0, x26
+000bd4f4  mov      w1, w25
+000bd4f8  bl       #0x8c538 _ZN11DispAlgoHal12setRcamTdLutEaPvma
+000bd4fc  ldrb     w8, [x19, #0xf1]
+000bd500  ldrb     w9, [x23]
+000bd504  cbnz     w9, #0xbd328
+000bd508  cbz      w8, #0xbd54c
+000bd50c  str      xzr, [sp, #0x30]
+000bd510  bl       #0x8c6a8 _ZN22DispAlgoStatusAccessor11getInstanceEv
+000bd514  mov      w2, #3
+000bd518  add      x3, sp, #0x78
+000bd51c  mov      x1, x19
+000bd520  mov      w4, wzr
+000bd524  bl       #0x8c958 _ZN22DispAlgoStatusAccessor14getGlobalValueEP13DispAlgorithm18dispAlgoStatusItemPvb
+000bd528  ldr      x8, [x19, #0x60]
+000bd52c  cbz      x8, #0xbd54c
+000bd530  ldur     q1, [x19, #0x38]
+000bd534  add      x3, sp, #0x30
+000bd538  ldr      d0, [sp, #0x78]
+000bd53c  ldr      x0, [x19, #0x68]
+000bd540  mov      x2, v1.d[1]
+000bd544  fmov     x1, d1
+000bd548  blr      x8
+000bd54c  sub      x1, x29, #0x78
+000bd550  mov      x0, x20
+000bd554  bl       #0x8c618 _ZNSt3__118condition_variable4waitERNS_11unique_lockINS_5mutexEEE
+000bd558  ldrb     w8, [x19, #0xe5]
+000bd55c  cbz      w8, #0xbd1f8
+000bd560  ldr      x21, [sp, #8]
+000bd564  ldrb     w8, [x23]
+000bd568  cbnz     w8, #0xbd108
+000bd56c  b        #0xbd120
+000bd570  bl       #0x8a778 __stack_chk_fail
+
+_ZN23DispAlgoColorMgmtInterp19updateDisplayStatusE18dispAlgoStatusItemPv @ 0xbd578, 112 bytes
+000bd578  stp      x22, x21, [sp, #-0x30]!
+000bd57c  stp      x20, x19, [sp, #0x10]
+000bd580  stp      x29, x30, [sp, #0x20]
+000bd584  add      x29, sp, #0x20
+000bd588  mov      x20, x0
+000bd58c  add      x19, x20, #0xbc
+000bd590  mov      x0, x19
+000bd594  mov      x21, x2
+000bd598  mov      w22, w1
+000bd59c  bl       #0x8acb8 _ZNSt3__15mutex4lockEv
+000bd5a0  mov      w8, #0x2d8
+000bd5a4  movk     w8, #1, lsl #16
+000bd5a8  ldr      w8, [x20, x8]
+000bd5ac  cmp      w8, w22
+000bd5b0  b.ne     #0xbd5c4
+000bd5b4  ldr      x8, [x21]
+000bd5b8  mov      w9, #0x2e0
+000bd5bc  movk     w9, #1, lsl #16
+000bd5c0  str      x8, [x20, x9]
+000bd5c4  ldr      x8, [x20]
+000bd5c8  mov      x0, x20
+000bd5cc  ldr      x8, [x8, #0x78]
+000bd5d0  blr      x8
+000bd5d4  mov      x0, x19
+000bd5d8  ldp      x29, x30, [sp, #0x20]
+000bd5dc  ldp      x20, x19, [sp, #0x10]
+000bd5e0  ldp      x22, x21, [sp], #0x30
+000bd5e4  b        #0x8adc8 _ZNSt3__15mutex6unlockEv
+
+_ZN20DispAlgoLutProcessor17interpolateLinearER11DispAlgoLutS1_S1_d @ 0xc3d20, 716 bytes
+000c3d20  sub      sp, sp, #0x90
+000c3d24  stp      d9, d8, [sp, #0x20]
+000c3d28  str      x27, [sp, #0x30]
+000c3d2c  stp      x26, x25, [sp, #0x40]
+000c3d30  stp      x24, x23, [sp, #0x50]
+000c3d34  stp      x22, x21, [sp, #0x60]
+000c3d38  stp      x20, x19, [sp, #0x70]
+000c3d3c  stp      x29, x30, [sp, #0x80]
+000c3d40  add      x29, sp, #0x80
+000c3d44  mrs      x26, tpidr_el0
+000c3d48  mov      x19, x0
+000c3d4c  ldr      x8, [x26, #0x28]
+000c3d50  str      x8, [sp, #0x18]
+000c3d54  ldr      w8, [x1, #0x18]
+000c3d58  ldr      w9, [x2, #0x18]
+000c3d5c  cmp      w8, w9
+000c3d60  b.ne     #0xc3f5c
+000c3d64  ldr      w8, [x1, #0x1c]
+000c3d68  ldr      w9, [x2, #0x1c]
+000c3d6c  cmp      w8, w9
+000c3d70  b.ne     #0xc3f5c
+000c3d74  ldr      x8, [x1, #0x28]
+000c3d78  ldr      x9, [x2, #0x28]
+000c3d7c  cmp      x8, x9
+000c3d80  b.ne     #0xc3f5c
+000c3d84  ldr      x8, [x1, #0x30]
+000c3d88  ldr      x9, [x2, #0x30]
+000c3d8c  cmp      x8, x9
+000c3d90  b.ne     #0xc3f5c
+000c3d94  ldr      x9, [x1, #0x38]
+000c3d98  ldr      x10, [x2, #0x38]
+000c3d9c  cmp      x9, x10
+000c3da0  b.ne     #0xc3f5c
+000c3da4  ldr      x3, [x19, #0x30]
+000c3da8  cmp      x3, x8
+000c3dac  b.ne     #0xc3fa8
+000c3db0  ldr      d2, [x1, #8]
+000c3db4  ldr      d1, [x2, #8]
+000c3db8  fcmp     d2, #0.0
+000c3dbc  b.mi     #0xc3fc4
+000c3dc0  fcmp     d1, #0.0
+000c3dc4  b.mi     #0xc3fc4
+000c3dc8  fcmp     d2, d1
+000c3dcc  b.eq     #0xc3fc4
+000c3dd0  csel     x20, x1, x2, mi
+000c3dd4  ldr      w10, [x19, #0x18]
+000c3dd8  csel     x21, x2, x1, mi
+000c3ddc  ldr      w9, [x20, #0x18]
+000c3de0  cmp      w9, #1
+000c3de4  cset     w9, eq
+000c3de8  cmp      w10, #1
+000c3dec  cset     w10, eq
+000c3df0  cbz      x8, #0xc3fe0
+000c3df4  ldr      d1, [x20, #8]
+000c3df8  mov      x22, xzr
+000c3dfc  ldr      d2, [x21, #8]
+000c3e00  and      w27, w9, w10
+000c3e04  ldr      w23, [x20, #0x40]
+000c3e08  fsub     d0, d0, d1
+000c3e0c  fsub     d1, d2, d1
+000c3e10  fdiv     d8, d0, d1
+000c3e14  fmov     d0, #1.00000000
+000c3e18  fsub     d9, d0, d8
+000c3e1c  mov      x24, xzr
+000c3e20  mov      x25, xzr
+000c3e24  cbz      w27, #0xc3e68
+000c3e28  add      x4, sp, #0x14
+000c3e2c  add      x5, sp, #0x10
+000c3e30  add      x6, sp, #0xc
+000c3e34  mov      x0, x20
+000c3e38  mov      w1, w22
+000c3e3c  mov      w2, w24
+000c3e40  mov      w3, w25
+000c3e44  bl       #0x8d128 _ZNK11DispAlgoLut4getFEiiiPfS0_S0_
+000c3e48  add      x4, sp, #8
+000c3e4c  add      x5, sp, #4
+000c3e50  mov      x6, sp
+000c3e54  mov      x0, x21
+000c3e58  mov      w1, w22
+000c3e5c  mov      w2, w24
+000c3e60  mov      w3, w25
+000c3e64  b        #0xc3ea4
+000c3e68  add      x4, sp, #0x14
+000c3e6c  add      x5, sp, #0x10
+000c3e70  add      x6, sp, #0xc
+000c3e74  mov      x0, x20
+000c3e78  mov      w1, w25
+000c3e7c  mov      w2, w24
+000c3e80  mov      w3, w22
+000c3e84  bl       #0x8d128 _ZNK11DispAlgoLut4getFEiiiPfS0_S0_
+000c3e88  add      x4, sp, #8
+000c3e8c  add      x5, sp, #4
+000c3e90  mov      x6, sp
+000c3e94  mov      x0, x21
+000c3e98  mov      w1, w25
+000c3e9c  mov      w2, w24
+000c3ea0  mov      w3, w22
+000c3ea4  bl       #0x8d128 _ZNK11DispAlgoLut4getFEiiiPfS0_S0_
+000c3ea8  ldp      s2, s0, [sp, #0x10]
+000c3eac  ldp      s3, s1, [sp, #4]
+000c3eb0  ldr      s4, [sp, #0xc]
+000c3eb4  fcvt     d0, s0
+000c3eb8  ldr      s5, [sp]
+000c3ebc  fcvt     d1, s1
+000c3ec0  fcvt     d2, s2
+000c3ec4  mov      x0, x19
+000c3ec8  fcvt     d3, s3
+000c3ecc  fcvt     d4, s4
+000c3ed0  fcvt     d5, s5
+000c3ed4  fmul     d0, d9, d0
+000c3ed8  fmul     d1, d8, d1
+000c3edc  fmul     d2, d9, d2
+000c3ee0  fmul     d3, d8, d3
+000c3ee4  fmul     d4, d9, d4
+000c3ee8  fmul     d5, d8, d5
+000c3eec  fadd     d0, d0, d1
+000c3ef0  fadd     d1, d2, d3
+000c3ef4  fadd     d2, d4, d5
+000c3ef8  fcvt     s0, d0
+000c3efc  fcvt     s1, d1
+000c3f00  fcvt     s2, d2
+000c3f04  cbz      w27, #0xc3f18
+000c3f08  mov      w1, w22
+000c3f0c  mov      w2, w24
+000c3f10  mov      w3, w25
+000c3f14  b        #0xc3f24
+000c3f18  mov      w1, w25
+000c3f1c  mov      w2, w24
+000c3f20  mov      w3, w22
+000c3f24  mov      w4, w23
+000c3f28  bl       #0x8d138 _ZN11DispAlgoLut3setEiiifffi
+000c3f2c  ldr      x8, [x19, #0x30]
+000c3f30  add      x25, x25, #1
+000c3f34  cmp      x8, x25
+000c3f38  b.hi     #0xc3e24
+000c3f3c  add      x24, x24, #1
+000c3f40  cmp      x8, x24
+000c3f44  b.hi     #0xc3e20
+000c3f48  add      x22, x22, #1
+000c3f4c  mov      w0, #1
+000c3f50  cmp      x8, x22
+000c3f54  b.hi     #0xc3e1c
+000c3f58  b        #0xc3f74
+000c3f5c  adrp     x0, #0x1ba000
+000c3f60  adrp     x1, #0x1ba000
+000c3f64  add      x0, x0, #0x815
+000c3f68  add      x1, x1, #0x859
+000c3f6c  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000c3f70  mov      w0, wzr
+000c3f74  ldr      x8, [x26, #0x28]
+000c3f78  ldr      x9, [sp, #0x18]
+000c3f7c  cmp      x8, x9
+000c3f80  b.ne     #0xc3fe8
+000c3f84  ldp      x29, x30, [sp, #0x80]
+000c3f88  ldp      x20, x19, [sp, #0x70]
+000c3f8c  ldp      x22, x21, [sp, #0x60]
+000c3f90  ldp      x24, x23, [sp, #0x50]
+000c3f94  ldp      x26, x25, [sp, #0x40]
+000c3f98  ldr      x27, [sp, #0x30]
+000c3f9c  ldp      d9, d8, [sp, #0x20]
+000c3fa0  add      sp, sp, #0x90
+000c3fa4  ret
+000c3fa8  adrp     x0, #0x1ba000
+000c3fac  adrp     x1, #0x1ba000
+000c3fb0  add      x0, x0, #0x7d6
+000c3fb4  add      x1, x1, #0x859
+000c3fb8  mov      x2, x8
+000c3fbc  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000c3fc0  b        #0xc3f70
+000c3fc4  mov      v0.16b, v2.16b
+000c3fc8  adrp     x0, #0x1ba000
+000c3fcc  adrp     x1, #0x1ba000
+000c3fd0  add      x0, x0, #0x86b
+000c3fd4  add      x1, x1, #0x859
+000c3fd8  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000c3fdc  b        #0xc3f70
+000c3fe0  mov      w0, #1
+000c3fe4  b        #0xc3f74
+000c3fe8  bl       #0x8a778 __stack_chk_fail
+
+_ZN20DispAlgoLutProcessor17calculateLutBytesERK15DispAlgoLutType @ 0xc37d8, 28 bytes
+000c37d8  ldp      x8, x9, [x0, #0x18]
+000c37dc  mul      x10, x8, x8
+000c37e0  mul      x8, x10, x8
+000c37e4  ldr      x10, [x0, #8]
+000c37e8  mul      x8, x8, x9
+000c37ec  mul      x0, x8, x10
+000c37f0  ret
+
+_ZNK11DispAlgoLut4getFEiiiPfS0_S0_ @ 0xc3848, 276 bytes
+000c3848  ldr      w11, [x0, #0x18]
+000c384c  ldr      x9, [x0]
+000c3850  ldr      x8, [x0, #0x20]
+000c3854  ldr      x10, [x0, #0x30]
+000c3858  ldr      w12, [x0, #0x38]
+000c385c  cbz      w11, #0xc387c
+000c3860  madd     w13, w10, w1, w2
+000c3864  cmp      w11, #1
+000c3868  madd     w13, w13, w10, w3
+000c386c  mul      w13, w13, w8
+000c3870  b.ne     #0xc3898
+000c3874  mul      w10, w13, w12
+000c3878  b        #0xc388c
+000c387c  madd     w11, w10, w3, w2
+000c3880  mul      w12, w12, w8
+000c3884  madd     w10, w11, w10, w1
+000c3888  mul      w10, w12, w10
+000c388c  add      x11, x9, w10, sxtw
+000c3890  sxtw     x9, w8
+000c3894  b        #0xc38ac
+000c3898  mul      w11, w8, w10
+000c389c  mul      w11, w11, w10
+000c38a0  mul      w10, w11, w10
+000c38a4  add      x11, x9, w13, sxtw
+000c38a8  sxtw     x9, w10
+000c38ac  ldr      w12, [x0, #0x1c]
+000c38b0  add      x10, x11, x9
+000c38b4  add      x9, x10, x9
+000c38b8  cmp      w12, #1
+000c38bc  b.ne     #0xc38dc
+000c38c0  ldr      w8, [x11]
+000c38c4  str      w8, [x4]
+000c38c8  ldr      w8, [x10]
+000c38cc  str      w8, [x5]
+000c38d0  ldr      w8, [x9]
+000c38d4  str      w8, [x6]
+000c38d8  ret
+000c38dc  cmp      w8, #1
+000c38e0  b.ne     #0xc3908
+000c38e4  cbnz     w12, #0xc3908
+000c38e8  ldr      b0, [x11]
+000c38ec  ucvtf    s0, s0
+000c38f0  str      s0, [x4]
+000c38f4  ldr      b0, [x10]
+000c38f8  ucvtf    s0, s0
+000c38fc  str      s0, [x5]
+000c3900  ldr      b0, [x9]
+000c3904  b        #0xc3950
+000c3908  cmp      w8, #2
+000c390c  b.ne     #0xc3934
+000c3910  cbnz     w12, #0xc3934
+000c3914  ldr      h0, [x11]
+000c3918  ucvtf    s0, s0
+000c391c  str      s0, [x4]
+000c3920  ldr      h0, [x10]
+000c3924  ucvtf    s0, s0
+000c3928  str      s0, [x5]
+000c392c  ldr      h0, [x9]
+000c3930  b        #0xc3950
+000c3934  ldr      s0, [x11]
+000c3938  ucvtf    s0, s0
+000c393c  str      s0, [x4]
+000c3940  ldr      s0, [x10]
+000c3944  ucvtf    s0, s0
+000c3948  str      s0, [x5]
+000c394c  ldr      s0, [x9]
+000c3950  ucvtf    s0, s0
+000c3954  str      s0, [x6]
+000c3958  ret
+
+_ZN11DispAlgoHal12setRcamTdLutEaPvma @ 0xb28b8, 336 bytes
+000b28b8  sub      sp, sp, #0xe0
+000b28bc  str      x21, [sp, #0xb0]
+000b28c0  stp      x20, x19, [sp, #0xc0]
+000b28c4  stp      x29, x30, [sp, #0xd0]
+000b28c8  add      x29, sp, #0xd0
+000b28cc  mrs      x21, tpidr_el0
+000b28d0  mov      x8, x3
+000b28d4  ldr      x9, [x21, #0x28]
+000b28d8  mov      x19, x2
+000b28dc  stur     x9, [x29, #-0x28]
+000b28e0  cbz      x19, #0xb2968
+000b28e4  cmp      x8, #6, lsl #12
+000b28e8  b.ne     #0xb2974
+000b28ec  and      w8, w4, #0xff
+000b28f0  cmp      w8, #4
+000b28f4  b.ne     #0xb2994
+000b28f8  and      w8, w1, #0xff
+000b28fc  cmp      w8, #4
+000b2900  b.hs     #0xb29b4
+000b2904  add      x8, x0, w1, sxtb #3
+000b2908  ldr      x20, [x8, #0x48]
+000b290c  cbz      x20, #0xb29c4
+000b2910  mov      w2, #0xa8
+000b2914  mov      x0, sp
+000b2918  mov      w1, wzr
+000b291c  bl       #0x8a8b8 memset
+000b2920  mov      w8, #1
+000b2924  str      x19, [sp, #0x90]
+000b2928  mov      w9, #0x1800
+000b292c  mov      w1, #4
+000b2930  mov      x2, sp
+000b2934  str      w8, [sp]
+000b2938  mov      x0, x20
+000b293c  str      w9, [sp, #0x88]
+000b2940  bl       #0x8b318 duss_hal_display_plane_tdlut_set
+000b2944  mov      w19, w0
+000b2948  cbz      w19, #0xb29dc
+000b294c  adrp     x0, #0x1b8000
+000b2950  adrp     x1, #0x1b8000
+000b2954  add      x0, x0, #0xf53
+000b2958  add      x1, x1, #0xf1b
+000b295c  mov      w2, w19
+000b2960  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000b2964  b        #0xb29dc
+000b2968  adrp     x0, #0x1b8000
+000b296c  add      x0, x0, #0xe55
+000b2970  b        #0xb29cc
+000b2974  adrp     x0, #0x1b8000
+000b2978  adrp     x1, #0x1b8000
+000b297c  add      x0, x0, #0xe76
+000b2980  add      x1, x1, #0xf1b
+000b2984  mov      w3, #0x6000
+000b2988  mov      x2, x8
+000b298c  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000b2990  b        #0xb29d8
+000b2994  adrp     x0, #0x1b8000
+000b2998  adrp     x1, #0x1b8000
+000b299c  add      x0, x0, #0xe9b
+000b29a0  add      x1, x1, #0xf1b
+000b29a4  mov      w3, #4
+000b29a8  sxtb     w2, w4
+000b29ac  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000b29b0  b        #0xb29d8
+000b29b4  adrp     x0, #0x1b8000
+000b29b8  add      x0, x0, #0xa89
+000b29bc  sxtb     w1, w1
+000b29c0  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000b29c4  adrp     x0, #0x1b8000
+000b29c8  add      x0, x0, #0xed0
+000b29cc  adrp     x1, #0x1b8000
+000b29d0  add      x1, x1, #0xf1b
+000b29d4  bl       #0x8c348 _Z12dispAlgoLogEPKcz
+000b29d8  mov      w19, #-1
+000b29dc  ldr      x8, [x21, #0x28]
+000b29e0  ldur     x9, [x29, #-0x28]
+000b29e4  cmp      x8, x9
+000b29e8  b.ne     #0xb2a04
+000b29ec  mov      w0, w19
+000b29f0  ldr      x21, [sp, #0xb0]
+000b29f4  ldp      x29, x30, [sp, #0xd0]
+000b29f8  ldp      x20, x19, [sp, #0xc0]
+000b29fc  add      sp, sp, #0xe0
+000b2a00  ret
+000b2a04  bl       #0x8a778 __stack_chk_fail
+
+_ZN13EagleVopPlane8set3dLutEPvi @ 0x9cdd0, 304 bytes
+0009cdd0  sub      sp, sp, #0xe0
+0009cdd4  stp      x22, x21, [sp, #0xb0]
+0009cdd8  stp      x20, x19, [sp, #0xc0]
+0009cddc  stp      x29, x30, [sp, #0xd0]
+0009cde0  add      x29, sp, #0xd0
+0009cde4  mrs      x22, tpidr_el0
+0009cde8  mov      x20, x0
+0009cdec  ldr      x8, [x22, #0x28]
+0009cdf0  mov      w19, w2
+0009cdf4  mov      x21, x1
+0009cdf8  stur     x8, [x29, #-0x28]
+0009cdfc  ldrb     w8, [x20, #0xb]
+0009ce00  cbz      w8, #0x9ce70
+0009ce04  mov      w2, #0xa8
+0009ce08  mov      x0, sp
+0009ce0c  mov      w1, wzr
+0009ce10  bl       #0x8a8b8 memset
+0009ce14  cbz      x21, #0x9ce2c
+0009ce18  mov      w8, #1
+0009ce1c  str      x21, [sp, #0x90]
+0009ce20  asr      w9, w19, #2
+0009ce24  str      w9, [sp, #0x88]
+0009ce28  str      w8, [sp]
+0009ce2c  ldr      x8, [x20]
+0009ce30  mov      x2, sp
+0009ce34  ldrb     w1, [x20, #8]
+0009ce38  ldr      x0, [x8, #8]
+0009ce3c  bl       #0x8b318 duss_hal_display_plane_tdlut_set
+0009ce40  mov      w8, w0
+0009ce44  cmp      w8, #0
+0009ce48  cset     w19, eq
+0009ce4c  cbz      w8, #0x9ced4
+0009ce50  ldrsb    x9, [x20, #8]
+0009ce54  add      x9, x9, #1
+0009ce58  cmp      w9, #0xa
+0009ce5c  b.hi     #0x9ce90
+0009ce60  adrp     x10, #0x23c000
+0009ce64  add      x10, x10, #0x5c0
+0009ce68  ldr      x2, [x10, x9, lsl #3]
+0009ce6c  b        #0x9ce98
+0009ce70  ldrsb    x8, [x20, #8]
+0009ce74  add      x8, x8, #1
+0009ce78  cmp      w8, #0xa
+0009ce7c  b.hi     #0x9ceb4
+0009ce80  adrp     x9, #0x23c000
+0009ce84  add      x9, x9, #0x5c0
+0009ce88  ldr      x2, [x9, x8, lsl #3]
+0009ce8c  b        #0x9cebc
+0009ce90  adrp     x2, #0x1b6000
+0009ce94  add      x2, x2, #0x9a6
+0009ce98  adrp     x0, #0x1b6000
+0009ce9c  adrp     x1, #0x1b6000
+0009cea0  add      x0, x0, #0x905
+0009cea4  add      x1, x1, #0x8fc
+0009cea8  mov      w3, w8
+0009ceac  bl       #0x8a598 weston_log
+0009ceb0  b        #0x9ced4
+0009ceb4  adrp     x2, #0x1b6000
+0009ceb8  add      x2, x2, #0x9a6
+0009cebc  adrp     x0, #0x1b6000
+0009cec0  adrp     x1, #0x1b6000
+0009cec4  add      x0, x0, #0x7a7
+0009cec8  add      x1, x1, #0x8fc
+0009cecc  bl       #0x8a598 weston_log
+0009ced0  mov      w19, wzr
+0009ced4  ldr      x8, [x22, #0x28]
+0009ced8  ldur     x9, [x29, #-0x28]
+0009cedc  cmp      x8, x9
+0009cee0  b.ne     #0x9cefc
+0009cee4  mov      w0, w19
+0009cee8  ldp      x29, x30, [sp, #0xd0]
+0009ceec  ldp      x20, x19, [sp, #0xc0]
+0009cef0  ldp      x22, x21, [sp, #0xb0]
+0009cef4  add      sp, sp, #0xe0
+0009cef8  ret
+0009cefc  bl       #0x8a778 __stack_chk_fail
+
+_ZN11EagleOutput16updateBrightnessEib @ 0x97008, 248 bytes
+00097008  str      x25, [sp, #-0x50]!
+0009700c  stp      x24, x23, [sp, #0x10]
+00097010  stp      x22, x21, [sp, #0x20]
+00097014  stp      x20, x19, [sp, #0x30]
+00097018  stp      x29, x30, [sp, #0x40]
+0009701c  add      x29, sp, #0x40
+00097020  mov      w19, w2
+00097024  mov      w21, w1
+00097028  mov      x20, x8
+0009702c  mov      x22, x0
+00097030  stp      x20, x20, [x20]
+00097034  str      xzr, [x20, #0x10]
+00097038  tbz      w21, #0x1f, #0x9705c
+0009703c  ldr      x8, [x22, #0x548]
+00097040  add      x9, x22, #0x5b0
+00097044  add      x10, x8, #0x108
+00097048  cmp      x8, #0
+0009704c  csel     x8, x9, x10, eq
+00097050  ldr      x0, [x8]
+00097054  bl       #0x8a968 _ZN8EagleVop10brightnessEv
+00097058  mov      w21, w0
+0009705c  ldr      w8, [x22, #0x3e8]
+00097060  cmp      w21, w8
+00097064  b.eq     #0x970e8
+00097068  ldr      x24, [x22, #0x560]
+0009706c  add      x25, x22, #0x558
+00097070  str      w21, [x22, #0x3e8]
+00097074  cmp      x25, x24
+00097078  b.eq     #0x970e8
+0009707c  mov      w22, #5
+00097080  ldr      x23, [x24, #0x10]
+00097084  mov      x0, x23
+00097088  bl       #0x8a858 wl_resource_get_version
+0009708c  cmp      w0, #4
+00097090  b.lt     #0x970dc
+00097094  mov      w0, #0x18
+00097098  bl       #0x8a6c8 _Znwm
+0009709c  ldr      x8, [x20]
+000970a0  mov      w1, w22
+000970a4  stp      x20, x23, [x0, #8]
+000970a8  mov      w2, w21
+000970ac  str      x8, [x0]
+000970b0  str      x0, [x8, #8]
+000970b4  ldr      x8, [x20, #0x10]
+000970b8  str      x0, [x20]
+000970bc  mov      x0, x23
+000970c0  add      x8, x8, #1
+000970c4  str      x8, [x20, #0x10]
+000970c8  bl       #0x8a7c8 wl_resource_post_event
+000970cc  tbz      w19, #0, #0x970dc
+000970d0  mov      w1, #6
+000970d4  mov      x0, x23
+000970d8  bl       #0x8a7c8 wl_resource_post_event
+000970dc  ldr      x24, [x24, #8]
+000970e0  cmp      x25, x24
+000970e4  b.ne     #0x97080
+000970e8  ldp      x29, x30, [sp, #0x40]
+000970ec  ldp      x20, x19, [sp, #0x30]
+000970f0  ldp      x22, x21, [sp, #0x20]
+000970f4  ldp      x24, x23, [sp, #0x10]
+000970f8  ldr      x25, [sp], #0x50
+000970fc  ret

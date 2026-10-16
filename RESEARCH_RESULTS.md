@@ -8,6 +8,18 @@
 
 本次公开的是研究结论、离线源码及处理用户本地记录的脱敏／回放工具。厂商固件、原始设备日志、个人路径、模型明文、密钥未收录。Doom 模块仅保留引擎、界面及离线检查；设备部署后端未收录。文档整理期间未连接相机，表中实机结果来自此前特定设备实验；一次成功不推广为跨版本产品保证。
 
+## 2026-10-14 至 10-16 二代固件研究
+
+| 主题 | 新增结果 | 证据与限制 |
+| --- | --- | --- |
+| LiDAR 与对焦 | ADS6401 流过滤、深度解码、ToF 结果分档，以及 AF-S / AF-C 的候选评分与接纳路径 | 1.3.16.2 静态 / 离线分析；没有遮挡前后运行轨迹、权重实测或二代设备验收，见 [LiDAR 报告](x2d2/research/1.3.16.2/LIDAR-PIPELINE.md) 和 [AF-S 报告](x2d2/research/1.3.16.2/AFS-WITHOUT-LIDAR.md) |
+| 启动资源与变体 | 核对 6 个硬件阶段标识、vendor Logo 位图和 GUI / MCU 资源；未确认特殊版启动选择链 | 只确认原厂资产和静态资源，早期加载器与实机冷启动链未恢复，见 [启动报告](x2d2/research/1.3.16.2/STARTUP-LOGO-VARIANTS.md) |
+| 显示与低灰 mura | 后屏 / EVF 的亮度映射、取景 / 回放 RGB LUT、亮度锚点插值；现有 LUT 没有屏幕位置维度 | 可讨论全局低灰色偏的 LUT 标定，不能由现有表直接修复固定位置绿斑；没有个体面板测量或空间补偿接口，见 [显示报告](x2d2/research/1.3.16.2/DISPLAY-MURA.md) |
+| IBIS 与地球自转 | Phocus 位置代理、camera-service 经纬度字段、IBIS 坐标补偿消息和虚表调用已核对 | 哈苏官方说明经纬度与罗盘用于地球自转补偿；控制器内部公式、4 小时过期处理和无定位降级尚未恢复，见 [IBIS 报告](x2d2/research/1.3.16.2/IBIS-GPS-EARTH-ROTATION.md) |
+| 对焦图标 | 提取二代 GUI 的 AF-S / AF-C 控制界面、实时取景和灰显 SVG / PNG | 原始固件 GUI 未随库提供；资源和预览放在 `x2d2/outputs/focus-icons-20261015/` |
+
+新增工具均为只读离线解析：`x2d2/tools/inspect_lidar.py`、`inspect_afs.py`、`inspect_startup_variants.py`、`inspect_display.py` 与 `inspect_ibis.py`。原厂输入、共享库、内核模块、加密模型、设备日志和本机路径不随仓库分发。
+
 ## 2026-10-08 至 10-13 新增成果
 
 | 主题 | 新增结果 | 证据与限制 |

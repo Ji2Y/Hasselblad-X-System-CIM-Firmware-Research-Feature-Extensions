@@ -1,0 +1,2211 @@
+
+_ZN20X2DIITofStreamFilter8onBufferEP16cam_frame_buffer @ 0x9838, 2088 bytes
+00009838  stp      x28, x27, [sp, #-0x60]!
+0000983c  stp      x26, x25, [sp, #0x10]
+00009840  stp      x24, x23, [sp, #0x20]
+00009844  stp      x22, x21, [sp, #0x30]
+00009848  stp      x20, x19, [sp, #0x40]
+0000984c  stp      x29, x30, [sp, #0x50]
+00009850  add      x29, sp, #0x50
+00009854  sub      sp, sp, #5, lsl #12
+00009858  sub      sp, sp, #0xc10
+0000985c  mrs      x25, tpidr_el0
+00009860  add      x26, sp, #0x110
+00009864  ldr      x8, [x25, #0x28]
+00009868  mov      x19, x1
+0000986c  mov      x20, x0
+00009870  mov      w2, #0x88
+00009874  sub      x0, x29, #0xe0
+00009878  str      x8, [x26, #0x5af8]
+0000987c  mov      w1, wzr
+00009880  ldr      x8, [x19, #0x20]
+00009884  str      x8, [sp, #0x88]
+00009888  bl       #0x51e8 memset
+0000988c  mov      w2, #0x5a70
+00009890  stp      xzr, xzr, [sp, #0x68]
+00009894  add      x0, sp, #0x110
+00009898  str      xzr, [sp, #0x78]
+0000989c  mov      w1, wzr
+000098a0  bl       #0x51e8 memset
+000098a4  mov      w8, #0x5370
+000098a8  str      xzr, [sp, #0x60]
+000098ac  movk     w8, #1, lsl #16
+000098b0  add      x8, x20, x8
+000098b4  ldarb    w8, [x8]
+000098b8  tbz      w8, #0, #0x993c
+000098bc  mov      w8, #0x5371
+000098c0  movk     w8, #1, lsl #16
+000098c4  ldrb     w8, [x20, x8]
+000098c8  cbz      w8, #0x993c
+000098cc  ldr      x8, [x20, #0x2470]
+000098d0  mov      w9, #0x2468
+000098d4  add      x21, x20, x9
+000098d8  cbz      x8, #0x99b8
+000098dc  ldr      x9, [x19, #0x20]
+000098e0  mov      x12, #0x2d69
+000098e4  movk     x12, #0xeb38, lsl #16
+000098e8  movk     x12, #0xea08, lsl #32
+000098ec  movk     x12, #0x9ddf, lsl #48
+000098f0  ubfiz    x11, x9, #3, #0x1d
+000098f4  add      x11, x11, #8
+000098f8  lsr      x10, x9, #0x20
+000098fc  eor      x11, x11, x10
+00009900  mul      x11, x11, x12
+00009904  eor      x10, x11, x10
+00009908  eor      x10, x10, x11, lsr #47
+0000990c  sub      x11, x8, #1
+00009910  mul      x10, x10, x12
+00009914  eor      x10, x10, x10, lsr #47
+00009918  mul      x10, x10, x12
+0000991c  ands     x12, x11, x8
+00009920  b.eq     #0x9944
+00009924  mov      x13, x10
+00009928  cmp      x10, x8
+0000992c  b.lo     #0x9948
+00009930  udiv     x13, x10, x8
+00009934  msub     x13, x13, x8, x10
+00009938  b        #0x9948
+0000993c  mov      w0, #-0x3f4
+00009940  b        #0x9d3c
+00009944  and      x13, x10, x11
+00009948  ldr      x14, [x21]
+0000994c  ldr      x14, [x14, x13, lsl #3]
+00009950  cbz      x14, #0x99b8
+00009954  ldr      x14, [x14]
+00009958  cbz      x14, #0x99b8
+0000995c  ldr      x15, [x14, #8]
+00009960  cmp      x15, x10
+00009964  b.ne     #0x9978
+00009968  ldr      x15, [x14, #0x10]
+0000996c  cmp      x15, x9
+00009970  b.ne     #0x9954
+00009974  b        #0x99a8
+00009978  cbz      x12, #0x9998
+0000997c  cmp      x15, x8
+00009980  b.lo     #0x998c
+00009984  udiv     x16, x15, x8
+00009988  msub     x15, x16, x8, x15
+0000998c  cmp      x15, x13
+00009990  b.eq     #0x9954
+00009994  b        #0x99b8
+00009998  and      x15, x15, x11
+0000999c  cmp      x15, x13
+000099a0  b.eq     #0x9954
+000099a4  b        #0x99b8
+000099a8  cbz      x14, #0x99b8
+000099ac  ldr      x22, [x14, #0x18]
+000099b0  add      x0, sp, #0x60
+000099b4  b        #0x99d8
+000099b8  ldr      x0, [sp, #0x88]
+000099bc  add      x1, sp, #0x60
+000099c0  bl       #0x55e8 duss_hal_mem_map
+000099c4  cbnz     w0, #0x9e24
+000099c8  ldr      x22, [sp, #0x60]
+000099cc  add      x1, sp, #0x88
+000099d0  mov      x0, x21
+000099d4  bl       #0x55f8 _ZNSt3__113unordered_mapIP16duss_hal_mem_bufPvNS_4hashIS2_EENS_8equal_toIS2_EENS_9allocatorINS_4pairIKS2_S3_EEEEEixERSA_
+000099d8  str      x22, [x0]
+000099dc  mov      w1, #1
+000099e0  ldr      x0, [sp, #0x88]
+000099e4  bl       #0x5608 duss_hal_mem_sync
+000099e8  cbnz     w0, #0x9dc0
+000099ec  mov      w8, #0x5328
+000099f0  str      wzr, [sp, #0x98]
+000099f4  movk     w8, #1, lsl #16
+000099f8  str      xzr, [sp, #0x90]
+000099fc  add      x21, x20, x8
+00009a00  add      x2, sp, #0x90
+00009a04  mov      x0, x20
+00009a08  mov      x1, x21
+00009a0c  bl       #0x5618 _ZN20X2DIITofStreamFilter17getConfigFromRcamER8FocusRoiR13CircleForMask
+00009a10  mov      w8, #0x5330
+00009a14  ldr      w9, [sp, #0x94]
+00009a18  movk     w8, #1, lsl #16
+00009a1c  mov      w10, #0x532c
+00009a20  movk     w10, #1, lsl #16
+00009a24  ldr      w8, [x20, x8]
+00009a28  add      x22, x20, x10
+00009a2c  cmp      w9, w8
+00009a30  b.ne     #0x9a5c
+00009a34  mov      w8, #0x5334
+00009a38  ldr      w9, [sp, #0x98]
+00009a3c  movk     w8, #1, lsl #16
+00009a40  ldr      w8, [x20, x8]
+00009a44  cmp      w9, w8
+00009a48  b.ne     #0x9a5c
+00009a4c  ldr      w8, [sp, #0x90]
+00009a50  ldr      w9, [x22]
+00009a54  cmp      w8, w9
+00009a58  b.eq     #0x9a94
+00009a5c  ldr      w8, [x22]
+00009a60  cbnz     w8, #0x9a6c
+00009a64  ldr      w8, [sp, #0x90]
+00009a68  cbz      w8, #0x9a94
+00009a6c  mov      w8, #0x5348
+00009a70  ldr      x1, [sp, #0x90]
+00009a74  movk     w8, #1, lsl #16
+00009a78  ldr      w2, [sp, #0x98]
+00009a7c  ldr      x0, [x20, x8]
+00009a80  bl       #0x5628 DepthMapWrapperSetCircleMask
+00009a84  ldr      w8, [sp, #0x98]
+00009a88  ldr      x9, [sp, #0x90]
+00009a8c  str      w8, [x22, #8]
+00009a90  str      x9, [x22]
+00009a94  mov      w9, #0x52e0
+00009a98  ldr      x8, [x20, #0x2718]
+00009a9c  movk     w9, #1, lsl #16
+00009aa0  str      wzr, [sp, #0x90]
+00009aa4  add      x22, x20, x9
+00009aa8  cbz      x8, #0x9af0
+00009aac  mov      w8, #0x2690
+00009ab0  add      x23, x20, x8
+00009ab4  mov      x0, x23
+00009ab8  mov      x1, xzr
+00009abc  mov      x2, xzr
+00009ac0  bl       #0x55c8 _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEE5seekgENS_4fposI9mbstate_tEE
+00009ac4  add      x1, sp, #0x90
+00009ac8  mov      x0, x23
+00009acc  bl       #0x5478 _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEErsERi
+00009ad0  ldr      s0, [sp, #0x90]
+00009ad4  adrp     x8, #0x12000
+00009ad8  ldr      s1, [x8, #0xb30]
+00009adc  mov      w8, #0x52e8
+00009ae0  scvtf    s0, s0
+00009ae4  movk     w8, #1, lsl #16
+00009ae8  fdiv     s0, s0, s1
+00009aec  str      s0, [x20, x8]
+00009af0  mov      w8, #0x52f0
+00009af4  ldr      w12, [x21]
+00009af8  mov      w10, #0x52f8
+00009afc  mov      w13, #0x5320
+00009b00  sub      x14, x29, #0xe0
+00009b04  movk     w8, #1, lsl #16
+00009b08  add      x9, sp, #0x84
+00009b0c  movk     w10, #1, lsl #16
+00009b10  add      x11, sp, #0x80
+00009b14  movk     w13, #1, lsl #16
+00009b18  str      x9, [x20, x8]
+00009b1c  add      x0, x14, #0x40
+00009b20  mov      w2, #0x48
+00009b24  str      x11, [x20, x10]
+00009b28  mov      x1, x22
+00009b2c  str      w12, [x20, x13]
+00009b30  bl       #0x53a8 memcpy
+00009b34  mov      w9, #0x4b18
+00009b38  ldr      x23, [sp, #0x60]
+00009b3c  add      x22, x20, x9
+00009b40  mov      w9, #0x680
+00009b44  mov      w8, #4
+00009b48  movk     w9, #1, lsl #16
+00009b4c  str      w8, [sp, #0x110]
+00009b50  str      x22, [x26, #0x2d20]
+00009b54  str      w9, [sp, #0x2e40]
+00009b58  bl       #0x5638 flow_trace_instance
+00009b5c  ldrb     w8, [x0]
+00009b60  tbz      w8, #0, #0x9d70
+00009b64  adrp     x27, #0x2f000
+00009b68  ldr      x27, [x27, #0xa98]
+00009b6c  ldr      x8, [x27]
+00009b70  ldrb     w8, [x8]
+00009b74  tbnz     w8, #0, #0x9d78
+00009b78  mov      w8, #0x5348
+00009b7c  ldur     q0, [sp, #0x68]
+00009b80  movk     w8, #1, lsl #16
+00009b84  ldr      x9, [sp, #0x78]
+00009b88  add      x1, sp, #0x30
+00009b8c  sub      x2, x29, #0xe0
+00009b90  ldr      x0, [x20, x8]
+00009b94  mov      w3, #1
+00009b98  add      x4, sp, #0x110
+00009b9c  str      q0, [sp, #0x30]
+00009ba0  stp      x9, x23, [sp, #0x40]
+00009ba4  str      xzr, [sp, #0x50]
+00009ba8  bl       #0x5648 DepthMapWrapperProcessFrame
+00009bac  tbz      w0, #0, #0x9d20
+00009bb0  adrp     x0, #0x30000
+00009bb4  adrp     x2, #0x12000
+00009bb8  add      x0, x0, #0x198
+00009bbc  add      x2, x2, #0xbc3
+00009bc0  mov      w1, #4
+00009bc4  bl       #0x5248 log_mgr_check
+00009bc8  tbz      w0, #0, #0x9ca8
+00009bcc  bl       #0x5258 co_thread_get
+00009bd0  cbz      x0, #0x9c58
+00009bd4  adrp     x8, #0x12000
+00009bd8  str      wzr, [sp, #0x2c]
+00009bdc  add      x8, x8, #0xbcc
+00009be0  add      x1, sp, #0x58
+00009be4  add      x2, sp, #0x2c
+00009be8  str      x8, [sp, #0x58]
+00009bec  bl       #0x5268 co_thread_get_current_co_name_co_id
+00009bf0  adrp     x4, #0x12000
+00009bf4  adrp     x5, #0x13000
+00009bf8  add      x4, x4, #0xbd0
+00009bfc  add      x5, x5, #0x5bc
+00009c00  mov      w0, #0x51
+00009c04  mov      w6, #0x13f
+00009c08  mov      w1, #4
+00009c0c  add      x2, sp, #0x90
+00009c10  mov      w3, #0x80
+00009c14  bl       #0x5278 duss_log_gen_head
+00009c18  cbz      w0, #0x9ca8
+00009c1c  ldr      x6, [sp, #0x58]
+00009c20  adrp     x3, #0x13000
+00009c24  ldr      w7, [sp, #0x2c]
+00009c28  adrp     x4, #0x12000
+00009c2c  ldr      w8, [x19, #0xb4]
+00009c30  adrp     x5, #0x12000
+00009c34  add      x3, x3, #0x6a6
+00009c38  add      x4, x4, #0xbc3
+00009c3c  add      x5, x5, #0xbcd
+00009c40  mov      w0, #0x51
+00009c44  str      w8, [sp]
+00009c48  mov      w1, #4
+00009c4c  add      x2, sp, #0x90
+00009c50  bl       #0x5288 duss_log_print
+00009c54  b        #0x9ca8
+00009c58  adrp     x4, #0x12000
+00009c5c  adrp     x5, #0x13000
+00009c60  add      x4, x4, #0xbd0
+00009c64  add      x5, x5, #0x5bc
+00009c68  mov      w0, #0x51
+00009c6c  mov      w6, #0x13f
+00009c70  mov      w1, #4
+00009c74  add      x2, sp, #0x90
+00009c78  mov      w3, #0x80
+00009c7c  bl       #0x5278 duss_log_gen_head
+00009c80  cbz      w0, #0x9ca8
+00009c84  ldr      w5, [x19, #0xb4]
+00009c88  adrp     x3, #0x13000
+00009c8c  adrp     x4, #0x12000
+00009c90  add      x3, x3, #0x6cb
+00009c94  add      x4, x4, #0xbc3
+00009c98  mov      w0, #0x51
+00009c9c  mov      w1, #4
+00009ca0  add      x2, sp, #0x90
+00009ca4  bl       #0x5288 duss_log_print
+00009ca8  mov      w8, #0x51e1
+00009cac  movk     w8, #1, lsl #16
+00009cb0  mov      w10, #0x384
+00009cb4  mov      w11, #0xe1
+00009cb8  ldrb     w8, [x20, x8]
+00009cbc  mov      w9, #0x27e0
+00009cc0  add      x24, x20, x9
+00009cc4  ldr      w9, [x19, #0xb4]
+00009cc8  mov      x1, x22
+00009ccc  cmp      w8, #0
+00009cd0  csel     w8, w11, w10, eq
+00009cd4  str      w9, [x20, #0x27e4]
+00009cd8  mov      w10, #0x27f0
+00009cdc  add      x23, x20, x10
+00009ce0  mov      x0, x23
+00009ce4  str      w8, [x20, #0x27ec]
+00009ce8  lsl      w2, w8, #3
+00009cec  bl       #0x53a8 memcpy
+00009cf0  mov      x0, x20
+00009cf4  mov      x1, x24
+00009cf8  mov      x2, x21
+00009cfc  bl       #0x5658 _ZN20X2DIITofStreamFilter14sendDataToRcamERK26_af_tof_spot_input_data_s_RK8FocusRoi
+00009d00  mov      w8, #0x5350
+00009d04  movk     w8, #1, lsl #16
+00009d08  ldrb     w8, [x20, x8]
+00009d0c  cbz      w8, #0x9d20
+00009d10  ldr      w1, [x20, #0x27ec]
+00009d14  mov      x0, x23
+00009d18  ldr      w2, [x19, #0xb4]
+00009d1c  bl       #0x5668 _ZN20X2DIITofStreamFilter12dumpDepthMapEPK25_tof_spot_points_cloud_s_jj
+00009d20  bl       #0x5638 flow_trace_instance
+00009d24  ldrb     w8, [x0]
+00009d28  tbz      w8, #0, #0x9d98
+00009d2c  ldr      x8, [x27]
+00009d30  ldrb     w8, [x8]
+00009d34  tbnz     w8, #0, #0x9da0
+00009d38  mov      w0, wzr
+00009d3c  ldr      x8, [x25, #0x28]
+00009d40  ldr      x9, [x26, #0x5af8]
+00009d44  cmp      x8, x9
+00009d48  b.ne     #0x9dbc
+00009d4c  add      sp, sp, #5, lsl #12
+00009d50  add      sp, sp, #0xc10
+00009d54  ldp      x29, x30, [sp, #0x50]
+00009d58  ldp      x20, x19, [sp, #0x40]
+00009d5c  ldp      x22, x21, [sp, #0x30]
+00009d60  ldp      x24, x23, [sp, #0x20]
+00009d64  ldp      x26, x25, [sp, #0x10]
+00009d68  ldp      x28, x27, [sp], #0x60
+00009d6c  ret
+00009d70  bl       #0x5678 flow_trace_init
+00009d74  b        #0x9b64
+00009d78  ldr      x0, [x27, #8]
+00009d7c  adrp     x2, #0x13000
+00009d80  adrp     x3, #0x15000
+00009d84  add      x2, x2, #0x68a
+00009d88  add      x3, x3, #0x210
+00009d8c  mov      w1, #1
+00009d90  bl       #0x5688 PerfettoTeHlEmitImpl
+00009d94  b        #0x9b78
+00009d98  bl       #0x5678 flow_trace_init
+00009d9c  b        #0x9d2c
+00009da0  ldr      x0, [x27, #8]
+00009da4  adrp     x3, #0x15000
+00009da8  add      x3, x3, #0x218
+00009dac  mov      w1, #2
+00009db0  mov      x2, xzr
+00009db4  bl       #0x5688 PerfettoTeHlEmitImpl
+00009db8  b        #0x9d38
+00009dbc  bl       #0x5308 __stack_chk_fail
+00009dc0  bl       #0x5258 co_thread_get
+00009dc4  cbnz     x0, #0x9e88
+00009dc8  adrp     x4, #0x12000
+00009dcc  adrp     x5, #0x13000
+00009dd0  add      x4, x4, #0xbd0
+00009dd4  add      x5, x5, #0x5bc
+00009dd8  mov      w0, #0x51
+00009ddc  mov      w6, #0x12d
+00009de0  add      x2, sp, #0x90
+00009de4  mov      w3, #0x80
+00009de8  mov      w1, wzr
+00009dec  bl       #0x5278 duss_log_gen_head
+00009df0  cbz      w0, #0x9f10
+00009df4  adrp     x3, #0x12000
+00009df8  adrp     x4, #0x13000
+00009dfc  adrp     x5, #0x12000
+00009e00  add      x3, x3, #0xd07
+00009e04  add      x4, x4, #0x5c5
+00009e08  add      x5, x5, #0xbd0
+00009e0c  mov      w0, #0x51
+00009e10  mov      w6, #0x12d
+00009e14  add      x2, sp, #0x90
+00009e18  mov      w1, wzr
+00009e1c  bl       #0x5288 duss_log_print
+00009e20  b        #0x9f10
+00009e24  bl       #0x5258 co_thread_get
+00009e28  cbnz     x0, #0x9f60
+00009e2c  adrp     x4, #0x12000
+00009e30  adrp     x5, #0x13000
+00009e34  add      x4, x4, #0xbd0
+00009e38  add      x5, x5, #0x5bc
+00009e3c  mov      w0, #0x51
+00009e40  mov      w6, #0x129
+00009e44  add      x2, sp, #0x90
+00009e48  mov      w3, #0x80
+00009e4c  mov      w1, wzr
+00009e50  bl       #0x5278 duss_log_gen_head
+00009e54  cbz      w0, #0x9fe8
+00009e58  adrp     x3, #0x12000
+00009e5c  adrp     x4, #0x13000
+00009e60  adrp     x5, #0x12000
+00009e64  add      x3, x3, #0xd07
+00009e68  add      x4, x4, #0x5c5
+00009e6c  add      x5, x5, #0xbd0
+00009e70  mov      w0, #0x51
+00009e74  mov      w6, #0x129
+00009e78  add      x2, sp, #0x90
+00009e7c  mov      w1, wzr
+00009e80  bl       #0x5288 duss_log_print
+00009e84  b        #0x9fe8
+00009e88  adrp     x8, #0x12000
+00009e8c  str      wzr, [sp, #0x84]
+00009e90  add      x8, x8, #0xbcc
+00009e94  add      x1, sp, #0x58
+00009e98  add      x2, sp, #0x84
+00009e9c  str      x8, [sp, #0x58]
+00009ea0  bl       #0x5268 co_thread_get_current_co_name_co_id
+00009ea4  adrp     x19, #0x12000
+00009ea8  add      x19, x19, #0xbd0
+00009eac  adrp     x5, #0x13000
+00009eb0  mov      w20, #0x12d
+00009eb4  add      x5, x5, #0x5bc
+00009eb8  mov      w0, #0x51
+00009ebc  add      x2, sp, #0x90
+00009ec0  mov      w3, #0x80
+00009ec4  mov      w1, wzr
+00009ec8  mov      x4, x19
+00009ecc  mov      w6, w20
+00009ed0  bl       #0x5278 duss_log_gen_head
+00009ed4  cbz      w0, #0x9f10
+00009ed8  ldr      x5, [sp, #0x58]
+00009edc  adrp     x3, #0x12000
+00009ee0  ldr      w6, [sp, #0x84]
+00009ee4  adrp     x4, #0x12000
+00009ee8  adrp     x7, #0x13000
+00009eec  str      w20, [sp, #8]
+00009ef0  mov      w1, wzr
+00009ef4  str      x19, [sp]
+00009ef8  add      x3, x3, #0xcb9
+00009efc  add      x4, x4, #0xbcd
+00009f00  mov      w0, #0x51
+00009f04  add      x7, x7, #0x5c5
+00009f08  add      x2, sp, #0x90
+00009f0c  bl       #0x5288 duss_log_print
+00009f10  adrp     x4, #0x12000
+00009f14  adrp     x5, #0x13000
+00009f18  add      x4, x4, #0xbd0
+00009f1c  add      x5, x5, #0x5bc
+00009f20  mov      w0, #0x51
+00009f24  mov      w6, #0x12d
+00009f28  add      x2, sp, #0x90
+00009f2c  mov      w3, #0x80
+00009f30  mov      w1, wzr
+00009f34  bl       #0x5278 duss_log_gen_head
+00009f38  cbz      w0, #0x9f54
+00009f3c  adrp     x3, #0x13000
+00009f40  add      x3, x3, #0x637
+00009f44  mov      w0, #0x51
+00009f48  add      x2, sp, #0x90
+00009f4c  mov      w1, wzr
+00009f50  bl       #0x5288 duss_log_print
+00009f54  adrp     x0, #0x13000
+00009f58  add      x0, x0, #0x65d
+00009f5c  b        #0xa034
+00009f60  adrp     x8, #0x12000
+00009f64  str      wzr, [sp, #0x84]
+00009f68  add      x8, x8, #0xbcc
+00009f6c  add      x1, sp, #0x58
+00009f70  add      x2, sp, #0x84
+00009f74  str      x8, [sp, #0x58]
+00009f78  bl       #0x5268 co_thread_get_current_co_name_co_id
+00009f7c  adrp     x19, #0x12000
+00009f80  add      x19, x19, #0xbd0
+00009f84  adrp     x5, #0x13000
+00009f88  mov      w20, #0x129
+00009f8c  add      x5, x5, #0x5bc
+00009f90  mov      w0, #0x51
+00009f94  add      x2, sp, #0x90
+00009f98  mov      w3, #0x80
+00009f9c  mov      w1, wzr
+00009fa0  mov      x4, x19
+00009fa4  mov      w6, w20
+00009fa8  bl       #0x5278 duss_log_gen_head
+00009fac  cbz      w0, #0x9fe8
+00009fb0  ldr      x5, [sp, #0x58]
+00009fb4  adrp     x3, #0x12000
+00009fb8  ldr      w6, [sp, #0x84]
+00009fbc  adrp     x4, #0x12000
+00009fc0  adrp     x7, #0x13000
+00009fc4  str      w20, [sp, #8]
+00009fc8  mov      w1, wzr
+00009fcc  str      x19, [sp]
+00009fd0  add      x3, x3, #0xcb9
+00009fd4  add      x4, x4, #0xbcd
+00009fd8  mov      w0, #0x51
+00009fdc  add      x7, x7, #0x5c5
+00009fe0  add      x2, sp, #0x90
+00009fe4  bl       #0x5288 duss_log_print
+00009fe8  adrp     x4, #0x12000
+00009fec  adrp     x5, #0x13000
+00009ff0  add      x4, x4, #0xbd0
+00009ff4  add      x5, x5, #0x5bc
+00009ff8  mov      w0, #0x51
+00009ffc  mov      w6, #0x129
+0000a000  add      x2, sp, #0x90
+0000a004  mov      w3, #0x80
+0000a008  mov      w1, wzr
+0000a00c  bl       #0x5278 duss_log_gen_head
+0000a010  cbz      w0, #0xa02c
+0000a014  adrp     x3, #0x13000
+0000a018  add      x3, x3, #0x5e0
+0000a01c  mov      w0, #0x51
+0000a020  add      x2, sp, #0x90
+0000a024  mov      w1, wzr
+0000a028  bl       #0x5288 duss_log_print
+0000a02c  adrp     x0, #0x13000
+0000a030  add      x0, x0, #0x608
+0000a034  bl       #0x5318 log_to_kmsg
+0000a038  adrp     x0, #0x12000
+0000a03c  add      x0, x0, #0xd7e
+0000a040  bl       #0x5328 duss_log_dump_backtrace
+0000a044  bl       #0x5338 is_running_in_cam_sil
+0000a048  tbz      w0, #0, #0xa058
+0000a04c  mov      x0, xzr
+0000a050  bl       #0x5348 fflush
+0000a054  bl       #0x5358 abort
+0000a058  mov      w0, #1
+0000a05c  bl       #0x5368 exit
+
+_ZN20X2DIITofStreamFilter16depthWrapperInitEPv @ 0x6f60, 5704 bytes
+00006f60  stp      x28, x27, [sp, #-0x60]!
+00006f64  stp      x26, x25, [sp, #0x10]
+00006f68  stp      x24, x23, [sp, #0x20]
+00006f6c  stp      x22, x21, [sp, #0x30]
+00006f70  stp      x20, x19, [sp, #0x40]
+00006f74  stp      x29, x30, [sp, #0x50]
+00006f78  add      x29, sp, #0x50
+00006f7c  sub      sp, sp, #0x500
+00006f80  mov      w8, #0x5268
+00006f84  mrs      x9, tpidr_el0
+00006f88  mov      x19, x0
+00006f8c  movk     w8, #1, lsl #16
+00006f90  add      x8, x19, x8
+00006f94  sub      x10, x29, #0x70
+00006f98  add      x27, sp, #0x140
+00006f9c  stp      x9, x8, [sp, #0x40]
+00006fa0  sub      x0, x29, #0xf0
+00006fa4  ldr      x8, [x9, #0x28]
+00006fa8  mov      w9, #0x52e0
+00006fac  movk     w9, #1, lsl #16
+00006fb0  add      x9, x19, x9
+00006fb4  mov      w2, #0x80
+00006fb8  mov      w1, wzr
+00006fbc  str      x9, [sp, #0x28]
+00006fc0  mov      w9, #0x51a0
+00006fc4  movk     w9, #1, lsl #16
+00006fc8  add      x9, x19, x9
+00006fcc  str      x9, [sp, #0x38]
+00006fd0  str      x8, [x10, #0x18]
+00006fd4  mov      w8, #0x5258
+00006fd8  movk     w8, #1, lsl #16
+00006fdc  str      xzr, [x27, #0x3a8]
+00006fe0  add      x8, x19, x8
+00006fe4  str      xzr, [x27, #0x3a0]
+00006fe8  stur     xzr, [x10, #0xd]
+00006fec  str      x8, [sp, #0x30]
+00006ff0  bl       #0x51e8 memset
+00006ff4  adrp     x0, #0x30000
+00006ff8  adrp     x2, #0x12000
+00006ffc  add      x0, x0, #0x198
+00007000  add      x2, x2, #0xbc3
+00007004  mov      w1, #3
+00007008  bl       #0x5248 log_mgr_check
+0000700c  tbz      w0, #0, #0x70fc
+00007010  bl       #0x5258 co_thread_get
+00007014  cbz      x0, #0x70a4
+00007018  adrp     x8, #0x12000
+0000701c  str      wzr, [sp, #0x84]
+00007020  add      x8, x8, #0xbcc
+00007024  add      x1, sp, #0x78
+00007028  add      x2, sp, #0x84
+0000702c  str      x8, [sp, #0x78]
+00007030  bl       #0x5268 co_thread_get_current_co_name_co_id
+00007034  adrp     x20, #0x12000
+00007038  adrp     x4, #0x12000
+0000703c  add      x20, x20, #0xe9a
+00007040  mov      w21, #0xa6
+00007044  add      x4, x4, #0xbd0
+00007048  mov      w0, #0x51
+0000704c  mov      w1, #3
+00007050  add      x2, sp, #0x3e0
+00007054  mov      w3, #0x80
+00007058  mov      x5, x20
+0000705c  mov      w6, w21
+00007060  bl       #0x5278 duss_log_gen_head
+00007064  cbz      w0, #0x70fc
+00007068  ldr      x6, [sp, #0x78]
+0000706c  adrp     x3, #0x12000
+00007070  ldr      w7, [sp, #0x84]
+00007074  adrp     x4, #0x12000
+00007078  adrp     x5, #0x12000
+0000707c  str      w21, [sp, #8]
+00007080  add      x3, x3, #0xf59
+00007084  str      x20, [sp]
+00007088  add      x4, x4, #0xbc3
+0000708c  add      x5, x5, #0xbcd
+00007090  mov      w0, #0x51
+00007094  mov      w1, #3
+00007098  add      x2, sp, #0x3e0
+0000709c  bl       #0x5288 duss_log_print
+000070a0  b        #0x70fc
+000070a4  adrp     x4, #0x12000
+000070a8  adrp     x5, #0x12000
+000070ac  add      x4, x4, #0xbd0
+000070b0  add      x5, x5, #0xe9a
+000070b4  mov      w0, #0x51
+000070b8  mov      w6, #0xa6
+000070bc  mov      w1, #3
+000070c0  add      x2, sp, #0x3e0
+000070c4  mov      w3, #0x80
+000070c8  bl       #0x5278 duss_log_gen_head
+000070cc  cbz      w0, #0x70fc
+000070d0  adrp     x3, #0x12000
+000070d4  adrp     x4, #0x12000
+000070d8  adrp     x5, #0x12000
+000070dc  add      x3, x3, #0xf8a
+000070e0  add      x4, x4, #0xbc3
+000070e4  add      x5, x5, #0xe9a
+000070e8  mov      w0, #0x51
+000070ec  mov      w6, #0xa6
+000070f0  mov      w1, #3
+000070f4  add      x2, sp, #0x3e0
+000070f8  bl       #0x5288 duss_log_print
+000070fc  mov      w8, #0x2508
+00007100  add      x8, x19, x8
+00007104  mov      w9, #0x2509
+00007108  adrp     x23, #0x12000
+0000710c  str      x8, [sp, #0x58]
+00007110  add      x8, x19, x9
+00007114  adrp     x26, #0x12000
+00007118  adrp     x24, #0x12000
+0000711c  str      x8, [sp, #0x60]
+00007120  add      x8, sp, #0x3e0
+00007124  mov      x25, x19
+00007128  orr      x8, x8, #1
+0000712c  mov      w28, #-1
+00007130  add      x23, x23, #0xfb0
+00007134  add      x26, x26, #0xbc3
+00007138  str      x8, [sp, #0x50]
+0000713c  add      x24, x24, #0xe9a
+00007140  mov      w19, #0x51
+00007144  mov      w21, #0xb8
+00007148  mov      w1, #2
+0000714c  mov      x0, x23
+00007150  bl       #0x53f8 access
+00007154  cbz      w0, #0x726c
+00007158  adrp     x0, #0x30000
+0000715c  mov      w1, #3
+00007160  add      x0, x0, #0x198
+00007164  mov      x2, x26
+00007168  bl       #0x5248 log_mgr_check
+0000716c  tbz      w0, #0, #0x7258
+00007170  bl       #0x5258 co_thread_get
+00007174  cbz      x0, #0x7200
+00007178  adrp     x8, #0x12000
+0000717c  str      wzr, [sp, #0x84]
+00007180  add      x8, x8, #0xbcc
+00007184  add      x1, sp, #0x78
+00007188  add      x2, sp, #0x84
+0000718c  str      x8, [sp, #0x78]
+00007190  bl       #0x5268 co_thread_get_current_co_name_co_id
+00007194  mov      w20, w19
+00007198  adrp     x4, #0x12000
+0000719c  mov      w22, #0xab
+000071a0  mov      w1, #3
+000071a4  add      x2, sp, #0x3e0
+000071a8  mov      w3, #0x80
+000071ac  mov      w0, w20
+000071b0  add      x4, x4, #0xbd0
+000071b4  mov      x5, x24
+000071b8  mov      w6, w22
+000071bc  bl       #0x5278 duss_log_gen_head
+000071c0  cbz      w0, #0x7258
+000071c4  ldr      x6, [sp, #0x78]
+000071c8  adrp     x3, #0x12000
+000071cc  ldr      w7, [sp, #0x84]
+000071d0  adrp     x5, #0x12000
+000071d4  mov      w1, #3
+000071d8  str      x23, [sp, #0x10]
+000071dc  add      x2, sp, #0x3e0
+000071e0  str      w22, [sp, #8]
+000071e4  mov      w0, w20
+000071e8  str      x24, [sp]
+000071ec  add      x3, x3, #0xfc6
+000071f0  mov      x4, x26
+000071f4  add      x5, x5, #0xbcd
+000071f8  bl       #0x5288 duss_log_print
+000071fc  b        #0x7258
+00007200  mov      w20, w19
+00007204  adrp     x4, #0x12000
+00007208  mov      w22, #0xab
+0000720c  mov      w1, #3
+00007210  add      x2, sp, #0x3e0
+00007214  mov      w3, #0x80
+00007218  mov      w0, w20
+0000721c  add      x4, x4, #0xbd0
+00007220  mov      x5, x24
+00007224  mov      w6, w22
+00007228  bl       #0x5278 duss_log_gen_head
+0000722c  cbz      w0, #0x7258
+00007230  adrp     x3, #0x12000
+00007234  mov      w1, #3
+00007238  add      x2, sp, #0x3e0
+0000723c  mov      w0, w20
+00007240  add      x3, x3, #0xffe
+00007244  mov      x4, x26
+00007248  mov      x5, x24
+0000724c  mov      w6, w22
+00007250  mov      x7, x23
+00007254  bl       #0x5288 duss_log_print
+00007258  mov      x0, x23
+0000725c  mov      w1, #0x1f9
+00007260  bl       #0x5408 cam_mkdir
+00007264  mov      w22, w0
+00007268  cbnz     w22, #0x82e0
+0000726c  ldp      x8, x5, [sp, #0x58]
+00007270  ldrb     w8, [x8]
+00007274  tbz      w8, #0, #0x727c
+00007278  ldr      x5, [x25, #0x2518]
+0000727c  adrp     x3, #0x13000
+00007280  sub      x0, x29, #0xf0
+00007284  add      x3, x3, #0xa1
+00007288  mov      x4, x23
+0000728c  bl       #0x88f8
+00007290  sub      x0, x29, #0xf0
+00007294  mov      w1, #4
+00007298  bl       #0x53f8 access
+0000729c  mov      w20, w0
+000072a0  adrp     x0, #0x30000
+000072a4  mov      w1, #3
+000072a8  add      x0, x0, #0x198
+000072ac  mov      x2, x26
+000072b0  bl       #0x5248 log_mgr_check
+000072b4  mov      w22, #0xb5
+000072b8  cbz      w20, #0x7350
+000072bc  tbz      w0, #0, #0x7438
+000072c0  bl       #0x5258 co_thread_get
+000072c4  mov      w20, w19
+000072c8  cbz      x0, #0x73e8
+000072cc  adrp     x8, #0x12000
+000072d0  str      wzr, [sp, #0x84]
+000072d4  add      x8, x8, #0xbcc
+000072d8  add      x1, sp, #0x78
+000072dc  add      x2, sp, #0x84
+000072e0  str      x8, [sp, #0x78]
+000072e4  bl       #0x5268 co_thread_get_current_co_name_co_id
+000072e8  adrp     x4, #0x12000
+000072ec  mov      w1, #3
+000072f0  add      x2, sp, #0x3e0
+000072f4  mov      w3, #0x80
+000072f8  mov      w0, w20
+000072fc  add      x4, x4, #0xbd0
+00007300  mov      x5, x24
+00007304  mov      w6, w22
+00007308  bl       #0x5278 duss_log_gen_head
+0000730c  cbz      w0, #0x7438
+00007310  ldr      x6, [sp, #0x78]
+00007314  adrp     x3, #0x13000
+00007318  ldr      w7, [sp, #0x84]
+0000731c  adrp     x5, #0x12000
+00007320  mov      w1, #3
+00007324  str      w22, [sp, #8]
+00007328  add      x2, sp, #0x3e0
+0000732c  str      x24, [sp]
+00007330  mov      w0, w20
+00007334  add      x3, x3, #0xab
+00007338  mov      x4, x26
+0000733c  add      x5, x5, #0xbcd
+00007340  sub      x8, x29, #0xf0
+00007344  str      x8, [sp, #0x10]
+00007348  bl       #0x5288 duss_log_print
+0000734c  b        #0x7438
+00007350  tbz      w0, #0, #0x74d0
+00007354  bl       #0x5258 co_thread_get
+00007358  mov      w22, w19
+0000735c  cbz      x0, #0x7674
+00007360  adrp     x8, #0x12000
+00007364  str      wzr, [sp, #0x84]
+00007368  add      x8, x8, #0xbcc
+0000736c  add      x1, sp, #0x78
+00007370  add      x2, sp, #0x84
+00007374  str      x8, [sp, #0x78]
+00007378  bl       #0x5268 co_thread_get_current_co_name_co_id
+0000737c  adrp     x4, #0x12000
+00007380  mov      w20, w21
+00007384  mov      w1, #3
+00007388  add      x2, sp, #0x3e0
+0000738c  mov      w3, #0x80
+00007390  mov      w0, w22
+00007394  add      x4, x4, #0xbd0
+00007398  mov      x5, x24
+0000739c  mov      w6, w20
+000073a0  bl       #0x5278 duss_log_gen_head
+000073a4  cbz      w0, #0x74d0
+000073a8  ldr      x6, [sp, #0x78]
+000073ac  adrp     x3, #0x13000
+000073b0  ldr      w7, [sp, #0x84]
+000073b4  adrp     x5, #0x12000
+000073b8  mov      w1, #3
+000073bc  str      w20, [sp, #8]
+000073c0  add      x2, sp, #0x3e0
+000073c4  str      x24, [sp]
+000073c8  mov      w0, w22
+000073cc  add      x3, x3, #0x110
+000073d0  mov      x4, x26
+000073d4  add      x5, x5, #0xbcd
+000073d8  sub      x8, x29, #0xf0
+000073dc  str      x8, [sp, #0x10]
+000073e0  bl       #0x5288 duss_log_print
+000073e4  b        #0x74d0
+000073e8  adrp     x4, #0x12000
+000073ec  mov      w1, #3
+000073f0  add      x2, sp, #0x3e0
+000073f4  mov      w3, #0x80
+000073f8  mov      w0, w20
+000073fc  add      x4, x4, #0xbd0
+00007400  mov      x5, x24
+00007404  mov      w6, w22
+00007408  bl       #0x5278 duss_log_gen_head
+0000740c  cbz      w0, #0x7438
+00007410  adrp     x3, #0x13000
+00007414  mov      w1, #3
+00007418  add      x2, sp, #0x3e0
+0000741c  sub      x7, x29, #0xf0
+00007420  mov      w0, w20
+00007424  add      x3, x3, #0xe3
+00007428  mov      x4, x26
+0000742c  mov      x5, x24
+00007430  mov      w6, w22
+00007434  bl       #0x5288 duss_log_print
+00007438  sub      x0, x29, #0xf0
+0000743c  str      xzr, [x27, #0x2a8]
+00007440  str      xzr, [x27, #0x2a0]
+00007444  str      xzr, [x27, #0x2b0]
+00007448  bl       #0x53b8 strlen
+0000744c  mov      x22, x0
+00007450  cmn      x22, #0x10
+00007454  b.hs     #0x82d8
+00007458  cmp      x22, #0x17
+0000745c  b.hs     #0x7474
+00007460  ldr      x20, [sp, #0x50]
+00007464  lsl      x8, x22, #1
+00007468  strb     w8, [sp, #0x3e0]
+0000746c  cbnz     x22, #0x74a0
+00007470  b        #0x74b0
+00007474  add      x8, x22, #0x10
+00007478  and      x24, x8, #0xfffffffffffffff0
+0000747c  mov      x0, x24
+00007480  bl       #0x5398 _Znwm
+00007484  mov      x20, x0
+00007488  str      x22, [x27, #0x2a8]
+0000748c  orr      x8, x24, #1
+00007490  adrp     x24, #0x12000
+00007494  add      x24, x24, #0xe9a
+00007498  str      x20, [x27, #0x2b0]
+0000749c  str      x8, [x27, #0x2a0]
+000074a0  sub      x1, x29, #0xf0
+000074a4  mov      x0, x20
+000074a8  mov      x2, x22
+000074ac  bl       #0x53a8 memcpy
+000074b0  add      x1, sp, #0x3e0
+000074b4  strb     wzr, [x20, x22]
+000074b8  mov      x0, x25
+000074bc  bl       #0x5418 _ZN20X2DIITofStreamFilter17loadAndSaveEepromERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+000074c0  ldrb     w8, [sp, #0x3e0]
+000074c4  tbz      w8, #0, #0x74d0
+000074c8  ldr      x0, [x27, #0x2b0]
+000074cc  bl       #0x53d8 _ZdlPv
+000074d0  sub      x0, x29, #0xf0
+000074d4  str      xzr, [x27, #0x2a8]
+000074d8  str      xzr, [x27, #0x2a0]
+000074dc  str      xzr, [x27, #0x2b0]
+000074e0  bl       #0x53b8 strlen
+000074e4  mov      x22, x0
+000074e8  cmn      x22, #0x10
+000074ec  b.hs     #0x82d8
+000074f0  cmp      x22, #0x17
+000074f4  b.hs     #0x750c
+000074f8  ldr      x20, [sp, #0x50]
+000074fc  lsl      x8, x22, #1
+00007500  strb     w8, [sp, #0x3e0]
+00007504  cbnz     x22, #0x7538
+00007508  b        #0x7548
+0000750c  add      x8, x22, #0x10
+00007510  and      x24, x8, #0xfffffffffffffff0
+00007514  mov      x0, x24
+00007518  bl       #0x5398 _Znwm
+0000751c  mov      x20, x0
+00007520  str      x22, [x27, #0x2a8]
+00007524  orr      x8, x24, #1
+00007528  adrp     x24, #0x12000
+0000752c  add      x24, x24, #0xe9a
+00007530  str      x20, [x27, #0x2b0]
+00007534  str      x8, [x27, #0x2a0]
+00007538  sub      x1, x29, #0xf0
+0000753c  mov      x0, x20
+00007540  mov      x2, x22
+00007544  bl       #0x53a8 memcpy
+00007548  add      x1, sp, #0x3e0
+0000754c  strb     wzr, [x20, x22]
+00007550  mov      x0, x25
+00007554  bl       #0x5428 _ZN20X2DIITofStreamFilter14loadEepromDataERKNSt3__112basic_stringIcNS0_11char_traitsIcEENS0_9allocatorIcEEEE
+00007558  ldrb     w8, [sp, #0x3e0]
+0000755c  mov      w20, w0
+00007560  tbz      w8, #0, #0x756c
+00007564  ldr      x0, [x27, #0x2b0]
+00007568  bl       #0x53d8 _ZdlPv
+0000756c  tbnz     w20, #0, #0x76cc
+00007570  adrp     x0, #0x30000
+00007574  mov      w1, #2
+00007578  add      x0, x0, #0x198
+0000757c  mov      x2, x26
+00007580  bl       #0x5248 log_mgr_check
+00007584  tbz      w0, #0, #0x765c
+00007588  bl       #0x5258 co_thread_get
+0000758c  cbz      x0, #0x7610
+00007590  adrp     x8, #0x12000
+00007594  str      wzr, [sp, #0x84]
+00007598  add      x8, x8, #0xbcc
+0000759c  add      x1, sp, #0x78
+000075a0  add      x2, sp, #0x84
+000075a4  str      x8, [sp, #0x78]
+000075a8  bl       #0x5268 co_thread_get_current_co_name_co_id
+000075ac  adrp     x4, #0x12000
+000075b0  mov      w1, #2
+000075b4  add      x2, sp, #0x3e0
+000075b8  mov      w3, #0x80
+000075bc  mov      w6, #0xc0
+000075c0  mov      w0, w19
+000075c4  add      x4, x4, #0xbd0
+000075c8  mov      x5, x24
+000075cc  bl       #0x5278 duss_log_gen_head
+000075d0  cbz      w0, #0x765c
+000075d4  ldr      x6, [sp, #0x78]
+000075d8  adrp     x3, #0x13000
+000075dc  ldr      w7, [sp, #0x84]
+000075e0  adrp     x5, #0x12000
+000075e4  mov      w1, #2
+000075e8  str      x24, [sp]
+000075ec  add      x2, sp, #0x3e0
+000075f0  mov      w0, w19
+000075f4  add      x3, x3, #0x177
+000075f8  mov      x4, x26
+000075fc  add      x5, x5, #0xbcd
+00007600  mov      w8, #0xc0
+00007604  str      w8, [sp, #8]
+00007608  bl       #0x5288 duss_log_print
+0000760c  b        #0x765c
+00007610  adrp     x4, #0x12000
+00007614  mov      w1, #2
+00007618  add      x2, sp, #0x3e0
+0000761c  mov      w3, #0x80
+00007620  mov      w6, #0xc0
+00007624  mov      w0, w19
+00007628  add      x4, x4, #0xbd0
+0000762c  mov      x5, x24
+00007630  bl       #0x5278 duss_log_gen_head
+00007634  cbz      w0, #0x765c
+00007638  adrp     x3, #0x13000
+0000763c  mov      w1, #2
+00007640  add      x2, sp, #0x3e0
+00007644  mov      w6, #0xc0
+00007648  mov      w0, w19
+0000764c  add      x3, x3, #0x1c1
+00007650  mov      x4, x26
+00007654  mov      x5, x24
+00007658  bl       #0x5288 duss_log_print
+0000765c  sub      x0, x29, #0xf0
+00007660  bl       #0x5438 unlink
+00007664  add      w28, w28, #1
+00007668  cmp      w28, #2
+0000766c  b.lo     #0x7148
+00007670  b        #0x76dc
+00007674  adrp     x4, #0x12000
+00007678  mov      w20, w21
+0000767c  mov      w1, #3
+00007680  add      x2, sp, #0x3e0
+00007684  mov      w3, #0x80
+00007688  mov      w0, w22
+0000768c  add      x4, x4, #0xbd0
+00007690  mov      x5, x24
+00007694  mov      w6, w20
+00007698  bl       #0x5278 duss_log_gen_head
+0000769c  cbz      w0, #0x74d0
+000076a0  adrp     x3, #0x13000
+000076a4  mov      w1, #3
+000076a8  add      x2, sp, #0x3e0
+000076ac  sub      x7, x29, #0xf0
+000076b0  mov      w0, w22
+000076b4  add      x3, x3, #0x149
+000076b8  mov      x4, x26
+000076bc  mov      x5, x24
+000076c0  mov      w6, w20
+000076c4  bl       #0x5288 duss_log_print
+000076c8  b        #0x74d0
+000076cc  mov      w8, #0x5371
+000076d0  movk     w8, #1, lsl #16
+000076d4  mov      w9, #1
+000076d8  strb     w9, [x25, x8]
+000076dc  mov      x19, x25
+000076e0  mov      x0, x19
+000076e4  bl       #0x5448 _ZN20X2DIITofStreamFilter19openTemperatureFileEv
+000076e8  mov      w9, #0x52d0
+000076ec  ldr      x14, [sp, #0x48]
+000076f0  mov      w8, #0x2539
+000076f4  movk     w9, #1, lsl #16
+000076f8  mov      w11, #0x526a
+000076fc  ldrb     w12, [x19, x8]
+00007700  mov      w13, #0x5269
+00007704  ldr      x8, [x19, x9]
+00007708  mov      w9, #0x526c
+0000770c  mov      w10, #2
+00007710  movk     w11, #1, lsl #16
+00007714  movk     w13, #1, lsl #16
+00007718  movk     w9, #1, lsl #16
+0000771c  strb     w10, [x14]
+00007720  strb     wzr, [x19, x11]
+00007724  strb     w12, [x19, x13]
+00007728  strh     wzr, [x19, x9]
+0000772c  cbz      x8, #0x790c
+00007730  ldrb     w9, [x8]
+00007734  cmp      w9, #0xff
+00007738  b.eq     #0x7814
+0000773c  ldrb     w9, [x8, #1]
+00007740  cmp      w9, #0xff
+00007744  b.eq     #0x7814
+00007748  ldrb     w9, [x8, #2]
+0000774c  cmp      w9, #0xff
+00007750  b.eq     #0x7814
+00007754  ldrb     w8, [x8, #3]
+00007758  cmp      w8, #0xff
+0000775c  b.eq     #0x7814
+00007760  mov      w8, #0x2538
+00007764  ldrb     w8, [x19, x8]
+00007768  cbz      w8, #0x7814
+0000776c  mov      w8, #0x526b
+00007770  adrp     x0, #0x30000
+00007774  adrp     x2, #0x12000
+00007778  movk     w8, #1, lsl #16
+0000777c  mov      w9, #1
+00007780  add      x0, x0, #0x198
+00007784  add      x2, x2, #0xbc3
+00007788  mov      w1, #3
+0000778c  strb     w9, [x19, x8]
+00007790  bl       #0x5248 log_mgr_check
+00007794  tbz      w0, #0, #0x790c
+00007798  bl       #0x5258 co_thread_get
+0000779c  cbz      x0, #0x8290
+000077a0  adrp     x8, #0x12000
+000077a4  str      wzr, [sp, #0x84]
+000077a8  add      x8, x8, #0xbcc
+000077ac  add      x1, sp, #0x78
+000077b0  add      x2, sp, #0x84
+000077b4  str      x8, [sp, #0x78]
+000077b8  bl       #0x5268 co_thread_get_current_co_name_co_id
+000077bc  adrp     x4, #0x12000
+000077c0  adrp     x5, #0x12000
+000077c4  add      x4, x4, #0xbd0
+000077c8  add      x5, x5, #0xe9a
+000077cc  mov      w0, #0x51
+000077d0  mov      w6, #0xd2
+000077d4  mov      w1, #3
+000077d8  add      x2, sp, #0x3e0
+000077dc  mov      w3, #0x80
+000077e0  bl       #0x5278 duss_log_gen_head
+000077e4  cbz      w0, #0x790c
+000077e8  ldr      x6, [sp, #0x78]
+000077ec  adrp     x3, #0x13000
+000077f0  ldr      w7, [sp, #0x84]
+000077f4  adrp     x4, #0x12000
+000077f8  adrp     x5, #0x12000
+000077fc  add      x3, x3, #0x200
+00007800  add      x4, x4, #0xbc3
+00007804  add      x5, x5, #0xbcd
+00007808  mov      w0, #0x51
+0000780c  mov      w1, #3
+00007810  b        #0x78b4
+00007814  mov      w8, #0x526b
+00007818  adrp     x0, #0x30000
+0000781c  adrp     x2, #0x12000
+00007820  movk     w8, #1, lsl #16
+00007824  add      x0, x0, #0x198
+00007828  add      x2, x2, #0xbc3
+0000782c  mov      w1, #2
+00007830  strb     wzr, [x19, x8]
+00007834  bl       #0x5248 log_mgr_check
+00007838  tbz      w0, #0, #0x790c
+0000783c  bl       #0x5258 co_thread_get
+00007840  cbz      x0, #0x78c0
+00007844  adrp     x8, #0x12000
+00007848  str      wzr, [sp, #0x84]
+0000784c  add      x8, x8, #0xbcc
+00007850  add      x1, sp, #0x78
+00007854  add      x2, sp, #0x84
+00007858  str      x8, [sp, #0x78]
+0000785c  bl       #0x5268 co_thread_get_current_co_name_co_id
+00007860  adrp     x4, #0x12000
+00007864  adrp     x5, #0x12000
+00007868  add      x4, x4, #0xbd0
+0000786c  add      x5, x5, #0xe9a
+00007870  mov      w0, #0x51
+00007874  mov      w6, #0xd5
+00007878  mov      w1, #2
+0000787c  add      x2, sp, #0x3e0
+00007880  mov      w3, #0x80
+00007884  bl       #0x5278 duss_log_gen_head
+00007888  cbz      w0, #0x790c
+0000788c  ldr      x6, [sp, #0x78]
+00007890  adrp     x3, #0x13000
+00007894  ldr      w7, [sp, #0x84]
+00007898  adrp     x4, #0x12000
+0000789c  adrp     x5, #0x12000
+000078a0  add      x3, x3, #0x263
+000078a4  add      x4, x4, #0xbc3
+000078a8  add      x5, x5, #0xbcd
+000078ac  mov      w0, #0x51
+000078b0  mov      w1, #2
+000078b4  add      x2, sp, #0x3e0
+000078b8  bl       #0x5288 duss_log_print
+000078bc  b        #0x790c
+000078c0  adrp     x4, #0x12000
+000078c4  adrp     x5, #0x12000
+000078c8  add      x4, x4, #0xbd0
+000078cc  add      x5, x5, #0xe9a
+000078d0  mov      w0, #0x51
+000078d4  mov      w6, #0xd5
+000078d8  mov      w1, #2
+000078dc  add      x2, sp, #0x3e0
+000078e0  mov      w3, #0x80
+000078e4  bl       #0x5278 duss_log_gen_head
+000078e8  cbz      w0, #0x790c
+000078ec  adrp     x3, #0x13000
+000078f0  adrp     x4, #0x12000
+000078f4  add      x3, x3, #0x29b
+000078f8  add      x4, x4, #0xbc3
+000078fc  mov      w0, #0x51
+00007900  mov      w1, #2
+00007904  add      x2, sp, #0x3e0
+00007908  bl       #0x5288 duss_log_print
+0000790c  adrp     x24, #0x2f000
+00007910  dup      v0.2d, xzr
+00007914  mov      w8, #0x529c
+00007918  movk     w8, #1, lsl #16
+0000791c  ldr      x24, [x24, #0xa40]
+00007920  add      x13, x19, x8
+00007924  adrp     x8, #0x12000
+00007928  add      x20, sp, #0x290
+0000792c  mov      w9, #0x52c0
+00007930  str      x13, [sp, #0x50]
+00007934  add      x10, x24, #0x18
+00007938  ldr      d1, [x8, #0xb08]
+0000793c  mov      w11, #0x52b8
+00007940  add      x21, x20, #0xb8
+00007944  mov      v0.d[0], x10
+00007948  add      x22, x20, #0x10
+0000794c  movk     w9, #1, lsl #16
+00007950  str      d1, [x13]
+00007954  mov      w8, #0x104
+00007958  movk     w11, #1, lsl #16
+0000795c  sub      x12, x29, #0x70
+00007960  add      x10, x24, #0x40
+00007964  strh     w8, [x19, x9]
+00007968  mov      x0, x21
+0000796c  mov      x1, x22
+00007970  str      x12, [x19, x11]
+00007974  str      x10, [x27, #0x208]
+00007978  str      q0, [x27, #0x150]
+0000797c  bl       #0x51f8 _ZNSt3__18ios_base4initEPv
+00007980  adrp     x23, #0x2f000
+00007984  mov      w10, #-1
+00007988  mov      x0, x22
+0000798c  ldr      x23, [x23, #0xa48]
+00007990  str      xzr, [x27, #0x290]
+00007994  str      w10, [sp, #0x3d8]
+00007998  add      x8, x23, #0x18
+0000799c  add      x9, x23, #0x40
+000079a0  str      x8, [x27, #0x150]
+000079a4  str      x9, [x27, #0x208]
+000079a8  bl       #0x5208 _ZNSt3__113basic_filebufIcNS_11char_traitsIcEEEC2Ev
+000079ac  ldr      x8, [x27, #0x1d8]
+000079b0  cbz      x8, #0x79d0
+000079b4  ldr      x8, [x27, #0x150]
+000079b8  ldur     x8, [x8, #-0x18]
+000079bc  add      x0, x20, x8
+000079c0  ldr      w8, [x0, #0x20]
+000079c4  orr      w1, w8, #4
+000079c8  bl       #0x5458 _ZNSt3__18ios_base5clearEj
+000079cc  b        #0x7a08
+000079d0  mov      w8, #0x24d8
+000079d4  ldr      x9, [x19, #0x24e8]
+000079d8  mov      w10, #0x24d9
+000079dc  add      x10, x19, x10
+000079e0  ldrb     w8, [x19, x8]
+000079e4  adrp     x1, #0x13000
+000079e8  add      x1, x1, #0xf45
+000079ec  tst      w8, #1
+000079f0  csel     x0, x10, x9, eq
+000079f4  bl       #0x5468 fopen
+000079f8  str      x0, [x27, #0x1d8]
+000079fc  cbz      x0, #0x79b4
+00007a00  mov      w8, #8
+00007a04  str      w8, [sp, #0x338]
+00007a08  add      x0, sp, #0x290
+00007a0c  add      x1, sp, #0x84
+00007a10  bl       #0x5478 _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEErsERi
+00007a14  add      x28, x23, #0x18
+00007a18  add      x20, x23, #0x40
+00007a1c  mov      x0, x22
+00007a20  str      x28, [x27, #0x150]
+00007a24  str      x20, [x27, #0x208]
+00007a28  bl       #0x5488 _ZNSt3__113basic_filebufIcNS_11char_traitsIcEEED2Ev
+00007a2c  adrp     x19, #0x2f000
+00007a30  add      x0, sp, #0x290
+00007a34  ldr      x19, [x19, #0xa68]
+00007a38  add      x1, x19, #8
+00007a3c  bl       #0x5498 _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEED2Ev
+00007a40  mov      x0, x21
+00007a44  bl       #0x54a8 _ZNSt3__19basic_iosIcNS_11char_traitsIcEEED2Ev
+00007a48  dup      v0.2d, xzr
+00007a4c  add      x8, x24, #0x18
+00007a50  add      x26, sp, #0x140
+00007a54  add      x21, x26, #0xb8
+00007a58  add      x22, x26, #0x10
+00007a5c  mov      x0, x21
+00007a60  mov      x1, x22
+00007a64  mov      v0.d[0], x8
+00007a68  add      x8, x24, #0x40
+00007a6c  str      x8, [x27, #0xb8]
+00007a70  str      q0, [x27]
+00007a74  bl       #0x51f8 _ZNSt3__18ios_base4initEPv
+00007a78  mov      w8, #-1
+00007a7c  str      xzr, [x27, #0x140]
+00007a80  mov      x0, x22
+00007a84  str      w8, [sp, #0x288]
+00007a88  str      x28, [x27]
+00007a8c  str      x20, [x27, #0xb8]
+00007a90  bl       #0x5208 _ZNSt3__113basic_filebufIcNS_11char_traitsIcEEEC2Ev
+00007a94  ldr      x8, [x27, #0x88]
+00007a98  cbz      x8, #0x7ab8
+00007a9c  ldr      x8, [x27]
+00007aa0  ldur     x8, [x8, #-0x18]
+00007aa4  add      x0, x26, x8
+00007aa8  ldr      w8, [x0, #0x20]
+00007aac  orr      w1, w8, #4
+00007ab0  bl       #0x5458 _ZNSt3__18ios_base5clearEj
+00007ab4  b        #0x7af0
+00007ab8  mov      w8, #0x24f0
+00007abc  ldr      x9, [x25, #0x2500]
+00007ac0  mov      w10, #0x24f1
+00007ac4  add      x10, x25, x10
+00007ac8  ldrb     w8, [x25, x8]
+00007acc  adrp     x1, #0x13000
+00007ad0  add      x1, x1, #0xf45
+00007ad4  tst      w8, #1
+00007ad8  csel     x0, x10, x9, eq
+00007adc  bl       #0x5468 fopen
+00007ae0  str      x0, [x27, #0x88]
+00007ae4  cbz      x0, #0x7a9c
+00007ae8  mov      w8, #8
+00007aec  str      w8, [sp, #0x1e8]
+00007af0  add      x0, sp, #0x140
+00007af4  add      x1, sp, #0x80
+00007af8  bl       #0x5478 _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEErsERi
+00007afc  add      x8, x23, #0x18
+00007b00  add      x9, x23, #0x40
+00007b04  mov      x0, x22
+00007b08  str      x8, [x27]
+00007b0c  str      x9, [x27, #0xb8]
+00007b10  bl       #0x5488 _ZNSt3__113basic_filebufIcNS_11char_traitsIcEEED2Ev
+00007b14  add      x1, x19, #8
+00007b18  add      x0, sp, #0x140
+00007b1c  bl       #0x5498 _ZNSt3__113basic_istreamIcNS_11char_traitsIcEEED2Ev
+00007b20  mov      x0, x21
+00007b24  bl       #0x54a8 _ZNSt3__19basic_iosIcNS_11char_traitsIcEEED2Ev
+00007b28  ldr      w8, [sp, #0x84]
+00007b2c  cbz      w8, #0x845c
+00007b30  ldr      w9, [sp, #0x80]
+00007b34  cbz      w9, #0x845c
+00007b38  mov      w10, #0x5288
+00007b3c  mov      w11, #0x5289
+00007b40  movk     w10, #1, lsl #16
+00007b44  movk     w11, #1, lsl #16
+00007b48  adrp     x0, #0x30000
+00007b4c  adrp     x2, #0x12000
+00007b50  add      x22, x25, x10
+00007b54  add      x21, x25, x11
+00007b58  add      x0, x0, #0x198
+00007b5c  add      x2, x2, #0xbc3
+00007b60  strb     w8, [x22]
+00007b64  mov      w1, #3
+00007b68  strb     w9, [x21]
+00007b6c  bl       #0x5248 log_mgr_check
+00007b70  tbz      w0, #0, #0x7c50
+00007b74  bl       #0x5258 co_thread_get
+00007b78  cbz      x0, #0x7c00
+00007b7c  adrp     x8, #0x12000
+00007b80  str      wzr, [sp, #0x74]
+00007b84  add      x8, x8, #0xbcc
+00007b88  add      x1, sp, #0x78
+00007b8c  add      x2, sp, #0x74
+00007b90  str      x8, [sp, #0x78]
+00007b94  bl       #0x5268 co_thread_get_current_co_name_co_id
+00007b98  adrp     x4, #0x12000
+00007b9c  adrp     x5, #0x12000
+00007ba0  add      x4, x4, #0xbd0
+00007ba4  add      x5, x5, #0xe9a
+00007ba8  mov      w0, #0x51
+00007bac  mov      w6, #0xe6
+00007bb0  mov      w1, #3
+00007bb4  add      x2, sp, #0x3e0
+00007bb8  mov      w3, #0x80
+00007bbc  bl       #0x5278 duss_log_gen_head
+00007bc0  cbz      w0, #0x7c50
+00007bc4  ldr      x6, [sp, #0x78]
+00007bc8  adrp     x3, #0x13000
+00007bcc  ldr      w7, [sp, #0x74]
+00007bd0  adrp     x4, #0x12000
+00007bd4  ldrb     w8, [x22]
+00007bd8  adrp     x5, #0x12000
+00007bdc  add      x3, x3, #0x38a
+00007be0  add      x4, x4, #0xbc3
+00007be4  add      x5, x5, #0xbcd
+00007be8  mov      w0, #0x51
+00007bec  str      w8, [sp]
+00007bf0  mov      w1, #3
+00007bf4  add      x2, sp, #0x3e0
+00007bf8  bl       #0x5288 duss_log_print
+00007bfc  b        #0x7c50
+00007c00  adrp     x4, #0x12000
+00007c04  adrp     x5, #0x12000
+00007c08  add      x4, x4, #0xbd0
+00007c0c  add      x5, x5, #0xe9a
+00007c10  mov      w0, #0x51
+00007c14  mov      w6, #0xe6
+00007c18  mov      w1, #3
+00007c1c  add      x2, sp, #0x3e0
+00007c20  mov      w3, #0x80
+00007c24  bl       #0x5278 duss_log_gen_head
+00007c28  cbz      w0, #0x7c50
+00007c2c  ldrb     w5, [x22]
+00007c30  adrp     x3, #0x13000
+00007c34  adrp     x4, #0x12000
+00007c38  add      x3, x3, #0x3b6
+00007c3c  add      x4, x4, #0xbc3
+00007c40  mov      w0, #0x51
+00007c44  mov      w1, #3
+00007c48  add      x2, sp, #0x3e0
+00007c4c  bl       #0x5288 duss_log_print
+00007c50  adrp     x0, #0x30000
+00007c54  adrp     x2, #0x12000
+00007c58  add      x0, x0, #0x198
+00007c5c  add      x2, x2, #0xbc3
+00007c60  mov      w1, #3
+00007c64  bl       #0x5248 log_mgr_check
+00007c68  tbz      w0, #0, #0x7d48
+00007c6c  bl       #0x5258 co_thread_get
+00007c70  cbz      x0, #0x7cf8
+00007c74  adrp     x8, #0x12000
+00007c78  str      wzr, [sp, #0x74]
+00007c7c  add      x8, x8, #0xbcc
+00007c80  add      x1, sp, #0x78
+00007c84  add      x2, sp, #0x74
+00007c88  str      x8, [sp, #0x78]
+00007c8c  bl       #0x5268 co_thread_get_current_co_name_co_id
+00007c90  adrp     x4, #0x12000
+00007c94  adrp     x5, #0x12000
+00007c98  add      x4, x4, #0xbd0
+00007c9c  add      x5, x5, #0xe9a
+00007ca0  mov      w0, #0x51
+00007ca4  mov      w6, #0xe7
+00007ca8  mov      w1, #3
+00007cac  add      x2, sp, #0x3e0
+00007cb0  mov      w3, #0x80
+00007cb4  bl       #0x5278 duss_log_gen_head
+00007cb8  cbz      w0, #0x7d48
+00007cbc  ldr      x6, [sp, #0x78]
+00007cc0  adrp     x3, #0x13000
+00007cc4  ldr      w7, [sp, #0x74]
+00007cc8  adrp     x4, #0x12000
+00007ccc  ldrb     w8, [x21]
+00007cd0  adrp     x5, #0x12000
+00007cd4  add      x3, x3, #0x3d7
+00007cd8  add      x4, x4, #0xbc3
+00007cdc  add      x5, x5, #0xbcd
+00007ce0  mov      w0, #0x51
+00007ce4  str      w8, [sp]
+00007ce8  mov      w1, #3
+00007cec  add      x2, sp, #0x3e0
+00007cf0  bl       #0x5288 duss_log_print
+00007cf4  b        #0x7d48
+00007cf8  adrp     x4, #0x12000
+00007cfc  adrp     x5, #0x12000
+00007d00  add      x4, x4, #0xbd0
+00007d04  add      x5, x5, #0xe9a
+00007d08  mov      w0, #0x51
+00007d0c  mov      w6, #0xe7
+00007d10  mov      w1, #3
+00007d14  add      x2, sp, #0x3e0
+00007d18  mov      w3, #0x80
+00007d1c  bl       #0x5278 duss_log_gen_head
+00007d20  cbz      w0, #0x7d48
+00007d24  ldrb     w5, [x21]
+00007d28  adrp     x3, #0x13000
+00007d2c  adrp     x4, #0x12000
+00007d30  add      x3, x3, #0x3fb
+00007d34  add      x4, x4, #0xbc3
+00007d38  mov      w0, #0x51
+00007d3c  mov      w1, #3
+00007d40  add      x2, sp, #0x3e0
+00007d44  bl       #0x5288 duss_log_print
+00007d48  ldr      x10, [sp, #0x50]
+00007d4c  adrp     x8, #0x12000
+00007d50  adrp     x9, #0x12000
+00007d54  ldr      x14, [sp, #0x28]
+00007d58  mov      w11, #0x2490
+00007d5c  mov      w12, #0x51a8
+00007d60  ldr      q0, [x8, #0xb20]
+00007d64  ldr      x10, [x10]
+00007d68  mov      w8, #0x51c4
+00007d6c  ldr      d1, [x9, #0xb10]
+00007d70  mov      w9, #0x51cc
+00007d74  ldrb     w11, [x25, x11]
+00007d78  movk     w12, #1, lsl #16
+00007d7c  movk     w8, #1, lsl #16
+00007d80  movk     w9, #1, lsl #16
+00007d84  str      x10, [x14]
+00007d88  mov      w13, #2
+00007d8c  str      q0, [x25, x12]
+00007d90  str      d1, [x25, x8]
+00007d94  str      w13, [x25, x9]
+00007d98  tbnz     w11, #0, #0x7da8
+00007d9c  mov      w8, #0x2491
+00007da0  add      x8, x25, x8
+00007da4  b        #0x7dac
+00007da8  ldr      x8, [x25, #0x24a0]
+00007dac  mov      w9, #0x51e0
+00007db0  ldr      x23, [sp, #0x38]
+00007db4  movk     w9, #1, lsl #16
+00007db8  ldr      x1, [sp, #0x48]
+00007dbc  add      x0, x25, x9
+00007dc0  mov      w2, #0x78
+00007dc4  str      x8, [x23]
+00007dc8  bl       #0x53a8 memcpy
+00007dcc  mov      w8, #0x5338
+00007dd0  movk     w8, #1, lsl #16
+00007dd4  add      x20, x25, x8
+00007dd8  mov      w8, #0x5348
+00007ddc  mov      w9, #0x5340
+00007de0  movk     w8, #1, lsl #16
+00007de4  movk     w9, #1, lsl #16
+00007de8  mov      w10, #0x5260
+00007dec  add      x22, x25, x8
+00007df0  ldr      x8, [sp, #0x30]
+00007df4  movk     w10, #1, lsl #16
+00007df8  add      x21, x25, x9
+00007dfc  mov      w2, #0xb8
+00007e00  add      x0, sp, #0x88
+00007e04  str      x20, [x8]
+00007e08  mov      x1, x23
+00007e0c  str      x21, [x25, x10]
+00007e10  bl       #0x53a8 memcpy
+00007e14  add      x1, sp, #0x88
+00007e18  mov      x0, x22
+00007e1c  mov      x2, x20
+00007e20  mov      x3, x21
+00007e24  bl       #0x54b8 DepthMapWrapperCreate
+00007e28  ldr      x8, [x22]
+00007e2c  cbnz     x8, #0x7fbc
+00007e30  adrp     x0, #0x30000
+00007e34  adrp     x2, #0x12000
+00007e38  add      x0, x0, #0x198
+00007e3c  add      x2, x2, #0xbc3
+00007e40  mov      w1, #1
+00007e44  bl       #0x5248 log_mgr_check
+00007e48  tbz      w0, #0, #0x7fbc
+00007e4c  bl       #0x5258 co_thread_get
+00007e50  cbz      x0, #0x7f20
+00007e54  adrp     x8, #0x12000
+00007e58  str      wzr, [sp, #0x74]
+00007e5c  add      x8, x8, #0xbcc
+00007e60  add      x1, sp, #0x78
+00007e64  add      x2, sp, #0x74
+00007e68  str      x8, [sp, #0x78]
+00007e6c  bl       #0x5268 co_thread_get_current_co_name_co_id
+00007e70  adrp     x4, #0x12000
+00007e74  adrp     x5, #0x12000
+00007e78  add      x4, x4, #0xbd0
+00007e7c  add      x5, x5, #0xe9a
+00007e80  mov      w0, #0x51
+00007e84  mov      w6, #0xfb
+00007e88  mov      w1, #1
+00007e8c  add      x2, sp, #0x3e0
+00007e90  mov      w3, #0x80
+00007e94  bl       #0x5278 duss_log_gen_head
+00007e98  cbz      w0, #0x7ec0
+00007e9c  adrp     x3, #0x13000
+00007ea0  adrp     x4, #0x12000
+00007ea4  add      x3, x3, #0x414
+00007ea8  add      x4, x4, #0xbd0
+00007eac  mov      w0, #0x51
+00007eb0  mov      w5, #0xfb
+00007eb4  mov      w1, #1
+00007eb8  add      x2, sp, #0x3e0
+00007ebc  bl       #0x5288 duss_log_print
+00007ec0  adrp     x4, #0x12000
+00007ec4  adrp     x5, #0x12000
+00007ec8  add      x4, x4, #0xbd0
+00007ecc  add      x5, x5, #0xe9a
+00007ed0  mov      w0, #0x51
+00007ed4  mov      w6, #0xfb
+00007ed8  mov      w1, #1
+00007edc  add      x2, sp, #0x3e0
+00007ee0  mov      w3, #0x80
+00007ee4  bl       #0x5278 duss_log_gen_head
+00007ee8  cbz      w0, #0x7fbc
+00007eec  ldr      x6, [sp, #0x78]
+00007ef0  adrp     x3, #0x13000
+00007ef4  ldr      w7, [sp, #0x74]
+00007ef8  adrp     x4, #0x12000
+00007efc  adrp     x5, #0x12000
+00007f00  add      x3, x3, #0x425
+00007f04  add      x4, x4, #0xbc3
+00007f08  add      x5, x5, #0xbcd
+00007f0c  mov      w0, #0x51
+00007f10  mov      w1, #1
+00007f14  add      x2, sp, #0x3e0
+00007f18  bl       #0x5288 duss_log_print
+00007f1c  b        #0x7fbc
+00007f20  adrp     x4, #0x12000
+00007f24  adrp     x5, #0x12000
+00007f28  add      x4, x4, #0xbd0
+00007f2c  add      x5, x5, #0xe9a
+00007f30  mov      w0, #0x51
+00007f34  mov      w6, #0xfb
+00007f38  mov      w1, #1
+00007f3c  add      x2, sp, #0x3e0
+00007f40  mov      w3, #0x80
+00007f44  bl       #0x5278 duss_log_gen_head
+00007f48  cbz      w0, #0x7f70
+00007f4c  adrp     x3, #0x13000
+00007f50  adrp     x4, #0x12000
+00007f54  add      x3, x3, #0x414
+00007f58  add      x4, x4, #0xbd0
+00007f5c  mov      w0, #0x51
+00007f60  mov      w5, #0xfb
+00007f64  mov      w1, #1
+00007f68  add      x2, sp, #0x3e0
+00007f6c  bl       #0x5288 duss_log_print
+00007f70  adrp     x4, #0x12000
+00007f74  adrp     x5, #0x12000
+00007f78  add      x4, x4, #0xbd0
+00007f7c  add      x5, x5, #0xe9a
+00007f80  mov      w0, #0x51
+00007f84  mov      w6, #0xfb
+00007f88  mov      w1, #1
+00007f8c  add      x2, sp, #0x3e0
+00007f90  mov      w3, #0x80
+00007f94  bl       #0x5278 duss_log_gen_head
+00007f98  cbz      w0, #0x7fbc
+00007f9c  adrp     x3, #0x13000
+00007fa0  adrp     x4, #0x12000
+00007fa4  add      x3, x3, #0x45f
+00007fa8  add      x4, x4, #0xbc3
+00007fac  mov      w0, #0x51
+00007fb0  mov      w1, #1
+00007fb4  add      x2, sp, #0x3e0
+00007fb8  bl       #0x5288 duss_log_print
+00007fbc  adrp     x0, #0x30000
+00007fc0  adrp     x2, #0x12000
+00007fc4  add      x0, x0, #0x198
+00007fc8  add      x2, x2, #0xbc3
+00007fcc  mov      w1, #3
+00007fd0  bl       #0x5248 log_mgr_check
+00007fd4  tbz      w0, #0, #0x80c4
+00007fd8  bl       #0x5258 co_thread_get
+00007fdc  cbz      x0, #0x806c
+00007fe0  adrp     x8, #0x12000
+00007fe4  str      wzr, [sp, #0x74]
+00007fe8  add      x8, x8, #0xbcc
+00007fec  add      x1, sp, #0x78
+00007ff0  add      x2, sp, #0x74
+00007ff4  str      x8, [sp, #0x78]
+00007ff8  bl       #0x5268 co_thread_get_current_co_name_co_id
+00007ffc  adrp     x21, #0x12000
+00008000  adrp     x4, #0x12000
+00008004  add      x21, x21, #0xe9a
+00008008  add      x4, x4, #0xbd0
+0000800c  mov      w0, #0x51
+00008010  mov      w1, #3
+00008014  add      x2, sp, #0x3e0
+00008018  mov      w3, #0x80
+0000801c  mov      w6, #0xfe
+00008020  mov      x5, x21
+00008024  mov      w20, #0xfe
+00008028  bl       #0x5278 duss_log_gen_head
+0000802c  cbz      w0, #0x80c4
+00008030  ldr      x6, [sp, #0x78]
+00008034  adrp     x3, #0x13000
+00008038  ldr      w7, [sp, #0x74]
+0000803c  adrp     x4, #0x12000
+00008040  adrp     x5, #0x12000
+00008044  str      w20, [sp, #8]
+00008048  add      x3, x3, #0x48e
+0000804c  str      x21, [sp]
+00008050  add      x4, x4, #0xbc3
+00008054  add      x5, x5, #0xbcd
+00008058  mov      w0, #0x51
+0000805c  mov      w1, #3
+00008060  add      x2, sp, #0x3e0
+00008064  bl       #0x5288 duss_log_print
+00008068  b        #0x80c4
+0000806c  adrp     x4, #0x12000
+00008070  adrp     x5, #0x12000
+00008074  add      x4, x4, #0xbd0
+00008078  add      x5, x5, #0xe9a
+0000807c  mov      w0, #0x51
+00008080  mov      w1, #3
+00008084  add      x2, sp, #0x3e0
+00008088  mov      w3, #0x80
+0000808c  mov      w6, #0xfe
+00008090  bl       #0x5278 duss_log_gen_head
+00008094  cbz      w0, #0x80c4
+00008098  adrp     x3, #0x13000
+0000809c  adrp     x4, #0x12000
+000080a0  adrp     x5, #0x12000
+000080a4  add      x3, x3, #0x4c3
+000080a8  add      x4, x4, #0xbc3
+000080ac  add      x5, x5, #0xe9a
+000080b0  mov      w0, #0x51
+000080b4  mov      w1, #3
+000080b8  add      x2, sp, #0x3e0
+000080bc  mov      w6, #0xfe
+000080c0  bl       #0x5288 duss_log_print
+000080c4  mov      w8, #0x2520
+000080c8  ldrb     w8, [x25, x8]
+000080cc  tbnz     w8, #0, #0x80dc
+000080d0  mov      w8, #0x2521
+000080d4  add      x0, x25, x8
+000080d8  b        #0x80e0
+000080dc  ldr      x0, [x25, #0x2530]
+000080e0  ldr      x8, [sp, #0x58]
+000080e4  ldrb     w8, [x8]
+000080e8  tbz      w8, #0, #0x80f4
+000080ec  ldr      x8, [x25, #0x2518]
+000080f0  str      x8, [sp, #0x60]
+000080f4  mov      w8, #0x5378
+000080f8  ldr      x1, [sp, #0x60]
+000080fc  movk     w8, #1, lsl #16
+00008100  add      x21, x25, x8
+00008104  mov      x2, x21
+00008108  bl       #0x54c8 fcali_load_intri_param
+0000810c  mov      w20, w0
+00008110  cbz      w20, #0x8244
+00008114  adrp     x0, #0x30000
+00008118  adrp     x2, #0x12000
+0000811c  add      x0, x0, #0x198
+00008120  add      x2, x2, #0xbc3
+00008124  mov      w1, #2
+00008128  bl       #0x5248 log_mgr_check
+0000812c  tbz      w0, #0, #0x8208
+00008130  bl       #0x5258 co_thread_get
+00008134  cbz      x0, #0x81b8
+00008138  adrp     x8, #0x12000
+0000813c  str      wzr, [sp, #0x74]
+00008140  add      x8, x8, #0xbcc
+00008144  add      x1, sp, #0x78
+00008148  add      x2, sp, #0x74
+0000814c  str      x8, [sp, #0x78]
+00008150  bl       #0x5268 co_thread_get_current_co_name_co_id
+00008154  adrp     x4, #0x12000
+00008158  adrp     x5, #0x12000
+0000815c  add      x4, x4, #0xbd0
+00008160  add      x5, x5, #0xe9a
+00008164  mov      w0, #0x51
+00008168  mov      w6, #0x107
+0000816c  mov      w1, #2
+00008170  add      x2, sp, #0x3e0
+00008174  mov      w3, #0x80
+00008178  bl       #0x5278 duss_log_gen_head
+0000817c  cbz      w0, #0x8208
+00008180  ldr      x6, [sp, #0x78]
+00008184  adrp     x3, #0x13000
+00008188  ldr      w7, [sp, #0x74]
+0000818c  adrp     x4, #0x12000
+00008190  adrp     x5, #0x12000
+00008194  str      w20, [sp]
+00008198  add      x3, x3, #0x4ed
+0000819c  add      x4, x4, #0xbc3
+000081a0  add      x5, x5, #0xbcd
+000081a4  mov      w0, #0x51
+000081a8  mov      w1, #2
+000081ac  add      x2, sp, #0x3e0
+000081b0  bl       #0x5288 duss_log_print
+000081b4  b        #0x8208
+000081b8  adrp     x4, #0x12000
+000081bc  adrp     x5, #0x12000
+000081c0  add      x4, x4, #0xbd0
+000081c4  add      x5, x5, #0xe9a
+000081c8  mov      w0, #0x51
+000081cc  mov      w6, #0x107
+000081d0  mov      w1, #2
+000081d4  add      x2, sp, #0x3e0
+000081d8  mov      w3, #0x80
+000081dc  bl       #0x5278 duss_log_gen_head
+000081e0  cbz      w0, #0x8208
+000081e4  adrp     x3, #0x13000
+000081e8  adrp     x4, #0x12000
+000081ec  add      x3, x3, #0x55a
+000081f0  add      x4, x4, #0xbc3
+000081f4  mov      w0, #0x51
+000081f8  mov      w1, #2
+000081fc  add      x2, sp, #0x3e0
+00008200  mov      w5, w20
+00008204  bl       #0x5288 duss_log_print
+00008208  adrp     x20, #0x12000
+0000820c  add      x20, x20, #0xbd0
+00008210  mov      w3, #0x109
+00008214  mov      w0, #1
+00008218  mov      w1, #0x10
+0000821c  mov      x2, x20
+00008220  bl       #0x54d8 cam_calloc_internal
+00008224  str      x0, [x21]
+00008228  mov      w3, #0x10b
+0000822c  mov      w0, #1
+00008230  mov      w1, #8
+00008234  mov      x2, x20
+00008238  bl       #0x54d8 cam_calloc_internal
+0000823c  ldr      x8, [x21]
+00008240  str      x0, [x8, #8]
+00008244  mov      w8, #0x5370
+00008248  movk     w8, #1, lsl #16
+0000824c  mov      w9, #1
+00008250  add      x8, x25, x8
+00008254  stlrb    w9, [x8]
+00008258  sub      x9, x29, #0x70
+0000825c  ldr      x8, [sp, #0x40]
+00008260  ldr      x8, [x8, #0x28]
+00008264  ldr      x9, [x9, #0x18]
+00008268  cmp      x8, x9
+0000826c  b.ne     #0x84c0
+00008270  add      sp, sp, #0x500
+00008274  ldp      x29, x30, [sp, #0x50]
+00008278  ldp      x20, x19, [sp, #0x40]
+0000827c  ldp      x22, x21, [sp, #0x30]
+00008280  ldp      x24, x23, [sp, #0x20]
+00008284  ldp      x26, x25, [sp, #0x10]
+00008288  ldp      x28, x27, [sp], #0x60
+0000828c  ret
+00008290  adrp     x4, #0x12000
+00008294  adrp     x5, #0x12000
+00008298  add      x4, x4, #0xbd0
+0000829c  add      x5, x5, #0xe9a
+000082a0  mov      w0, #0x51
+000082a4  mov      w6, #0xd2
+000082a8  mov      w1, #3
+000082ac  add      x2, sp, #0x3e0
+000082b0  mov      w3, #0x80
+000082b4  bl       #0x5278 duss_log_gen_head
+000082b8  cbz      w0, #0x790c
+000082bc  adrp     x3, #0x13000
+000082c0  adrp     x4, #0x12000
+000082c4  add      x3, x3, #0x237
+000082c8  add      x4, x4, #0xbc3
+000082cc  mov      w0, #0x51
+000082d0  mov      w1, #3
+000082d4  b        #0x7904
+000082d8  add      x0, sp, #0x3e0
+000082dc  bl       #0x53e8 _ZNKSt3__121__basic_string_commonILb1EE20__throw_length_errorEv
+000082e0  bl       #0x5258 co_thread_get
+000082e4  cbnz     x0, #0x8344
+000082e8  adrp     x4, #0x12000
+000082ec  adrp     x5, #0x12000
+000082f0  add      x4, x4, #0xbd0
+000082f4  add      x5, x5, #0xe9a
+000082f8  mov      w0, #0x51
+000082fc  mov      w6, #0xad
+00008300  add      x2, sp, #0x3e0
+00008304  mov      w3, #0x80
+00008308  mov      w1, wzr
+0000830c  bl       #0x5278 duss_log_gen_head
+00008310  cbz      w0, #0x83cc
+00008314  adrp     x3, #0x12000
+00008318  adrp     x4, #0x13000
+0000831c  adrp     x5, #0x12000
+00008320  add      x3, x3, #0xd07
+00008324  add      x4, x4, #0x2b
+00008328  add      x5, x5, #0xbd0
+0000832c  mov      w0, #0x51
+00008330  mov      w6, #0xad
+00008334  add      x2, sp, #0x3e0
+00008338  mov      w1, wzr
+0000833c  bl       #0x5288 duss_log_print
+00008340  b        #0x83cc
+00008344  adrp     x8, #0x12000
+00008348  str      wzr, [sp, #0x84]
+0000834c  add      x8, x8, #0xbcc
+00008350  add      x1, sp, #0x78
+00008354  add      x2, sp, #0x84
+00008358  str      x8, [sp, #0x78]
+0000835c  bl       #0x5268 co_thread_get_current_co_name_co_id
+00008360  adrp     x19, #0x12000
+00008364  add      x19, x19, #0xbd0
+00008368  adrp     x5, #0x12000
+0000836c  mov      w20, #0xad
+00008370  add      x5, x5, #0xe9a
+00008374  mov      w0, #0x51
+00008378  add      x2, sp, #0x3e0
+0000837c  mov      w3, #0x80
+00008380  mov      w1, wzr
+00008384  mov      x4, x19
+00008388  mov      w6, w20
+0000838c  bl       #0x5278 duss_log_gen_head
+00008390  cbz      w0, #0x83cc
+00008394  ldr      x5, [sp, #0x78]
+00008398  adrp     x3, #0x12000
+0000839c  ldr      w6, [sp, #0x84]
+000083a0  adrp     x4, #0x12000
+000083a4  adrp     x7, #0x13000
+000083a8  str      w20, [sp, #8]
+000083ac  mov      w1, wzr
+000083b0  str      x19, [sp]
+000083b4  add      x3, x3, #0xcb9
+000083b8  add      x4, x4, #0xbcd
+000083bc  mov      w0, #0x51
+000083c0  add      x7, x7, #0x2b
+000083c4  add      x2, sp, #0x3e0
+000083c8  bl       #0x5288 duss_log_print
+000083cc  adrp     x4, #0x12000
+000083d0  adrp     x5, #0x12000
+000083d4  add      x4, x4, #0xbd0
+000083d8  add      x5, x5, #0xe9a
+000083dc  mov      w0, #0x51
+000083e0  mov      w6, #0xad
+000083e4  add      x2, sp, #0x3e0
+000083e8  mov      w3, #0x80
+000083ec  mov      w1, wzr
+000083f0  bl       #0x5278 duss_log_gen_head
+000083f4  cbz      w0, #0x841c
+000083f8  adrp     x3, #0x13000
+000083fc  adrp     x4, #0x12000
+00008400  add      x3, x3, #0x34
+00008404  add      x4, x4, #0xfb0
+00008408  mov      w0, #0x51
+0000840c  add      x2, sp, #0x3e0
+00008410  mov      w1, wzr
+00008414  mov      w5, w22
+00008418  bl       #0x5288 duss_log_print
+0000841c  adrp     x0, #0x13000
+00008420  adrp     x1, #0x12000
+00008424  add      x0, x0, #0x67
+00008428  add      x1, x1, #0xfb0
+0000842c  mov      w2, w22
+00008430  bl       #0x5318 log_to_kmsg
+00008434  adrp     x0, #0x12000
+00008438  add      x0, x0, #0xd7e
+0000843c  bl       #0x5328 duss_log_dump_backtrace
+00008440  bl       #0x5338 is_running_in_cam_sil
+00008444  tbz      w0, #0, #0x8454
+00008448  mov      x0, xzr
+0000844c  bl       #0x5348 fflush
+00008450  bl       #0x5358 abort
+00008454  mov      w0, #1
+00008458  bl       #0x5368 exit
+0000845c  bl       #0x5258 co_thread_get
+00008460  cbnz     x0, #0x84c4
+00008464  adrp     x4, #0x12000
+00008468  adrp     x5, #0x12000
+0000846c  add      x4, x4, #0xbd0
+00008470  add      x5, x5, #0xe9a
+00008474  mov      w0, #0x51
+00008478  mov      w6, #0xe2
+0000847c  add      x2, sp, #0x3e0
+00008480  mov      w3, #0x80
+00008484  mov      w1, wzr
+00008488  bl       #0x5278 duss_log_gen_head
+0000848c  cbz      w0, #0x854c
+00008490  adrp     x3, #0x12000
+00008494  adrp     x4, #0x13000
+00008498  adrp     x5, #0x12000
+0000849c  add      x3, x3, #0xd07
+000084a0  add      x4, x4, #0x2c8
+000084a4  add      x5, x5, #0xbd0
+000084a8  mov      w0, #0x51
+000084ac  mov      w6, #0xe2
+000084b0  add      x2, sp, #0x3e0
+000084b4  mov      w1, wzr
+000084b8  bl       #0x5288 duss_log_print
+000084bc  b        #0x854c
+000084c0  bl       #0x5308 __stack_chk_fail
+000084c4  adrp     x8, #0x12000
+000084c8  str      wzr, [sp, #0x74]
+000084cc  add      x8, x8, #0xbcc
+000084d0  add      x1, sp, #0x78
+000084d4  add      x2, sp, #0x74
+000084d8  str      x8, [sp, #0x78]
+000084dc  bl       #0x5268 co_thread_get_current_co_name_co_id
+000084e0  adrp     x19, #0x12000
+000084e4  add      x19, x19, #0xbd0
+000084e8  adrp     x5, #0x12000
+000084ec  mov      w20, #0xe2
+000084f0  add      x5, x5, #0xe9a
+000084f4  mov      w0, #0x51
+000084f8  add      x2, sp, #0x3e0
+000084fc  mov      w3, #0x80
+00008500  mov      w1, wzr
+00008504  mov      x4, x19
+00008508  mov      w6, w20
+0000850c  bl       #0x5278 duss_log_gen_head
+00008510  cbz      w0, #0x854c
+00008514  ldr      x5, [sp, #0x78]
+00008518  adrp     x3, #0x12000
+0000851c  ldr      w6, [sp, #0x74]
+00008520  adrp     x4, #0x12000
+00008524  adrp     x7, #0x13000
+00008528  str      w20, [sp, #8]
+0000852c  mov      w1, wzr
+00008530  str      x19, [sp]
+00008534  add      x3, x3, #0xcb9
+00008538  add      x4, x4, #0xbcd
+0000853c  mov      w0, #0x51
+00008540  add      x7, x7, #0x2c8
+00008544  add      x2, sp, #0x3e0
+00008548  bl       #0x5288 duss_log_print
+0000854c  adrp     x4, #0x12000
+00008550  adrp     x5, #0x12000
+00008554  add      x4, x4, #0xbd0
+00008558  add      x5, x5, #0xe9a
+0000855c  mov      w0, #0x51
+00008560  mov      w6, #0xe2
+00008564  add      x2, sp, #0x3e0
+00008568  mov      w3, #0x80
+0000856c  mov      w1, wzr
+00008570  bl       #0x5278 duss_log_gen_head
+00008574  cbz      w0, #0x8594
+00008578  ldp      w5, w4, [sp, #0x80]
+0000857c  adrp     x3, #0x13000
+00008580  add      x3, x3, #0x2eb
+00008584  mov      w0, #0x51
+00008588  add      x2, sp, #0x3e0
+0000858c  mov      w1, wzr
+00008590  bl       #0x5288 duss_log_print
+00008594  ldp      w2, w1, [sp, #0x80]
+00008598  adrp     x0, #0x13000
+0000859c  add      x0, x0, #0x337
+000085a0  bl       #0x5318 log_to_kmsg
+000085a4  b        #0x8434
+
+_ZN20X2DIITofStreamFilter14sendDataToRcamERK26_af_tof_spot_input_data_s_RK8FocusRoi @ 0xa408, 1028 bytes
+0000a408  sub      sp, sp, #0x130
+0000a40c  str      x28, [sp, #0xd0]
+0000a410  stp      x26, x25, [sp, #0xe0]
+0000a414  stp      x24, x23, [sp, #0xf0]
+0000a418  stp      x22, x21, [sp, #0x100]
+0000a41c  stp      x20, x19, [sp, #0x110]
+0000a420  stp      x29, x30, [sp, #0x120]
+0000a424  add      x29, sp, #0x120
+0000a428  mrs      x24, tpidr_el0
+0000a42c  mov      w9, #0x5358
+0000a430  ldr      x8, [x24, #0x28]
+0000a434  mov      x20, x0
+0000a438  movk     w9, #1, lsl #16
+0000a43c  add      x25, x20, x9
+0000a440  mov      x22, x2
+0000a444  stur     x8, [x29, #-0x58]
+0000a448  mov      x23, x1
+0000a44c  ldr      x19, [x25]
+0000a450  cbz      x19, #0xa6a4
+0000a454  mov      x0, x19
+0000a458  mov      w26, #0x5440
+0000a45c  movk     w26, #0x89, lsl #16
+0000a460  bl       #0x56a8 taskbuf_next
+0000a464  mov      w1, w0
+0000a468  mov      x0, x19
+0000a46c  bl       #0x56b8 taskbuf_val_rw_by_index
+0000a470  mov      x21, x0
+0000a474  add      x19, x21, #0x14
+0000a478  mov      w8, #5
+0000a47c  add      x1, x23, #4
+0000a480  mov      w2, #0x2334
+0000a484  mov      x0, x19
+0000a488  str      w8, [x21, #0x10]
+0000a48c  bl       #0x53a8 memcpy
+0000a490  ldrb     w8, [x22]
+0000a494  mov      w9, #0x234c
+0000a498  mov      w2, #0x40
+0000a49c  mov      w3, #0x40
+0000a4a0  mov      w4, #0x40
+0000a4a4  strb     w8, [x21, x9]
+0000a4a8  mov      w9, #0x234d
+0000a4ac  ldrb     w8, [x22, #1]
+0000a4b0  strb     w8, [x21, x9]
+0000a4b4  mov      w9, #0x234e
+0000a4b8  ldrb     w8, [x22, #2]
+0000a4bc  strb     w8, [x21, x9]
+0000a4c0  mov      w9, #0x234f
+0000a4c4  ldrb     w8, [x22, #3]
+0000a4c8  mov      w22, #0x5378
+0000a4cc  movk     w22, #1, lsl #16
+0000a4d0  strb     w8, [x21, x9]
+0000a4d4  mov      w9, #0x2358
+0000a4d8  ldr      x8, [x20, x22]
+0000a4dc  add      x0, x21, x9
+0000a4e0  ldr      x1, [x8, #8]
+0000a4e4  bl       #0x56c8 __strncpy_chk2
+0000a4e8  ldr      x8, [x20, x22]
+0000a4ec  mov      w9, #0x2398
+0000a4f0  ldrb     w8, [x8]
+0000a4f4  strb     w8, [x21, x9]
+0000a4f8  mov      w9, #0x239a
+0000a4fc  ldr      x8, [x20, x22]
+0000a500  ldr      x8, [x8, #8]
+0000a504  ldrh     w8, [x8, #0x40]
+0000a508  strh     w8, [x21, x9]
+0000a50c  mov      w9, #0x239c
+0000a510  ldr      x8, [x20, x22]
+0000a514  ldr      x8, [x8, #8]
+0000a518  ldrh     w8, [x8, #0x42]
+0000a51c  strh     w8, [x21, x9]
+0000a520  mov      w9, #0x23c8
+0000a524  ldr      x8, [x20, x22]
+0000a528  ldr      x8, [x8, #8]
+0000a52c  ldr      w8, [x8, #0x50]
+0000a530  str      w8, [x21, #0x23a0]
+0000a534  ldr      x8, [x20, x22]
+0000a538  ldr      x8, [x8, #8]
+0000a53c  ldr      w8, [x8, #0x54]
+0000a540  str      w8, [x21, #0x23a4]
+0000a544  ldr      x8, [x20, x22]
+0000a548  ldr      x8, [x8, #8]
+0000a54c  ldr      w8, [x8, #0x58]
+0000a550  str      w8, [x21, #0x23a8]
+0000a554  ldr      x8, [x20, x22]
+0000a558  ldr      x8, [x8, #8]
+0000a55c  ldr      w8, [x8, #0x5c]
+0000a560  str      w8, [x21, #0x23ac]
+0000a564  ldr      x8, [x20, x22]
+0000a568  ldr      x8, [x8, #8]
+0000a56c  ldr      q0, [x8, #0x60]
+0000a570  str      q0, [x21, #0x23b0]
+0000a574  ldr      x8, [x20, x22]
+0000a578  ldr      x8, [x8, #8]
+0000a57c  ldr      x8, [x8, #0x70]
+0000a580  str      x8, [x21, #0x23c0]
+0000a584  ldr      x8, [x20, x22]
+0000a588  ldr      x8, [x8, #8]
+0000a58c  ldrb     w8, [x8, #0x78]
+0000a590  strb     w8, [x21, x9]
+0000a594  mov      w9, #0x23c9
+0000a598  ldr      x8, [x20, x22]
+0000a59c  ldr      x8, [x8, #8]
+0000a5a0  ldrb     w8, [x8, #0x79]
+0000a5a4  strb     w8, [x21, x9]
+0000a5a8  bl       #0x56d8 _ZNSt3__16chrono12steady_clock3nowEv
+0000a5ac  mov      w8, #0x5198
+0000a5b0  movk     w8, #1, lsl #16
+0000a5b4  add      x20, x20, x8
+0000a5b8  ldr      x8, [x20]
+0000a5bc  sub      x8, x0, x8
+0000a5c0  cmp      x8, x26
+0000a5c4  b.ge     #0xa5d8
+0000a5c8  sub      x8, x26, x8
+0000a5cc  add      x0, sp, #0x48
+0000a5d0  str      x8, [sp, #0x48]
+0000a5d4  bl       #0x56e8 _ZNSt3__111this_thread9sleep_forERKNS_6chrono8durationIxNS_5ratioILl1ELl1000000000EEEEE
+0000a5d8  bl       #0x56d8 _ZNSt3__16chrono12steady_clock3nowEv
+0000a5dc  str      x0, [x20]
+0000a5e0  bl       #0x5638 flow_trace_instance
+0000a5e4  ldrb     w8, [x0]
+0000a5e8  tbz      w8, #0, #0xa638
+0000a5ec  adrp     x8, #0x2f000
+0000a5f0  ldr      x8, [x8, #0xa98]
+0000a5f4  ldr      x9, [x8]
+0000a5f8  ldrb     w9, [x9]
+0000a5fc  tbnz     w9, #0, #0xa640
+0000a600  ldr      x0, [x25]
+0000a604  bl       #0x56f8 taskbuf_inc_copy
+0000a608  ldr      x8, [x24, #0x28]
+0000a60c  ldur     x9, [x29, #-0x58]
+0000a610  cmp      x8, x9
+0000a614  b.ne     #0xa708
+0000a618  ldp      x29, x30, [sp, #0x120]
+0000a61c  ldp      x20, x19, [sp, #0x110]
+0000a620  ldp      x22, x21, [sp, #0x100]
+0000a624  ldp      x24, x23, [sp, #0xf0]
+0000a628  ldp      x26, x25, [sp, #0xe0]
+0000a62c  ldr      x28, [sp, #0xd0]
+0000a630  add      sp, sp, #0x130
+0000a634  ret
+0000a638  bl       #0x5678 flow_trace_init
+0000a63c  b        #0xa5ec
+0000a640  ldr      w9, [x19]
+0000a644  mov      w10, #8
+0000a648  str      xzr, [sp, #0x20]
+0000a64c  ldr      x20, [x8, #8]
+0000a650  add      x8, sp, #0x20
+0000a654  str      w10, [sp, #0x20]
+0000a658  str      x9, [sp, #0x30]
+0000a65c  adrp     x9, #0x13000
+0000a660  ldr      w0, [x19]
+0000a664  add      x9, x9, #0xcac
+0000a668  str      x8, [sp, #0x48]
+0000a66c  str      x9, [sp, #0x28]
+0000a670  bl       #0x5708 flow_trace_get_process_scoped_flow
+0000a674  adrp     x2, #0x13000
+0000a678  str      x0, [sp, #0x18]
+0000a67c  mov      w8, #0xd
+0000a680  add      x9, sp, #0x10
+0000a684  add      x2, x2, #0xca1
+0000a688  mov      w1, #3
+0000a68c  str      w8, [sp, #0x10]
+0000a690  add      x3, sp, #0x48
+0000a694  stp      x9, xzr, [sp, #0x50]
+0000a698  mov      x0, x20
+0000a69c  bl       #0x5688 PerfettoTeHlEmitImpl
+0000a6a0  b        #0xa600
+0000a6a4  bl       #0x5258 co_thread_get
+0000a6a8  cbnz     x0, #0xa70c
+0000a6ac  adrp     x4, #0x12000
+0000a6b0  adrp     x5, #0x13000
+0000a6b4  add      x4, x4, #0xbd0
+0000a6b8  add      x5, x5, #0xc21
+0000a6bc  mov      w0, #0x51
+0000a6c0  add      x2, sp, #0x48
+0000a6c4  mov      w3, #0x80
+0000a6c8  mov      w6, #0x1fc
+0000a6cc  mov      w1, wzr
+0000a6d0  bl       #0x5278 duss_log_gen_head
+0000a6d4  cbz      w0, #0xa794
+0000a6d8  adrp     x3, #0x12000
+0000a6dc  adrp     x4, #0x13000
+0000a6e0  adrp     x5, #0x12000
+0000a6e4  add      x3, x3, #0xd07
+0000a6e8  add      x4, x4, #0xc30
+0000a6ec  add      x5, x5, #0xbd0
+0000a6f0  mov      w0, #0x51
+0000a6f4  add      x2, sp, #0x48
+0000a6f8  mov      w6, #0x1fc
+0000a6fc  mov      w1, wzr
+0000a700  bl       #0x5288 duss_log_print
+0000a704  b        #0xa794
+0000a708  bl       #0x5308 __stack_chk_fail
+0000a70c  adrp     x8, #0x12000
+0000a710  str      wzr, [sp, #0x3c]
+0000a714  add      x8, x8, #0xbcc
+0000a718  add      x1, sp, #0x40
+0000a71c  add      x2, sp, #0x3c
+0000a720  str      x8, [sp, #0x40]
+0000a724  bl       #0x5268 co_thread_get_current_co_name_co_id
+0000a728  adrp     x19, #0x12000
+0000a72c  add      x19, x19, #0xbd0
+0000a730  adrp     x5, #0x13000
+0000a734  add      x5, x5, #0xc21
+0000a738  mov      w0, #0x51
+0000a73c  add      x2, sp, #0x48
+0000a740  mov      w3, #0x80
+0000a744  mov      w6, #0x1fc
+0000a748  mov      w1, wzr
+0000a74c  mov      x4, x19
+0000a750  mov      w20, #0x1fc
+0000a754  bl       #0x5278 duss_log_gen_head
+0000a758  cbz      w0, #0xa794
+0000a75c  ldr      x5, [sp, #0x40]
+0000a760  adrp     x3, #0x12000
+0000a764  ldr      w6, [sp, #0x3c]
+0000a768  adrp     x4, #0x12000
+0000a76c  adrp     x7, #0x13000
+0000a770  str      w20, [sp, #8]
+0000a774  mov      w1, wzr
+0000a778  str      x19, [sp]
+0000a77c  add      x3, x3, #0xcb9
+0000a780  add      x4, x4, #0xbcd
+0000a784  mov      w0, #0x51
+0000a788  add      x7, x7, #0xc30
+0000a78c  add      x2, sp, #0x48
+0000a790  bl       #0x5288 duss_log_print
+0000a794  adrp     x4, #0x12000
+0000a798  adrp     x5, #0x13000
+0000a79c  add      x4, x4, #0xbd0
+0000a7a0  add      x5, x5, #0xc21
+0000a7a4  mov      w0, #0x51
+0000a7a8  add      x2, sp, #0x48
+0000a7ac  mov      w3, #0x80
+0000a7b0  mov      w6, #0x1fc
+0000a7b4  mov      w1, wzr
+0000a7b8  bl       #0x5278 duss_log_gen_head
+0000a7bc  cbz      w0, #0xa7d8
+0000a7c0  adrp     x3, #0x13000
+0000a7c4  add      x3, x3, #0xc40
+0000a7c8  mov      w0, #0x51
+0000a7cc  add      x2, sp, #0x48
+0000a7d0  mov      w1, wzr
+0000a7d4  bl       #0x5288 duss_log_print
+0000a7d8  adrp     x0, #0x13000
+0000a7dc  add      x0, x0, #0xc6d
+0000a7e0  bl       #0x5318 log_to_kmsg
+0000a7e4  adrp     x0, #0x12000
+0000a7e8  add      x0, x0, #0xd7e
+0000a7ec  bl       #0x5328 duss_log_dump_backtrace
+0000a7f0  bl       #0x5338 is_running_in_cam_sil
+0000a7f4  tbz      w0, #0, #0xa804
+0000a7f8  mov      x0, xzr
+0000a7fc  bl       #0x5348 fflush
+0000a800  bl       #0x5358 abort
+0000a804  mov      w0, #1
+0000a808  bl       #0x5368 exit

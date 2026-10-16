@@ -1,0 +1,7786 @@
+[
+  {
+    "path": "/shaders/photo.vert.qsb",
+    "flags": 0,
+    "nodeVA": 30527280,
+    "dataBaseVA": 30527770,
+    "dataOffset": 19046
+  },
+  {
+    "path": "/shaders/photo_oes_sw_csc.frag.qsb",
+    "flags": 0,
+    "nodeVA": 30527302,
+    "dataBaseVA": 30527770,
+    "dataOffset": 10399
+  },
+  {
+    "path": "/shaders/photo_oes_no_csc.frag.qsb",
+    "flags": 0,
+    "nodeVA": 30527324,
+    "dataBaseVA": 30527770,
+    "dataOffset": 20328
+  },
+  {
+    "path": "/shaders/photo.frag.qsb",
+    "flags": 0,
+    "nodeVA": 30527346,
+    "dataBaseVA": 30527770,
+    "dataOffset": 15165
+  },
+  {
+    "path": "/shaders/photo_oes_target.frag.qsb",
+    "flags": 0,
+    "nodeVA": 30527368,
+    "dataBaseVA": 30527770,
+    "dataOffset": 0
+  },
+  {
+    "path": "/shaders/afsymbol.vert.qsb",
+    "flags": 0,
+    "nodeVA": 30527390,
+    "dataBaseVA": 30527770,
+    "dataOffset": 9308
+  },
+  {
+    "path": "/shaders/afsymbol.frag.qsb",
+    "flags": 0,
+    "nodeVA": 30527412,
+    "dataBaseVA": 30527770,
+    "dataOffset": 4626
+  },
+  {
+    "path": "/shaders/progress_animation_target.frag.qsb",
+    "flags": 0,
+    "nodeVA": 30552789,
+    "dataBaseVA": 30552905,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/app/qmldir",
+    "flags": 1,
+    "nodeVA": 30555267,
+    "dataBaseVA": 30555341,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/app/qml/MainViewState.qml",
+    "flags": 1,
+    "nodeVA": 34996566,
+    "dataBaseVA": 35020440,
+    "dataOffset": 11822
+  },
+  {
+    "path": "/qt/qml/app/qml/error/ErrorViewModel.qml",
+    "flags": 1,
+    "nodeVA": 35004464,
+    "dataBaseVA": 35020440,
+    "dataOffset": 38775
+  },
+  {
+    "path": "/qt/qml/app/qml/error/ErrorUsbConnected.qml",
+    "flags": 1,
+    "nodeVA": 35004486,
+    "dataBaseVA": 35020440,
+    "dataOffset": 44001
+  },
+  {
+    "path": "/qt/qml/app/qml/error/ErrorBatteryExhausted.qml",
+    "flags": 0,
+    "nodeVA": 35004508,
+    "dataBaseVA": 35020440,
+    "dataOffset": 46580
+  },
+  {
+    "path": "/qt/qml/app/qml/error/ErrorNonAck.qml",
+    "flags": 0,
+    "nodeVA": 35004530,
+    "dataBaseVA": 35020440,
+    "dataOffset": 50619
+  },
+  {
+    "path": "/qt/qml/app/qml/error/Error.qml",
+    "flags": 1,
+    "nodeVA": 35004552,
+    "dataBaseVA": 35020440,
+    "dataOffset": 49568
+  },
+  {
+    "path": "/qt/qml/app/qml/error/ErrorBluetoothConnectionRequest.qml",
+    "flags": 0,
+    "nodeVA": 35004574,
+    "dataBaseVA": 35020440,
+    "dataOffset": 48321
+  },
+  {
+    "path": "/qt/qml/app/qml/error/ErrorAck.qml",
+    "flags": 0,
+    "nodeVA": 35004596,
+    "dataBaseVA": 35020440,
+    "dataOffset": 35742
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/LensDriveStateMachine.qml",
+    "flags": 1,
+    "nodeVA": 35003474,
+    "dataBaseVA": 35020440,
+    "dataOffset": 140365
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/SelfTimer.qml",
+    "flags": 0,
+    "nodeVA": 35003496,
+    "dataBaseVA": 35020440,
+    "dataOffset": 165657
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/AfPoint.qml",
+    "flags": 0,
+    "nodeVA": 35003518,
+    "dataBaseVA": 35020440,
+    "dataOffset": 173219
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/AfSymbol.qml",
+    "flags": 1,
+    "nodeVA": 35003540,
+    "dataBaseVA": 35020440,
+    "dataOffset": 112413
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/DetectedObjectsItemModel.qml",
+    "flags": 0,
+    "nodeVA": 35003562,
+    "dataBaseVA": 35020440,
+    "dataOffset": 163646
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/ObjectDetectionSelector.qml",
+    "flags": 1,
+    "nodeVA": 35003584,
+    "dataBaseVA": 35020440,
+    "dataOffset": 135863
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/LiveViewHistogram.qml",
+    "flags": 0,
+    "nodeVA": 35003606,
+    "dataBaseVA": 35020440,
+    "dataOffset": 108099
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/IsoWBSelector.qml",
+    "flags": 1,
+    "nodeVA": 35003628,
+    "dataBaseVA": 35020440,
+    "dataOffset": 100633
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/SpiritModePopup.qml",
+    "flags": 1,
+    "nodeVA": 35003650,
+    "dataBaseVA": 35020440,
+    "dataOffset": 167681
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/SpotMeterIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35003672,
+    "dataBaseVA": 35020440,
+    "dataOffset": 127182
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/LiveViewOverlay.qml",
+    "flags": 1,
+    "nodeVA": 35003694,
+    "dataBaseVA": 35020440,
+    "dataOffset": 148104
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/OverlayListView.qml",
+    "flags": 1,
+    "nodeVA": 35003716,
+    "dataBaseVA": 35020440,
+    "dataOffset": 87729
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/FocusIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35003738,
+    "dataBaseVA": 35020440,
+    "dataOffset": 127995
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/AfSymbolVisual.qml",
+    "flags": 1,
+    "nodeVA": 35003760,
+    "dataBaseVA": 35020440,
+    "dataOffset": 175754
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/MFAssistIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35003782,
+    "dataBaseVA": 35020440,
+    "dataOffset": 159417
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/AfSymbolShader.qml",
+    "flags": 0,
+    "nodeVA": 35003804,
+    "dataBaseVA": 35020440,
+    "dataOffset": 106539
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/FocusDistanceScale.qml",
+    "flags": 1,
+    "nodeVA": 35003826,
+    "dataBaseVA": 35020440,
+    "dataOffset": 119406
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/FocusPointTapHandler.qml",
+    "flags": 0,
+    "nodeVA": 35003848,
+    "dataBaseVA": 35020440,
+    "dataOffset": 91678
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/ApertureIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35003870,
+    "dataBaseVA": 35020440,
+    "dataOffset": 192108
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/AfArbitrarySymbol.qml",
+    "flags": 1,
+    "nodeVA": 35003892,
+    "dataBaseVA": 35020440,
+    "dataOffset": 138201
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/ZoomIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35003914,
+    "dataBaseVA": 35020440,
+    "dataOffset": 132456
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/ShutterSpeedIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35003936,
+    "dataBaseVA": 35020440,
+    "dataOffset": 96715
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/SvgOverlay.qml",
+    "flags": 0,
+    "nodeVA": 35003958,
+    "dataBaseVA": 35020440,
+    "dataOffset": 131044
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/AutoFocus.qml",
+    "flags": 1,
+    "nodeVA": 35003980,
+    "dataBaseVA": 35020440,
+    "dataOffset": 161780
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/MFAssistDistanceScale.qml",
+    "flags": 0,
+    "nodeVA": 35004002,
+    "dataBaseVA": 35020440,
+    "dataOffset": 122296
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/AFIndicator.qml",
+    "flags": 1,
+    "nodeVA": 35004024,
+    "dataBaseVA": 35020440,
+    "dataOffset": 114546
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/EvfBrightnessSelector.qml",
+    "flags": 0,
+    "nodeVA": 35004046,
+    "dataBaseVA": 35020440,
+    "dataOffset": 143149
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/LiveViewTouchpad.qml",
+    "flags": 0,
+    "nodeVA": 35004068,
+    "dataBaseVA": 35020440,
+    "dataOffset": 187361
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/IsoWBState.qml",
+    "flags": 0,
+    "nodeVA": 35004090,
+    "dataBaseVA": 35020440,
+    "dataOffset": 104347
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/LiveViewOverlayState.qml",
+    "flags": 1,
+    "nodeVA": 35004112,
+    "dataBaseVA": 35020440,
+    "dataOffset": 78241
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/SpiritBar.qml",
+    "flags": 1,
+    "nodeVA": 35004134,
+    "dataBaseVA": 35020440,
+    "dataOffset": 169986
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/SecondaryObject.qml",
+    "flags": 0,
+    "nodeVA": 35004156,
+    "dataBaseVA": 35020440,
+    "dataOffset": 98867
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/AfMesh.qml",
+    "flags": 1,
+    "nodeVA": 35004178,
+    "dataBaseVA": 35020440,
+    "dataOffset": 141905
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/SliderBar.qml",
+    "flags": 0,
+    "nodeVA": 35004200,
+    "dataBaseVA": 35020440,
+    "dataOffset": 124731
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/ZoomFlick.qml",
+    "flags": 1,
+    "nodeVA": 35004222,
+    "dataBaseVA": 35020440,
+    "dataOffset": 176485
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/ExpModeSelector.qml",
+    "flags": 0,
+    "nodeVA": 35004244,
+    "dataBaseVA": 35020440,
+    "dataOffset": 79854
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/AfDebugGrid.qml",
+    "flags": 0,
+    "nodeVA": 35004266,
+    "dataBaseVA": 35020440,
+    "dataOffset": 190467
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/HTS.qml",
+    "flags": 1,
+    "nodeVA": 35004288,
+    "dataBaseVA": 35020440,
+    "dataOffset": 138846
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/SpiritLevel.qml",
+    "flags": 1,
+    "nodeVA": 35004310,
+    "dataBaseVA": 35020440,
+    "dataOffset": 171242
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/GridOverlay.qml",
+    "flags": 1,
+    "nodeVA": 35004332,
+    "dataBaseVA": 35020440,
+    "dataOffset": 164478
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/PrimaryObjectIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35004354,
+    "dataBaseVA": 35020440,
+    "dataOffset": 116567
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/QuickAdjustSlider.qml",
+    "flags": 0,
+    "nodeVA": 35004376,
+    "dataBaseVA": 35020440,
+    "dataOffset": 181475
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/FocusSizePinchHandler.qml",
+    "flags": 0,
+    "nodeVA": 35004398,
+    "dataBaseVA": 35020440,
+    "dataOffset": 90218
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/ZoomOverlay.qml",
+    "flags": 0,
+    "nodeVA": 35004420,
+    "dataBaseVA": 35020440,
+    "dataOffset": 179103
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/LiveViewImage.qml",
+    "flags": 1,
+    "nodeVA": 35004442,
+    "dataBaseVA": 35020440,
+    "dataOffset": 184367
+  },
+  {
+    "path": "/qt/qml/app/qml/exposescreen/ExposeScreen.qml",
+    "flags": 0,
+    "nodeVA": 35003276,
+    "dataBaseVA": 35020440,
+    "dataOffset": 57647
+  },
+  {
+    "path": "/qt/qml/app/qml/exposescreen/IntervalTimerScreen.qml",
+    "flags": 0,
+    "nodeVA": 35003298,
+    "dataBaseVA": 35020440,
+    "dataOffset": 73192
+  },
+  {
+    "path": "/qt/qml/app/qml/exposescreen/Exposing.qml",
+    "flags": 1,
+    "nodeVA": 35003320,
+    "dataBaseVA": 35020440,
+    "dataOffset": 67376
+  },
+  {
+    "path": "/qt/qml/app/qml/exposescreen/BracketingScreen.qml",
+    "flags": 0,
+    "nodeVA": 35003342,
+    "dataBaseVA": 35020440,
+    "dataOffset": 69275
+  },
+  {
+    "path": "/qt/qml/app/qml/exposescreen/SelfTimerScreen.qml",
+    "flags": 0,
+    "nodeVA": 35003364,
+    "dataBaseVA": 35020440,
+    "dataOffset": 56425
+  },
+  {
+    "path": "/qt/qml/app/qml/exposescreen/ExposeProgress.qml",
+    "flags": 1,
+    "nodeVA": 35003386,
+    "dataBaseVA": 35020440,
+    "dataOffset": 66281
+  },
+  {
+    "path": "/qt/qml/app/qml/exposescreen/ExposeIconText.qml",
+    "flags": 0,
+    "nodeVA": 35003408,
+    "dataBaseVA": 35020440,
+    "dataOffset": 64300
+  },
+  {
+    "path": "/qt/qml/app/qml/exposescreen/LongExposureScreen.qml",
+    "flags": 0,
+    "nodeVA": 35003430,
+    "dataBaseVA": 35020440,
+    "dataOffset": 76253
+  },
+  {
+    "path": "/qt/qml/app/qml/exposescreen/SelfTimerIntervalScreen.qml",
+    "flags": 0,
+    "nodeVA": 35003452,
+    "dataBaseVA": 35020440,
+    "dataOffset": 62480
+  },
+  {
+    "path": "/qt/qml/app/qml/MainViewModel.qml",
+    "flags": 1,
+    "nodeVA": 34996654,
+    "dataBaseVA": 35020440,
+    "dataOffset": 15890
+  },
+  {
+    "path": "/qt/qml/app/qml/controlscreen/ApertureSetting.qml",
+    "flags": 0,
+    "nodeVA": 35003056,
+    "dataBaseVA": 35020440,
+    "dataOffset": 456655
+  },
+  {
+    "path": "/qt/qml/app/qml/controlscreen/ShutterSpeedSetting.qml",
+    "flags": 1,
+    "nodeVA": 35003078,
+    "dataBaseVA": 35020440,
+    "dataOffset": 477325
+  },
+  {
+    "path": "/qt/qml/app/qml/controlscreen/ControlScreenFocus.qml",
+    "flags": 1,
+    "nodeVA": 35003100,
+    "dataBaseVA": 35020440,
+    "dataOffset": 454660
+  },
+  {
+    "path": "/qt/qml/app/qml/controlscreen/ExposureAdjustIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35003122,
+    "dataBaseVA": 35020440,
+    "dataOffset": 478394
+  },
+  {
+    "path": "/qt/qml/app/qml/controlscreen/ControlScreenViewModel.qml",
+    "flags": 1,
+    "nodeVA": 35003144,
+    "dataBaseVA": 35020440,
+    "dataOffset": 482019
+  },
+  {
+    "path": "/qt/qml/app/qml/controlscreen/ShutterSpeedControl.qml",
+    "flags": 0,
+    "nodeVA": 35003166,
+    "dataBaseVA": 35020440,
+    "dataOffset": 471261
+  },
+  {
+    "path": "/qt/qml/app/qml/controlscreen/ControlScreen.qml",
+    "flags": 1,
+    "nodeVA": 35003188,
+    "dataBaseVA": 35020440,
+    "dataOffset": 464093
+  },
+  {
+    "path": "/qt/qml/app/qml/controlscreen/EvSetting.qml",
+    "flags": 0,
+    "nodeVA": 35003210,
+    "dataBaseVA": 35020440,
+    "dataOffset": 462376
+  },
+  {
+    "path": "/qt/qml/app/qml/controlscreen/IsoSetting.qml",
+    "flags": 0,
+    "nodeVA": 35003232,
+    "dataBaseVA": 35020440,
+    "dataOffset": 474264
+  },
+  {
+    "path": "/qt/qml/app/qml/controlscreen/ControlDrawer.qml",
+    "flags": 1,
+    "nodeVA": 35003254,
+    "dataBaseVA": 35020440,
+    "dataOffset": 459110
+  },
+  {
+    "path": "/qt/qml/app/qml/components/Checkbox.qml",
+    "flags": 0,
+    "nodeVA": 34999954,
+    "dataBaseVA": 35020440,
+    "dataOffset": 620761
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ProgressBarRounded.qml",
+    "flags": 0,
+    "nodeVA": 34999976,
+    "dataBaseVA": 35020440,
+    "dataOffset": 722490
+  },
+  {
+    "path": "/qt/qml/app/qml/components/BatteryIndicatorScaled.qml",
+    "flags": 0,
+    "nodeVA": 34999998,
+    "dataBaseVA": 35020440,
+    "dataOffset": 760999
+  },
+  {
+    "path": "/qt/qml/app/qml/components/Heading.qml",
+    "flags": 0,
+    "nodeVA": 35000020,
+    "dataBaseVA": 35020440,
+    "dataOffset": 573597
+  },
+  {
+    "path": "/qt/qml/app/qml/components/MetadataSeparator.qml",
+    "flags": 0,
+    "nodeVA": 35000042,
+    "dataBaseVA": 35020440,
+    "dataOffset": 675239
+  },
+  {
+    "path": "/qt/qml/app/qml/components/TestFont.qml",
+    "flags": 1,
+    "nodeVA": 35000064,
+    "dataBaseVA": 35020440,
+    "dataOffset": 753730
+  },
+  {
+    "path": "/qt/qml/app/qml/components/HdrDrcIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35000086,
+    "dataBaseVA": 35020440,
+    "dataOffset": 693049
+  },
+  {
+    "path": "/qt/qml/app/qml/components/Bracket.qml",
+    "flags": 0,
+    "nodeVA": 35000108,
+    "dataBaseVA": 35020440,
+    "dataOffset": 677028
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ExposureButton.qml",
+    "flags": 0,
+    "nodeVA": 35000130,
+    "dataBaseVA": 35020440,
+    "dataOffset": 697486
+  },
+  {
+    "path": "/qt/qml/app/qml/components/WhiteBalanceGrid.qml",
+    "flags": 0,
+    "nodeVA": 35000152,
+    "dataBaseVA": 35020440,
+    "dataOffset": 770415
+  },
+  {
+    "path": "/qt/qml/app/qml/components/LmModeModel.qml",
+    "flags": 0,
+    "nodeVA": 35000174,
+    "dataBaseVA": 35020440,
+    "dataOffset": 534212
+  },
+  {
+    "path": "/qt/qml/app/qml/components/LmModeListItem.qml",
+    "flags": 0,
+    "nodeVA": 35000196,
+    "dataBaseVA": 35020440,
+    "dataOffset": 632613
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ExpModeModel.qml",
+    "flags": 0,
+    "nodeVA": 35000218,
+    "dataBaseVA": 35020440,
+    "dataOffset": 720416
+  },
+  {
+    "path": "/qt/qml/app/qml/components/FilterDelegateModel.qml",
+    "flags": 0,
+    "nodeVA": 35000240,
+    "dataBaseVA": 35020440,
+    "dataOffset": 684773
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ConfirmButtonArea.qml",
+    "flags": 0,
+    "nodeVA": 35000262,
+    "dataBaseVA": 35020440,
+    "dataOffset": 736265
+  },
+  {
+    "path": "/qt/qml/app/qml/components/MetadataStarRow.qml",
+    "flags": 0,
+    "nodeVA": 35000284,
+    "dataBaseVA": 35020440,
+    "dataOffset": 755816
+  },
+  {
+    "path": "/qt/qml/app/qml/components/SliderLogic.qml",
+    "flags": 0,
+    "nodeVA": 35000306,
+    "dataBaseVA": 35020440,
+    "dataOffset": 599080
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ConfirmButtonsBottomOriented.qml",
+    "flags": 1,
+    "nodeVA": 35000328,
+    "dataBaseVA": 35020440,
+    "dataOffset": 687182
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ControlSetting.qml",
+    "flags": 0,
+    "nodeVA": 35000350,
+    "dataBaseVA": 35020440,
+    "dataOffset": 790229
+  },
+  {
+    "path": "/qt/qml/app/qml/components/UsbStatus.qml",
+    "flags": 0,
+    "nodeVA": 35000372,
+    "dataBaseVA": 35020440,
+    "dataOffset": 678538
+  },
+  {
+    "path": "/qt/qml/app/qml/components/TextSlider.qml",
+    "flags": 1,
+    "nodeVA": 35000394,
+    "dataBaseVA": 35020440,
+    "dataOffset": 713653
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ProgressBar.qml",
+    "flags": 0,
+    "nodeVA": 35000416,
+    "dataBaseVA": 35020440,
+    "dataOffset": 742303
+  },
+  {
+    "path": "/qt/qml/app/qml/components/TemperatureStatus.qml",
+    "flags": 0,
+    "nodeVA": 35000438,
+    "dataBaseVA": 35020440,
+    "dataOffset": 565291
+  },
+  {
+    "path": "/qt/qml/app/qml/components/PreviewRetained.qml",
+    "flags": 1,
+    "nodeVA": 35000460,
+    "dataBaseVA": 35020440,
+    "dataOffset": 571140
+  },
+  {
+    "path": "/qt/qml/app/qml/components/HistogramBrowse.qml",
+    "flags": 1,
+    "nodeVA": 35000482,
+    "dataBaseVA": 35020440,
+    "dataOffset": 717420
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ObjectDetectionListItem.qml",
+    "flags": 0,
+    "nodeVA": 35000504,
+    "dataBaseVA": 35020440,
+    "dataOffset": 549795
+  },
+  {
+    "path": "/qt/qml/app/qml/components/CompactText.qml",
+    "flags": 0,
+    "nodeVA": 35000526,
+    "dataBaseVA": 35020440,
+    "dataOffset": 667389
+  },
+  {
+    "path": "/qt/qml/app/qml/components/WifiStatus.qml",
+    "flags": 0,
+    "nodeVA": 35000548,
+    "dataBaseVA": 35020440,
+    "dataOffset": 662304
+  },
+  {
+    "path": "/qt/qml/app/qml/components/SimpleSlider.qml",
+    "flags": 0,
+    "nodeVA": 35000570,
+    "dataBaseVA": 35020440,
+    "dataOffset": 535239
+  },
+  {
+    "path": "/qt/qml/app/qml/components/CustomButtonHandler.qml",
+    "flags": 1,
+    "nodeVA": 35000592,
+    "dataBaseVA": 35020440,
+    "dataOffset": 567658
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ScaledConfirmButtonSideOriented.qml",
+    "flags": 0,
+    "nodeVA": 35000614,
+    "dataBaseVA": 35020440,
+    "dataOffset": 794732
+  },
+  {
+    "path": "/qt/qml/app/qml/components/WbListItem.qml",
+    "flags": 0,
+    "nodeVA": 35000636,
+    "dataBaseVA": 35020440,
+    "dataOffset": 735504
+  },
+  {
+    "path": "/qt/qml/app/qml/components/TextCheckboxRow.qml",
+    "flags": 0,
+    "nodeVA": 35000658,
+    "dataBaseVA": 35020440,
+    "dataOffset": 607550
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ImageZoomIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35000680,
+    "dataBaseVA": 35020440,
+    "dataOffset": 731501
+  },
+  {
+    "path": "/qt/qml/app/qml/components/TimeZoneItemModel.qml",
+    "flags": 0,
+    "nodeVA": 35000702,
+    "dataBaseVA": 35020440,
+    "dataOffset": 683888
+  },
+  {
+    "path": "/qt/qml/app/qml/components/NavigationArrows.qml",
+    "flags": 0,
+    "nodeVA": 35000724,
+    "dataBaseVA": 35020440,
+    "dataOffset": 784586
+  },
+  {
+    "path": "/qt/qml/app/qml/components/BrowseItemModelDefaults.qml",
+    "flags": 0,
+    "nodeVA": 35000746,
+    "dataBaseVA": 35020440,
+    "dataOffset": 602496
+  },
+  {
+    "path": "/qt/qml/app/qml/components/TimerIndicator.qml",
+    "flags": 1,
+    "nodeVA": 35000768,
+    "dataBaseVA": 35020440,
+    "dataOffset": 590886
+  },
+  {
+    "path": "/qt/qml/app/qml/components/PopoverHeading.qml",
+    "flags": 0,
+    "nodeVA": 35000790,
+    "dataBaseVA": 35020440,
+    "dataOffset": 675941
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ShortPressTimer.qml",
+    "flags": 0,
+    "nodeVA": 35000812,
+    "dataBaseVA": 35020440,
+    "dataOffset": 797995
+  },
+  {
+    "path": "/qt/qml/app/qml/components/StorageIndicatorComponent.qml",
+    "flags": 0,
+    "nodeVA": 35000834,
+    "dataBaseVA": 35020440,
+    "dataOffset": 674008
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ConfirmButtonsSideOriented.qml",
+    "flags": 0,
+    "nodeVA": 35000856,
+    "dataBaseVA": 35020440,
+    "dataOffset": 725941
+  },
+  {
+    "path": "/qt/qml/app/qml/components/TextValueCentered.qml",
+    "flags": 0,
+    "nodeVA": 35000878,
+    "dataBaseVA": 35020440,
+    "dataOffset": 786770
+  },
+  {
+    "path": "/qt/qml/app/qml/components/FocusModeListItem.qml",
+    "flags": 0,
+    "nodeVA": 35000900,
+    "dataBaseVA": 35020440,
+    "dataOffset": 587728
+  },
+  {
+    "path": "/qt/qml/app/qml/components/GlobalNotification.qml",
+    "flags": 0,
+    "nodeVA": 35000922,
+    "dataBaseVA": 35020440,
+    "dataOffset": 610323
+  },
+  {
+    "path": "/qt/qml/app/qml/components/GenericInform.qml",
+    "flags": 0,
+    "nodeVA": 35000944,
+    "dataBaseVA": 35020440,
+    "dataOffset": 580916
+  },
+  {
+    "path": "/qt/qml/app/qml/components/controls/PopupListSelector.qml",
+    "flags": 1,
+    "nodeVA": 35003012,
+    "dataBaseVA": 35020440,
+    "dataOffset": 813707
+  },
+  {
+    "path": "/qt/qml/app/qml/components/controls/RoundedTextIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35003034,
+    "dataBaseVA": 35020440,
+    "dataOffset": 816100
+  },
+  {
+    "path": "/qt/qml/app/qml/components/PopupBase.qml",
+    "flags": 0,
+    "nodeVA": 35000988,
+    "dataBaseVA": 35020440,
+    "dataOffset": 789068
+  },
+  {
+    "path": "/qt/qml/app/qml/components/MetadataLensData.qml",
+    "flags": 0,
+    "nodeVA": 35001010,
+    "dataBaseVA": 35020440,
+    "dataOffset": 660126
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ProgressShader.qml",
+    "flags": 0,
+    "nodeVA": 35001032,
+    "dataBaseVA": 35020440,
+    "dataOffset": 633577
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ExposuresAvailCounter.qml",
+    "flags": 0,
+    "nodeVA": 35001054,
+    "dataBaseVA": 35020440,
+    "dataOffset": 706669
+  },
+  {
+    "path": "/qt/qml/app/qml/components/Photo.qml",
+    "flags": 1,
+    "nodeVA": 35001076,
+    "dataBaseVA": 35020440,
+    "dataOffset": 556143
+  },
+  {
+    "path": "/qt/qml/app/qml/components/HblImageShader.qml",
+    "flags": 0,
+    "nodeVA": 35001098,
+    "dataBaseVA": 35020440,
+    "dataOffset": 617717
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ToggleSwitch.qml",
+    "flags": 0,
+    "nodeVA": 35001120,
+    "dataBaseVA": 35020440,
+    "dataOffset": 744452
+  },
+  {
+    "path": "/qt/qml/app/qml/components/Background.qml",
+    "flags": 0,
+    "nodeVA": 35001142,
+    "dataBaseVA": 35020440,
+    "dataOffset": 622194
+  },
+  {
+    "path": "/qt/qml/app/qml/components/OverExposureAnimation.qml",
+    "flags": 0,
+    "nodeVA": 35001164,
+    "dataBaseVA": 35020440,
+    "dataOffset": 724581
+  },
+  {
+    "path": "/qt/qml/app/qml/components/UiImage.qml",
+    "flags": 0,
+    "nodeVA": 35001186,
+    "dataBaseVA": 35020440,
+    "dataOffset": 612728
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ScaledImage.qml",
+    "flags": 0,
+    "nodeVA": 35001208,
+    "dataBaseVA": 35020440,
+    "dataOffset": 716574
+  },
+  {
+    "path": "/qt/qml/app/qml/components/TiledImage.qml",
+    "flags": 1,
+    "nodeVA": 35001230,
+    "dataBaseVA": 35020440,
+    "dataOffset": 782164
+  },
+  {
+    "path": "/qt/qml/app/qml/components/LensDataListItem.qml",
+    "flags": 0,
+    "nodeVA": 35001252,
+    "dataBaseVA": 35020440,
+    "dataOffset": 673030
+  },
+  {
+    "path": "/qt/qml/app/qml/components/CustomButtonCycle.qml",
+    "flags": 0,
+    "nodeVA": 35001274,
+    "dataBaseVA": 35020440,
+    "dataOffset": 792637
+  },
+  {
+    "path": "/qt/qml/app/qml/components/WritingIndicator.qml",
+    "flags": 1,
+    "nodeVA": 35001296,
+    "dataBaseVA": 35020440,
+    "dataOffset": 750184
+  },
+  {
+    "path": "/qt/qml/app/qml/components/HblLoader.qml",
+    "flags": 0,
+    "nodeVA": 35001318,
+    "dataBaseVA": 35020440,
+    "dataOffset": 550727
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ActiveFocusDebug.qml",
+    "flags": 0,
+    "nodeVA": 35001340,
+    "dataBaseVA": 35020440,
+    "dataOffset": 705271
+  },
+  {
+    "path": "/qt/qml/app/qml/components/TextCheckbox.qml",
+    "flags": 0,
+    "nodeVA": 35001362,
+    "dataBaseVA": 35020440,
+    "dataOffset": 707957
+  },
+  {
+    "path": "/qt/qml/app/qml/components/Separator.qml",
+    "flags": 0,
+    "nodeVA": 35001384,
+    "dataBaseVA": 35020440,
+    "dataOffset": 558978
+  },
+  {
+    "path": "/qt/qml/app/qml/components/FocusAreaModel.qml",
+    "flags": 0,
+    "nodeVA": 35001406,
+    "dataBaseVA": 35020440,
+    "dataOffset": 721452
+  },
+  {
+    "path": "/qt/qml/app/qml/components/DelegateModelItem.qml",
+    "flags": 0,
+    "nodeVA": 35001428,
+    "dataBaseVA": 35020440,
+    "dataOffset": 541630
+  },
+  {
+    "path": "/qt/qml/app/qml/components/CreateFolderIcon.qml",
+    "flags": 0,
+    "nodeVA": 35001450,
+    "dataBaseVA": 35020440,
+    "dataOffset": 646421
+  },
+  {
+    "path": "/qt/qml/app/qml/components/CustomListView.qml",
+    "flags": 0,
+    "nodeVA": 35001472,
+    "dataBaseVA": 35020440,
+    "dataOffset": 637723
+  },
+  {
+    "path": "/qt/qml/app/qml/components/DemoMarker.qml",
+    "flags": 0,
+    "nodeVA": 35001494,
+    "dataBaseVA": 35020440,
+    "dataOffset": 606642
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ViewHelper.qml",
+    "flags": 1,
+    "nodeVA": 35001516,
+    "dataBaseVA": 35020440,
+    "dataOffset": 681177
+  },
+  {
+    "path": "/qt/qml/app/qml/components/MetaDataOverlay.qml",
+    "flags": 1,
+    "nodeVA": 35001538,
+    "dataBaseVA": 35020440,
+    "dataOffset": 613574
+  },
+  {
+    "path": "/qt/qml/app/qml/components/BackArrow.qml",
+    "flags": 0,
+    "nodeVA": 35001560,
+    "dataBaseVA": 35020440,
+    "dataOffset": 703147
+  },
+  {
+    "path": "/qt/qml/app/qml/components/BlinkIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35001582,
+    "dataBaseVA": 35020440,
+    "dataOffset": 664986
+  },
+  {
+    "path": "/qt/qml/app/qml/components/buttons/BracketedCameraControl.qml",
+    "flags": 0,
+    "nodeVA": 35002902,
+    "dataBaseVA": 35020440,
+    "dataOffset": 801521
+  },
+  {
+    "path": "/qt/qml/app/qml/components/buttons/FramedImage.qml",
+    "flags": 0,
+    "nodeVA": 35002924,
+    "dataBaseVA": 35020440,
+    "dataOffset": 803983
+  },
+  {
+    "path": "/qt/qml/app/qml/components/buttons/Button.qml",
+    "flags": 0,
+    "nodeVA": 35002946,
+    "dataBaseVA": 35020440,
+    "dataOffset": 809479
+  },
+  {
+    "path": "/qt/qml/app/qml/components/buttons/FramedItem.qml",
+    "flags": 1,
+    "nodeVA": 35002968,
+    "dataBaseVA": 35020440,
+    "dataOffset": 804892
+  },
+  {
+    "path": "/qt/qml/app/qml/components/buttons/IconButton.qml",
+    "flags": 0,
+    "nodeVA": 35002990,
+    "dataBaseVA": 35020440,
+    "dataOffset": 806923
+  },
+  {
+    "path": "/qt/qml/app/qml/components/BounceListView.qml",
+    "flags": 1,
+    "nodeVA": 35001626,
+    "dataBaseVA": 35020440,
+    "dataOffset": 650558
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ThumbWheelHandler.qml",
+    "flags": 1,
+    "nodeVA": 35001648,
+    "dataBaseVA": 35020440,
+    "dataOffset": 538350
+  },
+  {
+    "path": "/qt/qml/app/qml/components/NavigationArrowButton.qml",
+    "flags": 0,
+    "nodeVA": 35001670,
+    "dataBaseVA": 35020440,
+    "dataOffset": 758430
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ConfirmationButtons.qml",
+    "flags": 0,
+    "nodeVA": 35001692,
+    "dataBaseVA": 35020440,
+    "dataOffset": 690952
+  },
+  {
+    "path": "/qt/qml/app/qml/components/HistogramComponent.qml",
+    "flags": 0,
+    "nodeVA": 35001714,
+    "dataBaseVA": 35020440,
+    "dataOffset": 728104
+  },
+  {
+    "path": "/qt/qml/app/qml/components/DelegateModelFocusItem.qml",
+    "flags": 0,
+    "nodeVA": 35001736,
+    "dataBaseVA": 35020440,
+    "dataOffset": 628093
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ScaledConfirmButtonsSideOriented.qml",
+    "flags": 0,
+    "nodeVA": 35001758,
+    "dataBaseVA": 35020440,
+    "dataOffset": 588648
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ControlScreenSwipeArea.qml",
+    "flags": 1,
+    "nodeVA": 35001780,
+    "dataBaseVA": 35020440,
+    "dataOffset": 694168
+  },
+  {
+    "path": "/qt/qml/app/qml/components/Switch.qml",
+    "flags": 0,
+    "nodeVA": 35001802,
+    "dataBaseVA": 35020440,
+    "dataOffset": 715343
+  },
+  {
+    "path": "/qt/qml/app/qml/components/PopupBackground.qml",
+    "flags": 0,
+    "nodeVA": 35001824,
+    "dataBaseVA": 35020440,
+    "dataOffset": 553335
+  },
+  {
+    "path": "/qt/qml/app/qml/components/MenuItemModel.qml",
+    "flags": 0,
+    "nodeVA": 35001846,
+    "dataBaseVA": 35020440,
+    "dataOffset": 548533
+  },
+  {
+    "path": "/qt/qml/app/qml/components/PageIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35001868,
+    "dataBaseVA": 35020440,
+    "dataOffset": 644597
+  },
+  {
+    "path": "/qt/qml/app/qml/components/LinkIndicator.qml",
+    "flags": 0,
+    "nodeVA": 35001890,
+    "dataBaseVA": 35020440,
+    "dataOffset": 712015
+  },
+  {
+    "path": "/qt/qml/app/qml/components/CardStatus.qml",
+    "flags": 1,
+    "nodeVA": 35001912,
+    "dataBaseVA": 35020440,
+    "dataOffset": 751613
+  },
+  {
+    "path": "/qt/qml/app/qml/components/TextValueRow.qml",
+    "flags": 0,
+    "nodeVA": 35001934,
+    "dataBaseVA": 35020440,
+    "dataOffset": 559929
+  },
+  {
+    "path": "/qt/qml/app/qml/components/FlashStatus.qml",
+    "flags": 0,
+    "nodeVA": 35001956,
+    "dataBaseVA": 35020440,
+    "dataOffset": 569187
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ViewpointListItem.qml",
+    "flags": 0,
+    "nodeVA": 35001978,
+    "dataBaseVA": 35020440,
+    "dataOffset": 686320
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ImageZoomIndicatorRetained.qml",
+    "flags": 1,
+    "nodeVA": 35002000,
+    "dataBaseVA": 35020440,
+    "dataOffset": 605608
+  },
+  {
+    "path": "/qt/qml/app/qml/components/TimeoutText.qml",
+    "flags": 1,
+    "nodeVA": 35002022,
+    "dataBaseVA": 35020440,
+    "dataOffset": 648723
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ConfirmButtonSideOriented.qml",
+    "flags": 0,
+    "nodeVA": 35002044,
+    "dataBaseVA": 35020440,
+    "dataOffset": 584300
+  },
+  {
+    "path": "/qt/qml/app/qml/components/Scrollbar.qml",
+    "flags": 1,
+    "nodeVA": 35002066,
+    "dataBaseVA": 35020440,
+    "dataOffset": 597567
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ListViewContainer.qml",
+    "flags": 0,
+    "nodeVA": 35002088,
+    "dataBaseVA": 35020440,
+    "dataOffset": 702544
+  },
+  {
+    "path": "/qt/qml/app/qml/components/StatusRow.qml",
+    "flags": 1,
+    "nodeVA": 35002110,
+    "dataBaseVA": 35020440,
+    "dataOffset": 730537
+  },
+  {
+    "path": "/qt/qml/app/qml/components/PageSwipe.qml",
+    "flags": 0,
+    "nodeVA": 35002132,
+    "dataBaseVA": 35020440,
+    "dataOffset": 561732
+  },
+  {
+    "path": "/qt/qml/app/qml/components/EvListItem.qml",
+    "flags": 0,
+    "nodeVA": 35002154,
+    "dataBaseVA": 35020440,
+    "dataOffset": 636398
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ClickArea.qml",
+    "flags": 0,
+    "nodeVA": 35002176,
+    "dataBaseVA": 35020440,
+    "dataOffset": 628758
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ExpModeListItem.qml",
+    "flags": 0,
+    "nodeVA": 35002198,
+    "dataBaseVA": 35020440,
+    "dataOffset": 682670
+  },
+  {
+    "path": "/qt/qml/app/qml/components/StorageMediaListItem.qml",
+    "flags": 0,
+    "nodeVA": 35002220,
+    "dataBaseVA": 35020440,
+    "dataOffset": 647749
+  },
+  {
+    "path": "/qt/qml/app/qml/components/GenericConfirm.qml",
+    "flags": 1,
+    "nodeVA": 35002242,
+    "dataBaseVA": 35020440,
+    "dataOffset": 539396
+  },
+  {
+    "path": "/qt/qml/app/qml/components/Touchpad.qml",
+    "flags": 1,
+    "nodeVA": 35002264,
+    "dataBaseVA": 35020440,
+    "dataOffset": 767879
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ExposureParameterHandler.qml",
+    "flags": 1,
+    "nodeVA": 35002286,
+    "dataBaseVA": 35020440,
+    "dataOffset": 680052
+  },
+  {
+    "path": "/qt/qml/app/qml/components/HdrIconOverlay.qml",
+    "flags": 0,
+    "nodeVA": 35002308,
+    "dataBaseVA": 35020440,
+    "dataOffset": 596142
+  },
+  {
+    "path": "/qt/qml/app/qml/components/DriveModeGrid.qml",
+    "flags": 0,
+    "nodeVA": 35002330,
+    "dataBaseVA": 35020440,
+    "dataOffset": 575554
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ObjectDetectionList.qml",
+    "flags": 0,
+    "nodeVA": 35002352,
+    "dataBaseVA": 35020440,
+    "dataOffset": 669659
+  },
+  {
+    "path": "/qt/qml/app/qml/components/FloatingLabel.qml",
+    "flags": 0,
+    "nodeVA": 35002374,
+    "dataBaseVA": 35020440,
+    "dataOffset": 754691
+  },
+  {
+    "path": "/qt/qml/app/qml/components/BalanceScaleIndicator.qml",
+    "flags": 1,
+    "nodeVA": 35002396,
+    "dataBaseVA": 35020440,
+    "dataOffset": 710020
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ListGradient.qml",
+    "flags": 0,
+    "nodeVA": 35002418,
+    "dataBaseVA": 35020440,
+    "dataOffset": 643150
+  },
+  {
+    "path": "/qt/qml/app/qml/components/HblListView.qml",
+    "flags": 0,
+    "nodeVA": 35002440,
+    "dataBaseVA": 35020440,
+    "dataOffset": 604566
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ConfirmButtonConfiguration.qml",
+    "flags": 0,
+    "nodeVA": 35002462,
+    "dataBaseVA": 35020440,
+    "dataOffset": 542273
+  },
+  {
+    "path": "/qt/qml/app/qml/components/BrowseItemModel.qml",
+    "flags": 0,
+    "nodeVA": 35002484,
+    "dataBaseVA": 35020440,
+    "dataOffset": 653209
+  },
+  {
+    "path": "/qt/qml/app/qml/components/DataChangedAnimation.qml",
+    "flags": 0,
+    "nodeVA": 35002506,
+    "dataBaseVA": 35020440,
+    "dataOffset": 779876
+  },
+  {
+    "path": "/qt/qml/app/qml/components/FocusAreaListItem.qml",
+    "flags": 0,
+    "nodeVA": 35002528,
+    "dataBaseVA": 35020440,
+    "dataOffset": 595232
+  },
+  {
+    "path": "/qt/qml/app/qml/components/DriveModeListItem.qml",
+    "flags": 0,
+    "nodeVA": 35002550,
+    "dataBaseVA": 35020440,
+    "dataOffset": 566454
+  },
+  {
+    "path": "/qt/qml/app/qml/components/HblImage.qml",
+    "flags": 0,
+    "nodeVA": 35002572,
+    "dataBaseVA": 35020440,
+    "dataOffset": 738781
+  },
+  {
+    "path": "/qt/qml/app/qml/components/HblGridView.qml",
+    "flags": 0,
+    "nodeVA": 35002594,
+    "dataBaseVA": 35020440,
+    "dataOffset": 640267
+  },
+  {
+    "path": "/qt/qml/app/qml/components/CropOverlay.qml",
+    "flags": 0,
+    "nodeVA": 35002616,
+    "dataBaseVA": 35020440,
+    "dataOffset": 688563
+  },
+  {
+    "path": "/qt/qml/app/qml/components/BounceGridView.qml",
+    "flags": 0,
+    "nodeVA": 35002638,
+    "dataBaseVA": 35020440,
+    "dataOffset": 592434
+  },
+  {
+    "path": "/qt/qml/app/qml/components/StorageIndicator.qml",
+    "flags": 1,
+    "nodeVA": 35002660,
+    "dataBaseVA": 35020440,
+    "dataOffset": 766953
+  },
+  {
+    "path": "/qt/qml/app/qml/components/HblTouchArea.qml",
+    "flags": 1,
+    "nodeVA": 35002682,
+    "dataBaseVA": 35020440,
+    "dataOffset": 543689
+  },
+  {
+    "path": "/qt/qml/app/qml/components/FocusAreaList.qml",
+    "flags": 0,
+    "nodeVA": 35002704,
+    "dataBaseVA": 35020440,
+    "dataOffset": 656085
+  },
+  {
+    "path": "/qt/qml/app/qml/components/GridNavigation.qml",
+    "flags": 1,
+    "nodeVA": 35002726,
+    "dataBaseVA": 35020440,
+    "dataOffset": 642120
+  },
+  {
+    "path": "/qt/qml/app/qml/components/CustomGridView.qml",
+    "flags": 1,
+    "nodeVA": 35002748,
+    "dataBaseVA": 35020440,
+    "dataOffset": 800573
+  },
+  {
+    "path": "/qt/qml/app/qml/components/HistogramLuminance.qml",
+    "flags": 0,
+    "nodeVA": 35002770,
+    "dataBaseVA": 35020440,
+    "dataOffset": 746121
+  },
+  {
+    "path": "/qt/qml/app/qml/components/OSDClock.qml",
+    "flags": 0,
+    "nodeVA": 35002792,
+    "dataBaseVA": 35020440,
+    "dataOffset": 777565
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ActionIcon.qml",
+    "flags": 0,
+    "nodeVA": 35002814,
+    "dataBaseVA": 35020440,
+    "dataOffset": 622879
+  },
+  {
+    "path": "/qt/qml/app/qml/components/Preview.qml",
+    "flags": 0,
+    "nodeVA": 35002836,
+    "dataBaseVA": 35020440,
+    "dataOffset": 624683
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ScaledDelegate.qml",
+    "flags": 0,
+    "nodeVA": 35002858,
+    "dataBaseVA": 35020440,
+    "dataOffset": 765593
+  },
+  {
+    "path": "/qt/qml/app/qml/components/ConfirmationIconButtons.qml",
+    "flags": 0,
+    "nodeVA": 35002880,
+    "dataBaseVA": 35020440,
+    "dataOffset": 663549
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopoverWhiteBalance.qml",
+    "flags": 1,
+    "nodeVA": 34999624,
+    "dataBaseVA": 35020440,
+    "dataOffset": 518769
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopoverObjectDetection.qml",
+    "flags": 1,
+    "nodeVA": 34999646,
+    "dataBaseVA": 35020440,
+    "dataOffset": 521523
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopoverMeterMethod.qml",
+    "flags": 0,
+    "nodeVA": 34999668,
+    "dataBaseVA": 35020440,
+    "dataOffset": 488412
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopoverBusy.qml",
+    "flags": 1,
+    "nodeVA": 34999690,
+    "dataBaseVA": 35020440,
+    "dataOffset": 511237
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopoverProcessing.qml",
+    "flags": 0,
+    "nodeVA": 34999712,
+    "dataBaseVA": 35020440,
+    "dataOffset": 509349
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopupIconText.qml",
+    "flags": 0,
+    "nodeVA": 34999734,
+    "dataBaseVA": 35020440,
+    "dataOffset": 513303
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopoverExposureAdjust.qml",
+    "flags": 0,
+    "nodeVA": 34999756,
+    "dataBaseVA": 35020440,
+    "dataOffset": 504636
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopoverFocusMode.qml",
+    "flags": 1,
+    "nodeVA": 34999778,
+    "dataBaseVA": 35020440,
+    "dataOffset": 517035
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopupInform.qml",
+    "flags": 1,
+    "nodeVA": 34999800,
+    "dataBaseVA": 35020440,
+    "dataOffset": 503034
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopoverExposureMode.qml",
+    "flags": 1,
+    "nodeVA": 34999822,
+    "dataBaseVA": 35020440,
+    "dataOffset": 500777
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/NotificationPopup.qml",
+    "flags": 0,
+    "nodeVA": 34999844,
+    "dataBaseVA": 35020440,
+    "dataOffset": 531618
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopoverDriveMode.qml",
+    "flags": 1,
+    "nodeVA": 34999866,
+    "dataBaseVA": 35020440,
+    "dataOffset": 497980
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/PopoverLensData.qml",
+    "flags": 1,
+    "nodeVA": 34999888,
+    "dataBaseVA": 35020440,
+    "dataOffset": 493956
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/Popover.qml",
+    "flags": 0,
+    "nodeVA": 34999910,
+    "dataBaseVA": 35020440,
+    "dataOffset": 523649
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/TransparentConfirm.qml",
+    "flags": 0,
+    "nodeVA": 34999932,
+    "dataBaseVA": 35020440,
+    "dataOffset": 528520
+  },
+  {
+    "path": "/qt/qml/app/qml/main.qml",
+    "flags": 0,
+    "nodeVA": 34996742,
+    "dataBaseVA": 35020440,
+    "dataOffset": 10017
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MenuDelegateClickArea.qml",
+    "flags": 0,
+    "nodeVA": 34998106,
+    "dataBaseVA": 35020440,
+    "dataOffset": 258349
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MainMenu.qml",
+    "flags": 1,
+    "nodeVA": 34998128,
+    "dataBaseVA": 35020440,
+    "dataOffset": 268059
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MenuHeader.qml",
+    "flags": 0,
+    "nodeVA": 34998150,
+    "dataBaseVA": 35020440,
+    "dataOffset": 253565
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/CustomButtonsView.qml",
+    "flags": 1,
+    "nodeVA": 34998172,
+    "dataBaseVA": 35020440,
+    "dataOffset": 210181
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/SubmenuDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999272,
+    "dataBaseVA": 35020440,
+    "dataOffset": 364848
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/StorageInfoDelegate.qml",
+    "flags": 1,
+    "nodeVA": 34999294,
+    "dataBaseVA": 35020440,
+    "dataOffset": 328102
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/SliderDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999316,
+    "dataBaseVA": 35020440,
+    "dataOffset": 332271
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/EditTextDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999338,
+    "dataBaseVA": 35020440,
+    "dataOffset": 349157
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/SwitchDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999360,
+    "dataBaseVA": 35020440,
+    "dataOffset": 337881
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/DropdownDelegate.qml",
+    "flags": 1,
+    "nodeVA": 34999382,
+    "dataBaseVA": 35020440,
+    "dataOffset": 357849
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/ValueSwitchDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999404,
+    "dataBaseVA": 35020440,
+    "dataOffset": 341725
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/TextDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999426,
+    "dataBaseVA": 35020440,
+    "dataOffset": 355125
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/DateTimeDelegate.qml",
+    "flags": 1,
+    "nodeVA": 34999448,
+    "dataBaseVA": 35020440,
+    "dataOffset": 352713
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/ImageDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999470,
+    "dataBaseVA": 35020440,
+    "dataOffset": 377226
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/CombinationValueDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999492,
+    "dataBaseVA": 35020440,
+    "dataOffset": 374469
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/BaseDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999514,
+    "dataBaseVA": 35020440,
+    "dataOffset": 346492
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/TextActionDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999536,
+    "dataBaseVA": 35020440,
+    "dataOffset": 370843
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/ButtonDelegate.qml",
+    "flags": 1,
+    "nodeVA": 34999558,
+    "dataBaseVA": 35020440,
+    "dataOffset": 350370
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/ListValueSwitchDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999580,
+    "dataBaseVA": 35020440,
+    "dataOffset": 360323
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/TextButtonDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34999602,
+    "dataBaseVA": 35020440,
+    "dataOffset": 329408
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MenuData.qml",
+    "flags": 0,
+    "nodeVA": 34998216,
+    "dataBaseVA": 35020440,
+    "dataOffset": 230849
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MenuBase.qml",
+    "flags": 0,
+    "nodeVA": 34998238,
+    "dataBaseVA": 35020440,
+    "dataOffset": 270227
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/ListSelectorSettings.qml",
+    "flags": 1,
+    "nodeVA": 34998260,
+    "dataBaseVA": 35020440,
+    "dataOffset": 265337
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/SettingsGeneric.qml",
+    "flags": 1,
+    "nodeVA": 34998282,
+    "dataBaseVA": 35020440,
+    "dataOffset": 213469
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/SettingDescription.qml",
+    "flags": 0,
+    "nodeVA": 34998304,
+    "dataBaseVA": 35020440,
+    "dataOffset": 260847
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MyLenses.qml",
+    "flags": 0,
+    "nodeVA": 34998326,
+    "dataBaseVA": 35020440,
+    "dataOffset": 221552
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MainMenuViewModel.qml",
+    "flags": 1,
+    "nodeVA": 34998348,
+    "dataBaseVA": 35020440,
+    "dataOffset": 196888
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/SpiritLevelView.qml",
+    "flags": 0,
+    "nodeVA": 34998370,
+    "dataBaseVA": 35020440,
+    "dataOffset": 236637
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/CustomButtonsViewModel.qml",
+    "flags": 0,
+    "nodeVA": 34998392,
+    "dataBaseVA": 35020440,
+    "dataOffset": 274901
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/ProfilesView.qml",
+    "flags": 1,
+    "nodeVA": 34998414,
+    "dataBaseVA": 35020440,
+    "dataOffset": 226377
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/SubMenuBase.qml",
+    "flags": 0,
+    "nodeVA": 34998436,
+    "dataBaseVA": 35020440,
+    "dataOffset": 218314
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/CustomButtonsItem.qml",
+    "flags": 1,
+    "nodeVA": 34998458,
+    "dataBaseVA": 35020440,
+    "dataOffset": 204334
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MenuSubdialog.qml",
+    "flags": 0,
+    "nodeVA": 34998480,
+    "dataBaseVA": 35020440,
+    "dataOffset": 257402
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/MenuPopup.qml",
+    "flags": 0,
+    "nodeVA": 34998810,
+    "dataBaseVA": 35020440,
+    "dataOffset": 286244
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/ProfileEdit.qml",
+    "flags": 1,
+    "nodeVA": 34998832,
+    "dataBaseVA": 35020440,
+    "dataOffset": 314439
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/RecalibrateSensor.qml",
+    "flags": 0,
+    "nodeVA": 34998854,
+    "dataBaseVA": 35020440,
+    "dataOffset": 317479
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/DiskFormat.qml",
+    "flags": 0,
+    "nodeVA": 34998876,
+    "dataBaseVA": 35020440,
+    "dataOffset": 278375
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/ConfirmResetAllSettings.qml",
+    "flags": 0,
+    "nodeVA": 34998898,
+    "dataBaseVA": 35020440,
+    "dataOffset": 324907
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/ConfirmRemoveBlackbox.qml",
+    "flags": 0,
+    "nodeVA": 34998920,
+    "dataBaseVA": 35020440,
+    "dataOffset": 316526
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/EvfDiopter.qml",
+    "flags": 0,
+    "nodeVA": 34998942,
+    "dataBaseVA": 35020440,
+    "dataOffset": 306635
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/ConfirmSaveProfile.qml",
+    "flags": 0,
+    "nodeVA": 34998964,
+    "dataBaseVA": 35020440,
+    "dataOffset": 304751
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/PopoverSaveLogs.qml",
+    "flags": 0,
+    "nodeVA": 34998986,
+    "dataBaseVA": 35020440,
+    "dataOffset": 310206
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/ConfirmConnectionReset.qml",
+    "flags": 0,
+    "nodeVA": 34999008,
+    "dataBaseVA": 35020440,
+    "dataOffset": 312530
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/EvfDiopterSelector.qml",
+    "flags": 0,
+    "nodeVA": 34999030,
+    "dataBaseVA": 35020440,
+    "dataOffset": 287971
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/TopDisplayBrightness.qml",
+    "flags": 0,
+    "nodeVA": 34999052,
+    "dataBaseVA": 35020440,
+    "dataOffset": 321401
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/ConfirmClearPairedBtDevices.qml",
+    "flags": 0,
+    "nodeVA": 34999074,
+    "dataBaseVA": 35020440,
+    "dataOffset": 311550
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/DropdownSelector.qml",
+    "flags": 0,
+    "nodeVA": 34999096,
+    "dataBaseVA": 35020440,
+    "dataOffset": 303476
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/ConfirmUpgradeRetry.qml",
+    "flags": 0,
+    "nodeVA": 34999118,
+    "dataBaseVA": 35020440,
+    "dataOffset": 276631
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/EvfBrightness.qml",
+    "flags": 0,
+    "nodeVA": 34999140,
+    "dataBaseVA": 35020440,
+    "dataOffset": 284141
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/ConfirmResetCustomButtons.qml",
+    "flags": 0,
+    "nodeVA": 34999162,
+    "dataBaseVA": 35020440,
+    "dataOffset": 309241
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/ConfirmFirstTimeGuide.qml",
+    "flags": 0,
+    "nodeVA": 34999184,
+    "dataBaseVA": 35020440,
+    "dataOffset": 300320
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/ConfirmResetImageCounter.qml",
+    "flags": 0,
+    "nodeVA": 34999206,
+    "dataBaseVA": 35020440,
+    "dataOffset": 297086
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/ConfirmClearWifiPasswd.qml",
+    "flags": 0,
+    "nodeVA": 34999228,
+    "dataBaseVA": 35020440,
+    "dataOffset": 313497
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/PopoverCombinationLock.qml",
+    "flags": 1,
+    "nodeVA": 34999250,
+    "dataBaseVA": 35020440,
+    "dataOffset": 293652
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/FirstTimeGuideQrCode.qml",
+    "flags": 1,
+    "nodeVA": 34998524,
+    "dataBaseVA": 35020440,
+    "dataOffset": 228662
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MenuSwipe.qml",
+    "flags": 0,
+    "nodeVA": 34998546,
+    "dataBaseVA": 35020440,
+    "dataOffset": 246451
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MenuBoolSelector.qml",
+    "flags": 0,
+    "nodeVA": 34998568,
+    "dataBaseVA": 35020440,
+    "dataOffset": 251869
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/FirstTimeGuide.qml",
+    "flags": 1,
+    "nodeVA": 34998590,
+    "dataBaseVA": 35020440,
+    "dataOffset": 206572
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/DateTime.qml",
+    "flags": 1,
+    "nodeVA": 34998612,
+    "dataBaseVA": 35020440,
+    "dataOffset": 261843
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/TimeZoneView.qml",
+    "flags": 1,
+    "nodeVA": 34998634,
+    "dataBaseVA": 35020440,
+    "dataOffset": 200261
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/CustomButtonsTouchArea.qml",
+    "flags": 0,
+    "nodeVA": 34998656,
+    "dataBaseVA": 35020440,
+    "dataOffset": 251025
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/SettingSlider.qml",
+    "flags": 1,
+    "nodeVA": 34998678,
+    "dataBaseVA": 35020440,
+    "dataOffset": 219366
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MenuListView.qml",
+    "flags": 1,
+    "nodeVA": 34998700,
+    "dataBaseVA": 35020440,
+    "dataOffset": 194253
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MainScreen.qml",
+    "flags": 0,
+    "nodeVA": 34998722,
+    "dataBaseVA": 35020440,
+    "dataOffset": 240190
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/LicenseView.qml",
+    "flags": 0,
+    "nodeVA": 34998744,
+    "dataBaseVA": 35020440,
+    "dataOffset": 232522
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/VibrationsView.qml",
+    "flags": 0,
+    "nodeVA": 34998766,
+    "dataBaseVA": 35020440,
+    "dataOffset": 271054
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/MenuHeaderDescription.qml",
+    "flags": 0,
+    "nodeVA": 34998788,
+    "dataBaseVA": 35020440,
+    "dataOffset": 225405
+  },
+  {
+    "path": "/qt/qml/app/qml/scripts/Keys.js",
+    "flags": 0,
+    "nodeVA": 34998084,
+    "dataBaseVA": 35020440,
+    "dataOffset": 450516
+  },
+  {
+    "path": "/qt/qml/app/qml/maintenance/MaintenanceLensDataScreen.qml",
+    "flags": 0,
+    "nodeVA": 34998018,
+    "dataBaseVA": 35020440,
+    "dataOffset": 383175
+  },
+  {
+    "path": "/qt/qml/app/qml/maintenance/MaintenanceScreen.qml",
+    "flags": 0,
+    "nodeVA": 34998040,
+    "dataBaseVA": 35020440,
+    "dataOffset": 378849
+  },
+  {
+    "path": "/qt/qml/app/qml/maintenance/SensorCalibrationScreen.qml",
+    "flags": 0,
+    "nodeVA": 34998062,
+    "dataBaseVA": 35020440,
+    "dataOffset": 380401
+  },
+  {
+    "path": "/qt/qml/app/qml/suspend/SuspendScreen.qml",
+    "flags": 0,
+    "nodeVA": 34997996,
+    "dataBaseVA": 35020440,
+    "dataOffset": 452920
+  },
+  {
+    "path": "/qt/qml/app/qml/MainContent.qml",
+    "flags": 1,
+    "nodeVA": 34996852,
+    "dataBaseVA": 35020440,
+    "dataOffset": 4853
+  },
+  {
+    "path": "/qt/qml/app/qml/upgrade/UpgradeItemModel.qml",
+    "flags": 0,
+    "nodeVA": 34997820,
+    "dataBaseVA": 35020440,
+    "dataOffset": 27760
+  },
+  {
+    "path": "/qt/qml/app/qml/upgrade/UpgradeConfirm.qml",
+    "flags": 0,
+    "nodeVA": 34997842,
+    "dataBaseVA": 35020440,
+    "dataOffset": 20284
+  },
+  {
+    "path": "/qt/qml/app/qml/upgrade/UpgradeWarn.qml",
+    "flags": 0,
+    "nodeVA": 34997864,
+    "dataBaseVA": 35020440,
+    "dataOffset": 17596
+  },
+  {
+    "path": "/qt/qml/app/qml/upgrade/Upgrade.qml",
+    "flags": 1,
+    "nodeVA": 34997886,
+    "dataBaseVA": 35020440,
+    "dataOffset": 28647
+  },
+  {
+    "path": "/qt/qml/app/qml/upgrade/UpgradeViewModel.qml",
+    "flags": 1,
+    "nodeVA": 34997908,
+    "dataBaseVA": 35020440,
+    "dataOffset": 22704
+  },
+  {
+    "path": "/qt/qml/app/qml/upgrade/UpgradePeripheralItemModel.qml",
+    "flags": 0,
+    "nodeVA": 34997930,
+    "dataBaseVA": 35020440,
+    "dataOffset": 19345
+  },
+  {
+    "path": "/qt/qml/app/qml/upgrade/UpgradePeripheral.qml",
+    "flags": 1,
+    "nodeVA": 34997952,
+    "dataBaseVA": 35020440,
+    "dataOffset": 30163
+  },
+  {
+    "path": "/qt/qml/app/qml/upgrade/UpgradeCheck.qml",
+    "flags": 1,
+    "nodeVA": 34997974,
+    "dataBaseVA": 35020440,
+    "dataOffset": 23915
+  },
+  {
+    "path": "/qt/qml/app/qml/tethered/TetheredPreview.qml",
+    "flags": 0,
+    "nodeVA": 34997798,
+    "dataBaseVA": 35020440,
+    "dataOffset": 32599
+  },
+  {
+    "path": "/qt/qml/app/qml/MainStateMachine.qml",
+    "flags": 1,
+    "nodeVA": 34996918,
+    "dataBaseVA": 35020440,
+    "dataOffset": 2447
+  },
+  {
+    "path": "/qt/qml/app/qml/MainModel.qml",
+    "flags": 0,
+    "nodeVA": 34996940,
+    "dataBaseVA": 35020440,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/app/qml/viewmodels/LiveviewViewModel.qml",
+    "flags": 1,
+    "nodeVA": 34997578,
+    "dataBaseVA": 35020440,
+    "dataOffset": 818759
+  },
+  {
+    "path": "/qt/qml/app/qml/viewmodels/BtConnectionViewModel.qml",
+    "flags": 0,
+    "nodeVA": 34997600,
+    "dataBaseVA": 35020440,
+    "dataOffset": 817679
+  },
+  {
+    "path": "/qt/qml/app/qml/viewmodels/SuspendViewModel.qml",
+    "flags": 0,
+    "nodeVA": 34997622,
+    "dataBaseVA": 35020440,
+    "dataOffset": 829892
+  },
+  {
+    "path": "/qt/qml/app/qml/viewmodels/ShutdownViewModel.qml",
+    "flags": 0,
+    "nodeVA": 34997644,
+    "dataBaseVA": 35020440,
+    "dataOffset": 837269
+  },
+  {
+    "path": "/qt/qml/app/qml/viewmodels/ExposeScreenViewModel.qml",
+    "flags": 1,
+    "nodeVA": 34997666,
+    "dataBaseVA": 35020440,
+    "dataOffset": 835191
+  },
+  {
+    "path": "/qt/qml/app/qml/viewmodels/FormatViewModel.qml",
+    "flags": 0,
+    "nodeVA": 34997688,
+    "dataBaseVA": 35020440,
+    "dataOffset": 843016
+  },
+  {
+    "path": "/qt/qml/app/qml/viewmodels/BrowseViewViewModel.qml",
+    "flags": 1,
+    "nodeVA": 34997710,
+    "dataBaseVA": 35020440,
+    "dataOffset": 838092
+  },
+  {
+    "path": "/qt/qml/app/qml/viewmodels/StateMachineViewModel.qml",
+    "flags": 1,
+    "nodeVA": 34997732,
+    "dataBaseVA": 35020440,
+    "dataOffset": 844528
+  },
+  {
+    "path": "/qt/qml/app/qml/viewmodels/TetheredViewModel.qml",
+    "flags": 0,
+    "nodeVA": 34997754,
+    "dataBaseVA": 35020440,
+    "dataOffset": 830837
+  },
+  {
+    "path": "/qt/qml/app/qml/viewmodels/MetadataOverlayViewModel.qml",
+    "flags": 0,
+    "nodeVA": 34997776,
+    "dataBaseVA": 35020440,
+    "dataOffset": 832421
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/FlickablePreview.qml",
+    "flags": 1,
+    "nodeVA": 34997050,
+    "dataBaseVA": 35020440,
+    "dataOffset": 406802
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowseGridCheckbox.qml",
+    "flags": 0,
+    "nodeVA": 34997072,
+    "dataBaseVA": 35020440,
+    "dataOffset": 396473
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowseSelectDevice.qml",
+    "flags": 1,
+    "nodeVA": 34997094,
+    "dataBaseVA": 35020440,
+    "dataOffset": 388871
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/ColorPickerOverlay.qml",
+    "flags": 1,
+    "nodeVA": 34997116,
+    "dataBaseVA": 35020440,
+    "dataOffset": 427882
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowseListDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34997138,
+    "dataBaseVA": 35020440,
+    "dataOffset": 384197
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowseStateMachine.qml",
+    "flags": 1,
+    "nodeVA": 34997160,
+    "dataBaseVA": 35020440,
+    "dataOffset": 384849
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/ColorPickerMetadataOverlay.qml",
+    "flags": 1,
+    "nodeVA": 34997182,
+    "dataBaseVA": 35020440,
+    "dataOffset": 424625
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowseViewTouchpad.qml",
+    "flags": 0,
+    "nodeVA": 34997204,
+    "dataBaseVA": 35020440,
+    "dataOffset": 429916
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowseDirectory.qml",
+    "flags": 1,
+    "nodeVA": 34997226,
+    "dataBaseVA": 35020440,
+    "dataOffset": 436934
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/popups/DeletePopup.qml",
+    "flags": 0,
+    "nodeVA": 34997468,
+    "dataBaseVA": 35020440,
+    "dataOffset": 440932
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/popups/MultiDeletePopup.qml",
+    "flags": 0,
+    "nodeVA": 34997490,
+    "dataBaseVA": 35020440,
+    "dataOffset": 445093
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/popups/DeletingPopup.qml",
+    "flags": 0,
+    "nodeVA": 34997512,
+    "dataBaseVA": 35020440,
+    "dataOffset": 444210
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/popups/ConfirmCreateFolder.qml",
+    "flags": 0,
+    "nodeVA": 34997534,
+    "dataBaseVA": 35020440,
+    "dataOffset": 442116
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/popups/ImageRatingPopup.qml",
+    "flags": 0,
+    "nodeVA": 34997556,
+    "dataBaseVA": 35020440,
+    "dataOffset": 446244
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowseListView.qml",
+    "flags": 1,
+    "nodeVA": 34997270,
+    "dataBaseVA": 35020440,
+    "dataOffset": 398308
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/EyeDropper.qml",
+    "flags": 1,
+    "nodeVA": 34997292,
+    "dataBaseVA": 35020440,
+    "dataOffset": 394700
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowsePopup.qml",
+    "flags": 1,
+    "nodeVA": 34997314,
+    "dataBaseVA": 35020440,
+    "dataOffset": 426132
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/ColorPickerDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34997336,
+    "dataBaseVA": 35020440,
+    "dataOffset": 439407
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowseGridItem.qml",
+    "flags": 0,
+    "nodeVA": 34997358,
+    "dataBaseVA": 35020440,
+    "dataOffset": 432165
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/MultiSelectOverlay.qml",
+    "flags": 1,
+    "nodeVA": 34997380,
+    "dataBaseVA": 35020440,
+    "dataOffset": 418201
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowseView.qml",
+    "flags": 1,
+    "nodeVA": 34997402,
+    "dataBaseVA": 35020440,
+    "dataOffset": 391334
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowseGridView.qml",
+    "flags": 1,
+    "nodeVA": 34997424,
+    "dataBaseVA": 35020440,
+    "dataOffset": 419127
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/BrowseImageDelegate.qml",
+    "flags": 0,
+    "nodeVA": 34997446,
+    "dataBaseVA": 35020440,
+    "dataOffset": 404032
+  },
+  {
+    "path": "/qt/qml/app/qml/shutdown/ShutdownScreen.qml",
+    "flags": 0,
+    "nodeVA": 34997028,
+    "dataBaseVA": 35020440,
+    "dataOffset": 533011
+  },
+  {
+    "path": "/qt/qml/app/qml/error/qmldir",
+    "flags": 0,
+    "nodeVA": 35870998,
+    "dataBaseVA": 35871488,
+    "dataOffset": 75
+  },
+  {
+    "path": "/qt/qml/app/qml/liveview/qmldir",
+    "flags": 0,
+    "nodeVA": 35870976,
+    "dataBaseVA": 35871488,
+    "dataOffset": 125
+  },
+  {
+    "path": "/qt/qml/app/qml/exposescreen/qmldir",
+    "flags": 0,
+    "nodeVA": 35870954,
+    "dataBaseVA": 35871488,
+    "dataOffset": 100
+  },
+  {
+    "path": "/qt/qml/app/qml/controlscreen/qmldir",
+    "flags": 0,
+    "nodeVA": 35870932,
+    "dataBaseVA": 35871488,
+    "dataOffset": 350
+  },
+  {
+    "path": "/qt/qml/app/qml/components/controls/qmldir",
+    "flags": 0,
+    "nodeVA": 35870910,
+    "dataBaseVA": 35871488,
+    "dataOffset": 450
+  },
+  {
+    "path": "/qt/qml/app/qml/components/qmldir",
+    "flags": 0,
+    "nodeVA": 35870844,
+    "dataBaseVA": 35871488,
+    "dataOffset": 425
+  },
+  {
+    "path": "/qt/qml/app/qml/components/buttons/qmldir",
+    "flags": 0,
+    "nodeVA": 35870888,
+    "dataBaseVA": 35871488,
+    "dataOffset": 475
+  },
+  {
+    "path": "/qt/qml/app/qml/popups/qmldir",
+    "flags": 0,
+    "nodeVA": 35870800,
+    "dataBaseVA": 35871488,
+    "dataOffset": 375
+  },
+  {
+    "path": "/qt/qml/app/qml/qmldir",
+    "flags": 0,
+    "nodeVA": 35870250,
+    "dataBaseVA": 35871488,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/delegates/qmldir",
+    "flags": 0,
+    "nodeVA": 35870778,
+    "dataBaseVA": 35871488,
+    "dataOffset": 200
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/popups/qmldir",
+    "flags": 0,
+    "nodeVA": 35870756,
+    "dataBaseVA": 35871488,
+    "dataOffset": 175
+  },
+  {
+    "path": "/qt/qml/app/qml/mainmenu/qmldir",
+    "flags": 0,
+    "nodeVA": 35870734,
+    "dataBaseVA": 35871488,
+    "dataOffset": 150
+  },
+  {
+    "path": "/qt/qml/app/qml/scripts/qmldir",
+    "flags": 0,
+    "nodeVA": 35870668,
+    "dataBaseVA": 35871488,
+    "dataOffset": 300
+  },
+  {
+    "path": "/qt/qml/app/qml/maintenance/qmldir",
+    "flags": 0,
+    "nodeVA": 35870646,
+    "dataBaseVA": 35871488,
+    "dataOffset": 225
+  },
+  {
+    "path": "/qt/qml/app/qml/suspend/qmldir",
+    "flags": 0,
+    "nodeVA": 35870624,
+    "dataBaseVA": 35871488,
+    "dataOffset": 325
+  },
+  {
+    "path": "/qt/qml/app/qml/upgrade/qmldir",
+    "flags": 0,
+    "nodeVA": 35870602,
+    "dataBaseVA": 35871488,
+    "dataOffset": 25
+  },
+  {
+    "path": "/qt/qml/app/qml/tethered/qmldir",
+    "flags": 0,
+    "nodeVA": 35870580,
+    "dataBaseVA": 35871488,
+    "dataOffset": 50
+  },
+  {
+    "path": "/qt/qml/app/qml/viewmodels/qmldir",
+    "flags": 0,
+    "nodeVA": 35870558,
+    "dataBaseVA": 35871488,
+    "dataOffset": 500
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/popups/qmldir",
+    "flags": 0,
+    "nodeVA": 35870536,
+    "dataBaseVA": 35871488,
+    "dataOffset": 275
+  },
+  {
+    "path": "/qt/qml/app/qml/browseview/qmldir",
+    "flags": 0,
+    "nodeVA": 35870514,
+    "dataBaseVA": 35871488,
+    "dataOffset": 250
+  },
+  {
+    "path": "/qt/qml/app/qml/shutdown/qmldir",
+    "flags": 0,
+    "nodeVA": 35870470,
+    "dataBaseVA": 35871488,
+    "dataOffset": 400
+  },
+  {
+    "path": "/translations/camera_ja_JP.qm",
+    "flags": 0,
+    "nodeVA": 35872057,
+    "dataBaseVA": 35872667,
+    "dataOffset": 434648
+  },
+  {
+    "path": "/translations/camera_it_IT.qm",
+    "flags": 1,
+    "nodeVA": 35872079,
+    "dataBaseVA": 35872667,
+    "dataOffset": 404782
+  },
+  {
+    "path": "/translations/camera_ko_KR.qm",
+    "flags": 0,
+    "nodeVA": 35872101,
+    "dataBaseVA": 35872667,
+    "dataOffset": 196176
+  },
+  {
+    "path": "/translations/camera_fr_FR.qm",
+    "flags": 1,
+    "nodeVA": 35872123,
+    "dataBaseVA": 35872667,
+    "dataOffset": 513005
+  },
+  {
+    "path": "/translations/camera_de_DE.qm",
+    "flags": 1,
+    "nodeVA": 35872145,
+    "dataBaseVA": 35872667,
+    "dataOffset": 166307
+  },
+  {
+    "path": "/translations/camera_ru_RU.qm",
+    "flags": 0,
+    "nodeVA": 35872167,
+    "dataBaseVA": 35872667,
+    "dataOffset": 303575
+  },
+  {
+    "path": "/translations/camera_zh_CN.qm",
+    "flags": 0,
+    "nodeVA": 35872189,
+    "dataBaseVA": 35872667,
+    "dataOffset": 96194
+  },
+  {
+    "path": "/translations/camera_zh_TW.qm",
+    "flags": 0,
+    "nodeVA": 35872211,
+    "dataBaseVA": 35872667,
+    "dataOffset": 543320
+  },
+  {
+    "path": "/translations/camera_es_ES.qm",
+    "flags": 1,
+    "nodeVA": 35872233,
+    "dataBaseVA": 35872667,
+    "dataOffset": 273589
+  },
+  {
+    "path": "/translations/camera_sv_SE.qm",
+    "flags": 0,
+    "nodeVA": 35872255,
+    "dataBaseVA": 35872667,
+    "dataOffset": 0
+  },
+  {
+    "path": "/icons/ic_liveview_exposure_mode_auto.svg",
+    "flags": 1,
+    "nodeVA": 36487146,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1393140
+  },
+  {
+    "path": "/icons/ic_menu_back.svg",
+    "flags": 1,
+    "nodeVA": 36487168,
+    "dataBaseVA": 36529144,
+    "dataOffset": 390375
+  },
+  {
+    "path": "/icons/camera_back.svg",
+    "flags": 1,
+    "nodeVA": 36487190,
+    "dataBaseVA": 36529144,
+    "dataOffset": 483185
+  },
+  {
+    "path": "/icons/ic_liveview_up-arrow.svg",
+    "flags": 1,
+    "nodeVA": 36487212,
+    "dataBaseVA": 36529144,
+    "dataOffset": 777305
+  },
+  {
+    "path": "/icons/ic_checkbox_selected_disabled_outline.svg",
+    "flags": 1,
+    "nodeVA": 36487234,
+    "dataBaseVA": 36529144,
+    "dataOffset": 583973
+  },
+  {
+    "path": "/icons/ic_menu_camera_body.svg",
+    "flags": 1,
+    "nodeVA": 36487256,
+    "dataBaseVA": 36529144,
+    "dataOffset": 951946
+  },
+  {
+    "path": "/icons/ic_focus_indicator_circle_focus_success.svg",
+    "flags": 1,
+    "nodeVA": 36487278,
+    "dataBaseVA": 36529144,
+    "dataOffset": 656489
+  },
+  {
+    "path": "/icons/ic_controlscreen_battery_charging.svg",
+    "flags": 1,
+    "nodeVA": 36487300,
+    "dataBaseVA": 36529144,
+    "dataOffset": 960264
+  },
+  {
+    "path": "/icons/ic_controlscreen_storage_card_full.svg",
+    "flags": 1,
+    "nodeVA": 36487322,
+    "dataBaseVA": 36529144,
+    "dataOffset": 433528
+  },
+  {
+    "path": "/icons/ic_liveview_card_missing.svg",
+    "flags": 1,
+    "nodeVA": 36487344,
+    "dataBaseVA": 36529144,
+    "dataOffset": 391818
+  },
+  {
+    "path": "/icons/ic_drive_mode_interval_infinity.svg",
+    "flags": 1,
+    "nodeVA": 36487366,
+    "dataBaseVA": 36529144,
+    "dataOffset": 853255
+  },
+  {
+    "path": "/icons/ic_dialog_warning_small.svg",
+    "flags": 1,
+    "nodeVA": 36487388,
+    "dataBaseVA": 36529144,
+    "dataOffset": 773824
+  },
+  {
+    "path": "/icons/ic_liveview_ssd_full+cfe_missing.svg",
+    "flags": 1,
+    "nodeVA": 36487410,
+    "dataBaseVA": 36529144,
+    "dataOffset": 871542
+  },
+  {
+    "path": "/icons/ic_liveview_drive_mode_interval.svg",
+    "flags": 1,
+    "nodeVA": 36487432,
+    "dataBaseVA": 36529144,
+    "dataOffset": 547913
+  },
+  {
+    "path": "/icons/ic_controlscreen_meter_method_point_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36487454,
+    "dataBaseVA": 36529144,
+    "dataOffset": 809723
+  },
+  {
+    "path": "/icons/ic_menu_general.svg",
+    "flags": 1,
+    "nodeVA": 36487476,
+    "dataBaseVA": 36529144,
+    "dataOffset": 609123
+  },
+  {
+    "path": "/icons/ic_tz+5_45.svg",
+    "flags": 1,
+    "nodeVA": 36487498,
+    "dataBaseVA": 36529144,
+    "dataOffset": 558918
+  },
+  {
+    "path": "/icons/ic_tz+8_45.svg",
+    "flags": 1,
+    "nodeVA": 36487520,
+    "dataBaseVA": 36529144,
+    "dataOffset": 573711
+  },
+  {
+    "path": "/icons/ic_liveview_drive_mode_exposure_bracketing.svg",
+    "flags": 1,
+    "nodeVA": 36487542,
+    "dataBaseVA": 36529144,
+    "dataOffset": 719937
+  },
+  {
+    "path": "/icons/ic_liveview_balance_scale_arrow.svg",
+    "flags": 1,
+    "nodeVA": 36487564,
+    "dataBaseVA": 36529144,
+    "dataOffset": 955266
+  },
+  {
+    "path": "/icons/ic_tz+3_30.svg",
+    "flags": 1,
+    "nodeVA": 36487586,
+    "dataBaseVA": 36529144,
+    "dataOffset": 559264
+  },
+  {
+    "path": "/icons/ic_tz+6_30.svg",
+    "flags": 1,
+    "nodeVA": 36487608,
+    "dataBaseVA": 36529144,
+    "dataOffset": 664627
+  },
+  {
+    "path": "/icons/ic_tz+5_30.svg",
+    "flags": 1,
+    "nodeVA": 36487630,
+    "dataBaseVA": 36529144,
+    "dataOffset": 821592
+  },
+  {
+    "path": "/icons/ic_tz+8_30.svg",
+    "flags": 1,
+    "nodeVA": 36487652,
+    "dataBaseVA": 36529144,
+    "dataOffset": 948849
+  },
+  {
+    "path": "/icons/ic_tz+9_30.svg",
+    "flags": 1,
+    "nodeVA": 36487674,
+    "dataBaseVA": 36529144,
+    "dataOffset": 588812
+  },
+  {
+    "path": "/icons/ic_tz+4_30.svg",
+    "flags": 1,
+    "nodeVA": 36487696,
+    "dataBaseVA": 36529144,
+    "dataOffset": 686208
+  },
+  {
+    "path": "/icons/ic_tz-3_30.svg",
+    "flags": 1,
+    "nodeVA": 36487718,
+    "dataBaseVA": 36529144,
+    "dataOffset": 391637
+  },
+  {
+    "path": "/icons/ic_tz-9_30.svg",
+    "flags": 1,
+    "nodeVA": 36487740,
+    "dataBaseVA": 36529144,
+    "dataOffset": 948625
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_focus_bracketing_popup.svg",
+    "flags": 1,
+    "nodeVA": 36487762,
+    "dataBaseVA": 36529144,
+    "dataOffset": 868624
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_exposure_bracketing_popup.svg",
+    "flags": 1,
+    "nodeVA": 36487784,
+    "dataBaseVA": 36529144,
+    "dataOffset": 701106
+  },
+  {
+    "path": "/icons/ic_liveview_AF-S_disable.svg",
+    "flags": 1,
+    "nodeVA": 36487806,
+    "dataBaseVA": 36529144,
+    "dataOffset": 802591
+  },
+  {
+    "path": "/icons/ic_liveview_AF-C_disable.svg",
+    "flags": 1,
+    "nodeVA": 36487828,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1401108
+  },
+  {
+    "path": "/icons/ic_playback_asterisk_selected.svg",
+    "flags": 1,
+    "nodeVA": 36487850,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1017171
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_mwb.svg",
+    "flags": 1,
+    "nodeVA": 36487872,
+    "dataBaseVA": 36529144,
+    "dataOffset": 533030
+  },
+  {
+    "path": "/icons/ic_playback_wb_flash.svg",
+    "flags": 1,
+    "nodeVA": 36487894,
+    "dataBaseVA": 36529144,
+    "dataOffset": 385497
+  },
+  {
+    "path": "/icons/ic_liveview_AF.svg",
+    "flags": 1,
+    "nodeVA": 36487916,
+    "dataBaseVA": 36529144,
+    "dataOffset": 469665
+  },
+  {
+    "path": "/icons/ic_focus_indicator_arrow_focus_success.svg",
+    "flags": 1,
+    "nodeVA": 36487938,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1408843
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_flash_popup.svg",
+    "flags": 1,
+    "nodeVA": 36487960,
+    "dataBaseVA": 36529144,
+    "dataOffset": 559749
+  },
+  {
+    "path": "/icons/ic_playback_asterisk_unselect.svg",
+    "flags": 1,
+    "nodeVA": 36487982,
+    "dataBaseVA": 36529144,
+    "dataOffset": 755938
+  },
+  {
+    "path": "/icons/ic_controlscreen_meter_method_smart.svg",
+    "flags": 1,
+    "nodeVA": 36488004,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1001161
+  },
+  {
+    "path": "/icons/ic_liveview_card_crash.svg",
+    "flags": 1,
+    "nodeVA": 36488026,
+    "dataBaseVA": 36529144,
+    "dataOffset": 842376
+  },
+  {
+    "path": "/icons/ic_liveview_detection_vehicle.svg",
+    "flags": 1,
+    "nodeVA": 36488048,
+    "dataBaseVA": 36529144,
+    "dataOffset": 705504
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_exposure_bracketing_popup_disable.svg",
+    "flags": 1,
+    "nodeVA": 36488070,
+    "dataBaseVA": 36529144,
+    "dataOffset": 589474
+  },
+  {
+    "path": "/icons/ic_menu_flash.svg",
+    "flags": 1,
+    "nodeVA": 36488092,
+    "dataBaseVA": 36529144,
+    "dataOffset": 629659
+  },
+  {
+    "path": "/icons/ic_liveview_arrow_right.svg",
+    "flags": 1,
+    "nodeVA": 36488114,
+    "dataBaseVA": 36529144,
+    "dataOffset": 421020
+  },
+  {
+    "path": "/icons/ic_checkbox_selected_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36488136,
+    "dataBaseVA": 36529144,
+    "dataOffset": 951099
+  },
+  {
+    "path": "/icons/ic_liveview_bracket_left_small.svg",
+    "flags": 1,
+    "nodeVA": 36488158,
+    "dataBaseVA": 36529144,
+    "dataOffset": 447263
+  },
+  {
+    "path": "/icons/ic_controlscreen_focus_mode_AF_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36488180,
+    "dataBaseVA": 36529144,
+    "dataOffset": 915857
+  },
+  {
+    "path": "/icons/ic_controlscreen_focus_mode_MF_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36488202,
+    "dataBaseVA": 36529144,
+    "dataOffset": 877223
+  },
+  {
+    "path": "/icons/ic_liveview_drive_mode_focus_bracketing.svg",
+    "flags": 1,
+    "nodeVA": 36488224,
+    "dataBaseVA": 36529144,
+    "dataOffset": 473484
+  },
+  {
+    "path": "/icons/ic_general_sound.svg",
+    "flags": 1,
+    "nodeVA": 36488246,
+    "dataBaseVA": 36529144,
+    "dataOffset": 477839
+  },
+  {
+    "path": "/icons/ic_evf_diopter_arrow_outlined.svg",
+    "flags": 1,
+    "nodeVA": 36488268,
+    "dataBaseVA": 36529144,
+    "dataOffset": 383273
+  },
+  {
+    "path": "/icons/ic_liveview_wide_area+vehicle.svg",
+    "flags": 1,
+    "nodeVA": 36488290,
+    "dataBaseVA": 36529144,
+    "dataOffset": 843808
+  },
+  {
+    "path": "/icons/ic_general_date_time.svg",
+    "flags": 1,
+    "nodeVA": 36488312,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1399812
+  },
+  {
+    "path": "/icons/ic_general_spirit_level.svg",
+    "flags": 1,
+    "nodeVA": 36488334,
+    "dataBaseVA": 36529144,
+    "dataOffset": 543684
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_auto.svg",
+    "flags": 1,
+    "nodeVA": 36488356,
+    "dataBaseVA": 36529144,
+    "dataOffset": 917175
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot_plus+pet.svg",
+    "flags": 1,
+    "nodeVA": 36488378,
+    "dataBaseVA": 36529144,
+    "dataOffset": 584316
+  },
+  {
+    "path": "/icons/ic_dialog_exit_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36488400,
+    "dataBaseVA": 36529144,
+    "dataOffset": 394871
+  },
+  {
+    "path": "/icons/ic_image_rating_star_filled_outlined.svg",
+    "flags": 1,
+    "nodeVA": 36488422,
+    "dataBaseVA": 36529144,
+    "dataOffset": 861168
+  },
+  {
+    "path": "/icons/ic_liveview_focus_box_arrow.svg",
+    "flags": 1,
+    "nodeVA": 36488444,
+    "dataBaseVA": 36529144,
+    "dataOffset": 777686
+  },
+  {
+    "path": "/icons/ic_controlscreen_wide_area+vehicle.svg",
+    "flags": 1,
+    "nodeVA": 36488466,
+    "dataBaseVA": 36529144,
+    "dataOffset": 856158
+  },
+  {
+    "path": "/icons/ic_controlscreen_popup_focus_area_wide.svg",
+    "flags": 1,
+    "nodeVA": 36488488,
+    "dataBaseVA": 36529144,
+    "dataOffset": 809376
+  },
+  {
+    "path": "/icons/ic_focus_indicator_circle_focusing.svg",
+    "flags": 1,
+    "nodeVA": 36488510,
+    "dataBaseVA": 36529144,
+    "dataOffset": 895577
+  },
+  {
+    "path": "/icons/ic_drive_mode_storage_right_bracket.svg",
+    "flags": 1,
+    "nodeVA": 36488532,
+    "dataBaseVA": 36529144,
+    "dataOffset": 765228
+  },
+  {
+    "path": "/icons/ic_controlscreen_flash_adjust_highlighted.svg",
+    "flags": 1,
+    "nodeVA": 36488554,
+    "dataBaseVA": 36529144,
+    "dataOffset": 609467
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_single_disable.svg",
+    "flags": 1,
+    "nodeVA": 36488576,
+    "dataBaseVA": 36529144,
+    "dataOffset": 583637
+  },
+  {
+    "path": "/icons/ic_dialog_button_arrow.svg",
+    "flags": 1,
+    "nodeVA": 36488598,
+    "dataBaseVA": 36529144,
+    "dataOffset": 521623
+  },
+  {
+    "path": "/icons/ic_controlscreen_popup_focus_area_custom.svg",
+    "flags": 1,
+    "nodeVA": 36488620,
+    "dataBaseVA": 36529144,
+    "dataOffset": 480571
+  },
+  {
+    "path": "/icons/ic_liveview_spot_plus+human.svg",
+    "flags": 1,
+    "nodeVA": 36488642,
+    "dataBaseVA": 36529144,
+    "dataOffset": 414179
+  },
+  {
+    "path": "/icons/ic_liveview_MF.svg",
+    "flags": 1,
+    "nodeVA": 36488664,
+    "dataBaseVA": 36529144,
+    "dataOffset": 790486
+  },
+  {
+    "path": "/icons/camera_top_s_M_orange.svg",
+    "flags": 1,
+    "nodeVA": 36488686,
+    "dataBaseVA": 36529144,
+    "dataOffset": 602347
+  },
+  {
+    "path": "/icons/ic_dialog_delete.svg",
+    "flags": 1,
+    "nodeVA": 36488708,
+    "dataBaseVA": 36529144,
+    "dataOffset": 837942
+  },
+  {
+    "path": "/icons/ic_liveview_image_stabilization_sport.svg",
+    "flags": 1,
+    "nodeVA": 36488730,
+    "dataBaseVA": 36529144,
+    "dataOffset": 448230
+  },
+  {
+    "path": "/icons/ic_controlscreen_HDR_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36488752,
+    "dataBaseVA": 36529144,
+    "dataOffset": 537092
+  },
+  {
+    "path": "/icons/ic_controlscreen_DRC_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36488774,
+    "dataBaseVA": 36529144,
+    "dataOffset": 703540
+  },
+  {
+    "path": "/icons/ic_liveview_HDR_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36488796,
+    "dataBaseVA": 36529144,
+    "dataOffset": 429141
+  },
+  {
+    "path": "/icons/ic_liveview_DRC_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36488818,
+    "dataBaseVA": 36529144,
+    "dataOffset": 581236
+  },
+  {
+    "path": "/icons/ic_menu_exposure.svg",
+    "flags": 1,
+    "nodeVA": 36488840,
+    "dataBaseVA": 36529144,
+    "dataOffset": 947953
+  },
+  {
+    "path": "/icons/ic_controlscreen_popup_detection_human.svg",
+    "flags": 1,
+    "nodeVA": 36488862,
+    "dataBaseVA": 36529144,
+    "dataOffset": 834072
+  },
+  {
+    "path": "/icons/ic_menu_switch_close.svg",
+    "flags": 1,
+    "nodeVA": 36488884,
+    "dataBaseVA": 36529144,
+    "dataOffset": 821070
+  },
+  {
+    "path": "/icons/ic_general_custom_buttons.svg",
+    "flags": 1,
+    "nodeVA": 36488906,
+    "dataBaseVA": 36529144,
+    "dataOffset": 550731
+  },
+  {
+    "path": "/icons/ic_controlscreen_meter_method_smart_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36488928,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1033448
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot_plus+off.svg",
+    "flags": 1,
+    "nodeVA": 36488950,
+    "dataBaseVA": 36529144,
+    "dataOffset": 595881
+  },
+  {
+    "path": "/icons/ic_lens_data_infinity.svg",
+    "flags": 1,
+    "nodeVA": 36488972,
+    "dataBaseVA": 36529144,
+    "dataOffset": 680941
+  },
+  {
+    "path": "/icons/custom_button_guide.svg",
+    "flags": 1,
+    "nodeVA": 36488994,
+    "dataBaseVA": 36529144,
+    "dataOffset": 558623
+  },
+  {
+    "path": "/icons/ic_liveview_ssd_missing+cfe_missing.svg",
+    "flags": 1,
+    "nodeVA": 36489016,
+    "dataBaseVA": 36529144,
+    "dataOffset": 544950
+  },
+  {
+    "path": "/icons/ic_distance_scale_near.svg",
+    "flags": 1,
+    "nodeVA": 36489038,
+    "dataBaseVA": 36529144,
+    "dataOffset": 854005
+  },
+  {
+    "path": "/icons/ic_liveview_bracket_right_small.svg",
+    "flags": 1,
+    "nodeVA": 36489060,
+    "dataBaseVA": 36529144,
+    "dataOffset": 646026
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_m_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36489082,
+    "dataBaseVA": 36529144,
+    "dataOffset": 445794
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_s_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36489104,
+    "dataBaseVA": 36529144,
+    "dataOffset": 721869
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_p_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36489126,
+    "dataBaseVA": 36529144,
+    "dataOffset": 687070
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_a_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36489148,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1036545
+  },
+  {
+    "path": "/icons/ic_playback_wb_cloudy.svg",
+    "flags": 1,
+    "nodeVA": 36489170,
+    "dataBaseVA": 36529144,
+    "dataOffset": 705133
+  },
+  {
+    "path": "/icons/ic_menu_switch_open_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36489192,
+    "dataBaseVA": 36529144,
+    "dataOffset": 653556
+  },
+  {
+    "path": "/icons/ic_general_about.svg",
+    "flags": 1,
+    "nodeVA": 36489214,
+    "dataBaseVA": 36529144,
+    "dataOffset": 387876
+  },
+  {
+    "path": "/icons/camera_topdown_large_55v.svg",
+    "flags": 1,
+    "nodeVA": 36489236,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1394676
+  },
+  {
+    "path": "/icons/ic_controlscreen_card_full.svg",
+    "flags": 1,
+    "nodeVA": 36489258,
+    "dataBaseVA": 36529144,
+    "dataOffset": 629880
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_flash.svg",
+    "flags": 1,
+    "nodeVA": 36489280,
+    "dataBaseVA": 36529144,
+    "dataOffset": 774089
+  },
+  {
+    "path": "/icons/ic_liveview_white_balance_awb.svg",
+    "flags": 1,
+    "nodeVA": 36489302,
+    "dataBaseVA": 36529144,
+    "dataOffset": 476310
+  },
+  {
+    "path": "/icons/ic_controlscreen_meter_method_central_point.svg",
+    "flags": 1,
+    "nodeVA": 36489324,
+    "dataBaseVA": 36529144,
+    "dataOffset": 642983
+  },
+  {
+    "path": "/icons/ic_tz+10.svg",
+    "flags": 1,
+    "nodeVA": 36489346,
+    "dataBaseVA": 36529144,
+    "dataOffset": 446099
+  },
+  {
+    "path": "/icons/ic_tz+11.svg",
+    "flags": 1,
+    "nodeVA": 36489368,
+    "dataBaseVA": 36529144,
+    "dataOffset": 856953
+  },
+  {
+    "path": "/icons/ic_tz+14.svg",
+    "flags": 1,
+    "nodeVA": 36489390,
+    "dataBaseVA": 36529144,
+    "dataOffset": 645741
+  },
+  {
+    "path": "/icons/ic_tz+12.svg",
+    "flags": 1,
+    "nodeVA": 36489412,
+    "dataBaseVA": 36529144,
+    "dataOffset": 899101
+  },
+  {
+    "path": "/icons/ic_tz+13.svg",
+    "flags": 1,
+    "nodeVA": 36489434,
+    "dataBaseVA": 36529144,
+    "dataOffset": 751666
+  },
+  {
+    "path": "/icons/ic_controlscreen_battery_normal.svg",
+    "flags": 1,
+    "nodeVA": 36489456,
+    "dataBaseVA": 36529144,
+    "dataOffset": 642442
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_focus_bracketing.svg",
+    "flags": 1,
+    "nodeVA": 36489478,
+    "dataBaseVA": 36529144,
+    "dataOffset": 692970
+  },
+  {
+    "path": "/icons/ic_liveview_wifi.svg",
+    "flags": 1,
+    "nodeVA": 36489500,
+    "dataBaseVA": 36529144,
+    "dataOffset": 489413
+  },
+  {
+    "path": "/icons/ic_focus_indicator_circle_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36489522,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1391686
+  },
+  {
+    "path": "/icons/ic_menu_focus.svg",
+    "flags": 1,
+    "nodeVA": 36489544,
+    "dataBaseVA": 36529144,
+    "dataOffset": 494449
+  },
+  {
+    "path": "/icons/ic_liveview_card_normal+card_full.svg",
+    "flags": 1,
+    "nodeVA": 36489566,
+    "dataBaseVA": 36529144,
+    "dataOffset": 813862
+  },
+  {
+    "path": "/icons/ic_menu_switch_close_highlight.svg",
+    "flags": 1,
+    "nodeVA": 36489588,
+    "dataBaseVA": 36529144,
+    "dataOffset": 648553
+  },
+  {
+    "path": "/icons/ic_menu_quality_RAW.svg",
+    "flags": 1,
+    "nodeVA": 36489610,
+    "dataBaseVA": 36529144,
+    "dataOffset": 394060
+  },
+  {
+    "path": "/icons/ic_dialog_warning.svg",
+    "flags": 1,
+    "nodeVA": 36489632,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1032562
+  },
+  {
+    "path": "/icons/camera_back_s_rear_custom_btn_orange.svg",
+    "flags": 1,
+    "nodeVA": 36489654,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1406669
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_florescent_popup.svg",
+    "flags": 1,
+    "nodeVA": 36489676,
+    "dataBaseVA": 36529144,
+    "dataOffset": 542235
+  },
+  {
+    "path": "/icons/ic_reset.svg",
+    "flags": 1,
+    "nodeVA": 36489698,
+    "dataBaseVA": 36529144,
+    "dataOffset": 593384
+  },
+  {
+    "path": "/icons/ic_general_language_unit.svg",
+    "flags": 1,
+    "nodeVA": 36489720,
+    "dataBaseVA": 36529144,
+    "dataOffset": 624776
+  },
+  {
+    "path": "/icons/ic_location.svg",
+    "flags": 1,
+    "nodeVA": 36489742,
+    "dataBaseVA": 36529144,
+    "dataOffset": 948137
+  },
+  {
+    "path": "/icons/ic_liveview_electronic_shutter.svg",
+    "flags": 1,
+    "nodeVA": 36489764,
+    "dataBaseVA": 36529144,
+    "dataOffset": 763142
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_awb_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36489786,
+    "dataBaseVA": 36529144,
+    "dataOffset": 381123
+  },
+  {
+    "path": "/icons/ic_general_service.svg",
+    "flags": 1,
+    "nodeVA": 36489808,
+    "dataBaseVA": 36529144,
+    "dataOffset": 543027
+  },
+  {
+    "path": "/icons/ic_liveview_ssd_normal+cfe_missing.svg",
+    "flags": 1,
+    "nodeVA": 36489830,
+    "dataBaseVA": 36529144,
+    "dataOffset": 389089
+  },
+  {
+    "path": "/icons/ic_playback_wb_mwb.svg",
+    "flags": 1,
+    "nodeVA": 36489852,
+    "dataBaseVA": 36529144,
+    "dataOffset": 779976
+  },
+  {
+    "path": "/icons/ic_liveview_focus_area_spot_plus+hc.svg",
+    "flags": 1,
+    "nodeVA": 36489874,
+    "dataBaseVA": 36529144,
+    "dataOffset": 562697
+  },
+  {
+    "path": "/icons/ic_dialog_exit.svg",
+    "flags": 1,
+    "nodeVA": 36489896,
+    "dataBaseVA": 36529144,
+    "dataOffset": 883794
+  },
+  {
+    "path": "/icons/ic_dialog_button_arrow_disabled_outlined.svg",
+    "flags": 1,
+    "nodeVA": 36489918,
+    "dataBaseVA": 36529144,
+    "dataOffset": 802285
+  },
+  {
+    "path": "/icons/ic_liveview_bracket_left.svg",
+    "flags": 1,
+    "nodeVA": 36489940,
+    "dataBaseVA": 36529144,
+    "dataOffset": 512165
+  },
+  {
+    "path": "/icons/ic_controlscreen_ssd_card_full.svg",
+    "flags": 1,
+    "nodeVA": 36489962,
+    "dataBaseVA": 36529144,
+    "dataOffset": 424119
+  },
+  {
+    "path": "/icons/ic_controlscreen_storage_cfe_secondary_card.svg",
+    "flags": 1,
+    "nodeVA": 36489984,
+    "dataBaseVA": 36529144,
+    "dataOffset": 861922
+  },
+  {
+    "path": "/icons/ic_liveview_focus_area_wide.svg",
+    "flags": 1,
+    "nodeVA": 36490006,
+    "dataBaseVA": 36529144,
+    "dataOffset": 579492
+  },
+  {
+    "path": "/icons/ic_menu_power.svg",
+    "flags": 1,
+    "nodeVA": 36490028,
+    "dataBaseVA": 36529144,
+    "dataOffset": 721601
+  },
+  {
+    "path": "/icons/ic_controlscreen_storage_ssd_secondary_card.svg",
+    "flags": 1,
+    "nodeVA": 36490050,
+    "dataBaseVA": 36529144,
+    "dataOffset": 869267
+  },
+  {
+    "path": "/icons/ic_controlscreen_flash_adjust.svg",
+    "flags": 1,
+    "nodeVA": 36490072,
+    "dataBaseVA": 36529144,
+    "dataOffset": 833128
+  },
+  {
+    "path": "/icons/ic_drive_mode_focus_bracketing.svg",
+    "flags": 1,
+    "nodeVA": 36490094,
+    "dataBaseVA": 36529144,
+    "dataOffset": 437352
+  },
+  {
+    "path": "/icons/ic_spirit_level_custom_popup.svg",
+    "flags": 1,
+    "nodeVA": 36490116,
+    "dataBaseVA": 36529144,
+    "dataOffset": 647635
+  },
+  {
+    "path": "/icons/ic_checkbox_selected_outline.svg",
+    "flags": 1,
+    "nodeVA": 36490138,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1047218
+  },
+  {
+    "path": "/icons/ic_controlscreen_USB2.svg",
+    "flags": 1,
+    "nodeVA": 36490160,
+    "dataBaseVA": 36529144,
+    "dataOffset": 835671
+  },
+  {
+    "path": "/icons/ic_controlscreen_USB3.svg",
+    "flags": 1,
+    "nodeVA": 36490182,
+    "dataBaseVA": 36529144,
+    "dataOffset": 952619
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_tangsten_popup.svg",
+    "flags": 1,
+    "nodeVA": 36490204,
+    "dataBaseVA": 36529144,
+    "dataOffset": 692414
+  },
+  {
+    "path": "/icons/ic_playback_meter_method_smart.svg",
+    "flags": 1,
+    "nodeVA": 36490226,
+    "dataBaseVA": 36529144,
+    "dataOffset": 566472
+  },
+  {
+    "path": "/icons/ic_controlscreen_wide_area+off.svg",
+    "flags": 1,
+    "nodeVA": 36490248,
+    "dataBaseVA": 36529144,
+    "dataOffset": 951390
+  },
+  {
+    "path": "/icons/ic_liveview_custom_area+vehicle.svg",
+    "flags": 1,
+    "nodeVA": 36490270,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1043236
+  },
+  {
+    "path": "/icons/ic_liveview_AF-S.svg",
+    "flags": 1,
+    "nodeVA": 36490292,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1026077
+  },
+  {
+    "path": "/icons/ic_liveview_AF-C.svg",
+    "flags": 1,
+    "nodeVA": 36490314,
+    "dataBaseVA": 36529144,
+    "dataOffset": 857375
+  },
+  {
+    "path": "/icons/ic_liveview_spot+human.svg",
+    "flags": 1,
+    "nodeVA": 36490336,
+    "dataBaseVA": 36529144,
+    "dataOffset": 450170
+  },
+  {
+    "path": "/icons/ic_liveview_detection_off.svg",
+    "flags": 1,
+    "nodeVA": 36490358,
+    "dataBaseVA": 36529144,
+    "dataOffset": 822787
+  },
+  {
+    "path": "/icons/ic_controlscreen_no_card.svg",
+    "flags": 1,
+    "nodeVA": 36490380,
+    "dataBaseVA": 36529144,
+    "dataOffset": 684603
+  },
+  {
+    "path": "/icons/ic_controlscreen_custom_area+off.svg",
+    "flags": 1,
+    "nodeVA": 36490402,
+    "dataBaseVA": 36529144,
+    "dataOffset": 946238
+  },
+  {
+    "path": "/icons/ic_playback_meter_method_central.svg",
+    "flags": 1,
+    "nodeVA": 36490424,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1035539
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_cloudy.svg",
+    "flags": 1,
+    "nodeVA": 36490446,
+    "dataBaseVA": 36529144,
+    "dataOffset": 865126
+  },
+  {
+    "path": "/icons/ic_liveview_image_stabilization_vertical.svg",
+    "flags": 1,
+    "nodeVA": 36490468,
+    "dataBaseVA": 36529144,
+    "dataOffset": 549943
+  },
+  {
+    "path": "/icons/ic_liveview_focus_mode_mf.svg",
+    "flags": 1,
+    "nodeVA": 36490490,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1391121
+  },
+  {
+    "path": "/icons/ic_controlscreen_wide_area+human.svg",
+    "flags": 1,
+    "nodeVA": 36490512,
+    "dataBaseVA": 36529144,
+    "dataOffset": 384108
+  },
+  {
+    "path": "/icons/ic_controlscreen_electronic_shutter.svg",
+    "flags": 1,
+    "nodeVA": 36490534,
+    "dataBaseVA": 36529144,
+    "dataOffset": 664957
+  },
+  {
+    "path": "/icons/ic_playback_R+J.svg",
+    "flags": 1,
+    "nodeVA": 36490556,
+    "dataBaseVA": 36529144,
+    "dataOffset": 480991
+  },
+  {
+    "path": "/icons/ic_playback_R+H.svg",
+    "flags": 1,
+    "nodeVA": 36490578,
+    "dataBaseVA": 36529144,
+    "dataOffset": 475666
+  },
+  {
+    "path": "/icons/ic_liveview_exposure_mode_a_sideways_scrolling.svg",
+    "flags": 1,
+    "nodeVA": 36490600,
+    "dataBaseVA": 36529144,
+    "dataOffset": 832384
+  },
+  {
+    "path": "/icons/ic_controlscreen_ssd_missing+cfe_missing.svg",
+    "flags": 1,
+    "nodeVA": 36490622,
+    "dataBaseVA": 36529144,
+    "dataOffset": 678398
+  },
+  {
+    "path": "/icons/pic_compliance_info_x2dm2.svg",
+    "flags": 1,
+    "nodeVA": 36490644,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1047942
+  },
+  {
+    "path": "/icons/ic_controlscreen_custom_area+human.svg",
+    "flags": 1,
+    "nodeVA": 36490666,
+    "dataBaseVA": 36529144,
+    "dataOffset": 855306
+  },
+  {
+    "path": "/icons/ic_dialog_button_arrow_outlined.svg",
+    "flags": 1,
+    "nodeVA": 36490688,
+    "dataBaseVA": 36529144,
+    "dataOffset": 771676
+  },
+  {
+    "path": "/icons/ic_image_rating_star_empty_outlined.svg",
+    "flags": 1,
+    "nodeVA": 36490710,
+    "dataBaseVA": 36529144,
+    "dataOffset": 658458
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_mwb_popup.svg",
+    "flags": 1,
+    "nodeVA": 36490732,
+    "dataBaseVA": 36529144,
+    "dataOffset": 616989
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot_plus+vehicle+hc.svg",
+    "flags": 1,
+    "nodeVA": 36490754,
+    "dataBaseVA": 36529144,
+    "dataOffset": 650765
+  },
+  {
+    "path": "/icons/ic_controlscreen_main_card_error.svg",
+    "flags": 1,
+    "nodeVA": 36490776,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1014370
+  },
+  {
+    "path": "/icons/ic_liveview_custom_area+human.svg",
+    "flags": 1,
+    "nodeVA": 36490798,
+    "dataBaseVA": 36529144,
+    "dataOffset": 943126
+  },
+  {
+    "path": "/icons/ic_lens_data_infinity_small.svg",
+    "flags": 1,
+    "nodeVA": 36490820,
+    "dataBaseVA": 36529144,
+    "dataOffset": 765783
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_single_popup.svg",
+    "flags": 1,
+    "nodeVA": 36490842,
+    "dataBaseVA": 36529144,
+    "dataOffset": 447046
+  },
+  {
+    "path": "/icons/ic_playback_meter_method_point.svg",
+    "flags": 0,
+    "nodeVA": 36490864,
+    "dataBaseVA": 36529144,
+    "dataOffset": 508623
+  },
+  {
+    "path": "/icons/ic_checkbox_unselected_outline.svg",
+    "flags": 1,
+    "nodeVA": 36490886,
+    "dataBaseVA": 36529144,
+    "dataOffset": 427539
+  },
+  {
+    "path": "/icons/camera_top_s_ISO_WB_orange.svg",
+    "flags": 1,
+    "nodeVA": 36490908,
+    "dataBaseVA": 36529144,
+    "dataOffset": 960617
+  },
+  {
+    "path": "/icons/ic_menu_switch_open.svg",
+    "flags": 1,
+    "nodeVA": 36490930,
+    "dataBaseVA": 36529144,
+    "dataOffset": 383573
+  },
+  {
+    "path": "/icons/ic_qr_code_first_time_guide.svg",
+    "flags": 1,
+    "nodeVA": 36490952,
+    "dataBaseVA": 36529144,
+    "dataOffset": 651578
+  },
+  {
+    "path": "/icons/ic_controlscreen_wide_area+pet.svg",
+    "flags": 1,
+    "nodeVA": 36490974,
+    "dataBaseVA": 36529144,
+    "dataOffset": 439791
+  },
+  {
+    "path": "/icons/camera_front_large.svg",
+    "flags": 1,
+    "nodeVA": 36490996,
+    "dataBaseVA": 36529144,
+    "dataOffset": 752275
+  },
+  {
+    "path": "/icons/ic_menu_item_action.svg",
+    "flags": 1,
+    "nodeVA": 36491018,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1387189
+  },
+  {
+    "path": "/icons/ic_controlscreen_custom_area+pet.svg",
+    "flags": 1,
+    "nodeVA": 36491040,
+    "dataBaseVA": 36529144,
+    "dataOffset": 517180
+  },
+  {
+    "path": "/icons/ic_controlscreen_AE-L.svg",
+    "flags": 1,
+    "nodeVA": 36491062,
+    "dataBaseVA": 36529144,
+    "dataOffset": 420588
+  },
+  {
+    "path": "/icons/ic_liveview_detection_pet.svg",
+    "flags": 1,
+    "nodeVA": 36491084,
+    "dataBaseVA": 36529144,
+    "dataOffset": 723034
+  },
+  {
+    "path": "/icons/ic_drive_mode_storage_left_bracket.svg",
+    "flags": 1,
+    "nodeVA": 36491106,
+    "dataBaseVA": 36529144,
+    "dataOffset": 645162
+  },
+  {
+    "path": "/icons/ic_general_lenses.svg",
+    "flags": 1,
+    "nodeVA": 36491128,
+    "dataBaseVA": 36529144,
+    "dataOffset": 463338
+  },
+  {
+    "path": "/icons/ic_menu_quality_R+H.svg",
+    "flags": 1,
+    "nodeVA": 36491150,
+    "dataBaseVA": 36529144,
+    "dataOffset": 601586
+  },
+  {
+    "path": "/icons/ic_menu_quality_R+J.svg",
+    "flags": 1,
+    "nodeVA": 36491172,
+    "dataBaseVA": 36529144,
+    "dataOffset": 438708
+  },
+  {
+    "path": "/icons/ic_liveview_white_balance_flash.svg",
+    "flags": 1,
+    "nodeVA": 36491194,
+    "dataBaseVA": 36529144,
+    "dataOffset": 663317
+  },
+  {
+    "path": "/icons/ic_general_settings_profiles2.svg",
+    "flags": 1,
+    "nodeVA": 36491216,
+    "dataBaseVA": 36529144,
+    "dataOffset": 767237
+  },
+  {
+    "path": "/icons/ic_general_settings_profiles4.svg",
+    "flags": 1,
+    "nodeVA": 36491238,
+    "dataBaseVA": 36529144,
+    "dataOffset": 386464
+  },
+  {
+    "path": "/icons/ic_general_settings_profiles3.svg",
+    "flags": 1,
+    "nodeVA": 36491260,
+    "dataBaseVA": 36529144,
+    "dataOffset": 717850
+  },
+  {
+    "path": "/icons/ic_general_settings_profiles5.svg",
+    "flags": 1,
+    "nodeVA": 36491282,
+    "dataBaseVA": 36529144,
+    "dataOffset": 878666
+  },
+  {
+    "path": "/icons/ic_general_settings_profiles1.svg",
+    "flags": 1,
+    "nodeVA": 36491304,
+    "dataBaseVA": 36529144,
+    "dataOffset": 841347
+  },
+  {
+    "path": "/icons/ic_controlscreen_storage_ssd_normal.svg",
+    "flags": 1,
+    "nodeVA": 36491326,
+    "dataBaseVA": 36529144,
+    "dataOffset": 688910
+  },
+  {
+    "path": "/icons/ic_controlscreen_meter_method_central_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36491348,
+    "dataBaseVA": 36529144,
+    "dataOffset": 822153
+  },
+  {
+    "path": "/icons/ic_liveview_exposure_mode_s.svg",
+    "flags": 1,
+    "nodeVA": 36491370,
+    "dataBaseVA": 36529144,
+    "dataOffset": 914451
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_focus_bracketing_disable.svg",
+    "flags": 1,
+    "nodeVA": 36491392,
+    "dataBaseVA": 36529144,
+    "dataOffset": 708383
+  },
+  {
+    "path": "/icons/ic_liveview_exposure_mode_p.svg",
+    "flags": 1,
+    "nodeVA": 36491414,
+    "dataBaseVA": 36529144,
+    "dataOffset": 616383
+  },
+  {
+    "path": "/icons/ic_liveview_AE-L_disable.svg",
+    "flags": 1,
+    "nodeVA": 36491436,
+    "dataBaseVA": 36529144,
+    "dataOffset": 937234
+  },
+  {
+    "path": "/icons/ic_controlscreen_main_card_full.svg",
+    "flags": 1,
+    "nodeVA": 36491458,
+    "dataBaseVA": 36529144,
+    "dataOffset": 392734
+  },
+  {
+    "path": "/icons/ic_focus_indicator_arrow_focusing.svg",
+    "flags": 1,
+    "nodeVA": 36491480,
+    "dataBaseVA": 36529144,
+    "dataOffset": 955587
+  },
+  {
+    "path": "/icons/ic_checkbox_unselected_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36491502,
+    "dataBaseVA": 36529144,
+    "dataOffset": 875603
+  },
+  {
+    "path": "/icons/ic_liveview_exposure_mode_m.svg",
+    "flags": 1,
+    "nodeVA": 36491524,
+    "dataBaseVA": 36529144,
+    "dataOffset": 876611
+  },
+  {
+    "path": "/icons/ic_liveview_exposure_mode_a.svg",
+    "flags": 1,
+    "nodeVA": 36491546,
+    "dataBaseVA": 36529144,
+    "dataOffset": 955907
+  },
+  {
+    "path": "/icons/ic_controlscreen_popup_focus_area_spot_plus+hc.svg",
+    "flags": 1,
+    "nodeVA": 36491568,
+    "dataBaseVA": 36529144,
+    "dataOffset": 659289
+  },
+  {
+    "path": "/icons/ic_playback_HDR_on.svg",
+    "flags": 1,
+    "nodeVA": 36491590,
+    "dataBaseVA": 36529144,
+    "dataOffset": 625456
+  },
+  {
+    "path": "/icons/ic_general_custom_overlays.svg",
+    "flags": 1,
+    "nodeVA": 36491612,
+    "dataBaseVA": 36529144,
+    "dataOffset": 951737
+  },
+  {
+    "path": "/icons/ic_menu_crop_modes.svg",
+    "flags": 1,
+    "nodeVA": 36491634,
+    "dataBaseVA": 36529144,
+    "dataOffset": 762397
+  },
+  {
+    "path": "/icons/ic_playback_RAW.svg",
+    "flags": 1,
+    "nodeVA": 36491656,
+    "dataBaseVA": 36529144,
+    "dataOffset": 514963
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_selftimer_popup_disable.svg",
+    "flags": 1,
+    "nodeVA": 36491678,
+    "dataBaseVA": 36529144,
+    "dataOffset": 881147
+  },
+  {
+    "path": "/icons/ic_controlscreen_storage_ssd_main_card.svg",
+    "flags": 1,
+    "nodeVA": 36491700,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1001522
+  },
+  {
+    "path": "/icons/ic_drive_mode_exposure_bracketing.svg",
+    "flags": 1,
+    "nodeVA": 36491722,
+    "dataBaseVA": 36529144,
+    "dataOffset": 827537
+  },
+  {
+    "path": "/icons/ic_liveview_ssd_full+cfe_normal.svg",
+    "flags": 1,
+    "nodeVA": 36491744,
+    "dataBaseVA": 36529144,
+    "dataOffset": 613047
+  },
+  {
+    "path": "/icons/ic_playback_meter_method_central_point.svg",
+    "flags": 1,
+    "nodeVA": 36491766,
+    "dataBaseVA": 36529144,
+    "dataOffset": 792570
+  },
+  {
+    "path": "/icons/ic_liveview_drive_mode_selftimer.svg",
+    "flags": 1,
+    "nodeVA": 36491788,
+    "dataBaseVA": 36529144,
+    "dataOffset": 569539
+  },
+  {
+    "path": "/icons/ic_liveview_card_full+card_full.svg",
+    "flags": 1,
+    "nodeVA": 36491810,
+    "dataBaseVA": 36529144,
+    "dataOffset": 527276
+  },
+  {
+    "path": "/icons/ic_controlscreen_storage_cfe_main_card.svg",
+    "flags": 1,
+    "nodeVA": 36491832,
+    "dataBaseVA": 36529144,
+    "dataOffset": 675205
+  },
+  {
+    "path": "/icons/ic_drive_mode_self_timer_big.svg",
+    "flags": 1,
+    "nodeVA": 36491854,
+    "dataBaseVA": 36529144,
+    "dataOffset": 652867
+  },
+  {
+    "path": "/icons/ic_controlscreen_auto_iso_selected.svg",
+    "flags": 1,
+    "nodeVA": 36491876,
+    "dataBaseVA": 36529144,
+    "dataOffset": 809941
+  },
+  {
+    "path": "/icons/ic_general_developer.svg",
+    "flags": 1,
+    "nodeVA": 36491898,
+    "dataBaseVA": 36529144,
+    "dataOffset": 481875
+  },
+  {
+    "path": "/icons/ic_controlscreen_ssd_card_error.svg",
+    "flags": 1,
+    "nodeVA": 36491920,
+    "dataBaseVA": 36529144,
+    "dataOffset": 811277
+  },
+  {
+    "path": "/icons/ic_menu_connection.svg",
+    "flags": 1,
+    "nodeVA": 36491942,
+    "dataBaseVA": 36529144,
+    "dataOffset": 896483
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_daylight_popup.svg",
+    "flags": 1,
+    "nodeVA": 36491964,
+    "dataBaseVA": 36529144,
+    "dataOffset": 827178
+  },
+  {
+    "path": "/icons/ic_controlscreen_no_ssd+error.svg",
+    "flags": 1,
+    "nodeVA": 36491986,
+    "dataBaseVA": 36529144,
+    "dataOffset": 683513
+  },
+  {
+    "path": "/icons/ic_time_zone_map.svg",
+    "flags": 1,
+    "nodeVA": 36492008,
+    "dataBaseVA": 36529144,
+    "dataOffset": 961174
+  },
+  {
+    "path": "/icons/ic_liveview_ssd_error+cfe_missing.svg",
+    "flags": 1,
+    "nodeVA": 36492030,
+    "dataBaseVA": 36529144,
+    "dataOffset": 411296
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_daylight.svg",
+    "flags": 1,
+    "nodeVA": 36492052,
+    "dataBaseVA": 36529144,
+    "dataOffset": 438352
+  },
+  {
+    "path": "/icons/ic_liveview_card_missing+crash.svg",
+    "flags": 1,
+    "nodeVA": 36492074,
+    "dataBaseVA": 36529144,
+    "dataOffset": 594419
+  },
+  {
+    "path": "/icons/ic_menu_quality.svg",
+    "flags": 1,
+    "nodeVA": 36492096,
+    "dataBaseVA": 36529144,
+    "dataOffset": 566802
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_selftimer_disable.svg",
+    "flags": 1,
+    "nodeVA": 36492118,
+    "dataBaseVA": 36529144,
+    "dataOffset": 621855
+  },
+  {
+    "path": "/icons/camera_front_s_wheel_orange.svg",
+    "flags": 1,
+    "nodeVA": 36492140,
+    "dataBaseVA": 36529144,
+    "dataOffset": 495846
+  },
+  {
+    "path": "/icons/ic_liveview_card_missing+normal.svg",
+    "flags": 1,
+    "nodeVA": 36492162,
+    "dataBaseVA": 36529144,
+    "dataOffset": 427862
+  },
+  {
+    "path": "/icons/ic_playback_wb_awb.svg",
+    "flags": 1,
+    "nodeVA": 36492184,
+    "dataBaseVA": 36529144,
+    "dataOffset": 618018
+  },
+  {
+    "path": "/icons/ic_liveview_white_balance_fluorescent.svg",
+    "flags": 1,
+    "nodeVA": 36492206,
+    "dataBaseVA": 36529144,
+    "dataOffset": 531520
+  },
+  {
+    "path": "/icons/ic_playback_cfe.svg",
+    "flags": 1,
+    "nodeVA": 36492228,
+    "dataBaseVA": 36529144,
+    "dataOffset": 904520
+  },
+  {
+    "path": "/icons/ic_controlscreen_auto_iso_disable.svg",
+    "flags": 1,
+    "nodeVA": 36492250,
+    "dataBaseVA": 36529144,
+    "dataOffset": 867570
+  },
+  {
+    "path": "/icons/ic_menu_switch_close_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36492272,
+    "dataBaseVA": 36529144,
+    "dataOffset": 603232
+  },
+  {
+    "path": "/icons/ic_playback_wb_daylight.svg",
+    "flags": 1,
+    "nodeVA": 36492294,
+    "dataBaseVA": 36529144,
+    "dataOffset": 593080
+  },
+  {
+    "path": "/icons/ic_liveview_card_full.svg",
+    "flags": 1,
+    "nodeVA": 36492316,
+    "dataBaseVA": 36529144,
+    "dataOffset": 609851
+  },
+  {
+    "path": "/icons/ic_controlscreen_HDR.svg",
+    "flags": 1,
+    "nodeVA": 36492338,
+    "dataBaseVA": 36529144,
+    "dataOffset": 769452
+  },
+  {
+    "path": "/icons/ic_liveview_battery_charging_small.svg",
+    "flags": 1,
+    "nodeVA": 36492360,
+    "dataBaseVA": 36529144,
+    "dataOffset": 583322
+  },
+  {
+    "path": "/icons/camera_back_large.svg",
+    "flags": 1,
+    "nodeVA": 36492382,
+    "dataBaseVA": 36529144,
+    "dataOffset": 906923
+  },
+  {
+    "path": "/icons/ic_playback_WiFi.svg",
+    "flags": 1,
+    "nodeVA": 36492404,
+    "dataBaseVA": 36529144,
+    "dataOffset": 875839
+  },
+  {
+    "path": "/icons/ic_controlscreen_popup_detection_vehicle.svg",
+    "flags": 1,
+    "nodeVA": 36492426,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1020080
+  },
+  {
+    "path": "/icons/ic_focus_indicator_arrow_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36492448,
+    "dataBaseVA": 36529144,
+    "dataOffset": 385734
+  },
+  {
+    "path": "/icons/ic_checkbox_unselected_disabled_outline.svg",
+    "flags": 1,
+    "nodeVA": 36492470,
+    "dataBaseVA": 36529144,
+    "dataOffset": 526953
+  },
+  {
+    "path": "/icons/ic_controlscreen_custom_area+vehicle.svg",
+    "flags": 1,
+    "nodeVA": 36492492,
+    "dataBaseVA": 36529144,
+    "dataOffset": 702681
+  },
+  {
+    "path": "/icons/ic_liveview_wide_area+pet.svg",
+    "flags": 1,
+    "nodeVA": 36492514,
+    "dataBaseVA": 36529144,
+    "dataOffset": 665237
+  },
+  {
+    "path": "/icons/ic_liveview_drive_mode_continue.svg",
+    "flags": 1,
+    "nodeVA": 36492536,
+    "dataBaseVA": 36529144,
+    "dataOffset": 560617
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot+pet.svg",
+    "flags": 1,
+    "nodeVA": 36492558,
+    "dataBaseVA": 36529144,
+    "dataOffset": 713446
+  },
+  {
+    "path": "/icons/ic_liveview_drive_mode_single.svg",
+    "flags": 1,
+    "nodeVA": 36492580,
+    "dataBaseVA": 36529144,
+    "dataOffset": 642743
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_single.svg",
+    "flags": 1,
+    "nodeVA": 36492602,
+    "dataBaseVA": 36529144,
+    "dataOffset": 589257
+  },
+  {
+    "path": "/icons/ic_controlscreen_popup_focus_area_spot.svg",
+    "flags": 1,
+    "nodeVA": 36492624,
+    "dataBaseVA": 36529144,
+    "dataOffset": 750090
+  },
+  {
+    "path": "/icons/ic_controlscreen_auto_iso.svg",
+    "flags": 1,
+    "nodeVA": 36492646,
+    "dataBaseVA": 36529144,
+    "dataOffset": 789469
+  },
+  {
+    "path": "/icons/ic_camera_ok.svg",
+    "flags": 1,
+    "nodeVA": 36492668,
+    "dataBaseVA": 36529144,
+    "dataOffset": 464062
+  },
+  {
+    "path": "/icons/ic_arrow_left.svg",
+    "flags": 1,
+    "nodeVA": 36492690,
+    "dataBaseVA": 36529144,
+    "dataOffset": 884711
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_s.svg",
+    "flags": 1,
+    "nodeVA": 36492712,
+    "dataBaseVA": 36529144,
+    "dataOffset": 847636
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_p.svg",
+    "flags": 1,
+    "nodeVA": 36492734,
+    "dataBaseVA": 36529144,
+    "dataOffset": 918152
+  },
+  {
+    "path": "/icons/ic_menu_lenses.svg",
+    "flags": 1,
+    "nodeVA": 36492756,
+    "dataBaseVA": 36529144,
+    "dataOffset": 838511
+  },
+  {
+    "path": "/icons/ic_spirit_level_custom.svg",
+    "flags": 1,
+    "nodeVA": 36492778,
+    "dataBaseVA": 36529144,
+    "dataOffset": 490946
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot+human.svg",
+    "flags": 1,
+    "nodeVA": 36492800,
+    "dataBaseVA": 36529144,
+    "dataOffset": 494988
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_m.svg",
+    "flags": 1,
+    "nodeVA": 36492822,
+    "dataBaseVA": 36529144,
+    "dataOffset": 630948
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_tangsten.svg",
+    "flags": 1,
+    "nodeVA": 36492844,
+    "dataBaseVA": 36529144,
+    "dataOffset": 867011
+  },
+  {
+    "path": "/icons/ic_liveview_MF_disable.svg",
+    "flags": 1,
+    "nodeVA": 36492866,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1024280
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_a.svg",
+    "flags": 1,
+    "nodeVA": 36492888,
+    "dataBaseVA": 36529144,
+    "dataOffset": 628590
+  },
+  {
+    "path": "/icons/ic_open_liveview_highlighted.svg",
+    "flags": 1,
+    "nodeVA": 36492910,
+    "dataBaseVA": 36529144,
+    "dataOffset": 914109
+  },
+  {
+    "path": "/icons/ic_playback_new_folder.svg",
+    "flags": 1,
+    "nodeVA": 36492932,
+    "dataBaseVA": 36529144,
+    "dataOffset": 436191
+  },
+  {
+    "path": "/icons/ic_playback_storage_ssd.svg",
+    "flags": 1,
+    "nodeVA": 36492954,
+    "dataBaseVA": 36529144,
+    "dataOffset": 598911
+  },
+  {
+    "path": "/icons/ic_controlscreen_meter_method_point.svg",
+    "flags": 1,
+    "nodeVA": 36492976,
+    "dataBaseVA": 36529144,
+    "dataOffset": 516981
+  },
+  {
+    "path": "/icons/ic_liveview_white_balance_shade.svg",
+    "flags": 1,
+    "nodeVA": 36492998,
+    "dataBaseVA": 36529144,
+    "dataOffset": 419333
+  },
+  {
+    "path": "/icons/ic_lens_data_unknown.svg",
+    "flags": 1,
+    "nodeVA": 36493020,
+    "dataBaseVA": 36529144,
+    "dataOffset": 530441
+  },
+  {
+    "path": "/icons/ic_controlscreen_ssd_full+cfe_missing.svg",
+    "flags": 1,
+    "nodeVA": 36493042,
+    "dataBaseVA": 36529144,
+    "dataOffset": 444167
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_video_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36493064,
+    "dataBaseVA": 36529144,
+    "dataOffset": 834742
+  },
+  {
+    "path": "/icons/ic_liveview_custom_area+pet.svg",
+    "flags": 1,
+    "nodeVA": 36493086,
+    "dataBaseVA": 36529144,
+    "dataOffset": 399070
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_selftimer_popup.svg",
+    "flags": 1,
+    "nodeVA": 36493108,
+    "dataBaseVA": 36529144,
+    "dataOffset": 572314
+  },
+  {
+    "path": "/icons/ic_liveview_card_full+crash.svg",
+    "flags": 1,
+    "nodeVA": 36493130,
+    "dataBaseVA": 36529144,
+    "dataOffset": 798361
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_florescent.svg",
+    "flags": 1,
+    "nodeVA": 36493152,
+    "dataBaseVA": 36529144,
+    "dataOffset": 387513
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot+off.svg",
+    "flags": 1,
+    "nodeVA": 36493174,
+    "dataBaseVA": 36529144,
+    "dataOffset": 612731
+  },
+  {
+    "path": "/icons/ic_distance_scale_far.svg",
+    "flags": 1,
+    "nodeVA": 36493196,
+    "dataBaseVA": 36529144,
+    "dataOffset": 596612
+  },
+  {
+    "path": "/icons/ic_battery_exhausted.svg",
+    "flags": 1,
+    "nodeVA": 36493218,
+    "dataBaseVA": 36529144,
+    "dataOffset": 563931
+  },
+  {
+    "path": "/icons/ic_playback_wb_tangsten.svg",
+    "flags": 1,
+    "nodeVA": 36493240,
+    "dataBaseVA": 36529144,
+    "dataOffset": 913613
+  },
+  {
+    "path": "/icons/ic_liveview_exposure_compensation.svg",
+    "flags": 1,
+    "nodeVA": 36493262,
+    "dataBaseVA": 36529144,
+    "dataOffset": 482602
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_interval_popup_disable.svg",
+    "flags": 1,
+    "nodeVA": 36493284,
+    "dataBaseVA": 36529144,
+    "dataOffset": 851666
+  },
+  {
+    "path": "/icons/ic_liveview_card_crash+crash.svg",
+    "flags": 1,
+    "nodeVA": 36493306,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1015364
+  },
+  {
+    "path": "/icons/ic_menu_display.svg",
+    "flags": 1,
+    "nodeVA": 36493328,
+    "dataBaseVA": 36529144,
+    "dataOffset": 596445
+  },
+  {
+    "path": "/icons/ic_playback_folder.svg",
+    "flags": 1,
+    "nodeVA": 36493350,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1031443
+  },
+  {
+    "path": "/icons/ic_controlscreen_no_secondary_card.svg",
+    "flags": 1,
+    "nodeVA": 36493372,
+    "dataBaseVA": 36529144,
+    "dataOffset": 412746
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_interval_disable.svg",
+    "flags": 1,
+    "nodeVA": 36493394,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1408221
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_continuous_popup.svg",
+    "flags": 1,
+    "nodeVA": 36493416,
+    "dataBaseVA": 36529144,
+    "dataOffset": 848776
+  },
+  {
+    "path": "/icons/ic_controlscreen_focus_mode_AF.svg",
+    "flags": 1,
+    "nodeVA": 36493438,
+    "dataBaseVA": 36529144,
+    "dataOffset": 865564
+  },
+  {
+    "path": "/icons/ic_playback_storage_cfe.svg",
+    "flags": 1,
+    "nodeVA": 36493460,
+    "dataBaseVA": 36529144,
+    "dataOffset": 570373
+  },
+  {
+    "path": "/icons/ic_liveview_custom_area+off.svg",
+    "flags": 1,
+    "nodeVA": 36493482,
+    "dataBaseVA": 36529144,
+    "dataOffset": 830624
+  },
+  {
+    "path": "/icons/ic_liveview_wide_area+human.svg",
+    "flags": 1,
+    "nodeVA": 36493504,
+    "dataBaseVA": 36529144,
+    "dataOffset": 774373
+  },
+  {
+    "path": "/icons/camera_top.svg",
+    "flags": 1,
+    "nodeVA": 36493526,
+    "dataBaseVA": 36529144,
+    "dataOffset": 552394
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_single_popup_disable.svg",
+    "flags": 1,
+    "nodeVA": 36493548,
+    "dataBaseVA": 36529144,
+    "dataOffset": 810966
+  },
+  {
+    "path": "/icons/ic_liveview_USB2.svg",
+    "flags": 1,
+    "nodeVA": 36493570,
+    "dataBaseVA": 36529144,
+    "dataOffset": 885815
+  },
+  {
+    "path": "/icons/ic_playback_USB.svg",
+    "flags": 1,
+    "nodeVA": 36493592,
+    "dataBaseVA": 36529144,
+    "dataOffset": 607086
+  },
+  {
+    "path": "/icons/ic_liveview_USB3.svg",
+    "flags": 1,
+    "nodeVA": 36493614,
+    "dataBaseVA": 36529144,
+    "dataOffset": 496915
+  },
+  {
+    "path": "/icons/ic_liveview_battery_normal_small.svg",
+    "flags": 1,
+    "nodeVA": 36493636,
+    "dataBaseVA": 36529144,
+    "dataOffset": 512727
+  },
+  {
+    "path": "/icons/ic_liveview_spot_meter_circle.svg",
+    "flags": 1,
+    "nodeVA": 36493658,
+    "dataBaseVA": 36529144,
+    "dataOffset": 699269
+  },
+  {
+    "path": "/icons/ic_transverse_line.svg",
+    "flags": 1,
+    "nodeVA": 36493680,
+    "dataBaseVA": 36529144,
+    "dataOffset": 380863
+  },
+  {
+    "path": "/icons/ic_controlscreen_object_detection_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36493702,
+    "dataBaseVA": 36529144,
+    "dataOffset": 661313
+  },
+  {
+    "path": "/icons/ic_liveview_wifi_mobile.svg",
+    "flags": 1,
+    "nodeVA": 36493724,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1020780
+  },
+  {
+    "path": "/icons/ic_liveview_HDR.svg",
+    "flags": 1,
+    "nodeVA": 36493746,
+    "dataBaseVA": 36529144,
+    "dataOffset": 575341
+  },
+  {
+    "path": "/icons/ic_controlscreen_no_ssd_card.svg",
+    "flags": 1,
+    "nodeVA": 36493768,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1035697
+  },
+  {
+    "path": "/icons/ic_controlscreen_wifi_mobile.svg",
+    "flags": 1,
+    "nodeVA": 36493790,
+    "dataBaseVA": 36529144,
+    "dataOffset": 673638
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_exposure_bracketing.svg",
+    "flags": 1,
+    "nodeVA": 36493812,
+    "dataBaseVA": 36529144,
+    "dataOffset": 899754
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_focus_bracketing_popup_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36493834,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1387688
+  },
+  {
+    "path": "/icons/ic_liveview_bracket_right.svg",
+    "flags": 1,
+    "nodeVA": 36493856,
+    "dataBaseVA": 36529144,
+    "dataOffset": 512446
+  },
+  {
+    "path": "/icons/ic_liveview_exposure_mode_auto_sideways_scrolling.svg",
+    "flags": 1,
+    "nodeVA": 36493878,
+    "dataBaseVA": 36529144,
+    "dataOffset": 479224
+  },
+  {
+    "path": "/icons/ic_liveview_exposure_mode_m_sideways_scrolling.svg",
+    "flags": 1,
+    "nodeVA": 36493900,
+    "dataBaseVA": 36529144,
+    "dataOffset": 542558
+  },
+  {
+    "path": "/icons/ic_liveview_image_stabilization_horizontal.svg",
+    "flags": 1,
+    "nodeVA": 36493922,
+    "dataBaseVA": 36529144,
+    "dataOffset": 768645
+  },
+  {
+    "path": "/icons/ic_playback_ssd.svg",
+    "flags": 1,
+    "nodeVA": 36493944,
+    "dataBaseVA": 36529144,
+    "dataOffset": 603761
+  },
+  {
+    "path": "/icons/ic_controlscreen_no_ssd+full.svg",
+    "flags": 1,
+    "nodeVA": 36493966,
+    "dataBaseVA": 36529144,
+    "dataOffset": 661677
+  },
+  {
+    "path": "/icons/ic_controlscreen_flash_icon.svg",
+    "flags": 1,
+    "nodeVA": 36493988,
+    "dataBaseVA": 36529144,
+    "dataOffset": 833570
+  },
+  {
+    "path": "/icons/ic_liveview_white_balance_cloudy.svg",
+    "flags": 1,
+    "nodeVA": 36494010,
+    "dataBaseVA": 36529144,
+    "dataOffset": 455257
+  },
+  {
+    "path": "/icons/ic_tz0.svg",
+    "flags": 1,
+    "nodeVA": 36494032,
+    "dataBaseVA": 36529144,
+    "dataOffset": 657448
+  },
+  {
+    "path": "/icons/ic_liveview_overheating.svg",
+    "flags": 1,
+    "nodeVA": 36494054,
+    "dataBaseVA": 36529144,
+    "dataOffset": 698269
+  },
+  {
+    "path": "/icons/ic_liveview_wide_area+off.svg",
+    "flags": 1,
+    "nodeVA": 36494076,
+    "dataBaseVA": 36529144,
+    "dataOffset": 829027
+  },
+  {
+    "path": "/icons/ic_controlscreen_overheating.svg",
+    "flags": 1,
+    "nodeVA": 36494098,
+    "dataBaseVA": 36529144,
+    "dataOffset": 686534
+  },
+  {
+    "path": "/icons/ic_liveview_focus_area_custom.svg",
+    "flags": 1,
+    "nodeVA": 36494120,
+    "dataBaseVA": 36529144,
+    "dataOffset": 509079
+  },
+  {
+    "path": "/icons/ic_liveview_focus_area_spot.svg",
+    "flags": 1,
+    "nodeVA": 36494142,
+    "dataBaseVA": 36529144,
+    "dataOffset": 388148
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_interval.svg",
+    "flags": 1,
+    "nodeVA": 36494164,
+    "dataBaseVA": 36529144,
+    "dataOffset": 779658
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_full_auto_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36494186,
+    "dataBaseVA": 36529144,
+    "dataOffset": 540874
+  },
+  {
+    "path": "/icons/ic_liveview_spot_plus+off.svg",
+    "flags": 1,
+    "nodeVA": 36494208,
+    "dataBaseVA": 36529144,
+    "dataOffset": 395298
+  },
+  {
+    "path": "/icons/ic_shutdown.svg",
+    "flags": 1,
+    "nodeVA": 36494230,
+    "dataBaseVA": 36529144,
+    "dataOffset": 898268
+  },
+  {
+    "path": "/icons/ic_tz+8.svg",
+    "flags": 1,
+    "nodeVA": 36494252,
+    "dataBaseVA": 36529144,
+    "dataOffset": 778003
+  },
+  {
+    "path": "/icons/ic_tz+6.svg",
+    "flags": 1,
+    "nodeVA": 36494274,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1394382
+  },
+  {
+    "path": "/icons/ic_tz+9.svg",
+    "flags": 1,
+    "nodeVA": 36494296,
+    "dataBaseVA": 36529144,
+    "dataOffset": 696959
+  },
+  {
+    "path": "/icons/ic_spirit_level_default.svg",
+    "flags": 1,
+    "nodeVA": 36494318,
+    "dataBaseVA": 36529144,
+    "dataOffset": 906064
+  },
+  {
+    "path": "/icons/ic_tz+4.svg",
+    "flags": 1,
+    "nodeVA": 36494340,
+    "dataBaseVA": 36529144,
+    "dataOffset": 447844
+  },
+  {
+    "path": "/icons/ic_tz+7.svg",
+    "flags": 1,
+    "nodeVA": 36494362,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1022981
+  },
+  {
+    "path": "/icons/ic_tz+2.svg",
+    "flags": 1,
+    "nodeVA": 36494384,
+    "dataBaseVA": 36529144,
+    "dataOffset": 622701
+  },
+  {
+    "path": "/icons/ic_tz+5.svg",
+    "flags": 1,
+    "nodeVA": 36494406,
+    "dataBaseVA": 36529144,
+    "dataOffset": 572659
+  },
+  {
+    "path": "/icons/ic_tz+3.svg",
+    "flags": 1,
+    "nodeVA": 36494428,
+    "dataBaseVA": 36529144,
+    "dataOffset": 474629
+  },
+  {
+    "path": "/icons/ic_tz+1.svg",
+    "flags": 1,
+    "nodeVA": 36494450,
+    "dataBaseVA": 36529144,
+    "dataOffset": 771982
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_continuous_disable.svg",
+    "flags": 1,
+    "nodeVA": 36494472,
+    "dataBaseVA": 36529144,
+    "dataOffset": 751913
+  },
+  {
+    "path": "/icons/ic_liveview_focus_area_spot_plus.svg",
+    "flags": 1,
+    "nodeVA": 36494494,
+    "dataBaseVA": 36529144,
+    "dataOffset": 649087
+  },
+  {
+    "path": "/icons/ic_playback_exposure_mode_auto.svg",
+    "flags": 1,
+    "nodeVA": 36494516,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1407184
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_shade.svg",
+    "flags": 1,
+    "nodeVA": 36494538,
+    "dataBaseVA": 36529144,
+    "dataOffset": 598378
+  },
+  {
+    "path": "/icons/ic_controlscreen_focus_mode_AF-C.svg",
+    "flags": 1,
+    "nodeVA": 36494560,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1034563
+  },
+  {
+    "path": "/icons/ic_controlscreen_storage_right_bracket.svg",
+    "flags": 1,
+    "nodeVA": 36494582,
+    "dataBaseVA": 36529144,
+    "dataOffset": 602906
+  },
+  {
+    "path": "/icons/ic_liveview_iso_auto.svg",
+    "flags": 1,
+    "nodeVA": 36494604,
+    "dataBaseVA": 36529144,
+    "dataOffset": 511104
+  },
+  {
+    "path": "/icons/ic_controlscreen_focus_mode_AF-T.svg",
+    "flags": 1,
+    "nodeVA": 36494626,
+    "dataBaseVA": 36529144,
+    "dataOffset": 679357
+  },
+  {
+    "path": "/icons/ic_controlscreen_focus_mode_AF-S.svg",
+    "flags": 1,
+    "nodeVA": 36494648,
+    "dataBaseVA": 36529144,
+    "dataOffset": 896956
+  },
+  {
+    "path": "/icons/ic_liveview_AE-L.svg",
+    "flags": 1,
+    "nodeVA": 36494670,
+    "dataBaseVA": 36529144,
+    "dataOffset": 564239
+  },
+  {
+    "path": "/icons/ic_dialog_button_arrow_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36494692,
+    "dataBaseVA": 36529144,
+    "dataOffset": 948454
+  },
+  {
+    "path": "/icons/ic_controlscreen_both_card_full.svg",
+    "flags": 1,
+    "nodeVA": 36494714,
+    "dataBaseVA": 36529144,
+    "dataOffset": 626722
+  },
+  {
+    "path": "/icons/ic_liveview_spot+off.svg",
+    "flags": 1,
+    "nodeVA": 36494736,
+    "dataBaseVA": 36529144,
+    "dataOffset": 817413
+  },
+  {
+    "path": "/icons/ic_playback_exposure_mode_s.svg",
+    "flags": 1,
+    "nodeVA": 36494758,
+    "dataBaseVA": 36529144,
+    "dataOffset": 654118
+  },
+  {
+    "path": "/icons/ic_playback_exposure_mode_p.svg",
+    "flags": 1,
+    "nodeVA": 36494780,
+    "dataBaseVA": 36529144,
+    "dataOffset": 488846
+  },
+  {
+    "path": "/icons/ic_controlscreen_secondary_card_error.svg",
+    "flags": 1,
+    "nodeVA": 36494802,
+    "dataBaseVA": 36529144,
+    "dataOffset": 472491
+  },
+  {
+    "path": "/icons/ic_controlscreen_card_error.svg",
+    "flags": 1,
+    "nodeVA": 36494824,
+    "dataBaseVA": 36529144,
+    "dataOffset": 839157
+  },
+  {
+    "path": "/icons/ic_controlscreen_storage_cfe_normal.svg",
+    "flags": 1,
+    "nodeVA": 36494846,
+    "dataBaseVA": 36529144,
+    "dataOffset": 786277
+  },
+  {
+    "path": "/icons/ic_dialog_confirm.svg",
+    "flags": 1,
+    "nodeVA": 36494868,
+    "dataBaseVA": 36529144,
+    "dataOffset": 792272
+  },
+  {
+    "path": "/icons/ic_liveview_white_balance_tungsten.svg",
+    "flags": 1,
+    "nodeVA": 36494890,
+    "dataBaseVA": 36529144,
+    "dataOffset": 693607
+  },
+  {
+    "path": "/icons/ic_playback_storage_ssd_disable.svg",
+    "flags": 1,
+    "nodeVA": 36494912,
+    "dataBaseVA": 36529144,
+    "dataOffset": 631232
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot_plus+off+hc.svg",
+    "flags": 1,
+    "nodeVA": 36494934,
+    "dataBaseVA": 36529144,
+    "dataOffset": 413765
+  },
+  {
+    "path": "/icons/ic_playback_HEIF.svg",
+    "flags": 1,
+    "nodeVA": 36494956,
+    "dataBaseVA": 36529144,
+    "dataOffset": 406235
+  },
+  {
+    "path": "/icons/ic_playback_exposure_mode_m.svg",
+    "flags": 1,
+    "nodeVA": 36494978,
+    "dataBaseVA": 36529144,
+    "dataOffset": 463842
+  },
+  {
+    "path": "/icons/ic_controlscreen_exposure_mode_video.svg",
+    "flags": 1,
+    "nodeVA": 36495000,
+    "dataBaseVA": 36529144,
+    "dataOffset": 391282
+  },
+  {
+    "path": "/icons/camera_back_s_joystick_orange.svg",
+    "flags": 1,
+    "nodeVA": 36495022,
+    "dataBaseVA": 36529144,
+    "dataOffset": 898586
+  },
+  {
+    "path": "/icons/ic_playback_exposure_mode_a.svg",
+    "flags": 1,
+    "nodeVA": 36495044,
+    "dataBaseVA": 36529144,
+    "dataOffset": 751436
+  },
+  {
+    "path": "/icons/ic_general_custom_profiles.svg",
+    "flags": 1,
+    "nodeVA": 36495066,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1405418
+  },
+  {
+    "path": "/icons/ic_controlscreen_storage_left_bracket.svg",
+    "flags": 1,
+    "nodeVA": 36495088,
+    "dataBaseVA": 36529144,
+    "dataOffset": 547585
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot_plus+pet+hc.svg",
+    "flags": 1,
+    "nodeVA": 36495110,
+    "dataBaseVA": 36529144,
+    "dataOffset": 709064
+  },
+  {
+    "path": "/icons/ic_controlscreen_popup_focus_area_spot_plus.svg",
+    "flags": 1,
+    "nodeVA": 36495132,
+    "dataBaseVA": 36529144,
+    "dataOffset": 828463
+  },
+  {
+    "path": "/icons/ic_liveview_focus_mode_afc.svg",
+    "flags": 1,
+    "nodeVA": 36495154,
+    "dataBaseVA": 36529144,
+    "dataOffset": 770443
+  },
+  {
+    "path": "/icons/ic_liveview_focus_mode_afs.svg",
+    "flags": 1,
+    "nodeVA": 36495176,
+    "dataBaseVA": 36529144,
+    "dataOffset": 674145
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot_plus+human+hc.svg",
+    "flags": 1,
+    "nodeVA": 36495198,
+    "dataBaseVA": 36529144,
+    "dataOffset": 750406
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_awb.svg",
+    "flags": 1,
+    "nodeVA": 36495220,
+    "dataBaseVA": 36529144,
+    "dataOffset": 794386
+  },
+  {
+    "path": "/icons/ic_checkbox_unselected.svg",
+    "flags": 1,
+    "nodeVA": 36495242,
+    "dataBaseVA": 36529144,
+    "dataOffset": 719702
+  },
+  {
+    "path": "/icons/ic_controlscreen_ssd_error+cfe_missing.svg",
+    "flags": 1,
+    "nodeVA": 36495264,
+    "dataBaseVA": 36529144,
+    "dataOffset": 701611
+  },
+  {
+    "path": "/icons/ic_liveview_exposure_mode_p_sideways_scrolling.svg",
+    "flags": 1,
+    "nodeVA": 36495286,
+    "dataBaseVA": 36529144,
+    "dataOffset": 560030
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_cloudy_popup.svg",
+    "flags": 1,
+    "nodeVA": 36495308,
+    "dataBaseVA": 36529144,
+    "dataOffset": 549288
+  },
+  {
+    "path": "/icons/ic_menu_quality_JPG.svg",
+    "flags": 1,
+    "nodeVA": 36495330,
+    "dataBaseVA": 36529144,
+    "dataOffset": 939479
+  },
+  {
+    "path": "/icons/ic_dialog_delete_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36495352,
+    "dataBaseVA": 36529144,
+    "dataOffset": 384868
+  },
+  {
+    "path": "/icons/ic_controlscreen_DRC.svg",
+    "flags": 1,
+    "nodeVA": 36495374,
+    "dataBaseVA": 36529144,
+    "dataOffset": 386062
+  },
+  {
+    "path": "/icons/ic_controlscreen_both_card_error.svg",
+    "flags": 1,
+    "nodeVA": 36495396,
+    "dataBaseVA": 36529144,
+    "dataOffset": 681525
+  },
+  {
+    "path": "/icons/ic_controlscreen_popup_detection_pet.svg",
+    "flags": 1,
+    "nodeVA": 36495418,
+    "dataBaseVA": 36529144,
+    "dataOffset": 745808
+  },
+  {
+    "path": "/icons/ic_wbtools_picker.svg",
+    "flags": 1,
+    "nodeVA": 36495440,
+    "dataBaseVA": 36529144,
+    "dataOffset": 880231
+  },
+  {
+    "path": "/icons/ic_liveview_spot_plus+vehicle.svg",
+    "flags": 1,
+    "nodeVA": 36495462,
+    "dataBaseVA": 36529144,
+    "dataOffset": 756297
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot_plus+vehicle.svg",
+    "flags": 1,
+    "nodeVA": 36495484,
+    "dataBaseVA": 36529144,
+    "dataOffset": 766314
+  },
+  {
+    "path": "/icons/camera_front_s_custom_btn_orange.svg",
+    "flags": 1,
+    "nodeVA": 36495506,
+    "dataBaseVA": 36529144,
+    "dataOffset": 478666
+  },
+  {
+    "path": "/icons/camera_back_s_rear_wheel_orange.svg",
+    "flags": 1,
+    "nodeVA": 36495528,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1392610
+  },
+  {
+    "path": "/icons/ic_tz-10.svg",
+    "flags": 1,
+    "nodeVA": 36495550,
+    "dataBaseVA": 36529144,
+    "dataOffset": 549684
+  },
+  {
+    "path": "/icons/ic_tz-11.svg",
+    "flags": 1,
+    "nodeVA": 36495572,
+    "dataBaseVA": 36529144,
+    "dataOffset": 855081
+  },
+  {
+    "path": "/icons/ic_playback_wb_florescent.svg",
+    "flags": 1,
+    "nodeVA": 36495594,
+    "dataBaseVA": 36529144,
+    "dataOffset": 508778
+  },
+  {
+    "path": "/icons/ic_tz-12.svg",
+    "flags": 1,
+    "nodeVA": 36495616,
+    "dataBaseVA": 36529144,
+    "dataOffset": 629431
+  },
+  {
+    "path": "/icons/ic_liveview_card_missing+card_full.svg",
+    "flags": 1,
+    "nodeVA": 36495638,
+    "dataBaseVA": 36529144,
+    "dataOffset": 900229
+  },
+  {
+    "path": "/icons/ic_controlscreen_wifi.svg",
+    "flags": 1,
+    "nodeVA": 36495660,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1019376
+  },
+  {
+    "path": "/icons/ic_checkbox_selected.svg",
+    "flags": 1,
+    "nodeVA": 36495682,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1387403
+  },
+  {
+    "path": "/icons/ic_liveview_white_balance_daylight.svg",
+    "flags": 1,
+    "nodeVA": 36495704,
+    "dataBaseVA": 36529144,
+    "dataOffset": 839843
+  },
+  {
+    "path": "/icons/ic_controlscreen_full+error.svg",
+    "flags": 1,
+    "nodeVA": 36495726,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1017536
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot_plus+human.svg",
+    "flags": 1,
+    "nodeVA": 36495748,
+    "dataBaseVA": 36529144,
+    "dataOffset": 884905
+  },
+  {
+    "path": "/icons/ic_tz-8.svg",
+    "flags": 1,
+    "nodeVA": 36495770,
+    "dataBaseVA": 36529144,
+    "dataOffset": 764537
+  },
+  {
+    "path": "/icons/ic_tz-6.svg",
+    "flags": 1,
+    "nodeVA": 36495792,
+    "dataBaseVA": 36529144,
+    "dataOffset": 941235
+  },
+  {
+    "path": "/icons/ic_tz-9.svg",
+    "flags": 1,
+    "nodeVA": 36495814,
+    "dataBaseVA": 36529144,
+    "dataOffset": 593808
+  },
+  {
+    "path": "/icons/ic_tz-4.svg",
+    "flags": 1,
+    "nodeVA": 36495836,
+    "dataBaseVA": 36529144,
+    "dataOffset": 580424
+  },
+  {
+    "path": "/icons/ic_tz-7.svg",
+    "flags": 1,
+    "nodeVA": 36495858,
+    "dataBaseVA": 36529144,
+    "dataOffset": 515703
+  },
+  {
+    "path": "/icons/ic_tz-2.svg",
+    "flags": 1,
+    "nodeVA": 36495880,
+    "dataBaseVA": 36529144,
+    "dataOffset": 606076
+  },
+  {
+    "path": "/icons/ic_tz-5.svg",
+    "flags": 1,
+    "nodeVA": 36495902,
+    "dataBaseVA": 36529144,
+    "dataOffset": 672243
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_awb_popup.svg",
+    "flags": 1,
+    "nodeVA": 36495924,
+    "dataBaseVA": 36529144,
+    "dataOffset": 865984
+  },
+  {
+    "path": "/icons/ic_tz-3.svg",
+    "flags": 1,
+    "nodeVA": 36495946,
+    "dataBaseVA": 36529144,
+    "dataOffset": 691159
+  },
+  {
+    "path": "/icons/ic_tz-1.svg",
+    "flags": 1,
+    "nodeVA": 36495968,
+    "dataBaseVA": 36529144,
+    "dataOffset": 751208
+  },
+  {
+    "path": "/icons/ic_dialog_complete.svg",
+    "flags": 1,
+    "nodeVA": 36495990,
+    "dataBaseVA": 36529144,
+    "dataOffset": 764990
+  },
+  {
+    "path": "/icons/ic_controlscreen_focus_mode_MF.svg",
+    "flags": 1,
+    "nodeVA": 36496012,
+    "dataBaseVA": 36529144,
+    "dataOffset": 832707
+  },
+  {
+    "path": "/icons/ic_playback_JPG.svg",
+    "flags": 1,
+    "nodeVA": 36496034,
+    "dataBaseVA": 36529144,
+    "dataOffset": 699656
+  },
+  {
+    "path": "/icons/ic_playback_wb_shade.svg",
+    "flags": 1,
+    "nodeVA": 36496056,
+    "dataBaseVA": 36529144,
+    "dataOffset": 793916
+  },
+  {
+    "path": "/icons/ic_open_liveview.svg",
+    "flags": 1,
+    "nodeVA": 36496078,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1019043
+  },
+  {
+    "path": "/icons/ic_liveview_card_crash+card_full.svg",
+    "flags": 1,
+    "nodeVA": 36496100,
+    "dataBaseVA": 36529144,
+    "dataOffset": 956233
+  },
+  {
+    "path": "/icons/ic_controlscreen_meter_method_central_point_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36496122,
+    "dataBaseVA": 36529144,
+    "dataOffset": 492068
+  },
+  {
+    "path": "/icons/ic_liveview_ssd_missing.svg",
+    "flags": 1,
+    "nodeVA": 36496144,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1384482
+  },
+  {
+    "path": "/icons/ic_main_menu_usb_mass_storage.svg",
+    "flags": 1,
+    "nodeVA": 36496166,
+    "dataBaseVA": 36529144,
+    "dataOffset": 946658
+  },
+  {
+    "path": "/icons/ic_general_touch.svg",
+    "flags": 1,
+    "nodeVA": 36496188,
+    "dataBaseVA": 36529144,
+    "dataOffset": 949142
+  },
+  {
+    "path": "/icons/ic_liveview_card_normal+crash.svg",
+    "flags": 1,
+    "nodeVA": 36496210,
+    "dataBaseVA": 36529144,
+    "dataOffset": 561671
+  },
+  {
+    "path": "/icons/camera_topdown_large_28p.svg",
+    "flags": 1,
+    "nodeVA": 36496232,
+    "dataBaseVA": 36529144,
+    "dataOffset": 521800
+  },
+  {
+    "path": "/icons/ic_logo_hasselblad.svg",
+    "flags": 1,
+    "nodeVA": 36496254,
+    "dataBaseVA": 36529144,
+    "dataOffset": 807969
+  },
+  {
+    "path": "/icons/ic_controlscreen_secondary_card_full.svg",
+    "flags": 1,
+    "nodeVA": 36496276,
+    "dataBaseVA": 36529144,
+    "dataOffset": 655161
+  },
+  {
+    "path": "/icons/ic_controlscreen_popup_detection_off.svg",
+    "flags": 1,
+    "nodeVA": 36496298,
+    "dataBaseVA": 36529144,
+    "dataOffset": 569287
+  },
+  {
+    "path": "/icons/ic_menu_ibis.svg",
+    "flags": 1,
+    "nodeVA": 36496320,
+    "dataBaseVA": 36529144,
+    "dataOffset": 764090
+  },
+  {
+    "path": "/icons/ic_playback_storage_cfe_disable.svg",
+    "flags": 1,
+    "nodeVA": 36496342,
+    "dataBaseVA": 36529144,
+    "dataOffset": 455980
+  },
+  {
+    "path": "/icons/ic_liveview_DRC.svg",
+    "flags": 1,
+    "nodeVA": 36496364,
+    "dataBaseVA": 36529144,
+    "dataOffset": 470416
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_continuous.svg",
+    "flags": 1,
+    "nodeVA": 36496386,
+    "dataBaseVA": 36529144,
+    "dataOffset": 421333
+  },
+  {
+    "path": "/icons/ic_liveview_image_stabilization_off.svg",
+    "flags": 1,
+    "nodeVA": 36496408,
+    "dataBaseVA": 36529144,
+    "dataOffset": 849080
+  },
+  {
+    "path": "/icons/ic_liveview_exposure_mode_s_sideways_scrolling.svg",
+    "flags": 1,
+    "nodeVA": 36496430,
+    "dataBaseVA": 36529144,
+    "dataOffset": 643851
+  },
+  {
+    "path": "/icons/ic_liveview_focus_distance_infinity.svg",
+    "flags": 1,
+    "nodeVA": 36496452,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1016490
+  },
+  {
+    "path": "/icons/ic_colon.svg",
+    "flags": 1,
+    "nodeVA": 36496474,
+    "dataBaseVA": 36529144,
+    "dataOffset": 446844
+  },
+  {
+    "path": "/icons/ic_dialog_confirm_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36496496,
+    "dataBaseVA": 36529144,
+    "dataOffset": 653278
+  },
+  {
+    "path": "/icons/ic_menu_quality_HEIF.svg",
+    "flags": 1,
+    "nodeVA": 36496518,
+    "dataBaseVA": 36529144,
+    "dataOffset": 942659
+  },
+  {
+    "path": "/icons/ic_playback_HDR_off.svg",
+    "flags": 1,
+    "nodeVA": 36496540,
+    "dataBaseVA": 36529144,
+    "dataOffset": 406617
+  },
+  {
+    "path": "/icons/ic_controlscreen_storage_card_crash.svg",
+    "flags": 1,
+    "nodeVA": 36496562,
+    "dataBaseVA": 36529144,
+    "dataOffset": 496417
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_selftimer.svg",
+    "flags": 1,
+    "nodeVA": 36496584,
+    "dataBaseVA": 36529144,
+    "dataOffset": 692041
+  },
+  {
+    "path": "/icons/ic_tz+12_45.svg",
+    "flags": 1,
+    "nodeVA": 36496606,
+    "dataBaseVA": 36529144,
+    "dataOffset": 575117
+  },
+  {
+    "path": "/icons/ic_liveview_spot_plus+pet.svg",
+    "flags": 1,
+    "nodeVA": 36496628,
+    "dataBaseVA": 36529144,
+    "dataOffset": 927879
+  },
+  {
+    "path": "/icons/ic_tz+10_30.svg",
+    "flags": 1,
+    "nodeVA": 36496650,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1036319
+  },
+  {
+    "path": "/icons/camera_top_s_lens_control_ring_orange.svg",
+    "flags": 1,
+    "nodeVA": 36496672,
+    "dataBaseVA": 36529144,
+    "dataOffset": 551823
+  },
+  {
+    "path": "/icons/ic_liveview_spot+vehicle.svg",
+    "flags": 1,
+    "nodeVA": 36496694,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1037301
+  },
+  {
+    "path": "/icons/camera_front.svg",
+    "flags": 1,
+    "nodeVA": 36496716,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1003786
+  },
+  {
+    "path": "/icons/ic_controlscreen_no_ssd.svg",
+    "flags": 1,
+    "nodeVA": 36496738,
+    "dataBaseVA": 36529144,
+    "dataOffset": 682547
+  },
+  {
+    "path": "/icons/ic_controlscreen_WB_shade_popup.svg",
+    "flags": 1,
+    "nodeVA": 36496760,
+    "dataBaseVA": 36529144,
+    "dataOffset": 624181
+  },
+  {
+    "path": "/icons/ic_menu_switch_open_highlight.svg",
+    "flags": 1,
+    "nodeVA": 36496782,
+    "dataBaseVA": 36529144,
+    "dataOffset": 641907
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_exposure_bracketing_disable.svg",
+    "flags": 1,
+    "nodeVA": 36496804,
+    "dataBaseVA": 36529144,
+    "dataOffset": 513353
+  },
+  {
+    "path": "/icons/ic_menu_storage.svg",
+    "flags": 1,
+    "nodeVA": 36496826,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1047560
+  },
+  {
+    "path": "/icons/ic_dialog_info.svg",
+    "flags": 1,
+    "nodeVA": 36496848,
+    "dataBaseVA": 36529144,
+    "dataOffset": 685263
+  },
+  {
+    "path": "/icons/ic_controlscreen_flash_adjust_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36496870,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1032854
+  },
+  {
+    "path": "/icons/ic_liveview_spot+pet.svg",
+    "flags": 1,
+    "nodeVA": 36496892,
+    "dataBaseVA": 36529144,
+    "dataOffset": 918791
+  },
+  {
+    "path": "/icons/ic_controlscreen_focus_mode_AF-C_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36496914,
+    "dataBaseVA": 36529144,
+    "dataOffset": 811912
+  },
+  {
+    "path": "/icons/ic_controlscreen_focus_mode_AF-T_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36496936,
+    "dataBaseVA": 36529144,
+    "dataOffset": 859776
+  },
+  {
+    "path": "/icons/ic_controlscreen_focus_mode_AF-S_disabled.svg",
+    "flags": 1,
+    "nodeVA": 36496958,
+    "dataBaseVA": 36529144,
+    "dataOffset": 425221
+  },
+  {
+    "path": "/icons/ic_liveview_white_balance_mwb.svg",
+    "flags": 1,
+    "nodeVA": 36496980,
+    "dataBaseVA": 36529144,
+    "dataOffset": 660051
+  },
+  {
+    "path": "/icons/ic_distance_scale_far_green.svg",
+    "flags": 1,
+    "nodeVA": 36497002,
+    "dataBaseVA": 36529144,
+    "dataOffset": 685545
+  },
+  {
+    "path": "/icons/ic_drive_mode_interval.svg",
+    "flags": 1,
+    "nodeVA": 36497024,
+    "dataBaseVA": 36529144,
+    "dataOffset": 573935
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_continuous_popup_disable.svg",
+    "flags": 1,
+    "nodeVA": 36497046,
+    "dataBaseVA": 36529144,
+    "dataOffset": 679807
+  },
+  {
+    "path": "/icons/ic_controlscreen_drive_mode_interval_popup.svg",
+    "flags": 1,
+    "nodeVA": 36497068,
+    "dataBaseVA": 36529144,
+    "dataOffset": 659745
+  },
+  {
+    "path": "/icons/ic_liveview_detection_human.svg",
+    "flags": 1,
+    "nodeVA": 36497090,
+    "dataBaseVA": 36529144,
+    "dataOffset": 421641
+  },
+  {
+    "path": "/icons/ic_spirit_level_default_popup.svg",
+    "flags": 1,
+    "nodeVA": 36497112,
+    "dataBaseVA": 36529144,
+    "dataOffset": 697930
+  },
+  {
+    "path": "/icons/ic_liveview_flash.svg",
+    "flags": 1,
+    "nodeVA": 36497134,
+    "dataBaseVA": 36529144,
+    "dataOffset": 628880
+  },
+  {
+    "path": "/icons/ic_controlscreen_spot+vehicle.svg",
+    "flags": 1,
+    "nodeVA": 36497156,
+    "dataBaseVA": 36529144,
+    "dataOffset": 783884
+  },
+  {
+    "path": "/icons/ic_controlscreen_meter_method_central.svg",
+    "flags": 1,
+    "nodeVA": 36497178,
+    "dataBaseVA": 36529144,
+    "dataOffset": 433305
+  },
+  {
+    "path": "/icons/ic_liveview_card_crash+normal.svg",
+    "flags": 1,
+    "nodeVA": 36497200,
+    "dataBaseVA": 36529144,
+    "dataOffset": 646607
+  },
+  {
+    "path": "/icons/ic_controlscreen_error+full.svg",
+    "flags": 1,
+    "nodeVA": 36497222,
+    "dataBaseVA": 36529144,
+    "dataOffset": 784704
+  },
+  {
+    "path": "/images/pic_compliance_info_x2d.png",
+    "flags": 0,
+    "nodeVA": 36486904,
+    "dataBaseVA": 36529144,
+    "dataOffset": 4782
+  },
+  {
+    "path": "/images/gradient_initial_bottom.png",
+    "flags": 1,
+    "nodeVA": 36486926,
+    "dataBaseVA": 36529144,
+    "dataOffset": 379127
+  },
+  {
+    "path": "/images/gradient_remainder_top.png",
+    "flags": 0,
+    "nodeVA": 36486948,
+    "dataBaseVA": 36529144,
+    "dataOffset": 368657
+  },
+  {
+    "path": "/images/pic_compliance_info_cfv.png",
+    "flags": 0,
+    "nodeVA": 36486970,
+    "dataBaseVA": 36529144,
+    "dataOffset": 89986
+  },
+  {
+    "path": "/images/VictorEyeChart_1600x1200_X259_Y219.png",
+    "flags": 0,
+    "nodeVA": 36486992,
+    "dataBaseVA": 36529144,
+    "dataOffset": 265828
+  },
+  {
+    "path": "/images/gradient_left.png",
+    "flags": 1,
+    "nodeVA": 36487014,
+    "dataBaseVA": 36529144,
+    "dataOffset": 1126
+  },
+  {
+    "path": "/images/gradient_bottom.png",
+    "flags": 1,
+    "nodeVA": 36487036,
+    "dataBaseVA": 36529144,
+    "dataOffset": 244223
+  },
+  {
+    "path": "/images/gradient_initial_top.png",
+    "flags": 0,
+    "nodeVA": 36487058,
+    "dataBaseVA": 36529144,
+    "dataOffset": 0
+  },
+  {
+    "path": "/images/gradient_remainder_bottom.png",
+    "flags": 0,
+    "nodeVA": 36487080,
+    "dataBaseVA": 36529144,
+    "dataOffset": 252978
+  },
+  {
+    "path": "/images/gradient_top.png",
+    "flags": 1,
+    "nodeVA": 36487102,
+    "dataBaseVA": 36529144,
+    "dataOffset": 363531
+  },
+  {
+    "path": "/images/gradient_right.png",
+    "flags": 1,
+    "nodeVA": 36487124,
+    "dataBaseVA": 36529144,
+    "dataOffset": 249325
+  },
+  {
+    "path": "/qt-project.org/imports/QML/qmldir",
+    "flags": 0,
+    "nodeVA": 38004194,
+    "dataBaseVA": 38004300,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/imports/QtQuick/Window/qmldir",
+    "flags": 0,
+    "nodeVA": 39056398,
+    "dataBaseVA": 39056530,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/touchtest/qmldir",
+    "flags": 0,
+    "nodeVA": 39160800,
+    "dataBaseVA": 39160886,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/FreeStyleTouchTest.qml",
+    "flags": 0,
+    "nodeVA": 39161765,
+    "dataBaseVA": 39162583,
+    "dataOffset": 21127
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/ImageViewer.qml",
+    "flags": 0,
+    "nodeVA": 39161787,
+    "dataBaseVA": 39162583,
+    "dataOffset": 18403
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/ButtonTestX2D.qml",
+    "flags": 0,
+    "nodeVA": 39161809,
+    "dataBaseVA": 39162583,
+    "dataOffset": 9318
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/scripts/Keys.js",
+    "flags": 0,
+    "nodeVA": 39162029,
+    "dataBaseVA": 39162583,
+    "dataOffset": 24897
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/Circle.qml",
+    "flags": 0,
+    "nodeVA": 39161853,
+    "dataBaseVA": 39162583,
+    "dataOffset": 17562
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/ButtonTestCFV.qml",
+    "flags": 0,
+    "nodeVA": 39161875,
+    "dataBaseVA": 39162583,
+    "dataOffset": 4790
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/LedTest.qml",
+    "flags": 0,
+    "nodeVA": 39161897,
+    "dataBaseVA": 39162583,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/touchtest_main.qml",
+    "flags": 0,
+    "nodeVA": 39161919,
+    "dataBaseVA": 39162583,
+    "dataOffset": 13587
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/SingleTouchGridTest.qml",
+    "flags": 0,
+    "nodeVA": 39161941,
+    "dataBaseVA": 39162583,
+    "dataOffset": 2881
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/CrossMark.qml",
+    "flags": 0,
+    "nodeVA": 39161963,
+    "dataBaseVA": 39162583,
+    "dataOffset": 16442
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/HorizontalSlidingTest.qml",
+    "flags": 0,
+    "nodeVA": 39161985,
+    "dataBaseVA": 39162583,
+    "dataOffset": 11002
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/LightsensorTest.qml",
+    "flags": 0,
+    "nodeVA": 39162007,
+    "dataBaseVA": 39162583,
+    "dataOffset": 7416
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/qmldir",
+    "flags": 0,
+    "nodeVA": 39189671,
+    "dataBaseVA": 39189821,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/touchtest/qml/scripts/qmldir",
+    "flags": 0,
+    "nodeVA": 39189715,
+    "dataBaseVA": 39189821,
+    "dataOffset": 31
+  },
+  {
+    "path": "/qt/qml/imagetest/qmldir",
+    "flags": 0,
+    "nodeVA": 39190900,
+    "dataBaseVA": 39190986,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/imagetest/qml/imagetest_main.qml",
+    "flags": 0,
+    "nodeVA": 39191258,
+    "dataBaseVA": 39191368,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/imagetest/qml/qmldir",
+    "flags": 0,
+    "nodeVA": 39195186,
+    "dataBaseVA": 39195272,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/sutest/qmldir",
+    "flags": 0,
+    "nodeVA": 39195391,
+    "dataBaseVA": 39195471,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/sutest/qml/TestItem.qml",
+    "flags": 0,
+    "nodeVA": 39196052,
+    "dataBaseVA": 39196842,
+    "dataOffset": 10219
+  },
+  {
+    "path": "/qt/qml/sutest/qml/MyButton.qml",
+    "flags": 0,
+    "nodeVA": 39196074,
+    "dataBaseVA": 39196842,
+    "dataOffset": 25826
+  },
+  {
+    "path": "/qt/qml/sutest/qml/TestWindow.qml",
+    "flags": 1,
+    "nodeVA": 39196096,
+    "dataBaseVA": 39196842,
+    "dataOffset": 24410
+  },
+  {
+    "path": "/qt/qml/sutest/qml/sutest_main.qml",
+    "flags": 0,
+    "nodeVA": 39196118,
+    "dataBaseVA": 39196842,
+    "dataOffset": 8543
+  },
+  {
+    "path": "/qt/qml/sutest/qml/Led.qml",
+    "flags": 1,
+    "nodeVA": 39196140,
+    "dataBaseVA": 39196842,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/sutest/qml/TestResult.qml",
+    "flags": 0,
+    "nodeVA": 39196162,
+    "dataBaseVA": 39196842,
+    "dataOffset": 12171
+  },
+  {
+    "path": "/qt/qml/sutest/qml/wheeltest.qml",
+    "flags": 0,
+    "nodeVA": 39196184,
+    "dataBaseVA": 39196842,
+    "dataOffset": 16011
+  },
+  {
+    "path": "/qt/qml/sutest/qml/displaytest.qml",
+    "flags": 1,
+    "nodeVA": 39196206,
+    "dataBaseVA": 39196842,
+    "dataOffset": 2690
+  },
+  {
+    "path": "/qt/qml/sutest/qml/joysticktest.qml",
+    "flags": 0,
+    "nodeVA": 39196228,
+    "dataBaseVA": 39196842,
+    "dataOffset": 20367
+  },
+  {
+    "path": "/qt/qml/sutest/qml/Slider.qml",
+    "flags": 0,
+    "nodeVA": 39196250,
+    "dataBaseVA": 39196842,
+    "dataOffset": 3740
+  },
+  {
+    "path": "/qt/qml/sutest/qml/keytest.qml",
+    "flags": 1,
+    "nodeVA": 39196272,
+    "dataBaseVA": 39196842,
+    "dataOffset": 6741
+  },
+  {
+    "path": "/qt/qml/sutest/qml/Backlight.qml",
+    "flags": 0,
+    "nodeVA": 39196294,
+    "dataBaseVA": 39196842,
+    "dataOffset": 13898
+  },
+  {
+    "path": "/qt/qml/sutest/qml/TestRunner.qml",
+    "flags": 1,
+    "nodeVA": 39196316,
+    "dataBaseVA": 39196842,
+    "dataOffset": 11041
+  },
+  {
+    "path": "/qt/qml/sutest/qml/EVFWindow.qml",
+    "flags": 0,
+    "nodeVA": 39196338,
+    "dataBaseVA": 39196842,
+    "dataOffset": 1278
+  },
+  {
+    "path": "/qt/qml/sutest/qml/qmldir",
+    "flags": 0,
+    "nodeVA": 39224071,
+    "dataBaseVA": 39224151,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/confirmtest/qmldir",
+    "flags": 0,
+    "nodeVA": 39225360,
+    "dataBaseVA": 39225450,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/confirmtest/qml/confirmtest_main.qml",
+    "flags": 0,
+    "nodeVA": 39225734,
+    "dataBaseVA": 39225852,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/confirmtest/qml/qmldir",
+    "flags": 0,
+    "nodeVA": 39228034,
+    "dataBaseVA": 39228124,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/lenstest/qmldir",
+    "flags": 0,
+    "nodeVA": 39228245,
+    "dataBaseVA": 39228329,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/lenstest/qml/lenstest_main.qml",
+    "flags": 0,
+    "nodeVA": 39228595,
+    "dataBaseVA": 39228701,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/lenstest/qml/qmldir",
+    "flags": 0,
+    "nodeVA": 39230390,
+    "dataBaseVA": 39230474,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/qmlif/qmldir",
+    "flags": 0,
+    "nodeVA": 39230873,
+    "dataBaseVA": 39230989,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/types/qmldir",
+    "flags": 0,
+    "nodeVA": 39270424,
+    "dataBaseVA": 39270540,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/ecs/qmldir",
+    "flags": 0,
+    "nodeVA": 39270917,
+    "dataBaseVA": 39271029,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/guiconfig/qmldir",
+    "flags": 0,
+    "nodeVA": 39271901,
+    "dataBaseVA": 39272025,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/guiobject/qmldir",
+    "flags": 0,
+    "nodeVA": 39273945,
+    "dataBaseVA": 39274069,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/keys/qmldir",
+    "flags": 0,
+    "nodeVA": 39275308,
+    "dataBaseVA": 39275422,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/objectdetection/qmldir",
+    "flags": 0,
+    "nodeVA": 39277935,
+    "dataBaseVA": 39278071,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/storage/qmldir",
+    "flags": 0,
+    "nodeVA": 39279759,
+    "dataBaseVA": 39279879,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/affocusmodel/qmldir",
+    "flags": 0,
+    "nodeVA": 39285733,
+    "dataBaseVA": 39285863,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qpdf/sRGB2014.icc",
+    "flags": 0,
+    "nodeVA": 39405759,
+    "dataBaseVA": 39405825,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/gui/painting/shaders/backingstorecompose.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39408963,
+    "dataBaseVA": 39409219,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/gui/painting/shaders/backingstorecompose.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39408985,
+    "dataBaseVA": 39409219,
+    "dataOffset": 1412
+  },
+  {
+    "path": "/qt-project.org/imports/QtQuick/qmldir",
+    "flags": 0,
+    "nodeVA": 39522168,
+    "dataBaseVA": 39522282,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldoutlinetext.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39522580,
+    "dataBaseVA": 39531892,
+    "dataOffset": 101855
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/visualization.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39522602,
+    "dataBaseVA": 39531892,
+    "dataOffset": 43433
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldoutlinetext_fwidth.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39522624,
+    "dataBaseVA": 39531892,
+    "dataOffset": 86900
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/visualization.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39522646,
+    "dataBaseVA": 39531892,
+    "dataOffset": 58074
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/outlinedtext_a.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39522668,
+    "dataBaseVA": 39531892,
+    "dataOffset": 26259
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/outlinedtext.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39522690,
+    "dataBaseVA": 39531892,
+    "dataOffset": 70154
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/opaquetexture.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39522712,
+    "dataBaseVA": 39531892,
+    "dataOffset": 174434
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/smoothcolor.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39522734,
+    "dataBaseVA": 39531892,
+    "dataOffset": 12769
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/hiqsubpixeldistancefieldtext.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39522756,
+    "dataBaseVA": 39531892,
+    "dataOffset": 7971
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/styledtext_a.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39522778,
+    "dataBaseVA": 39531892,
+    "dataOffset": 140321
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/smoothtexture.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39522800,
+    "dataBaseVA": 39531892,
+    "dataOffset": 181853
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/outlinedtext.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39522822,
+    "dataBaseVA": 39531892,
+    "dataOffset": 113204
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldshiftedtext_fwidth.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39522844,
+    "dataBaseVA": 39531892,
+    "dataOffset": 60637
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/32bitcolortext.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39522866,
+    "dataBaseVA": 39531892,
+    "dataOffset": 129605
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/styledtext.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39522888,
+    "dataBaseVA": 39531892,
+    "dataOffset": 94878
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldoutlinetext.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39522910,
+    "dataBaseVA": 39531892,
+    "dataOffset": 6237
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/vertexcolor.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39522932,
+    "dataBaseVA": 39531892,
+    "dataOffset": 75434
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shadereffect.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39522954,
+    "dataBaseVA": 39531892,
+    "dataOffset": 41212
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldshiftedtext_a.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39522976,
+    "dataBaseVA": 39531892,
+    "dataOffset": 78850
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldtext.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39522998,
+    "dataBaseVA": 39531892,
+    "dataOffset": 185714
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/flatcolor.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523020,
+    "dataBaseVA": 39531892,
+    "dataOffset": 175318
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/stencilclip.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39523042,
+    "dataBaseVA": 39531892,
+    "dataOffset": 80602
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/hiqsubpixeldistancefieldtext.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523064,
+    "dataBaseVA": 39531892,
+    "dataOffset": 160417
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/loqsubpixeldistancefieldtext.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523086,
+    "dataBaseVA": 39531892,
+    "dataOffset": 117993
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/visualization.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523108,
+    "dataBaseVA": 39531892,
+    "dataOffset": 109616
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/styledtext.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523130,
+    "dataBaseVA": 39531892,
+    "dataOffset": 52285
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldoutlinetext_a.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523152,
+    "dataBaseVA": 39531892,
+    "dataOffset": 22801
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldtext.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523174,
+    "dataBaseVA": 39531892,
+    "dataOffset": 54770
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/stencilclip.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523196,
+    "dataBaseVA": 39531892,
+    "dataOffset": 119862
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldoutlinetext_a_fwidth.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523218,
+    "dataBaseVA": 39531892,
+    "dataOffset": 164459
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/sprite.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523240,
+    "dataBaseVA": 39531892,
+    "dataOffset": 172104
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldoutlinetext_a.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523262,
+    "dataBaseVA": 39531892,
+    "dataOffset": 72272
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/textmask.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523284,
+    "dataBaseVA": 39531892,
+    "dataOffset": 128108
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/8bittextmask.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523306,
+    "dataBaseVA": 39531892,
+    "dataOffset": 49156
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/smoothtexture.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523328,
+    "dataBaseVA": 39531892,
+    "dataOffset": 42418
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/vertexcolor.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523350,
+    "dataBaseVA": 39531892,
+    "dataOffset": 59992
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/hiqsubpixeldistancefieldtext.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523372,
+    "dataBaseVA": 39531892,
+    "dataOffset": 115293
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/smoothcolor.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523394,
+    "dataBaseVA": 39531892,
+    "dataOffset": 139663
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/outlinedtext_a.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523416,
+    "dataBaseVA": 39531892,
+    "dataOffset": 134281
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/outlinedtext.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39523438,
+    "dataBaseVA": 39531892,
+    "dataOffset": 157815
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/smoothtexture.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523460,
+    "dataBaseVA": 39531892,
+    "dataOffset": 88915
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/8bittextmask_a.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523482,
+    "dataBaseVA": 39531892,
+    "dataOffset": 4859
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/texture.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523504,
+    "dataBaseVA": 39531892,
+    "dataOffset": 45511
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/vertexcolor.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523526,
+    "dataBaseVA": 39531892,
+    "dataOffset": 17856
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldtext_fwidth.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523548,
+    "dataBaseVA": 39531892,
+    "dataOffset": 136399
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/8bittextmask_a.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523570,
+    "dataBaseVA": 39531892,
+    "dataOffset": 3498
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldoutlinetext.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39523592,
+    "dataBaseVA": 39531892,
+    "dataOffset": 18514
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/24bittextmask.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523614,
+    "dataBaseVA": 39531892,
+    "dataOffset": 74024
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/styledtext.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523636,
+    "dataBaseVA": 39531892,
+    "dataOffset": 24536
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldtext_a_fwidth.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523658,
+    "dataBaseVA": 39531892,
+    "dataOffset": 124612
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/stencilclip.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523680,
+    "dataBaseVA": 39531892,
+    "dataOffset": 178288
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldshiftedtext_fwidth.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523702,
+    "dataBaseVA": 39531892,
+    "dataOffset": 155890
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/smoothcolor.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523724,
+    "dataBaseVA": 39531892,
+    "dataOffset": 171459
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/vertexcolor.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523746,
+    "dataBaseVA": 39531892,
+    "dataOffset": 11045
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldtext.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523768,
+    "dataBaseVA": 39531892,
+    "dataOffset": 81778
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/styledtext_a.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523790,
+    "dataBaseVA": 39531892,
+    "dataOffset": 68430
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldshiftedtext.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523812,
+    "dataBaseVA": 39531892,
+    "dataOffset": 111091
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldoutlinetext_fwidth.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523834,
+    "dataBaseVA": 39531892,
+    "dataOffset": 37466
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldoutlinetext_a_fwidth.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523856,
+    "dataBaseVA": 39531892,
+    "dataOffset": 98440
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/styledtext.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523878,
+    "dataBaseVA": 39531892,
+    "dataOffset": 137942
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/sprite.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523900,
+    "dataBaseVA": 39531892,
+    "dataOffset": 34566
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/textmask.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523922,
+    "dataBaseVA": 39531892,
+    "dataOffset": 143464
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/smoothtexture.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523944,
+    "dataBaseVA": 39531892,
+    "dataOffset": 93887
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldtext.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39523966,
+    "dataBaseVA": 39531892,
+    "dataOffset": 56185
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldshiftedtext_a.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39523988,
+    "dataBaseVA": 39531892,
+    "dataOffset": 106606
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/hiqsubpixeldistancefieldtext_a.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524010,
+    "dataBaseVA": 39531892,
+    "dataOffset": 145708
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/flatcolor.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524032,
+    "dataBaseVA": 39531892,
+    "dataOffset": 62531
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/smoothcolor.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524054,
+    "dataBaseVA": 39531892,
+    "dataOffset": 167937
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/loqsubpixeldistancefieldtext.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524076,
+    "dataBaseVA": 39531892,
+    "dataOffset": 83173
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldtext_fwidth.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524098,
+    "dataBaseVA": 39531892,
+    "dataOffset": 148391
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/hiqsubpixeldistancefieldtext.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524120,
+    "dataBaseVA": 39531892,
+    "dataOffset": 130959
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/loqsubpixeldistancefieldtext.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524142,
+    "dataBaseVA": 39531892,
+    "dataOffset": 103851
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/opaquetexture.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39524164,
+    "dataBaseVA": 39531892,
+    "dataOffset": 67021
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/loqsubpixeldistancefieldtext_a.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524186,
+    "dataBaseVA": 39531892,
+    "dataOffset": 16001
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/hiqsubpixeldistancefieldtext_a.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524208,
+    "dataBaseVA": 39531892,
+    "dataOffset": 121908
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/stencilclip.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524230,
+    "dataBaseVA": 39531892,
+    "dataOffset": 120549
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldshiftedtext.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524252,
+    "dataBaseVA": 39531892,
+    "dataOffset": 39460
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/texture.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524274,
+    "dataBaseVA": 39531892,
+    "dataOffset": 65826
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/sprite.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524296,
+    "dataBaseVA": 39531892,
+    "dataOffset": 142042
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/textmask.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39524318,
+    "dataBaseVA": 39531892,
+    "dataOffset": 76889
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldtext_a.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524340,
+    "dataBaseVA": 39531892,
+    "dataOffset": 176873
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldtext_a_fwidth.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524362,
+    "dataBaseVA": 39531892,
+    "dataOffset": 64282
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/texture.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39524384,
+    "dataBaseVA": 39531892,
+    "dataOffset": 152975
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shadereffect.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39524406,
+    "dataBaseVA": 39531892,
+    "dataOffset": 154433
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldshiftedtext.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524428,
+    "dataBaseVA": 39531892,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/flatcolor.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39524450,
+    "dataBaseVA": 39531892,
+    "dataOffset": 108352
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/outlinedtext.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524472,
+    "dataBaseVA": 39531892,
+    "dataOffset": 178982
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/visualization.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524494,
+    "dataBaseVA": 39531892,
+    "dataOffset": 36006
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/opaquetexture.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524516,
+    "dataBaseVA": 39531892,
+    "dataOffset": 32866
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/32bitcolortext.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524538,
+    "dataBaseVA": 39531892,
+    "dataOffset": 97069
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldtext_a.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524560,
+    "dataBaseVA": 39531892,
+    "dataOffset": 20222
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldshiftedtext_a_fwidth.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524582,
+    "dataBaseVA": 39531892,
+    "dataOffset": 47262
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/opaquetexture.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524604,
+    "dataBaseVA": 39531892,
+    "dataOffset": 63382
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/loqsubpixeldistancefieldtext.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39524626,
+    "dataBaseVA": 39531892,
+    "dataOffset": 30392
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/8bittextmask.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524648,
+    "dataBaseVA": 39531892,
+    "dataOffset": 163099
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/24bittextmask.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524670,
+    "dataBaseVA": 39531892,
+    "dataOffset": 100457
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldoutlinetext.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524692,
+    "dataBaseVA": 39531892,
+    "dataOffset": 1745
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/loqsubpixeldistancefieldtext_a.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524714,
+    "dataBaseVA": 39531892,
+    "dataOffset": 85030
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/sprite.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39524736,
+    "dataBaseVA": 39531892,
+    "dataOffset": 28347
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/textmask.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524758,
+    "dataBaseVA": 39531892,
+    "dataOffset": 166453
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shadereffect.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39524780,
+    "dataBaseVA": 39531892,
+    "dataOffset": 50535
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldshiftedtext_a_fwidth.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524802,
+    "dataBaseVA": 39531892,
+    "dataOffset": 126182
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/flatcolor.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524824,
+    "dataBaseVA": 39531892,
+    "dataOffset": 93059
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/distancefieldshiftedtext.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39524846,
+    "dataBaseVA": 39531892,
+    "dataOffset": 149960
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shadereffect.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524868,
+    "dataBaseVA": 39531892,
+    "dataOffset": 151784
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/texture.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39524890,
+    "dataBaseVA": 39531892,
+    "dataOffset": 21617
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapestroke.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39719289,
+    "dataBaseVA": 39719967,
+    "dataOffset": 9327
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapestroke.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39719311,
+    "dataBaseVA": 39719967,
+    "dataOffset": 21494
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39719333,
+    "dataBaseVA": 39719967,
+    "dataOffset": 6357
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapestroke.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39719355,
+    "dataBaseVA": 39719967,
+    "dataOffset": 26498
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39719377,
+    "dataBaseVA": 39719967,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39719399,
+    "dataBaseVA": 39719967,
+    "dataOffset": 3228
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39719421,
+    "dataBaseVA": 39719967,
+    "dataOffset": 14356
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapestroke.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39719443,
+    "dataBaseVA": 39719967,
+    "dataOffset": 17465
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_derivatives.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39750327,
+    "dataBaseVA": 39750801,
+    "dataOffset": 5605
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_derivatives.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39750349,
+    "dataBaseVA": 39750801,
+    "dataOffset": 8833
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_derivatives.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39750371,
+    "dataBaseVA": 39750801,
+    "dataOffset": 2635
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_derivatives.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39750393,
+    "dataBaseVA": 39750801,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_lg.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39762416,
+    "dataBaseVA": 39762818,
+    "dataOffset": 7120
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_lg.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39762438,
+    "dataBaseVA": 39762818,
+    "dataOffset": 10555
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_lg.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39762460,
+    "dataBaseVA": 39762818,
+    "dataOffset": 3423
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_lg.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39762482,
+    "dataBaseVA": 39762818,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_lg_derivatives.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39776893,
+    "dataBaseVA": 39777391,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_lg_derivatives.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39776915,
+    "dataBaseVA": 39777391,
+    "dataOffset": 10124
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_lg_derivatives.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39776937,
+    "dataBaseVA": 39777391,
+    "dataOffset": 7132
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_lg_derivatives.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39776959,
+    "dataBaseVA": 39777391,
+    "dataOffset": 3697
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_rg.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39790552,
+    "dataBaseVA": 39790954,
+    "dataOffset": 4517
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_rg.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39790574,
+    "dataBaseVA": 39790954,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_rg.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39790596,
+    "dataBaseVA": 39790954,
+    "dataOffset": 11569
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_rg.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39790618,
+    "dataBaseVA": 39790954,
+    "dataOffset": 7911
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_rg_derivatives.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39807110,
+    "dataBaseVA": 39807608,
+    "dataOffset": 3394
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_rg_derivatives.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39807132,
+    "dataBaseVA": 39807608,
+    "dataOffset": 7396
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_rg_derivatives.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39807154,
+    "dataBaseVA": 39807608,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_rg_derivatives.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39807176,
+    "dataBaseVA": 39807608,
+    "dataOffset": 11445
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_cg.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39822799,
+    "dataBaseVA": 39823201,
+    "dataOffset": 7411
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_cg.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39822821,
+    "dataBaseVA": 39823201,
+    "dataOffset": 10716
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_cg.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39822843,
+    "dataBaseVA": 39823201,
+    "dataOffset": 3566
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_cg.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39822865,
+    "dataBaseVA": 39823201,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_cg_derivatives.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39837861,
+    "dataBaseVA": 39838359,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_cg_derivatives.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39837883,
+    "dataBaseVA": 39838359,
+    "dataOffset": 3373
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_cg_derivatives.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39837905,
+    "dataBaseVA": 39838359,
+    "dataOffset": 6789
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_cg_derivatives.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39837927,
+    "dataBaseVA": 39838359,
+    "dataOffset": 10094
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_tf.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39852107,
+    "dataBaseVA": 39852509,
+    "dataOffset": 3610
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_tf.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39852129,
+    "dataBaseVA": 39852509,
+    "dataOffset": 6945
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_tf.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39852151,
+    "dataBaseVA": 39852509,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_tf.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39852173,
+    "dataBaseVA": 39852509,
+    "dataOffset": 10326
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_tf_derivatives.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39866292,
+    "dataBaseVA": 39866790,
+    "dataOffset": 2947
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_tf_derivatives.frag.qsb",
+    "flags": 0,
+    "nodeVA": 39866314,
+    "dataBaseVA": 39866790,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_tf_derivatives.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 39866336,
+    "dataBaseVA": 39866790,
+    "dataOffset": 5847
+  },
+  {
+    "path": "/qt-project.org/scenegraph/shaders_ng/shapecurve_tf_derivatives.vert.qsb",
+    "flags": 0,
+    "nodeVA": 39866358,
+    "dataBaseVA": 39866790,
+    "dataOffset": 9457
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/constants/qmldir",
+    "flags": 0,
+    "nodeVA": 40075425,
+    "dataBaseVA": 40075549,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/imports/QtQml/StateMachine/qmldir",
+    "flags": 0,
+    "nodeVA": 40108199,
+    "dataBaseVA": 40108339,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/uiproxies/qmldir",
+    "flags": 0,
+    "nodeVA": 40117286,
+    "dataBaseVA": 40117410,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/uiproxies/CameraUI.qml",
+    "flags": 1,
+    "nodeVA": 40208440,
+    "dataBaseVA": 40208630,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/uiproxies/StorageUI.qml",
+    "flags": 1,
+    "nodeVA": 40208462,
+    "dataBaseVA": 40208630,
+    "dataOffset": 7026
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/proxies/qmldir",
+    "flags": 0,
+    "nodeVA": 40217969,
+    "dataBaseVA": 40218089,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/hblsystemtime/qmldir",
+    "flags": 0,
+    "nodeVA": 40221417,
+    "dataBaseVA": 40221549,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/upgrade/qmldir",
+    "flags": 0,
+    "nodeVA": 40223231,
+    "dataBaseVA": 40223351,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/menumodel/qmldir",
+    "flags": 0,
+    "nodeVA": 40225302,
+    "dataBaseVA": 40225426,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/valueformatter/qmldir",
+    "flags": 0,
+    "nodeVA": 40241065,
+    "dataBaseVA": 40241199,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/imports/QtCore/qmldir",
+    "flags": 0,
+    "nodeVA": 40249063,
+    "dataBaseVA": 40249175,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/video/qmldir",
+    "flags": 0,
+    "nodeVA": 40252402,
+    "dataBaseVA": 40252518,
+    "dataOffset": 0
+  },
+  {
+    "path": "/video_shaders/shaders/video.vert.qsb",
+    "flags": 0,
+    "nodeVA": 40253006,
+    "dataBaseVA": 40253170,
+    "dataOffset": 0
+  },
+  {
+    "path": "/video_shaders/shaders/video.frag.qsb",
+    "flags": 0,
+    "nodeVA": 40253028,
+    "dataBaseVA": 40253170,
+    "dataOffset": 1423
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/licensemodel/qmldir",
+    "flags": 0,
+    "nodeVA": 40257483,
+    "dataBaseVA": 40257613,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/lensdata/qmldir",
+    "flags": 0,
+    "nodeVA": 40258580,
+    "dataBaseVA": 40258702,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/luts/qmldir",
+    "flags": 0,
+    "nodeVA": 40267624,
+    "dataBaseVA": 40267738,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/luts/FastPreviewLut.qml",
+    "flags": 0,
+    "nodeVA": 40274580,
+    "dataBaseVA": 40274958,
+    "dataOffset": 656
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/luts/Lut.qml",
+    "flags": 0,
+    "nodeVA": 40274602,
+    "dataBaseVA": 40274958,
+    "dataOffset": 3314
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/luts/UiLut.qml",
+    "flags": 0,
+    "nodeVA": 40274624,
+    "dataBaseVA": 40274958,
+    "dataOffset": 1329
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/luts/SdrLut.qml",
+    "flags": 0,
+    "nodeVA": 40274646,
+    "dataBaseVA": 40274958,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/luts/HdrLut.qml",
+    "flags": 0,
+    "nodeVA": 40274668,
+    "dataBaseVA": 40274958,
+    "dataOffset": 1983
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/luts/HdrBaseLut.qml",
+    "flags": 0,
+    "nodeVA": 40274690,
+    "dataBaseVA": 40274958,
+    "dataOffset": 2647
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/histogram/qmldir",
+    "flags": 0,
+    "nodeVA": 40280038,
+    "dataBaseVA": 40280162,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/imports/QtQuick/Shapes/qmldir",
+    "flags": 0,
+    "nodeVA": 40294144,
+    "dataBaseVA": 40294276,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/radialgradient.vert.qsb",
+    "flags": 0,
+    "nodeVA": 40294567,
+    "dataBaseVA": 40296209,
+    "dataOffset": 33345
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/texturefill.frag.qsb",
+    "flags": 0,
+    "nodeVA": 40294589,
+    "dataBaseVA": 40296209,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/lineargradient.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 40294611,
+    "dataBaseVA": 40296209,
+    "dataOffset": 8067
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/wireframe.vert.qsb",
+    "flags": 0,
+    "nodeVA": 40294633,
+    "dataBaseVA": 40296209,
+    "dataOffset": 10269
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/conicalgradient.frag.qsb",
+    "flags": 0,
+    "nodeVA": 40294655,
+    "dataBaseVA": 40296209,
+    "dataOffset": 18678
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/lineargradient.vert.qsb",
+    "flags": 0,
+    "nodeVA": 40294677,
+    "dataBaseVA": 40296209,
+    "dataOffset": 11674
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/radialgradient.frag.qsb",
+    "flags": 0,
+    "nodeVA": 40294699,
+    "dataBaseVA": 40296209,
+    "dataOffset": 3031
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/radialgradient.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 40294721,
+    "dataBaseVA": 40296209,
+    "dataOffset": 29518
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/texturefill.vert.qsb",
+    "flags": 0,
+    "nodeVA": 40294743,
+    "dataBaseVA": 40296209,
+    "dataOffset": 20505
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/wireframe.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 40294765,
+    "dataBaseVA": 40296209,
+    "dataOffset": 13579
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/lineargradient.frag.qsb",
+    "flags": 0,
+    "nodeVA": 40294787,
+    "dataBaseVA": 40296209,
+    "dataOffset": 22279
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/conicalgradient.vert.qsb",
+    "flags": 0,
+    "nodeVA": 40294809,
+    "dataBaseVA": 40296209,
+    "dataOffset": 1294
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/texturefill.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 40294831,
+    "dataBaseVA": 40296209,
+    "dataOffset": 6750
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/conicalgradient.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 40294853,
+    "dataBaseVA": 40296209,
+    "dataOffset": 23626
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/wireframe.frag.qsb",
+    "flags": 0,
+    "nodeVA": 40294875,
+    "dataBaseVA": 40296209,
+    "dataOffset": 17373
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/radialgradient.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 40294897,
+    "dataBaseVA": 40296209,
+    "dataOffset": 15271
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/wireframe.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 40294919,
+    "dataBaseVA": 40296209,
+    "dataOffset": 5479
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/conicalgradient.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 40294941,
+    "dataBaseVA": 40296209,
+    "dataOffset": 27682
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/texturefill.vert.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 40294963,
+    "dataBaseVA": 40296209,
+    "dataOffset": 25630
+  },
+  {
+    "path": "/qt-project.org/shapes/shaders_ng/lineargradient.frag.qsb.mv2qsb",
+    "flags": 0,
+    "nodeVA": 40294985,
+    "dataBaseVA": 40296209,
+    "dataOffset": 31972
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/input/qmldir",
+    "flags": 0,
+    "nodeVA": 40332211,
+    "dataBaseVA": 40332327,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/debugdata/qmldir",
+    "flags": 0,
+    "nodeVA": 40333772,
+    "dataBaseVA": 40333896,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt/qml/com/hasselblad/colorsampler/qmldir",
+    "flags": 0,
+    "nodeVA": 40334938,
+    "dataBaseVA": 40335068,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/imports/QtQml/qmldir",
+    "flags": 0,
+    "nodeVA": 40424013,
+    "dataBaseVA": 40424123,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/imports/QtQml/Models/qmldir",
+    "flags": 0,
+    "nodeVA": 40431477,
+    "dataBaseVA": 40431605,
+    "dataOffset": 0
+  },
+  {
+    "path": "/qt-project.org/imports/QtQml/WorkerScript/qmldir",
+    "flags": 0,
+    "nodeVA": 40450461,
+    "dataBaseVA": 40450601,
+    "dataOffset": 0
+  }
+]

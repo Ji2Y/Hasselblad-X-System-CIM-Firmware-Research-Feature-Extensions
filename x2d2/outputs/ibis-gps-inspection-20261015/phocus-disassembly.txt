@@ -1,0 +1,182 @@
+
+_ZN15CameraProxyDbus16set_gps_positionERK4QMapI7QString8QVariantEiP7QObject @ 0x17ddf0 (692 bytes)
+0017ddf0 sub      sp, sp, #0x80
+0017ddf4 stp      x29, x30, [sp, #0x40]
+0017ddf8 add      x29, sp, #0x40
+0017ddfc stp      x24, x23, [sp, #0x50]
+0017de00 stp      x22, x21, [sp, #0x60]
+0017de04 stp      x20, x19, [sp, #0x70]
+0017de08 mrs      x23, tpidr_el0
+0017de0c mov      x19, x0
+0017de10 ldr      x8, [x23, #0x28]
+0017de14 adrp     x24, #0x219000
+0017de18 mov      x22, x3
+0017de1c mov      w21, w2
+0017de20 mov      x20, x1
+0017de24 add      x24, x24, #0xbae
+0017de28 stur     x8, [x29, #-8]
+0017de2c mov      w8, #0x10
+0017de30 ldr      x0, [x0, #0x300]
+0017de34 stp      xzr, x24, [sp, #0x18]
+0017de38 str      x8, [sp, #0x28]
+0017de3c add      x8, sp, #8
+0017de40 add      x1, sp, #0x18
+0017de44 bl       #0x1d8520 _ZN9DBusProxy16createMethodCallERK7QString
+0017de48 ldr      x8, [sp, #0x18]
+0017de4c cbz      x8, #0x17de6c
+0017de50 ldaxr    w9, [x8]
+0017de54 subs     w9, w9, #1
+0017de58 stlxr    w10, w9, [x8]
+0017de5c cbnz     w10, #0x17de50
+0017de60 b.ne     #0x17de6c
+0017de64 ldr      x0, [sp, #0x18]
+0017de68 bl       #0x4cb38 free
+0017de6c adrp     x1, #0x2ab000
+0017de70 add      x0, sp, #0x18
+0017de74 mov      x2, x20
+0017de78 ldr      x1, [x1, #0xd40]
+0017de7c bl       #0x4eba8 _ZN8QVariantC1E9QMetaTypePKv
+0017de80 add      x0, sp, #8
+0017de84 add      x1, sp, #0x18
+0017de88 bl       #0x4ebb8 _ZN12QDBusMessagelsERK8QVariant
+0017de8c add      x0, sp, #0x18
+0017de90 bl       #0x4d2c8 _ZN8QVariantD1Ev
+0017de94 add      x8, x19, #0x2dc
+0017de98 ldaxr    w9, [x8]
+0017de9c add      w10, w9, #1
+0017dea0 stlxr    w11, w10, [x8]
+0017dea4 cbnz     w11, #0x17de98
+0017dea8 cbnz     w9, #0x17deb8
+0017deac mov      x0, x19
+0017deb0 mov      w1, #1
+0017deb4 bl       #0x156ad0 _ZN11CameraProxy30set_gps_position_activeChangedEb
+0017deb8 mov      w0, #0x38
+0017debc bl       #0x4ceb8 _Znwm
+0017dec0 mov      x20, x0
+0017dec4 mov      w8, #0x10
+0017dec8 stp      xzr, x24, [sp, #0x18]
+0017decc str      x8, [sp, #0x28]
+0017ded0 add      x1, sp, #0x18
+0017ded4 mov      x2, x22
+0017ded8 bl       #0x167aa0 _ZN22DBusPendingCallWatcherC2ERK7QStringP7QObject
+0017dedc ldr      x8, [sp, #0x18]
+0017dee0 cbz      x8, #0x17df00
+0017dee4 ldaxr    w9, [x8]
+0017dee8 subs     w9, w9, #1
+0017deec stlxr    w10, w9, [x8]
+0017def0 cbnz     w10, #0x17dee4
+0017def4 b.ne     #0x17df00
+0017def8 ldr      x0, [sp, #0x18]
+0017defc bl       #0x4cb38 free
+0017df00 ldr      x0, [x19, #0x300]
+0017df04 add      x1, sp, #8
+0017df08 mov      x2, x20
+0017df0c mov      w3, w21
+0017df10 bl       #0x1d7400 _ZN9DBusProxy16callWithFinishedERK12QDBusMessageP7QObjecti
+0017df14 mov      x21, x0
+0017df18 str      x0, [x20, #0x28]
+0017df1c cbz      x0, #0x17df7c
+0017df20 adrp     x8, #0x2ab000
+0017df24 ldr      x8, [x8, #0xf00]
+0017df28 stp      x8, xzr, [sp, #0x18]
+0017df2c mov      w0, #0x18
+0017df30 bl       #0x4ceb8 _Znwm
+0017df34 adrp     x9, #0x168000
+0017df38 mov      w8, #1
+0017df3c add      x9, x9, #0x9d8
+0017df40 mov      x4, x0
+0017df44 str      w8, [x0]
+0017df48 stp      x9, x20, [x0, #8]
+0017df4c adrp     x7, #0x2ab000
+0017df50 add      x8, sp, #0x10
+0017df54 add      x1, sp, #0x18
+0017df58 mov      x0, x21
+0017df5c mov      x2, x20
+0017df60 mov      x3, xzr
+0017df64 ldr      x7, [x7, #0xf08]
+0017df68 mov      w5, wzr
+0017df6c mov      x6, xzr
+0017df70 bl       #0x4cf98 _ZN7QObject11connectImplEPKS_PPvS1_S3_PN9QtPrivate15QSlotObjectBaseEN2Qt14ConnectionTypeEPKiPK11QMetaObject
+0017df74 add      x0, sp, #0x10
+0017df78 bl       #0x4cfa8 _ZN11QMetaObject10ConnectionD1Ev
+0017df7c adrp     x8, #0x2aa000
+0017df80 ldr      x8, [x8, #0x9e8]
+0017df84 stp      x8, xzr, [sp, #0x18]
+0017df88 mov      w0, #0x18
+0017df8c bl       #0x4ceb8 _Znwm
+0017df90 adrp     x9, #0x192000
+0017df94 mov      w8, #1
+0017df98 add      x9, x9, #0x358
+0017df9c mov      x4, x0
+0017dfa0 str      w8, [x0]
+0017dfa4 stp      x9, x19, [x0, #8]
+0017dfa8 adrp     x7, #0x2aa000
+0017dfac mov      x8, sp
+0017dfb0 add      x1, sp, #0x18
+0017dfb4 mov      x0, x20
+0017dfb8 mov      x2, x19
+0017dfbc mov      x3, xzr
+0017dfc0 ldr      x7, [x7, #0x9f0]
+0017dfc4 mov      w5, wzr
+0017dfc8 mov      x6, xzr
+0017dfcc bl       #0x4cf98 _ZN7QObject11connectImplEPKS_PPvS1_S3_PN9QtPrivate15QSlotObjectBaseEN2Qt14ConnectionTypeEPKiPK11QMetaObject
+0017dfd0 mov      x0, sp
+0017dfd4 bl       #0x4cfa8 _ZN11QMetaObject10ConnectionD1Ev
+0017dfd8 add      x0, sp, #8
+0017dfdc bl       #0x4eb68 _ZN12QDBusMessageD1Ev
+0017dfe0 ldr      x8, [x23, #0x28]
+0017dfe4 ldur     x9, [x29, #-8]
+0017dfe8 cmp      x8, x9
+0017dfec b.ne     #0x17e00c
+0017dff0 mov      x0, x20
+0017dff4 ldp      x20, x19, [sp, #0x70]
+0017dff8 ldp      x22, x21, [sp, #0x60]
+0017dffc ldp      x24, x23, [sp, #0x50]
+0017e000 ldp      x29, x30, [sp, #0x40]
+0017e004 add      sp, sp, #0x80
+0017e008 ret
+0017e00c bl       #0x4cba8 __stack_chk_fail
+0017e010 b        #0x17e090
+0017e014 ldr      x8, [sp, #0x18]
+0017e018 mov      x19, x0
+0017e01c cbz      x8, #0x17e03c
+0017e020 ldaxr    w9, [x8]
+0017e024 subs     w9, w9, #1
+0017e028 stlxr    w10, w9, [x8]
+0017e02c cbnz     w10, #0x17e020
+0017e030 b.ne     #0x17e03c
+0017e034 ldr      x0, [sp, #0x18]
+0017e038 bl       #0x4cb38 free
+0017e03c mov      x0, x20
+0017e040 bl       #0x4cb88 _ZdlPv
+0017e044 b        #0x17e094
+0017e048 mov      x19, x0
+0017e04c add      x0, sp, #0x18
+0017e050 bl       #0x4d2c8 _ZN8QVariantD1Ev
+0017e054 b        #0x17e094
+0017e058 bl       #0x7a710 __clang_call_terminate
+0017e05c ldr      x8, [sp, #0x18]
+0017e060 mov      x19, x0
+0017e064 cbz      x8, #0x17e09c
+0017e068 ldaxr    w9, [x8]
+0017e06c subs     w9, w9, #1
+0017e070 stlxr    w10, w9, [x8]
+0017e074 cbnz     w10, #0x17e068
+0017e078 b.ne     #0x17e09c
+0017e07c ldr      x0, [sp, #0x18]
+0017e080 bl       #0x4cb38 free
+0017e084 mov      x0, x19
+0017e088 bl       #0x4cbb8 _Unwind_Resume
+0017e08c b        #0x17e090
+0017e090 mov      x19, x0
+0017e094 add      x0, sp, #8
+0017e098 bl       #0x4eb68 _ZN12QDBusMessageD1Ev
+0017e09c mov      x0, x19
+0017e0a0 bl       #0x4cbb8 _Unwind_Resume
+
+_ZN15CameraProxyDbus18doSet_gps_positionERK4QMapI7QString8QVariantE @ 0x15bde8 (20 bytes)
+0015bde8 ldr      x8, [x0]
+0015bdec mov      w2, #-1
+0015bdf0 mov      x3, xzr
+0015bdf4 ldr      x4, [x8, #0x1a8]
+0015bdf8 br       x4

@@ -1,0 +1,347 @@
+{
+  "model": "X2D II 100C",
+  "firmware": "1.3.16.2",
+  "verification": "static offline only",
+  "device_access": false,
+  "deployable": false,
+  "library_sha256": "7d6164eccc734de7087bb778ee72f17a0b3ccf6c0d1f20092c7ebe74a86574ba",
+  "config_sha256": "e4f965ed8634c0e14d418d4f57131243d7ea197b8abea2a84d9ee0f934d2ed9e",
+  "instruction_count": 76,
+  "policy_callback_count": 7,
+  "result_jump_table_count": 2,
+  "evidence": [
+    {
+      "va": "0x1ca448",
+      "word": "0x97fa0f52"
+    },
+    {
+      "va": "0x1ca44c",
+      "word": "0x39400001"
+    },
+    {
+      "va": "0x1ca454",
+      "word": "0x97fffd77"
+    },
+    {
+      "va": "0x1c9a6c",
+      "word": "0x7100051f"
+    },
+    {
+      "va": "0x1c9a70",
+      "word": "0x540002e0"
+    },
+    {
+      "va": "0x1c9ad8",
+      "word": "0xf9456508"
+    },
+    {
+      "va": "0x1c9ae0",
+      "word": "0xf9456929"
+    },
+    {
+      "va": "0x1c9ae4",
+      "word": "0xf9456d4a"
+    },
+    {
+      "va": "0x1c9ae8",
+      "word": "0xf945716b"
+    },
+    {
+      "va": "0x1c9afc",
+      "word": "0xf9457508"
+    },
+    {
+      "va": "0x1c9b00",
+      "word": "0x9e670162"
+    },
+    {
+      "va": "0x1c9b18",
+      "word": "0xf9457d08"
+    },
+    {
+      "va": "0x1d4ee0",
+      "word": "0x97f9e9d0"
+    },
+    {
+      "va": "0x1d4ef4",
+      "word": "0x320003e1"
+    },
+    {
+      "va": "0x1d4efc",
+      "word": "0x97f9eb75"
+    },
+    {
+      "va": "0x1d4f00",
+      "word": "0x72001c1f"
+    },
+    {
+      "va": "0x1d4f04",
+      "word": "0x54000120"
+    },
+    {
+      "va": "0x1d4f18",
+      "word": "0xb94102a8"
+    },
+    {
+      "va": "0x1d4f1c",
+      "word": "0xb9402c09"
+    },
+    {
+      "va": "0x1d4f20",
+      "word": "0x6b08013f"
+    },
+    {
+      "va": "0x1d4f24",
+      "word": "0x540006ea"
+    },
+    {
+      "va": "0x1d4fc8",
+      "word": "0x528000a1"
+    },
+    {
+      "va": "0x1d4fcc",
+      "word": "0x97f9eb41"
+    },
+    {
+      "va": "0x1d4fd4",
+      "word": "0x54000120"
+    },
+    {
+      "va": "0x1d4ff8",
+      "word": "0x2a1f03e0"
+    },
+    {
+      "va": "0x1d5418",
+      "word": "0x97f9ea2e"
+    },
+    {
+      "va": "0x1d5420",
+      "word": "0x54000d20"
+    },
+    {
+      "va": "0x1d5434",
+      "word": "0xb94102a8"
+    },
+    {
+      "va": "0x1d5438",
+      "word": "0xb9402f29"
+    },
+    {
+      "va": "0x1d543c",
+      "word": "0x6b08013f"
+    },
+    {
+      "va": "0x1d5440",
+      "word": "0x54000c2b"
+    },
+    {
+      "va": "0x185f24",
+      "word": "0x97fb3097"
+    },
+    {
+      "va": "0x186438",
+      "word": "0x97fffeb4"
+    },
+    {
+      "va": "0x186454",
+      "word": "0xb140314"
+    },
+    {
+      "va": "0x18659c",
+      "word": "0x97fb2f09"
+    },
+    {
+      "va": "0x1865c8",
+      "word": "0x1e610800"
+    },
+    {
+      "va": "0x1865cc",
+      "word": "0x1e682000"
+    },
+    {
+      "va": "0x1865d0",
+      "word": "0x1a934113"
+    },
+    {
+      "va": "0x18666c",
+      "word": "0x97fb2edd"
+    },
+    {
+      "va": "0x186670",
+      "word": "0x71000e7f"
+    },
+    {
+      "va": "0x186684",
+      "word": "0xb8a87928"
+    },
+    {
+      "va": "0x18668c",
+      "word": "0xd61f0100"
+    },
+    {
+      "va": "0x1868c4",
+      "word": "0x97fb20b3"
+    },
+    {
+      "va": "0x1868d8",
+      "word": "0x97fb26a6"
+    },
+    {
+      "va": "0x186944",
+      "word": "0x97fb2e33"
+    },
+    {
+      "va": "0x186968",
+      "word": "0x97fb267e"
+    },
+    {
+      "va": "0x1d9228",
+      "word": "0xb9415288"
+    },
+    {
+      "va": "0x1d9230",
+      "word": "0x54000641"
+    },
+    {
+      "va": "0x1d9524",
+      "word": "0x6b19011f"
+    },
+    {
+      "va": "0x1d9584",
+      "word": "0x540000ab"
+    },
+    {
+      "va": "0x1d96ec",
+      "word": "0xb9409269"
+    },
+    {
+      "va": "0x1d96f4",
+      "word": "0x54fffe0c"
+    },
+    {
+      "va": "0x1d96f8",
+      "word": "0x6b1a013f"
+    },
+    {
+      "va": "0x1d96fc",
+      "word": "0x54fffdcb"
+    },
+    {
+      "va": "0x1da1bc",
+      "word": "0x97f9d519"
+    },
+    {
+      "va": "0x1da308",
+      "word": "0x3945a2a8"
+    },
+    {
+      "va": "0x1da3d8",
+      "word": "0xb94182a8"
+    },
+    {
+      "va": "0x1da3e0",
+      "word": "0x6a09011f"
+    },
+    {
+      "va": "0x1da3e4",
+      "word": "0x540015c0"
+    },
+    {
+      "va": "0x598078",
+      "word": "0x72003f1f"
+    },
+    {
+      "va": "0x598094",
+      "word": "0x6b08015f"
+    },
+    {
+      "va": "0x598098",
+      "word": "0x1a98b168"
+    },
+    {
+      "va": "0x5980a0",
+      "word": "0x1a9f0118"
+    },
+    {
+      "va": "0x5980a4",
+      "word": "0x97eadd9f"
+    },
+    {
+      "va": "0x5980c4",
+      "word": "0x1e212000"
+    },
+    {
+      "va": "0x5980c8",
+      "word": "0x540000ad"
+    },
+    {
+      "va": "0x5980fc",
+      "word": "0x7100091f"
+    },
+    {
+      "va": "0x598104",
+      "word": "0x1a893118"
+    },
+    {
+      "va": "0x59811c",
+      "word": "0xb8bb7909"
+    },
+    {
+      "va": "0x598124",
+      "word": "0xd61f0100"
+    },
+    {
+      "va": "0x598200",
+      "word": "0x2a1f03f7"
+    },
+    {
+      "va": "0x598208",
+      "word": "0xb942c6f7"
+    },
+    {
+      "va": "0x598210",
+      "word": "0xb942d2f7"
+    },
+    {
+      "va": "0x598218",
+      "word": "0xb942baf7"
+    },
+    {
+      "va": "0x59826c",
+      "word": "0x97eae041"
+    },
+    {
+      "va": "0x598c98",
+      "word": "0x97eae8f6"
+    }
+  ],
+  "config_review": {
+    "hybrid_policy": 1,
+    "enabled_algorithms": [
+      "CDAF",
+      "PDAF",
+      "ToF"
+    ],
+    "goto_refine_enabled": true,
+    "goto_refine_algorithm_mask": 0,
+    "pdaf_result_ok_peak_score": 80,
+    "pdaf_result_super_ok_peak_score": 120,
+    "tof_result_ok_peak_score": 80,
+    "tof_result_super_ok_peak_score": 99,
+    "live_overrides_read": false
+  },
+  "conclusions": [
+    "Policy 1 resolves to Hasselblad-specific stage callbacks.",
+    "Start-stage PDAF validity/direction checks can succeed before checking ToF.",
+    "PDAF AF-S consumes aligned lens position and temporal standard deviation.",
+    "PDAF result 3 has a range-limited absolute lens-command branch.",
+    "DTOF quality logic can downgrade/zero a result; classification is not an unconditional distance command.",
+    "Goto refinement is separately mask-gated; all-off supplied config is not always-on CDAF refinement."
+  ],
+  "limitations": [
+    "The supplied config may be overridden at runtime.",
+    "A hand over the window does not prove ToF's exact result or selected AF branch.",
+    "No matched-scene X2D/X2D II sharpness or timing experiment was performed.",
+    "No Kalman attribution or safe cross-generation binary port is established."
+  ]
+}

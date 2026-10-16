@@ -1,0 +1,707 @@
+
+_ZN25SetGpsCompensationCommand7executeERK18QCommandLineParser @ 0x42c38 (1452 bytes)
+00042c38 sub      sp, sp, #0xd0
+00042c3c stp      d9, d8, [sp, #0x90]
+00042c40 stp      x29, x30, [sp, #0xa0]
+00042c44 add      x29, sp, #0xa0
+00042c48 stp      x22, x21, [sp, #0xb0]
+00042c4c stp      x20, x19, [sp, #0xc0]
+00042c50 mrs      x22, tpidr_el0
+00042c54 mov      x19, x0
+00042c58 ldr      x8, [x22, #0x28]
+00042c5c mov      x20, x1
+00042c60 stur     x8, [x29, #-0x18]
+00042c64 ldr      x8, [x0]
+00042c68 ldr      x8, [x8, #0x60]
+00042c6c blr      x8
+00042c70 mov      x1, x0
+00042c74 add      x8, sp, #0x50
+00042c78 mov      x0, x20
+00042c7c bl       #0x1df10 _ZNK18QCommandLineParser5valueERK18QCommandLineOption
+00042c80 adrp     x1, #0x93000
+00042c84 sub      x8, x29, #0x30
+00042c88 add      x1, x1, #0xbaa
+00042c8c mov      w0, #1
+00042c90 bl       #0x1ddc0 _ZN7QString8fromUtf8E14QByteArrayView
+00042c94 ldur     q0, [x29, #-0x30]
+00042c98 ldur     x8, [x29, #-0x20]
+00042c9c str      q0, [sp, #0x20]
+00042ca0 str      x8, [sp, #0x30]
+00042ca4 add      x8, sp, #0x38
+00042ca8 add      x0, sp, #0x50
+00042cac add      x1, sp, #0x20
+00042cb0 mov      x2, xzr
+00042cb4 mov      w3, #1
+00042cb8 bl       #0x1e6b0 _ZNK7QString5splitERKS_6QFlagsIN2Qt18SplitBehaviorFlagsEENS3_15CaseSensitivityE
+00042cbc ldr      x8, [sp, #0x20]
+00042cc0 cbz      x8, #0x42ce0
+00042cc4 ldaxr    w9, [x8]
+00042cc8 subs     w9, w9, #1
+00042ccc stlxr    w10, w9, [x8]
+00042cd0 cbnz     w10, #0x42cc4
+00042cd4 b.ne     #0x42ce0
+00042cd8 ldr      x0, [sp, #0x20]
+00042cdc bl       #0x1dda0 free
+00042ce0 ldr      x0, [sp, #0x40]
+00042ce4 sub      x1, x29, #0x34
+00042ce8 bl       #0x1e6c0 _ZNK7QString7toFloatEPb
+00042cec mov      v8.16b, v0.16b
+00042cf0 ldurb    w8, [x29, #-0x34]
+00042cf4 cbz      w8, #0x42e74
+00042cf8 ldr      x8, [sp, #0x40]
+00042cfc add      x0, x8, #0x18
+00042d00 sub      x1, x29, #0x34
+00042d04 bl       #0x1e6c0 _ZNK7QString7toFloatEPb
+00042d08 mov      v9.16b, v0.16b
+00042d0c ldurb    w8, [x29, #-0x34]
+00042d10 cbz      w8, #0x42ed0
+00042d14 ldr      x0, [x19, #0x10]
+00042d18 ldr      x8, [x0]
+00042d1c ldr      x9, [x8, #0xe8]
+00042d20 mov      v0.16b, v8.16b
+00042d24 add      x8, sp, #0x10
+00042d28 mov      v1.16b, v9.16b
+00042d2c blr      x9
+00042d30 ldr      x21, [sp, #0x10]
+00042d34 cbz      x21, #0x42f2c
+00042d38 ldr      x20, [sp, #0x18]
+00042d3c cbz      x20, #0x42d64
+00042d40 ldaxr    w8, [x20]
+00042d44 add      w8, w8, #1
+00042d48 stlxr    w9, w8, [x20]
+00042d4c cbnz     w9, #0x42d40
+00042d50 add      x8, x20, #4
+00042d54 ldaxr    w9, [x8]
+00042d58 add      w9, w9, #1
+00042d5c stlxr    w10, w9, [x8]
+00042d60 cbnz     w10, #0x42d54
+00042d64 adrp     x8, #0xcd000
+00042d68 ldr      x8, [x8, #0xd90]
+00042d6c stp      x8, xzr, [x29, #-0x30]
+00042d70 mov      w0, #0x28
+00042d74 bl       #0x1de20 _Znwm
+00042d78 adrp     x9, #0x43000
+00042d7c mov      w8, #1
+00042d80 add      x9, x9, #0x1e8
+00042d84 mov      x4, x0
+00042d88 stp      x21, x20, [x0, #0x18]
+00042d8c str      w8, [x0]
+00042d90 stp      x9, x19, [x0, #8]
+00042d94 adrp     x7, #0xcd000
+00042d98 add      x8, sp, #8
+00042d9c sub      x1, x29, #0x30
+00042da0 mov      x0, x21
+00042da4 mov      x2, x19
+00042da8 mov      x3, xzr
+00042dac ldr      x7, [x7, #0xd98]
+00042db0 mov      w5, wzr
+00042db4 mov      x6, xzr
+00042db8 bl       #0x1df30 _ZN7QObject11connectImplEPKS_PPvS1_S3_PN9QtPrivate15QSlotObjectBaseEN2Qt14ConnectionTypeEPKiPK11QMetaObject
+00042dbc add      x0, sp, #8
+00042dc0 bl       #0x1df40 _ZN11QMetaObject10ConnectionD1Ev
+00042dc4 ldr      x19, [sp, #0x18]
+00042dc8 cbz      x19, #0x42e0c
+00042dcc add      x8, x19, #4
+00042dd0 ldaxr    w9, [x8]
+00042dd4 subs     w9, w9, #1
+00042dd8 stlxr    w10, w9, [x8]
+00042ddc cbnz     w10, #0x42dd0
+00042de0 b.ne     #0x42df0
+00042de4 ldr      x8, [x19, #8]
+00042de8 mov      x0, x19
+00042dec blr      x8
+00042df0 ldaxr    w8, [x19]
+00042df4 subs     w8, w8, #1
+00042df8 stlxr    w9, w8, [x19]
+00042dfc cbnz     w9, #0x42df0
+00042e00 b.ne     #0x42e0c
+00042e04 mov      x0, x19
+00042e08 bl       #0x1de30 _ZdlPv
+00042e0c ldr      x8, [sp, #0x38]
+00042e10 cbz      x8, #0x42f90
+00042e14 ldaxr    w9, [x8]
+00042e18 subs     w9, w9, #1
+00042e1c stlxr    w10, w9, [x8]
+00042e20 cbnz     w10, #0x42e14
+00042e24 b.ne     #0x42f90
+00042e28 ldr      x8, [sp, #0x48]
+00042e2c cbz      x8, #0x42f88
+00042e30 ldr      x19, [sp, #0x40]
+00042e34 mov      w9, #0x18
+00042e38 madd     x20, x8, x9, x19
+00042e3c b        #0x42e4c
+00042e40 add      x19, x19, #0x18
+00042e44 cmp      x19, x20
+00042e48 b.eq     #0x42f88
+00042e4c ldr      x8, [x19]
+00042e50 cbz      x8, #0x42e40
+00042e54 ldaxr    w9, [x8]
+00042e58 subs     w9, w9, #1
+00042e5c stlxr    w10, w9, [x8]
+00042e60 cbnz     w10, #0x42e54
+00042e64 b.ne     #0x42e40
+00042e68 ldr      x0, [x19]
+00042e6c bl       #0x1dda0 free
+00042e70 b        #0x42e40
+00042e74 adrp     x1, #0x93000
+00042e78 sub      x8, x29, #0x30
+00042e7c add      x1, x1, #0xfb2
+00042e80 mov      w0, #0x18
+00042e84 bl       #0x1e530 _ZN7QString10fromLatin1E14QByteArrayView
+00042e88 ldur     q0, [x29, #-0x30]
+00042e8c ldur     x8, [x29, #-0x20]
+00042e90 str      q0, [sp, #0x20]
+00042e94 str      x8, [sp, #0x30]
+00042e98 add      x2, sp, #0x20
+00042e9c mov      x0, x19
+00042ea0 mov      w1, wzr
+00042ea4 bl       #0x33310 _ZN7Command6resultEbRK7QString
+00042ea8 ldr      x8, [sp, #0x20]
+00042eac cbz      x8, #0x42cf8
+00042eb0 ldaxr    w9, [x8]
+00042eb4 subs     w9, w9, #1
+00042eb8 stlxr    w10, w9, [x8]
+00042ebc cbnz     w10, #0x42eb0
+00042ec0 b.ne     #0x42cf8
+00042ec4 ldr      x0, [sp, #0x20]
+00042ec8 bl       #0x1dda0 free
+00042ecc b        #0x42cf8
+00042ed0 adrp     x1, #0x93000
+00042ed4 mov      w0, #0x19
+00042ed8 add      x1, x1, #0xfcb
+00042edc sub      x8, x29, #0x30
+00042ee0 bl       #0x1e530 _ZN7QString10fromLatin1E14QByteArrayView
+00042ee4 ldur     q0, [x29, #-0x30]
+00042ee8 ldur     x8, [x29, #-0x20]
+00042eec str      q0, [sp, #0x20]
+00042ef0 str      x8, [sp, #0x30]
+00042ef4 add      x2, sp, #0x20
+00042ef8 mov      x0, x19
+00042efc mov      w1, wzr
+00042f00 bl       #0x33310 _ZN7Command6resultEbRK7QString
+00042f04 ldr      x8, [sp, #0x20]
+00042f08 cbz      x8, #0x42d14
+00042f0c ldaxr    w9, [x8]
+00042f10 subs     w9, w9, #1
+00042f14 stlxr    w10, w9, [x8]
+00042f18 cbnz     w10, #0x42f0c
+00042f1c b.ne     #0x42d14
+00042f20 ldr      x0, [sp, #0x20]
+00042f24 bl       #0x1dda0 free
+00042f28 b        #0x42d14
+00042f2c adrp     x1, #0x93000
+00042f30 sub      x8, x29, #0x30
+00042f34 add      x1, x1, #0x3e0
+00042f38 mov      w0, #0xf
+00042f3c bl       #0x1e530 _ZN7QString10fromLatin1E14QByteArrayView
+00042f40 ldur     q0, [x29, #-0x30]
+00042f44 ldur     x8, [x29, #-0x20]
+00042f48 str      q0, [sp, #0x20]
+00042f4c str      x8, [sp, #0x30]
+00042f50 add      x2, sp, #0x20
+00042f54 mov      x0, x19
+00042f58 mov      w1, wzr
+00042f5c bl       #0x33310 _ZN7Command6resultEbRK7QString
+00042f60 ldr      x8, [sp, #0x20]
+00042f64 cbz      x8, #0x42dc4
+00042f68 ldaxr    w9, [x8]
+00042f6c subs     w9, w9, #1
+00042f70 stlxr    w10, w9, [x8]
+00042f74 cbnz     w10, #0x42f68
+00042f78 b.ne     #0x42dc4
+00042f7c ldr      x0, [sp, #0x20]
+00042f80 bl       #0x1dda0 free
+00042f84 b        #0x42dc4
+00042f88 ldr      x0, [sp, #0x38]
+00042f8c bl       #0x1dda0 free
+00042f90 ldr      x8, [sp, #0x50]
+00042f94 cbz      x8, #0x42fb4
+00042f98 ldaxr    w9, [x8]
+00042f9c subs     w9, w9, #1
+00042fa0 stlxr    w10, w9, [x8]
+00042fa4 cbnz     w10, #0x42f98
+00042fa8 b.ne     #0x42fb4
+00042fac ldr      x0, [sp, #0x50]
+00042fb0 bl       #0x1dda0 free
+00042fb4 ldr      x8, [x22, #0x28]
+00042fb8 ldur     x9, [x29, #-0x18]
+00042fbc cmp      x8, x9
+00042fc0 b.ne     #0x42fdc
+00042fc4 ldp      x20, x19, [sp, #0xc0]
+00042fc8 ldp      x22, x21, [sp, #0xb0]
+00042fcc ldp      x29, x30, [sp, #0xa0]
+00042fd0 ldp      d9, d8, [sp, #0x90]
+00042fd4 add      sp, sp, #0xd0
+00042fd8 ret
+00042fdc bl       #0x1df80 __stack_chk_fail
+00042fe0 bl       #0x255c8 __clang_call_terminate
+00042fe4 ldr      x8, [sp, #0x20]
+00042fe8 mov      x19, x0
+00042fec cbz      x8, #0x430b8
+00042ff0 ldaxr    w9, [x8]
+00042ff4 subs     w9, w9, #1
+00042ff8 stlxr    w10, w9, [x8]
+00042ffc cbnz     w10, #0x42ff0
+00043000 b.ne     #0x430b8
+00043004 ldr      x0, [sp, #0x20]
+00043008 bl       #0x1dda0 free
+0004300c b        #0x430b8
+00043010 b        #0x43068
+00043014 ldr      x8, [sp, #0x20]
+00043018 mov      x19, x0
+0004301c cbz      x8, #0x43118
+00043020 ldaxr    w9, [x8]
+00043024 subs     w9, w9, #1
+00043028 stlxr    w10, w9, [x8]
+0004302c cbnz     w10, #0x43020
+00043030 b        #0x43054
+00043034 b        #0x43114
+00043038 ldr      x8, [sp, #0x20]
+0004303c mov      x19, x0
+00043040 cbz      x8, #0x43118
+00043044 ldaxr    w9, [x8]
+00043048 subs     w9, w9, #1
+0004304c stlxr    w10, w9, [x8]
+00043050 cbnz     w10, #0x43044
+00043054 b.ne     #0x43118
+00043058 ldr      x0, [sp, #0x20]
+0004305c bl       #0x1dda0 free
+00043060 b        #0x43118
+00043064 b        #0x43114
+00043068 mov      x19, x0
+0004306c b        #0x430b8
+00043070 mov      x19, x0
+00043074 cbz      x20, #0x430b8
+00043078 add      x8, x20, #4
+0004307c ldaxr    w9, [x8]
+00043080 subs     w9, w9, #1
+00043084 stlxr    w10, w9, [x8]
+00043088 cbnz     w10, #0x4307c
+0004308c b.ne     #0x4309c
+00043090 ldr      x8, [x20, #8]
+00043094 mov      x0, x20
+00043098 blr      x8
+0004309c ldaxr    w8, [x20]
+000430a0 subs     w8, w8, #1
+000430a4 stlxr    w9, w8, [x20]
+000430a8 cbnz     w9, #0x4309c
+000430ac b.ne     #0x430b8
+000430b0 mov      x0, x20
+000430b4 bl       #0x1de30 _ZdlPv
+000430b8 ldr      x20, [sp, #0x18]
+000430bc cbz      x20, #0x43118
+000430c0 add      x8, x20, #4
+000430c4 ldaxr    w9, [x8]
+000430c8 subs     w9, w9, #1
+000430cc stlxr    w10, w9, [x8]
+000430d0 cbnz     w10, #0x430c4
+000430d4 b.ne     #0x430e4
+000430d8 ldr      x8, [x20, #8]
+000430dc mov      x0, x20
+000430e0 blr      x8
+000430e4 ldaxr    w8, [x20]
+000430e8 subs     w8, w8, #1
+000430ec stlxr    w9, w8, [x20]
+000430f0 cbnz     w9, #0x430e4
+000430f4 b.ne     #0x43118
+000430f8 mov      x0, x20
+000430fc bl       #0x1de30 _ZdlPv
+00043100 b        #0x43118
+00043104 bl       #0x255c8 __clang_call_terminate
+00043108 bl       #0x255c8 __clang_call_terminate
+0004310c b        #0x43114
+00043110 b        #0x43114
+00043114 mov      x19, x0
+00043118 ldr      x8, [sp, #0x38]
+0004311c cbz      x8, #0x431b8
+00043120 ldaxr    w9, [x8]
+00043124 subs     w9, w9, #1
+00043128 stlxr    w10, w9, [x8]
+0004312c cbnz     w10, #0x43120
+00043130 b.ne     #0x431b8
+00043134 ldr      x8, [sp, #0x48]
+00043138 cbnz     x8, #0x43148
+0004313c ldr      x0, [sp, #0x38]
+00043140 bl       #0x1dda0 free
+00043144 b        #0x431b8
+00043148 ldr      x20, [sp, #0x40]
+0004314c mov      w9, #0x18
+00043150 madd     x21, x8, x9, x20
+00043154 b        #0x43164
+00043158 add      x20, x20, #0x18
+0004315c cmp      x20, x21
+00043160 b.eq     #0x4313c
+00043164 ldr      x8, [x20]
+00043168 cbz      x8, #0x43158
+0004316c ldaxr    w9, [x8]
+00043170 subs     w9, w9, #1
+00043174 stlxr    w10, w9, [x8]
+00043178 cbnz     w10, #0x4316c
+0004317c b.ne     #0x43158
+00043180 ldr      x0, [x20]
+00043184 bl       #0x1dda0 free
+00043188 b        #0x43158
+0004318c ldr      x8, [sp, #0x20]
+00043190 mov      x19, x0
+00043194 cbz      x8, #0x431b8
+00043198 ldaxr    w9, [x8]
+0004319c subs     w9, w9, #1
+000431a0 stlxr    w10, w9, [x8]
+000431a4 cbnz     w10, #0x43198
+000431a8 b.ne     #0x431b8
+000431ac ldr      x0, [sp, #0x20]
+000431b0 b        #0x43140
+000431b4 mov      x19, x0
+000431b8 ldr      x8, [sp, #0x50]
+000431bc cbz      x8, #0x431dc
+000431c0 ldaxr    w9, [x8]
+000431c4 subs     w9, w9, #1
+000431c8 stlxr    w10, w9, [x8]
+000431cc cbnz     w10, #0x431c0
+000431d0 b.ne     #0x431dc
+000431d4 ldr      x0, [sp, #0x50]
+000431d8 bl       #0x1dda0 free
+000431dc mov      x0, x19
+000431e0 bl       #0x1df90 _Unwind_Resume
+
+_ZN25GetGpsCompensationCommand7executeERK18QCommandLineParser @ 0x43750 (628 bytes)
+00043750 sub      sp, sp, #0x80
+00043754 stp      x29, x30, [sp, #0x50]
+00043758 add      x29, sp, #0x50
+0004375c stp      x22, x21, [sp, #0x60]
+00043760 stp      x20, x19, [sp, #0x70]
+00043764 mrs      x22, tpidr_el0
+00043768 mov      x19, x0
+0004376c ldr      x8, [x22, #0x28]
+00043770 stur     x8, [x29, #-8]
+00043774 ldr      x0, [x0, #0x10]
+00043778 ldr      x8, [x0]
+0004377c ldr      x9, [x8, #0xf0]
+00043780 add      x8, sp, #0x20
+00043784 blr      x9
+00043788 ldr      x21, [sp, #0x20]
+0004378c cbz      x21, #0x43888
+00043790 ldr      x20, [sp, #0x28]
+00043794 cbz      x20, #0x437bc
+00043798 ldaxr    w8, [x20]
+0004379c add      w8, w8, #1
+000437a0 stlxr    w9, w8, [x20]
+000437a4 cbnz     w9, #0x43798
+000437a8 add      x8, x20, #4
+000437ac ldaxr    w9, [x8]
+000437b0 add      w9, w9, #1
+000437b4 stlxr    w10, w9, [x8]
+000437b8 cbnz     w10, #0x437ac
+000437bc adrp     x8, #0xcd000
+000437c0 ldr      x8, [x8, #0xd90]
+000437c4 stp      x8, xzr, [x29, #-0x20]
+000437c8 mov      w0, #0x28
+000437cc bl       #0x1de20 _Znwm
+000437d0 adrp     x9, #0x43000
+000437d4 mov      w8, #1
+000437d8 add      x9, x9, #0x9c8
+000437dc mov      x4, x0
+000437e0 stp      x21, x20, [x0, #0x18]
+000437e4 str      w8, [x0]
+000437e8 stp      x9, x19, [x0, #8]
+000437ec adrp     x7, #0xcd000
+000437f0 add      x8, sp, #0x18
+000437f4 sub      x1, x29, #0x20
+000437f8 mov      x0, x21
+000437fc mov      x2, x19
+00043800 mov      x3, xzr
+00043804 ldr      x7, [x7, #0xd98]
+00043808 mov      w5, wzr
+0004380c mov      x6, xzr
+00043810 bl       #0x1df30 _ZN7QObject11connectImplEPKS_PPvS1_S3_PN9QtPrivate15QSlotObjectBaseEN2Qt14ConnectionTypeEPKiPK11QMetaObject
+00043814 add      x0, sp, #0x18
+00043818 bl       #0x1df40 _ZN11QMetaObject10ConnectionD1Ev
+0004381c ldr      x19, [sp, #0x28]
+00043820 cbz      x19, #0x43864
+00043824 add      x8, x19, #4
+00043828 ldaxr    w9, [x8]
+0004382c subs     w9, w9, #1
+00043830 stlxr    w10, w9, [x8]
+00043834 cbnz     w10, #0x43828
+00043838 b.ne     #0x43848
+0004383c ldr      x8, [x19, #8]
+00043840 mov      x0, x19
+00043844 blr      x8
+00043848 ldaxr    w8, [x19]
+0004384c subs     w8, w8, #1
+00043850 stlxr    w9, w8, [x19]
+00043854 cbnz     w9, #0x43848
+00043858 b.ne     #0x43864
+0004385c mov      x0, x19
+00043860 bl       #0x1de30 _ZdlPv
+00043864 ldr      x8, [x22, #0x28]
+00043868 ldur     x9, [x29, #-8]
+0004386c cmp      x8, x9
+00043870 b.ne     #0x438e4
+00043874 ldp      x20, x19, [sp, #0x70]
+00043878 ldp      x22, x21, [sp, #0x60]
+0004387c ldp      x29, x30, [sp, #0x50]
+00043880 add      sp, sp, #0x80
+00043884 ret
+00043888 adrp     x1, #0x93000
+0004388c sub      x8, x29, #0x20
+00043890 add      x1, x1, #0x3e0
+00043894 mov      w0, #0xf
+00043898 bl       #0x1e530 _ZN7QString10fromLatin1E14QByteArrayView
+0004389c ldur     q0, [x29, #-0x20]
+000438a0 ldur     x8, [x29, #-0x10]
+000438a4 str      q0, [sp]
+000438a8 str      x8, [sp, #0x10]
+000438ac mov      x2, sp
+000438b0 mov      x0, x19
+000438b4 mov      w1, wzr
+000438b8 bl       #0x33310 _ZN7Command6resultEbRK7QString
+000438bc ldr      x8, [sp]
+000438c0 cbz      x8, #0x4381c
+000438c4 ldaxr    w9, [x8]
+000438c8 subs     w9, w9, #1
+000438cc stlxr    w10, w9, [x8]
+000438d0 cbnz     w10, #0x438c4
+000438d4 b.ne     #0x4381c
+000438d8 ldr      x0, [sp]
+000438dc bl       #0x1dda0 free
+000438e0 b        #0x4381c
+000438e4 bl       #0x1df80 __stack_chk_fail
+000438e8 bl       #0x255c8 __clang_call_terminate
+000438ec ldr      x8, [sp]
+000438f0 mov      x19, x0
+000438f4 cbz      x8, #0x4396c
+000438f8 ldaxr    w9, [x8]
+000438fc subs     w9, w9, #1
+00043900 stlxr    w10, w9, [x8]
+00043904 cbnz     w10, #0x438f8
+00043908 b.ne     #0x4396c
+0004390c ldr      x0, [sp]
+00043910 bl       #0x1dda0 free
+00043914 b        #0x4396c
+00043918 b        #0x4391c
+0004391c mov      x19, x0
+00043920 b        #0x4396c
+00043924 mov      x19, x0
+00043928 cbz      x20, #0x4396c
+0004392c add      x8, x20, #4
+00043930 ldaxr    w9, [x8]
+00043934 subs     w9, w9, #1
+00043938 stlxr    w10, w9, [x8]
+0004393c cbnz     w10, #0x43930
+00043940 b.ne     #0x43950
+00043944 ldr      x8, [x20, #8]
+00043948 mov      x0, x20
+0004394c blr      x8
+00043950 ldaxr    w8, [x20]
+00043954 subs     w8, w8, #1
+00043958 stlxr    w9, w8, [x20]
+0004395c cbnz     w9, #0x43950
+00043960 b.ne     #0x4396c
+00043964 mov      x0, x20
+00043968 bl       #0x1de30 _ZdlPv
+0004396c ldr      x20, [sp, #0x28]
+00043970 cbz      x20, #0x439b4
+00043974 add      x8, x20, #4
+00043978 ldaxr    w9, [x8]
+0004397c subs     w9, w9, #1
+00043980 stlxr    w10, w9, [x8]
+00043984 cbnz     w10, #0x43978
+00043988 b.ne     #0x43998
+0004398c ldr      x8, [x20, #8]
+00043990 mov      x0, x20
+00043994 blr      x8
+00043998 ldaxr    w8, [x20]
+0004399c subs     w8, w8, #1
+000439a0 stlxr    w9, w8, [x20]
+000439a4 cbnz     w9, #0x43998
+000439a8 b.ne     #0x439b4
+000439ac mov      x0, x20
+000439b0 bl       #0x1de30 _ZdlPv
+000439b4 mov      x0, x19
+000439b8 bl       #0x1df90 _Unwind_Resume
+000439bc bl       #0x255c8 __clang_call_terminate
+000439c0 bl       #0x255c8 __clang_call_terminate
+
+_ZN29IbisSetGpsCompensationMessageC1Eff @ 0x2d590 (368 bytes)
+0002d590 sub      sp, sp, #0x50
+0002d594 stp      d9, d8, [sp, #0x20]
+0002d598 stp      x29, x30, [sp, #0x30]
+0002d59c add      x29, sp, #0x30
+0002d5a0 stp      x20, x19, [sp, #0x40]
+0002d5a4 mov      v8.16b, v1.16b
+0002d5a8 mrs      x20, tpidr_el0
+0002d5ac mov      v9.16b, v0.16b
+0002d5b0 ldr      x8, [x20, #0x28]
+0002d5b4 adrp     x9, #0x91000
+0002d5b8 mov      x19, x0
+0002d5bc add      x9, x9, #0x6f2
+0002d5c0 mov      w10, #0x1d
+0002d5c4 str      x8, [sp, #0x18]
+0002d5c8 stp      xzr, x9, [sp]
+0002d5cc str      x10, [sp, #0x10]
+0002d5d0 mov      w3, #9
+0002d5d4 mov      x1, sp
+0002d5d8 mov      w2, #0x18
+0002d5dc mov      w4, #1
+0002d5e0 bl       #0x2c6a0 _ZN15IbisCtrlMessageC2ERK7QStringNS_8SubCmdIdEtb
+0002d5e4 ldr      x8, [sp]
+0002d5e8 cbz      x8, #0x2d608
+0002d5ec ldaxr    w9, [x8]
+0002d5f0 subs     w9, w9, #1
+0002d5f4 stlxr    w10, w9, [x8]
+0002d5f8 cbnz     w10, #0x2d5ec
+0002d5fc b.ne     #0x2d608
+0002d600 ldr      x0, [sp]
+0002d604 bl       #0x1dda0 free
+0002d608 adrp     x8, #0xcd000
+0002d60c ldr      x8, [x8, #0xe50]
+0002d610 strb     wzr, [sp]
+0002d614 stur     s9, [sp, #1]
+0002d618 stur     s8, [sp, #5]
+0002d61c add      x8, x8, #0x10
+0002d620 str      x8, [x19]
+0002d624 mov      x0, x19
+0002d628 bl       #0x4c150 _ZN9DussEvent6msgBufEv
+0002d62c ldr      x8, [sp]
+0002d630 stur     x8, [x0, #3]
+0002d634 ldrb     w8, [sp, #8]
+0002d638 strb     w8, [x0, #0xb]
+0002d63c ldr      x8, [x20, #0x28]
+0002d640 ldr      x9, [sp, #0x18]
+0002d644 cmp      x8, x9
+0002d648 b.ne     #0x2d660
+0002d64c ldp      x20, x19, [sp, #0x40]
+0002d650 ldp      x29, x30, [sp, #0x30]
+0002d654 ldp      d9, d8, [sp, #0x20]
+0002d658 add      sp, sp, #0x50
+0002d65c ret
+0002d660 bl       #0x1df80 __stack_chk_fail
+0002d664 adrp     x9, #0xcd000
+0002d668 mov      x20, x0
+0002d66c ldr      x9, [x9, #0xdf0]
+0002d670 ldr      x8, [x19, #0x20]
+0002d674 add      x9, x9, #0x10
+0002d678 str      x9, [x19]
+0002d67c cbz      x8, #0x2d69c
+0002d680 ldaxr    w9, [x8]
+0002d684 subs     w9, w9, #1
+0002d688 stlxr    w10, w9, [x8]
+0002d68c cbnz     w10, #0x2d680
+0002d690 b.ne     #0x2d69c
+0002d694 ldr      x0, [x19, #0x20]
+0002d698 bl       #0x1dda0 free
+0002d69c adrp     x9, #0xcd000
+0002d6a0 ldr      x9, [x9, #0xdd8]
+0002d6a4 ldr      x8, [x19, #8]
+0002d6a8 add      x9, x9, #0x10
+0002d6ac str      x9, [x19]
+0002d6b0 cbz      x8, #0x2d6f8
+0002d6b4 ldaxr    w9, [x8]
+0002d6b8 subs     w9, w9, #1
+0002d6bc stlxr    w10, w9, [x8]
+0002d6c0 cbnz     w10, #0x2d6b4
+0002d6c4 b.ne     #0x2d6f8
+0002d6c8 ldr      x0, [x19, #8]
+0002d6cc b        #0x2d6f4
+0002d6d0 ldr      x8, [sp]
+0002d6d4 mov      x20, x0
+0002d6d8 cbz      x8, #0x2d6f8
+0002d6dc ldaxr    w9, [x8]
+0002d6e0 subs     w9, w9, #1
+0002d6e4 stlxr    w10, w9, [x8]
+0002d6e8 cbnz     w10, #0x2d6dc
+0002d6ec b.ne     #0x2d6f8
+0002d6f0 ldr      x0, [sp]
+0002d6f4 bl       #0x1dda0 free
+0002d6f8 mov      x0, x20
+0002d6fc bl       #0x1df90 _Unwind_Resume
+
+_ZN29IbisGetGpsCompensationMessageC1Ev @ 0x2d700 (348 bytes)
+0002d700 sub      sp, sp, #0x40
+0002d704 stp      x29, x30, [sp, #0x20]
+0002d708 add      x29, sp, #0x20
+0002d70c stp      x20, x19, [sp, #0x30]
+0002d710 mrs      x20, tpidr_el0
+0002d714 adrp     x9, #0x91000
+0002d718 ldr      x8, [x20, #0x28]
+0002d71c mov      x19, x0
+0002d720 add      x9, x9, #0x72e
+0002d724 mov      w10, #0x1d
+0002d728 stur     x8, [x29, #-8]
+0002d72c stp      xzr, x9, [sp]
+0002d730 str      x10, [sp, #0x10]
+0002d734 mov      w3, #9
+0002d738 mov      x1, sp
+0002d73c mov      w2, #0x18
+0002d740 mov      w4, #1
+0002d744 bl       #0x2c6a0 _ZN15IbisCtrlMessageC2ERK7QStringNS_8SubCmdIdEtb
+0002d748 ldr      x8, [sp]
+0002d74c cbz      x8, #0x2d76c
+0002d750 ldaxr    w9, [x8]
+0002d754 subs     w9, w9, #1
+0002d758 stlxr    w10, w9, [x8]
+0002d75c cbnz     w10, #0x2d750
+0002d760 b.ne     #0x2d76c
+0002d764 ldr      x0, [sp]
+0002d768 bl       #0x1dda0 free
+0002d76c adrp     x8, #0xcd000
+0002d770 ldr      x8, [x8, #0xe58]
+0002d774 add      x8, x8, #0x10
+0002d778 str      x8, [x19]
+0002d77c mov      x0, x19
+0002d780 bl       #0x4c150 _ZN9DussEvent6msgBufEv
+0002d784 adrp     x8, #0x98000
+0002d788 add      x8, x8, #0xa19
+0002d78c ldrb     w9, [x8, #8]
+0002d790 ldr      x8, [x8]
+0002d794 strb     w9, [x0, #0xb]
+0002d798 stur     x8, [x0, #3]
+0002d79c ldr      x8, [x20, #0x28]
+0002d7a0 ldur     x9, [x29, #-8]
+0002d7a4 cmp      x8, x9
+0002d7a8 b.ne     #0x2d7bc
+0002d7ac ldp      x20, x19, [sp, #0x30]
+0002d7b0 ldp      x29, x30, [sp, #0x20]
+0002d7b4 add      sp, sp, #0x40
+0002d7b8 ret
+0002d7bc bl       #0x1df80 __stack_chk_fail
+0002d7c0 adrp     x9, #0xcd000
+0002d7c4 mov      x20, x0
+0002d7c8 ldr      x9, [x9, #0xdf0]
+0002d7cc ldr      x8, [x19, #0x20]
+0002d7d0 add      x9, x9, #0x10
+0002d7d4 str      x9, [x19]
+0002d7d8 cbz      x8, #0x2d7f8
+0002d7dc ldaxr    w9, [x8]
+0002d7e0 subs     w9, w9, #1
+0002d7e4 stlxr    w10, w9, [x8]
+0002d7e8 cbnz     w10, #0x2d7dc
+0002d7ec b.ne     #0x2d7f8
+0002d7f0 ldr      x0, [x19, #0x20]
+0002d7f4 bl       #0x1dda0 free
+0002d7f8 adrp     x9, #0xcd000
+0002d7fc ldr      x9, [x9, #0xdd8]
+0002d800 ldr      x8, [x19, #8]
+0002d804 add      x9, x9, #0x10
+0002d808 str      x9, [x19]
+0002d80c cbz      x8, #0x2d854
+0002d810 ldaxr    w9, [x8]
+0002d814 subs     w9, w9, #1
+0002d818 stlxr    w10, w9, [x8]
+0002d81c cbnz     w10, #0x2d810
+0002d820 b.ne     #0x2d854
+0002d824 ldr      x0, [x19, #8]
+0002d828 b        #0x2d850
+0002d82c ldr      x8, [sp]
+0002d830 mov      x20, x0
+0002d834 cbz      x8, #0x2d854
+0002d838 ldaxr    w9, [x8]
+0002d83c subs     w9, w9, #1
+0002d840 stlxr    w10, w9, [x8]
+0002d844 cbnz     w10, #0x2d838
+0002d848 b.ne     #0x2d854
+0002d84c ldr      x0, [sp]
+0002d850 bl       #0x1dda0 free
+0002d854 mov      x0, x20
+0002d858 bl       #0x1df90 _Unwind_Resume
