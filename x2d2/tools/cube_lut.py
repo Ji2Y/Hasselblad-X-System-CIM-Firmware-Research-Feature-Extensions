@@ -5,8 +5,8 @@
 ``lut_width``^3 nodes, red index fastest, RGB triplets, unsigned 16-bit
 little-endian containers holding ``lut_bit_depth``-bit codes, ``param_count``
 tables back to back (one per ``sdr_ref_white`` step). The ISP-side ``rcam``
-layout (``cm_*_lv_sdr_fastpre``, IQ ``tlut``/``lut_data``) is a different,
-undecoded layout; this tool refuses it.
+layout (``cm_*_lv_sdr_fastpre``, IQ ``tlut``/``lut_data``) is a different
+planar layout handled by ``rcam_lut.py``; this tool refuses it.
 
 Subcommands (run from the repository root; every output goes to a path you
 name and existing files are never overwritten):

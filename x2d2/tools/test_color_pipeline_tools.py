@@ -12,6 +12,7 @@ from pathlib import Path
 
 import cube_lut
 import inspect_color_pipeline as icp
+import rcam_lut
 
 
 def affine(size: int) -> cube_lut.Lut3D:
@@ -157,6 +158,62 @@ class InspectorTests(unittest.TestCase):
             (root / "cm_b.bin").write_bytes(bytes(10))
             rows = {row["descriptor"]: row["size_matches"] for row in icp.dispalgo_report(root)}
         self.assertEqual(rows, {"cm_a.json": True, "cm_b.json": False})
+
+
+def _rcam_words(fn) -> list[int]:
+    """Synthetic rcam table whose node (r, g, b) holds fn(r, g, b) codes."""
+    words = [0] * rcam_lut.WORDS
+    for r in range(16):
+        for g in range(16):
+            for b in range(16):
+                for plane, code in enumerate(fn(r, g, b)):
+                    i = rcam_lut.word_index(plane, r, g, b)
+                    words[i] |= code << 16 if b & 1 else code
+    return words
+
+
+class RcamTests(unittest.TestCase):
+    def test_layout_planes_and_halves(self) -> None:
+        words = _rcam_words(lambda r, g, b: (r, g, b))
+        # blue is the fastest index and shares one word between even and odd nodes
+        self.assertEqual(words[rcam_lut.word_index(2, 0, 0, 0)], (1 << 16) | 0)
+        self.assertEqual(words[rcam_lut.word_index(0, 5, 0, 0)], (5 << 16) | 5)
+        self.assertEqual(rcam_lut.word_index(1, 0, 1, 0), 2048 + 8)
+        self.assertEqual(rcam_lut.word_index(0, 1, 0, 0), 128)
+        lut = rcam_lut.decode(words)
+        self.assertAlmostEqual(lut.node(3, 7, 11)[1] * rcam_lut.TOP, 7)
+
+    def test_identity_roundtrip(self) -> None:
+        ident = _rcam_words(lambda r, g, b: tuple(round(v * 4095 / 15) for v in (r, g, b)))
+        self.assertEqual(rcam_lut.encode(rcam_lut.decode(ident)), ident)
+
+    def test_identity_look_keeps_srgb_and_p3_tables(self) -> None:
+        stock = rcam_lut.decode(_rcam_words(lambda r, g, b: (min(4095, r * 300), g * 250, b * 200)))
+        look = cube_lut.identity(9)
+        for p3 in (False, True):
+            self.assertEqual(rcam_lut.encode(rcam_lut.compose_table(stock, look, p3)), rcam_lut.encode(stock))
+
+    def test_bake_replaces_only_tables_and_skips_nested_copy(self) -> None:
+        main = _rcam_words(lambda r, g, b: (r * 273, g * 273, 4095 - b * 273))
+        ident = _rcam_words(lambda r, g, b: tuple(v * 273 for v in (r, g, b)))
+        lcdc = main + ident  # like X2D 4.2.0: the LCD array starts with a copy of main
+        block = {"main_3dlut": [{"lut_data": main}], "lcdc_3dlut0": [{"tlut": lcdc}],
+                 "lcdc_3dlut1": [{"tlut": lcdc}]}
+        pack = lambda w: struct.pack("<%dI" % len(w), *w)  # noqa: E731
+        blob = b"HEAD" + pack(main) + b"MID!" + pack(lcdc) + b"PAD." + pack(lcdc) + b"TAIL"
+        info = {"p3_tables": {}}
+        half = cube_lut.Lut3D(2, [tuple(0.5 * v for v in node) for node in cube_lut.identity(2).data])
+        new, report = rcam_lut.bake(blob, block, info, half, rcam_lut.DEFAULT_TABLES, "all")
+        self.assertEqual(len(new), len(blob))
+        self.assertEqual(new[:4], b"HEAD")
+        self.assertEqual(new[-4:], b"TAIL")
+        statuses = [row["status"] for row in report]
+        self.assertIn("kept (identity table)", statuses)
+        self.assertIn("same content as lcdc_3dlut0, replaced together", statuses)
+        baked_main = rcam_lut.decode(list(struct.unpack_from("<6144I", new, 4)))
+        self.assertAlmostEqual(baked_main.node(15, 0, 0)[0], 0.5, places=3)
+        with self.assertRaises(SystemExit):
+            rcam_lut.bake(blob, block, info, half, ("lcdc_3dlut0",), "all")
 
 
 if __name__ == "__main__":

@@ -52,16 +52,43 @@
 
 IQ 表含 `video0` 模式，以及拓扑 `TPLG_IMX461BQR_VIDEO_4K2160_12BIT_30FPS`、`VIDEO_8K3428_11BIT_24FPS`、`VIDEO_4K1296_12BIT_60FPS`、`VIDEO_12K_11BIT_10FPS`。插件目录含 `libdcam_shooter_video_single.so`、`libdcam_venc_h26x.so`、`libdcam_venc_prores.so`、`libdcam_venc_proresraw.so`、`libdcam_mp4_stream_writer.so` 等。`MAIN_3DLUT` 在 `video0` 启用，`PYRA_3DLUT*` 的 `user` 槽对应 DJI 平台的 video/hdmi/lcd 用途。社区的视频实现不在本仓库；这里只记录固件中存在的调校与插件，不代表视频 LUT 已可用。
 
+### 5. ISP LUT 解码后的一代事实（静态分析 + 离线验证）
+
+二代记录中由 `libduml_hal.so` 反汇编得到的 `rcam` 布局，对一代 `ec1706_config.json` 的全部表同样成立：16³、12 位、R/G/B 三平面。一代 `libduml_hal.so` 没有这两个函数，布局是用一代表的逐字节往返单独核对的。核对结果：
+
+- **全部表逐字节往返：** 对 `ec1706_config.bin` 的 `MAIN_3DLUT`（11 张）与 `LCDC_3DLUT0/1`（各 99 张，内容相同）解码再编码后写回，结果与原文件逐字节相同。
+- **灰轴：** `MAIN_3DLUT` 灰轴与恒等映射相差不超过 9 个 12 位码值，所以照片 3D LUT 基本不改灰阶。
+- **LCD 表布局：** `LCDC_3DLUT0` 的 99 张表按 色温(11) × `user_scenario`(3) × `hardware_version`(3) 排列，第一轴最快：
+  - 0–10 与 `MAIN_3DLUT` 0–10 逐字节相同：取景显示与成片使用同一套调色。
+  - 11–32 为恒等表（场景 1、2）。
+  - 33–98 与照片表相差约 2000–2600 码值，推测为不同屏幕硬件版本叠加了面板补偿；具体机身属于哪个版本，静态无法确定。
+- **色彩矩阵：** `MAIN_CCM.lmtx_fw` 为 44 组（11 色温 × 4），每组 8 份相同的 6 个系数，即全局矩阵，共 11 种取值。大量系数恰为 −1229（约 −0.30，按 1/4096），像是寄存器限幅；矩阵本身不是完整的相机到输出色彩变换，其余部分由 3D LUT 承担。
+
 ## 自定义 LUT 拍摄可行性评估
 
 | 方案 | 依据 | 主要障碍 | 评级 |
 | --- | --- | --- | --- |
 | A. 取景 / 监看 LUT | `3dlut=lcd,0,user` 已在原厂路径使用；`iq userlut` 调试入口 | `user` 槽已被补偿表占用，新 look 必须与之合成；一代没有 `.cube` 解析库，需在电脑端转换为 `rcam` 布局，而该布局未解码；调试入口需要 shell | 有明确接入点，未验证 |
 | B. 视频输出 LUT | `video0` 与 `PYRA_3DLUT` `user` 槽 | 取决于社区视频实现走哪条流；需要流配置与 IQ 段同时打开该槽 | 待验证 |
-| C. LUT 烘焙进 JPEG | `MAIN_3DLUT` 11 张色温表 | 需要修改 IQ 表或拓扑，且每张都要与原厂调色合成；输入为 ISP 内部 RGB | 风险最高，仅静态证据 |
+| C. LUT 同时烘焙进取景与 JPEG | `rcam_lut.py bake` 把 `look(stock(x))` 写入 `MAIN_3DLUT` 与 `LCDC_3DLUT0/1` | 部署需要替换 system 分区的 IQ 表，或用未验证的 `iq load`；硬件版本 1、2 的显示表含面板补偿，look 接在其后只是近似；恒等表保持不变 | 离线候选已验证，未实机 |
 | D. RAW | RAW 写入段不含 3DLUT | 机内 LUT 不进入 RAW | 不适用 |
 
-与二代相比，一代的屏幕端 LUT 只能走 ISP `rcam` 格式，没有可直接复用的 `cube_r` 文件，因此一代的方案 A 难度高于二代的回放方案。
+与二代相比，一代没有 `cube_r` 显示文件；但取景表 0–10 就是照片表，所以烘焙后取景与成片天然一致。
+
+方案 C 的离线验证（X2D 4.2.0，合成 look，不涉及实机）：
+
+- 单位 look：输出与原文件逐字节相同。
+- 测试 look：
+  - LUT 区域外改动 0 字节；
+  - 节点与期望值相差不超过 0.5 码值；
+  - 每个显示数组中 77 张非恒等表被烘焙，22 张恒等表保持不变。
+- 与“原厂表插值后再套 33³ look”比较（8 位刻度）：
+  - 温和 look：平均 0.02、最大 2.32；
+  - 强非线性 look：平均 1.02，p95 3.26，p99 6.92，最大 26.59。
+
+误差来自相机表只有 16³。部署与恢复都未实现、未测试，需要用户另行明确授权。
+
+三格式输出与 Lightroom 复现的方法分析见二代记录对应章节。其中的结论按机型分开：一代没有 P3 色域轴，因此也没有二代那种色域开关的可能。
 
 ## 证据与复现
 
@@ -69,12 +96,14 @@ IQ 表含 `video0` 模式，以及拓扑 `TPLG_IMX461BQR_VIDEO_4K2160_12BIT_30FP
 
 ```sh
 python3 x2d2/tools/inspect_color_pipeline.py /path/to/x2d-4.2.0/system
+python3 x2d2/tools/rcam_lut.py export /path/to/x2d-4.2.0/system --table main_3dlut --index 0 --out outputs/x2d-main-0.cube
+python3 x2d2/tools/rcam_lut.py bake /path/to/x2d-4.2.0/system --look my_look.cube --out-dir outputs/x2d-iq-look
 ```
 
-若 `ec1706_config.json` 哈希与上表一致，报告 `known_input` 为 `X2D 100C 4.2.0 ec1706_config.json`；`dispalgo` 为空列表。本文的模式、段、槽位、表数与轴长均来自该报告。`cube_lut.py` 只处理二代 `cube_r` 文件，不适用于一代。固件、解包树与原厂表不随仓库提供。
+若 `ec1706_config.json` 哈希与上表一致，报告 `known_input` 为 `X2D 100C 4.2.0 ec1706_config.json`；`dispalgo` 为空列表。本文的模式、段、槽位、表数与轴长均来自该报告。`rcam_lut.py` 只接受上表哈希的 `ec1706_config.bin` / `.json`。`cube_lut.py` 只处理二代 `cube_r` 文件，不适用于一代。固件、解包树与原厂表不随仓库提供。
 
 ## 限制与下一步
 
 - 全部为静态分析，没有实机验证；不能据此认为取景 LUT、视频 LUT 或烘焙 LUT 已可用。
-- `rcam` LUT 布局、`userlut` 参数含义、补偿表的数据来源（IQ `LCDC_3DLUT` 还是外部文件）均未确认。
+- `userlut` 参数含义、补偿表的数据来源（IQ `LCDC_3DLUT` 的硬件版本表，还是外部文件）、机身的显示硬件版本均未确认。烘焙表是否被相机按预期加载，尚无实机证据。
 - 下一项离线工作：确认 `setDispEngCompensationLut` 的调用时机，以及 `user` 模式表来自何处；之后才能设计“补偿表 ∘ look”的合成。
