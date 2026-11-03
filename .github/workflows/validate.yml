@@ -26,4 +26,7 @@ jobs:
         run: python -m unittest discover -s x2d/object-recognition/CodeTests/offline-contract -p 'test_*.py'
       - name: Shutter timing analysis tests
         run: python -m unittest discover -s x2d/CodeTests/shutter-animation-preview -p 'test_analyze_blackout.py'
+      - name: Color pipeline tool tests
+        working-directory: x2d2/tools
+        run: python -m unittest test_color_pipeline_tools.py
 

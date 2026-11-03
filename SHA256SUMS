@@ -1,4 +1,4 @@
-cef671692dd2d9038d364d4643e8ee8319c7f525d4ee4a37f2654a40956dc40e  ./.github/workflows/validate.yml
+07a0ee7aef814f2428ecee82389b1b647c58684e20b68529f63d77e873e9b049  ./.github/workflows/validate.yml
 ad6b2fe2d1ad15aae0a25bf4b1d1325b2de3142c7e05514a6995e67c0c86edc5  ./.gitignore
 fe1ee3a5024f349acfc29e930b7c9e52bae15e39ca1ee92924fe9d611435c86a  ./AGENTS.md
 0774d93c44d7cf14c92670b69b96392295bc48f804a8939ff88782b84e3fe53e  ./CITATION.cff
@@ -11,10 +11,10 @@ fe1ee3a5024f349acfc29e930b7c9e52bae15e39ca1ee92924fe9d611435c86a  ./AGENTS.md
 afebc5db45c2fd6326c430e45c805b7089eb5d267861dee1f4b22b29bd2b521f  ./PUBLISH_CHECKLIST.md
 41080dd3bd1e9b9a672536ebda1f6fb1b40a042d58d2c5369f43129ed6bfeb02  ./README.md
 ddddc85d62f60b34c4827994f5176149d70b56a4126a16868689b7ed9ac9682f  ./REPRODUCE.md
-d063877d43b11393655431dec7c4378183d97777384a100bce6dd83a220838b5  ./RESEARCH_RESULTS.md
+99fde7ca03978f1a947ded21ae5234178c18d10a14636cec432a53980209b543  ./RESEARCH_RESULTS.md
 0a47417db599953b77edb0fa5a1432407a76bb0a063ccaab50f94ccd63595a26  ./SECURITY.md
 083f1cf421049d3fc2a504d5c7773b62f188858245400feb64b8e352fbe85ed4  ./THIRD_PARTY_NOTICES.md
-f493bb71bb134ec3725f5967401ba7cb809a33bc5e9d59c73c8e0d0dcf266f23  ./scripts/reproduce_offline.py
+2016c51aedf6cb5459ead7283b5e11ad1335de567031fa6f7fa9ae5c3ced2119  ./scripts/reproduce_offline.py
 06095ac844e07e6386453a5213e51d38a3d1c8e1046bdcc375c4e25f432c165f  ./scripts/validate_public_repo.py
 70df87da3fc030820160ab7689606558f08bb1c1be3e38b7b4dff55fbfe32a8b  ./x2d/CodeTests/README.md
 6843baf6d96794fcd3074ef544ab323fee3e8f5df5e3e652046699801065d98d  ./x2d/CodeTests/factory-debug-ui/README.md
@@ -87,7 +87,7 @@ a798258b1dc645f2cff7048484c8e10d0d5204f5cdaaaea7d238493be40b7a64  ./x2d/CodeTest
 c3435e56feedba7ebc64a8af655692976dd82ddc0fa5a30b855c65efb8ae3870  ./x2d/CodeTests/x2d-afc-research/README.md
 2950d69b8652edc43e1bf46e79ce977276723b267cc6e808921788a39d84fee8  ./x2d/CodeTests/x2d-afc-research/patch_x2d_4_2_0_afc.py
 74a9d2b05459dbe019293f0f5c60793f1edb8c7096f599191fb9924dca883cfe  ./x2d/CodeTests/x2d-afc-research/requirements-usb.txt
-dd62b340a68508c3a7b583e42c216f176859de7727cafa440cdc96085af45c12  ./x2d/README.md
+af7ab95e80de5066132f4df59b4d26d03c5c0458aa8f984e412be7641fbc2af8  ./x2d/README.md
 8bee8bd9c2406ec8664bf528b815497da5faf296ddf74f2fbaabe8d8a2ce3f3b  ./x2d/object-recognition/CodeTests/liveview-overlay/README.md
 ed585291b30fe7b1c0ed99a4c18dab5506bcccb52048ec1941abca7b4aff7eca  ./x2d/object-recognition/CodeTests/native-cpu-detector/README.md
 ab552d0acc36a9e5e84c7af0df4367b5f9ae1fde51ecfefc683786f077880341  ./x2d/object-recognition/CodeTests/native-ion-lease-probe/README.md
@@ -153,6 +153,12 @@ d691730edb765779c333b72d98d3921f6b79ae4e05e21cac402737af24b2c933  ./x2d/tools/fi
 801e99767541639428790f54b88c55727c3d1131775a78e562cba6af7499f873  ./x2d/tools/inspect_ui_load_permissions_4_2_0.py
 edd71f7f34b3cb217f14d15025c4f0e3df06436bbf8ca66bf96859bea254e38b  ./x2d/tools/inspect_usb_ui_4_2_0.py
 f7a8c43e0e71c00af77e7d5b2603dfdbd60419f73f3368791d2da5e4de4c6c73  ./x2d/tools/qml_resource.py
-afc6cb375d87abc67ab647dcfd4dae2c6c21e3d1a3b9cf230617481c1639ff8b  ./x2d2/README.md
+3336f73031d072a1226092a468719e548642a8072ccfd4dfb64677045506f5c8  ./x2d2/README.md
 0234c6508c57d4d7f85cc5e1932d9b1103dcc66315382d77de3b0d34401f9854  ./x2d2/research/1.3.16.2/REGION.md
 83cc0371241e8d824b50e4fee555e752e9564cfaea0e6620458ae8d2926f0aca  ./x2d2/tools/inspect_region.py
+17219c1d10832b2c98e2427ac781903369a3d9b9c371efdfe4393b689aa4e1b8  ./x2d/research/4.2.0/COLOR-PIPELINE-LUT.md
+78a06301f5257186005991028b988cc6eb6517c6d2c4e5534101a6d183017b31  ./x2d2/research/1.3.16.2/COLOR-PIPELINE-LUT.md
+0fe662776a277f8e898a8fc53a366b0217bc273e60247ac344f6a9ad9ae88a97  ./x2d2/tools/README.md
+ba118a437c7b7ad18488343dedab7ffbb4ffe4f2aaa206469fb6b4431e9fe5a4  ./x2d2/tools/cube_lut.py
+cd68b3ad97b264f18c611112802f26cffe5f1f1c54d92a78593b9c2f949c38f0  ./x2d2/tools/inspect_color_pipeline.py
+4d46fd5275b42e93b5c2e21fa2a16b3e15fc3ab167dfd3bccb341ed1f26c4290  ./x2d2/tools/test_color_pipeline_tools.py

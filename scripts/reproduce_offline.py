@@ -98,6 +98,11 @@ def main() -> int:
         ROOT,
         env,
     )
+    run(
+        [PYTHON, "-m", "unittest", "test_color_pipeline_tools.py"],
+        ROOT / "x2d2/tools",
+        env,
+    )
     print("\nOFFLINE REPRODUCTION PASSED")
     return 0
 

@@ -1,6 +1,6 @@
 # Research Results
 
-Updated: 2026-09-26.
+Updated: 2026-11-03.
 
 ## Reproducibility scope
 
@@ -71,6 +71,14 @@ The repository now includes [`scripts/reproduce_offline.py`](scripts/reproduce_o
 - Audio assets are not in the repository, and their redistribution license has not been confirmed.
 - Cold boot, shutter-event coupling, and long-term coexistence with stock notification sounds remain to be accepted.
 
+## X2D / X2D II color pipeline and custom LUTs
+
+- Static analysis of official X2D 4.2.0 and X2D II 1.3.16.2. Each model is recorded separately: [X2D](x2d/research/4.2.0/COLOR-PIPELINE-LUT.md), [X2D II](x2d2/research/1.3.16.2/COLOR-PIPELINE-LUT.md).
+- Both use a DJI `rcam` E2 ISP with a FlatBuffers-JSON tuning table. Every still-render and playback segment bypasses the hardware block named `MAIN_HNCS` and enables `MAIN_3DLUT`. The in-camera JPEG/HEIF look therefore comes from CCM, gamma and `MAIN_3DLUT`: 11 color-temperature tables on X2D, and 4 color temperatures × sRGB/P3 on X2D II.
+- The output-stage 3D LUT has a reserved `iq_lut3d_user` slot, and `librcam` has an `iq userlut [lut_file] [lut_type] [lut_size]` debug command. On X2D II the still main frame bypasses that output LUT. On X2D the LCD path already uses the `user` mode for the stock compensation LUT (`3dlut=lcd,0,user;`).
+- The X2D II display color-management `cube_r` LUTs (`/etc/dispalgo`) were decoded and round-tripped byte-for-byte offline. A tool composes a `.cube` look ahead of the stock panel mapping. This display-only route is the most feasible; baking a LUT into JPEG/HEIF would need IQ-table or topology changes. RAW is unaffected.
+- No device test was performed. The ISP `rcam` LUT layout and the effect of the debug command are unverified.
+
 ## X2D II
 
 - The current material is regional offline research and checking scripts for 1.3.16.2.
@@ -84,7 +92,7 @@ This public candidate does not contain vendor binaries, derived QML units, devic
 
 # 研究成果总表
 
-更新日期：2026-09-26。
+更新日期：2026-11-03。
 
 ## 可复现范围
 
@@ -154,6 +162,14 @@ This public candidate does not contain vendor binaries, derived QML units, devic
 - 旧直接 PCM 方案会干扰原厂提示音，后续改为原厂音频客户端链路；用户确认新版单次试听可听。
 - 音频素材不在仓库中，且其再分发许可未确认。
 - 冷启动、拍摄事件联动和原厂提示音长期共存仍待验收。
+
+## X2D / X2D II 色彩管线与自定义 LUT
+
+- 对官方 X2D 4.2.0 与 X2D II 1.3.16.2 做静态分析，两代分别记录：[X2D](x2d/research/4.2.0/COLOR-PIPELINE-LUT.md)、[X2D II](x2d2/research/1.3.16.2/COLOR-PIPELINE-LUT.md)。
+- 两代均为 DJI `rcam` E2 ISP，调校表为 FlatBuffers 文本 JSON。所有照片渲染与回放段都旁路名为 `MAIN_HNCS` 的硬件块、启用 `MAIN_3DLUT`。因此机内 JPEG/HEIF 的颜色由 CCM、gamma 与 `MAIN_3DLUT` 决定：一代为 11 张色温表，二代为 4 色温 × sRGB/P3。
+- 输出端 3D LUT 预留 `iq_lut3d_user` 槽，`librcam` 含 `iq userlut [lut_file] [lut_type] [lut_size]` 调试命令。二代照片主帧旁路该输出 LUT；一代 LCD 路径已用 `user` 模式承载原厂补偿表（`3dlut=lcd,0,user;`）。
+- 已离线解码二代显示色彩管理 `cube_r` LUT（`/etc/dispalgo`），重新编码与原文件逐字节相同，并提供把 `.cube` look 合成到原厂面板映射之前的工具。只影响屏幕观看的路线最可行；烘焙进 JPEG/HEIF 需要修改 IQ 表或拓扑；RAW 不受影响。
+- 没有实机测试；ISP `rcam` LUT 布局与调试命令的实际作用未验证。
 
 ## X2D II
 
