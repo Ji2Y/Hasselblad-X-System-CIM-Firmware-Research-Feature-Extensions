@@ -9,6 +9,7 @@ The X2D tree covers firmware 4.2.0 unless a document states otherwise.
 - [Factory debug UI](CodeTests/factory-debug-ui/README.md): [research finding](research/4.2.0/FACTORY-DEBUG-UI-FINDINGS.md), stock GUI lock-state evidence, and a bounded ADB state inspector; it does not enable ADB or install a payload.
 - [Shutter animation](CodeTests/shutter-animation-preview/README.md): browser/QML visual candidate, read-only timing analysis and audio source.
 - [Firmware tools](tools/README.md): offline firmware and QML analysis helpers.
+- [Color pipeline and custom LUT feasibility](research/4.2.0/COLOR-PIPELINE-LUT.md): static trace of the 4.2.0 IQ table, 3D LUT slots and the LCD compensation LUT; not device-tested.
 - [Research notes](research/): selected sanitized findings and validation limits.
 - [External research references](references/EXTERNAL-RESEARCH.md): citation-only provenance, including the X2D CIM notes that inspired the AF-C investigation.
 
